@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<!--
+  Índex AR — sitio original, creado y publicado por su autor.
+  Registro de autoría / línea de tiempo: primera publicación en producción — 2026.
+  Repositorio con historial de versiones fechado: [agregar URL de GitHub cuando esté creado].
+  Todo el contenido, diseño y estructura de esta obra están protegidos por la Ley 11.723
+  de Propiedad Intelectual de la República Argentina. Queda prohibida su reproducción
+  total o parcial sin autorización expresa del autor.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Índex AR — Lectura económica y política de la Argentina</title>
+<meta name="description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo. Escrito desde el seno de la economía real.">
+<meta name="theme-color" content="#122A45">
+<meta name="author" content="Índex AR">
+<meta name="copyright" content="© 2026 Índex AR. Todos los derechos reservados. Protegido por la Ley 11.723 (Argentina).">
+<link rel="canonical" href="https://indexar.netlify.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Índex AR">
+<meta property="og:title" content="Índex AR — Lectura económica y política de la Argentina">
+<meta property="og:description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo.">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Índex AR">
+<meta name="twitter:description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo.">
+
+<!-- Favicon propio, generado a partir del isotipo (sin archivo externo) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23122A45'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2F0E9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%2375AADB' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%2375AADB'/%3E%3C/svg%3E">
+
+<!-- Datos estructurados, para que buscadores entiendan qué es este sitio y quién lo publica -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Índex AR",
+  "description": "Análisis macroeconómico y político de la Argentina.",
+  "knowsLanguage": "es",
+  "copyrightYear": "2026",
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Índex AR"
+  }
+}
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --paper: #F2F0E9;
+    --paper-warm: #EAE6DA;
+    --ink: #14171F;
+    --ink-soft: #4A4E58;
+    --navy: #122A45;
+    --celeste: #75AADB;
+    --celeste-deep: #3E6FA0;
+    --wine: #7A3030;
+    --green-note: #3D6B52;
+    --amber: #C99A2E;
+    --rule: #D8D3C4;
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    --paper: #14171F;
+    --paper-warm: #1C202B;
+    --ink: #ECEAE2;
+    --ink-soft: #A7ABB6;
+    --navy: #9FC3E8;
+    --celeste: #75AADB;
+    --celeste-deep: #8FBCE6;
+    --rule: #2C303B;
+    color-scheme: dark;
+  }
+  [data-theme="dark"] .ticker-strip,
+  [data-theme="dark"] .masthead-bar,
+  [data-theme="dark"] footer {
+    background: #0B0D12;
+  }
+  [data-theme="dark"] .hero-figure { background: var(--paper-warm); border-color: var(--rule); }
+
+  .theme-toggle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: none;
+    border: 1.5px solid var(--ink-soft);
+    color: var(--ink-soft);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s ease;
+  }
+  .theme-toggle:hover { border-color: var(--celeste-deep); color: var(--celeste-deep); }
+
+  /* Barra de progreso de lectura */
+  #scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--celeste-deep);
+    z-index: 1001;
+    transition: width 0.1s linear;
+  }
+
+  /* Skip link — accesibilidad real, invisible hasta que se navega por teclado */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--celeste-deep);
+    color: #fff;
+    padding: 12px 20px;
+    z-index: 1000;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+  }
+  .skip-link:focus { left: 12px; top: 12px; }
+
+  @media print {
+    .masthead-bar, .ticker-strip, nav, #newsletter, .hero-ctas, .theme-toggle, footer .footer-bottom span:last-child { display: none !important; }
+    body { background: #fff; color: #000; }
+    a[href]::after { content: " (" attr(href) ")"; font-size: 10px; }
+  }
+
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    position: relative;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+
+  .masthead-bar {
+    background: var(--ink);
+    color: #9AA0AC;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .masthead-inner { display: flex; justify-content: space-between; padding: 7px 0; flex-wrap: wrap; gap: 6px; }
+  .masthead-inner span:nth-child(2) { color: var(--celeste); }
+
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background: var(--paper);
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  nav {
+    display: flex; gap: 30px; align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; font-weight: 500;
+    color: var(--ink-soft);
+  }
+  nav a { position: relative; padding-bottom: 3px; }
+  nav a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px;
+    background: var(--celeste-deep); transition: width 0.25s ease;
+  }
+  nav a:hover { color: var(--navy); }
+  nav a:hover::after { width: 100%; }
+  nav a.is-active { color: var(--navy); }
+  nav a.is-active::after { width: 100%; }
+
+  /* Panel de indicadores — tarjetas KPI */
+  .kpi-panel-head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 22px; flex-wrap: wrap;
+  }
+  .pill-live {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1.2px;
+    text-transform: uppercase; background: var(--navy); color: #fff;
+    padding: 4px 10px 4px 8px; border-radius: 20px;
+  }
+  .pill-live-dot {
+    width: 7px; height: 7px; border-radius: 50%; background: #7FD16A;
+    animation: pulse-dot 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .kpi-card {
+    background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 2px;
+    padding: 18px 20px; position: relative;
+    transition: border-color 0.15s ease;
+  }
+  .kpi-card:hover { border-color: var(--ink-soft); }
+  .kpi-card::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--rule);
+  }
+  .kpi-card[data-trend="up"]::before { background: #3D8F5F; }
+  .kpi-card[data-trend="down"]::before { background: #B23B30; }
+  .kpi-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; margin-top: 6px;
+  }
+  .kpi-value { font-family: 'Fraunces', serif; font-weight: 700; font-size: 32px; color: var(--navy); line-height: 1; }
+  .kpi-sub { font-size: 11.5px; color: var(--ink-soft); margin-top: 6px; }
+
+  /* Donut termómetro del día */
+  .thermo-wrap { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; margin-top: 26px; }
+  .thermo-legend { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+  .thermo-legend-item { display: flex; align-items: center; gap: 8px; color: var(--ink-soft); }
+  .thermo-dot { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+
+  @media (max-width: 900px) {
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .kpi-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Archivo filtrable */
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+  .f-input {
+    font-family: 'Inter', sans-serif; font-size: 13.5px; padding: 9px 12px;
+    border: 1.5px solid var(--ink); border-radius: 2px; background: var(--paper); color: var(--ink);
+  }
+  .f-count { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-soft); margin-left: auto; }
+  .archive-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; }
+  .archive-table th {
+    text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink-soft); padding: 9px 10px; border-bottom: 1.5px solid var(--ink);
+    background: var(--paper);
+  }
+  .archive-table td { padding: 12px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .archive-table tbody tr { transition: background 0.15s ease; }
+  .archive-table tbody tr:hover { background: var(--paper-warm); }
+  .archive-table tbody tr[data-hidden="1"] { display: none; }
+  .tag-pill {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.6px;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 20px; color: #fff; white-space: nowrap;
+  }
+  .tag-economia { background: var(--celeste-deep); }
+  .tag-finanzas { background: var(--wine); }
+  .tag-mercados { background: var(--green-note); }
+  .tag-energia { background: #8A6A1F; }
+  /* Bloque de color sólido (rompe la monotonía del papel) */
+  .archive-note {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--ink-soft);
+    background: var(--paper-warm); border-left: 2px solid var(--celeste); padding: 10px 14px; margin-bottom: 18px;
+  }
+
+  .block-navy {
+    background: var(--navy);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 90px;
+    border-bottom: none;
+  }
+  .block-navy::before, .block-navy::after {
+    content: "";
+    position: absolute; left: -5%; right: -5%; height: 60px;
+    background: var(--paper); z-index: 2;
+  }
+  .block-navy::before { top: -30px; transform: skewY(-2.2deg); }
+  .block-navy::after { bottom: -30px; transform: skewY(-2.2deg); }
+  .block-navy > .wrap { position: relative; z-index: 3; }
+  .block-navy .section-title { color: var(--paper); }
+  .block-navy .section-label { color: var(--celeste); }
+  .block-navy .faq-q { color: var(--celeste); }
+  .block-navy .faq-a { color: #B9C2CE; }
+  .block-navy .faq-item { border-top-color: rgba(255,255,255,0.18); }
+
+  /* Frase manifiesto — quiebre tipográfico grande entre secciones */
+  .manifesto {
+    padding: 76px 0;
+    text-align: center;
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--rule);
+  }
+  .manifesto p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.25;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--navy);
+  }
+  .manifesto p em { color: var(--celeste-deep); font-style: italic; }
+
+  /* Tarjetas de pillar con tinte de color propio (no todas beige) */
+  .pillar.tint-economia { background: color-mix(in srgb, var(--celeste) 5%, var(--paper)); }
+  .pillar.tint-finanzas { background: color-mix(in srgb, var(--wine) 4%, var(--paper)); }
+  .pillar.tint-mercados { background: color-mix(in srgb, var(--green-note) 4%, var(--paper)); }
+  .pillar.tint-energia { background: color-mix(in srgb, var(--amber) 6%, var(--paper)); }
+  .pillar.tint-economia .pillar-num { color: var(--celeste-deep); }
+  .pillar.tint-finanzas .pillar-num { color: var(--wine); }
+  .pillar.tint-mercados .pillar-num { color: var(--green-note); }
+  .pillar.tint-energia .pillar-num { color: #8A6A1F; }
+
+  /* Hook tipo FAQ del lector */
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+  .faq-item { border-top: 1px solid var(--rule); padding-top: 16px; }
+  .faq-q {
+    font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; font-size: 19px;
+    color: var(--navy); margin-bottom: 8px; line-height: 1.3;
+  }
+  .faq-a { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; }
+  @media (max-width: 780px) { .faq-grid { grid-template-columns: 1fr; } }
+
+  /* Avatar monograma para Sobre */
+  .about-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+  .about-avatar {
+    width: 64px; height: 64px; border-radius: 50%; background: var(--navy);
+    color: var(--celeste); display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; flex-shrink: 0;
+  }
+  .about-credentials { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-soft); }
+  .about-credentials a { color: var(--celeste-deep); }
+
+  /* Teaser de servicios futuros */
+  .pill-soon {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; background: var(--amber); color: var(--ink); padding: 3px 9px; border-radius: 20px;
+  }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .service-card {
+    border: 1px solid var(--rule); padding: 20px; background: var(--paper-warm); opacity: 0.85;
+  }
+  .service-card h4 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
+  .service-card p { font-size: 13px; color: var(--ink-soft); }
+  @media (max-width: 780px) { .services-grid { grid-template-columns: 1fr; } }
+
+
+  .ticker-strip { background: var(--ink); color: var(--amber); overflow: hidden; white-space: nowrap; border-bottom: 2px solid var(--ink); }
+  .ticker-track {
+    display: inline-block; padding: 9px 0;
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.5px;
+    animation: scroll-left 32s linear infinite;
+  }
+  .ticker-track span { margin-right: 48px; }
+  .ticker-up { color: #7FD1A8; }
+  .ticker-down { color: #E28B7D; }
+  @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } html { scroll-behavior: auto; } }
+
+  .hero { padding: 60px 0 0; border-bottom: 1px solid var(--rule); position: relative; }
+  .hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 52px; align-items: end; padding-bottom: 48px; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 2px;
+    color: var(--celeste-deep); text-transform: uppercase; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1.5px; background: var(--celeste-deep); display: inline-block; }
+  h1 {
+    font-family: 'Fraunces', serif; font-optical-sizing: auto; font-weight: 600;
+    font-size: 58px; line-height: 1.05; letter-spacing: -1px;
+  }
+  .hero-sub {
+    margin-top: 24px; font-family: 'Source Serif 4', serif; font-size: 19px;
+    color: var(--ink-soft); max-width: 520px; line-height: 1.55;
+  }
+  .hero-ctas { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13.5px;
+    padding: 13px 22px; border-radius: 2px; border: 2px solid var(--ink);
+    transition: all 0.15s ease; cursor: pointer;
+  }
+  .btn-solid { background: var(--ink); color: var(--paper); }
+  .btn-solid:hover { background: var(--navy); border-color: var(--navy); }
+  .btn-outline:hover { background: var(--ink); color: var(--paper); }
+
+  .hero-figure { border: 1.5px solid var(--ink); background: var(--paper-warm); padding: 18px 20px 16px; }
+  .figure-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1.5px;
+    color: var(--ink-soft); text-transform: uppercase; display: flex; justify-content: space-between; margin-bottom: 10px;
+  }
+  .figure-label .figure-tag { display: inline-flex; align-items: center; gap: 6px; }
+  .figure-label .figure-tag::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--celeste-deep); flex-shrink: 0; }
+  .figure-value { font-family: 'Fraunces', serif; font-weight: 600; font-size: 15px; color: var(--navy); }
+  .hero-figure svg { width: 100%; height: auto; display: block; }
+
+  /* Carrusel de gráficos */
+  .carousel-slide { display: none; }
+  .carousel-slide.active { display: block; }
+  .carousel-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule);
+  }
+  .carousel-arrow {
+    width: 26px; height: 26px; border: 1px solid var(--ink); background: none; color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1;
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .carousel-arrow:hover { background: var(--ink); color: var(--paper); }
+  .carousel-pos {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--ink-soft);
+  }
+  .figure-caption {
+    margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; line-height: 1.5;
+    color: var(--ink-soft); border-top: 1px solid var(--rule); padding-top: 9px;
+  }
+
+  .toc {
+    display: flex; flex-wrap: wrap; gap: 10px; padding: 20px 0 0; border-top: 1.5px solid var(--ink);
+  }
+  .toc a {
+    display: flex; align-items: center; gap: 8px; flex: 1 1 160px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.5px;
+    color: var(--ink); text-decoration: none; padding: 12px 14px;
+    border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-warm);
+    transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  }
+  .toc a:hover { border-color: var(--celeste-deep); background: var(--paper); transform: translateY(-1px); }
+  .toc-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: 50%; background: var(--celeste-deep); color: #fff;
+    font-size: 10px; flex-shrink: 0;
+  }
+
+  section { padding: 68px 0; border-bottom: 1px solid var(--rule); }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 10px; }
+  .section-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 30px; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1.5px; color: var(--ink-soft); text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .section-label::before {
+    content: ""; display: inline-block; width: 8px; height: 8px; background: var(--celeste-deep); flex-shrink: 0;
+  }
+  .block-navy .section-label::before { background: var(--celeste); }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 280px; gap: 56px; align-items: start; }
+  .about-body { max-width: 62ch; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: var(--ink); }
+  .about-body p + p { margin-top: 16px; }
+  .about-body .drop-cap {
+    float: left; font-family: 'Fraunces', serif; font-weight: 600; font-size: 74px;
+    line-height: 0.78; padding: 6px 8px 0 0; color: var(--navy);
+  }
+  .margin-note {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.6; color: var(--ink-soft);
+    border-left: 2px solid var(--celeste); padding-left: 16px;
+  }
+  .margin-note strong { display: block; color: var(--ink); text-transform: uppercase; letter-spacing: 1px; font-size: 10.5px; margin-bottom: 8px; }
+
+  .pillars { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
+  .pillar { padding: 26px 22px; border-right: 1px solid var(--rule); transition: background 0.2s ease; }
+  .pillar:hover { filter: brightness(0.96); }
+  .pillar:last-child { border-right: none; }
+  .pillar-num {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 26px; color: var(--rule);
+    transition: color 0.2s ease; display: block; margin-bottom: 14px;
+  }
+  .pillar:hover .pillar-num { filter: brightness(0.85); }
+  .pillar h3 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+  .pillar p { font-size: 14px; color: var(--ink-soft); }
+
+  .channels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .channel-card {
+    border: 2px solid var(--ink); padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
+    transition: background 0.15s ease;
+  }
+  .channel-card:hover { background: var(--paper-warm); }
+  .channel-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; }
+  .channel-desc { font-size: 13px; color: var(--ink-soft); }
+  .channel-cta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--navy); margin-top: auto; }
+
+  footer { padding: 44px 0 36px; background: var(--ink); color: #9AA0AC; }
+  .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1.4fr; gap: 32px; font-size: 12.5px; line-height: 1.7; }
+  .footer-brand { font-family: 'Fraunces', serif; color: var(--paper); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .footer-col-title { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--celeste); margin-bottom: 10px; }
+  .footer-col a { display: block; color: #B9BCC4; margin-bottom: 5px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    margin-top: 34px; padding-top: 18px; border-top: 1px solid #2A2E38; display: flex; justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #71757F; flex-wrap: wrap; gap: 8px;
+  }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 780px) {
+    h1 { font-size: 38px; }
+    .pillars { grid-template-columns: 1fr 1fr; }
+    .pillar:nth-child(2) { border-right: none; }
+    .pillar:nth-child(3), .pillar:nth-child(4) { border-top: 1px solid var(--rule); }
+    .channels { grid-template-columns: 1fr 1fr; }
+    .toc { display: none; }
+  }
+  @media (max-width: 480px) {
+    .pillars { grid-template-columns: 1fr; }
+    .pillar { border-right: none !important; border-top: 1px solid var(--rule); }
+    .pillar:first-child { border-top: none; }
+    .channels { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .about-body .drop-cap { font-size: 58px; }
+  }
+
+  :focus-visible { outline: 2px solid var(--celeste-deep); outline-offset: 2px; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <div class="masthead-bar">
+    <div class="wrap masthead-inner">
+      <span>Edición digital</span>
+      <span id="masthead-date">—</span>
+      <span>N.° 001</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap header-inner">
+      <a href="#" style="display:flex; align-items:center;">
+        <svg viewBox="0 0 320 100" width="180" height="56" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="48" width="9" height="42" rx="2" fill="#122A45"/>
+          <polyline points="5,44 14,33 20,39 27,18" fill="none" stroke="#75AADB" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="27" cy="18" r="3.2" fill="#75AADB"/>
+          <text x="26" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="58" letter-spacing="0.5">
+            <tspan fill="#122A45">NDEX</tspan><tspan fill="#75AADB" dx="14">AR</tspan>
+          </text>
+        </svg>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#secciones">Secciones</a>
+        <a href="#archivo">Archivo</a>
+        <a href="#newsletter">Newsletter</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro" type="button">Oscuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="ticker-strip" aria-live="polite" aria-atomic="false" aria-label="Indicadores económicos en vivo">
+    <div class="ticker-track">
+      <span>DÓLAR BLUE <span class="ticker-val" data-key="dolar-blue">cargando…</span></span>
+      <span>DÓLAR OFICIAL <span class="ticker-val" data-key="dolar-oficial">cargando…</span></span>
+      <span>INFLACIÓN MENSUAL <span class="ticker-val" data-key="inflacion">cargando…</span></span>
+      <span>RIESGO PAÍS <span class="ticker-val" data-key="riesgo-pais">cargando…</span></span>
+      <span>ACTIVIDAD ECONÓMICA <span class="ticker-val" data-key="actividad">cargando…</span></span>
+      <span>RESERVAS BCRA <span class="ticker-val" data-key="reservas">cargando…</span></span>
+      <span>DÓLAR BLUE <span class="ticker-val" data-key="dolar-blue">cargando…</span></span>
+      <span>DÓLAR OFICIAL <span class="ticker-val" data-key="dolar-oficial">cargando…</span></span>
+      <span>INFLACIÓN MENSUAL <span class="ticker-val" data-key="inflacion">cargando…</span></span>
+      <span>RIESGO PAÍS <span class="ticker-val" data-key="riesgo-pais">cargando…</span></span>
+      <span>ACTIVIDAD ECONÓMICA <span class="ticker-val" data-key="actividad">cargando…</span></span>
+      <span>RESERVAS BCRA <span class="ticker-val" data-key="reservas">cargando…</span></span>
+    </div>
+  </div>
+
+  <main id="main">
+  <section class="hero" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Análisis independiente · Argentina</div>
+          <h1>Lectura económica y política de la Argentina.</h1>
+          <div class="hero-ctas">
+            <a class="btn btn-solid" href="#newsletter">Suscribirme a la newsletter</a>
+            <a class="btn btn-outline" href="#secciones">Ver qué vas a encontrar</a>
+            <button class="btn btn-outline" id="share-btn" type="button">Compartir</button>
+          </div>
+        </div>
+        <div class="hero-figure reveal">
+          <div class="carousel-slide active" data-slide="0">
+            <div class="figure-label">
+              <span class="figure-tag">Fig. 01 — Dólar blue</span>
+              <span class="figure-value" id="spark-value-0">—</span>
+            </div>
+            <svg id="spark-svg-0" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+            <div class="figure-caption" id="spark-caption-0">Cargando serie histórica…</div>
+          </div>
+          <div class="carousel-slide" data-slide="1">
+            <div class="figure-label">
+              <span class="figure-tag">Fig. 02 — Inflación mensual</span>
+              <span class="figure-value" id="spark-value-1">—</span>
+            </div>
+            <svg id="spark-svg-1" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+            <div class="figure-caption" id="spark-caption-1">Cargando serie histórica…</div>
+          </div>
+          <div class="carousel-slide" data-slide="2">
+            <div class="figure-label">
+              <span class="figure-tag">Fig. 03 — Riesgo país</span>
+              <span class="figure-value" id="spark-value-2">—</span>
+            </div>
+            <svg id="spark-svg-2" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+            <div class="figure-caption" id="spark-caption-2">Cargando serie histórica…</div>
+          </div>
+          <div class="carousel-slide" data-slide="3">
+            <div class="figure-label">
+              <span class="figure-tag">Fig. 04 — Actividad económica</span>
+              <span class="figure-value" id="spark-value-3">—</span>
+            </div>
+            <svg id="spark-svg-3" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+            <div class="figure-caption" id="spark-caption-3">Cargando serie histórica…</div>
+          </div>
+          <div class="carousel-slide" data-slide="4">
+            <div class="figure-label">
+              <span class="figure-tag">Fig. 05 — Reservas del BCRA</span>
+              <span class="figure-value" id="spark-value-4">—</span>
+            </div>
+            <svg id="spark-svg-4" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+            <div class="figure-caption" id="spark-caption-4">Cargando serie histórica…</div>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Gráfico anterior">‹</button>
+            <span class="carousel-pos" id="carousel-pos">01 / 05</span>
+            <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Gráfico siguiente">›</button>
+          </div>
+        </div>
+      </div>
+      <div class="toc">
+        <a href="#secciones"><span class="toc-num">01</span>Economía</a>
+        <a href="#secciones"><span class="toc-num">02</span>Finanzas</a>
+        <a href="#secciones"><span class="toc-num">03</span>Mercados</a>
+        <a href="#secciones"><span class="toc-num">04</span>Energía/Agro</a>
+        <a href="#newsletter"><span class="toc-num">05</span>Newsletter</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel" class="reveal">
+    <div class="wrap">
+      <div class="kpi-panel-head">
+        <div class="section-title" style="font-size:26px;">Panel de indicadores</div>
+        <span class="pill-live"><span class="pill-live-dot"></span>En vivo</span>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card" id="kpi-dolar-blue">
+          <div class="kpi-label">Dólar blue</div>
+          <div class="kpi-value" data-key="dolar-blue">—</div>
+          <div class="kpi-sub">Fuente: DolarAPI</div>
+        </div>
+        <div class="kpi-card" id="kpi-dolar-oficial">
+          <div class="kpi-label">Dólar oficial</div>
+          <div class="kpi-value" data-key="dolar-oficial">—</div>
+          <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
+        </div>
+        <div class="kpi-card" id="kpi-inflacion">
+          <div class="kpi-label">Inflación mensual</div>
+          <div class="kpi-value" data-key="inflacion">—</div>
+          <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
+        </div>
+        <div class="kpi-card" id="kpi-riesgo-pais">
+          <div class="kpi-label">Riesgo país</div>
+          <div class="kpi-value" data-key="riesgo-pais">—</div>
+          <div class="kpi-sub">Fuente: ArgentinaDatos / Ámbito</div>
+        </div>
+        <div class="kpi-card" id="kpi-actividad">
+          <div class="kpi-label">Actividad económica</div>
+          <div class="kpi-value" data-key="actividad">—</div>
+          <div class="kpi-sub">Fuente: Ministerio de Economía (EMAE)</div>
+        </div>
+        <div class="kpi-card" id="kpi-reservas">
+          <div class="kpi-label">Reservas del BCRA</div>
+          <div class="kpi-value" data-key="reservas">—</div>
+          <div class="kpi-sub">Fuente: datos.gob.ar / BCRA</div>
+        </div>
+      </div>
+
+      <div class="thermo-wrap">
+        <svg id="thermo-donut" viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="thermo-legend">
+          <div class="figure-tag" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:4px;">Termómetro del día</div>
+          <div class="thermo-legend-item"><span class="thermo-dot" style="background:#3D8F5F;"></span><span id="thermo-up-label">— indicadores al alza</span></div>
+          <div class="thermo-legend-item"><span class="thermo-dot" style="background:#B23B30;"></span><span id="thermo-down-label">— indicadores a la baja</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" style="background: var(--ink); border-bottom: 2px solid var(--ink);">
+    <div class="wrap reveal" style="text-align:center;">
+      <div class="section-label" style="color: var(--celeste); margin-bottom:14px;">Newsletter</div>
+      <div class="section-title" style="color: var(--paper); font-size:34px; max-width:640px; margin:0 auto 14px;">Recibí el análisis completo en tu mail</div>
+      <p style="color:#B9BCC4; max-width:520px; margin:0 auto 30px; font-size:16px; font-family:'Source Serif 4',serif;">Dos o tres veces por semana, sin spam ni relleno. Cancelás cuando quieras.</p>
+      <form id="newsletter-form" style="display:flex; gap:10px; max-width:440px; margin:0 auto; flex-wrap:wrap; justify-content:center;">
+        <input type="email" id="newsletter-email" required placeholder="tu@email.com"
+          style="flex:1; min-width:220px; padding:14px 16px; border:2px solid var(--paper); border-radius:2px; background:transparent; color:var(--paper); font-family:'Inter',sans-serif; font-size:14px;">
+        <button type="submit" class="btn btn-solid" style="background:var(--celeste); border-color:var(--celeste); color:var(--ink);">Suscribirme</button>
+      </form>
+      <p id="newsletter-msg" style="margin-top:14px; font-size:13px; color:var(--celeste); min-height:18px;"></p>
+    </div>
+  </section>
+
+  <section id="sobre" class="block-navy">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div class="section-title">¿Por qué seguir Índex AR?</div>
+        <div class="section-label">Antes de suscribirte</div>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">"No entiendo por qué sube el dólar más allá de 'está todo mal'."</div>
+          <div class="faq-a">Cada nota va al mecanismo: qué lo empuja, quién compra, quién vende, y qué mirar para saber si el movimiento sigue.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">"Me cuesta separar la grieta política del dato económico real."</div>
+          <div class="faq-a">Leemos las medidas de gobierno por su efecto concreto en precios, tasas y actividad — no por la bandera de quien las anuncia.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">"Ya me cansé de los promedios inventados y los datos puestos a ojo."</div>
+          <div class="faq-a">Todo lo que ves en el panel sale en vivo de fuentes públicas y verificables: BCRA, INDEC, ArgentinaDatos. Nada se tipea a mano.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">"No tengo tiempo para leer un informe de 20 páginas todas las semanas."</div>
+          <div class="faq-a">Cada publicación entra en un café: qué pasó, por qué pasó, qué mirar de acá en adelante. Nada más.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-detalle">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div class="section-title">Sobre Índex AR</div>
+        <div class="section-label">Quién escribe</div>
+      </div>
+      <div class="about-header">
+        <div class="about-avatar">MI</div>
+        <div class="about-credentials">Publicación independiente de economía y política</div>
+      </div>
+      <div class="about-grid">
+        <div class="about-body">
+          <p><span class="drop-cap">L</span>a Argentina no tiene problema de datos: sobran índices, licitaciones y comunicados del Central todas las semanas. Lo que casi nadie se toma el tiempo de explicar es el paso de después — qué mueve ese número por dentro y qué hace la política económica cuando reacciona a él.</p>
+          <p>Índex AR nace de esa costumbre: agarrar un dato puntual y explicarlo como se explicaría en una charla de café con otro economista, sin la solemnidad de un informe de 20 páginas. Qué pasó, por qué pasó, qué mirar de acá en más — con la fuente primaria siempre a mano para que cada uno la chequee por su cuenta.</p>
+        </div>
+        <div class="margin-note">
+          <strong>Nota editorial</strong>
+          Índex AR está a cargo de Marcos Ibáñez, economista. Esta sección se actualiza a medida que la cobertura crece. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto reveal">
+    <div class="wrap">
+      <p>Un dato suelto no dice mucho. Lo que importa es <em>por qué</em> se movió — y qué puede pasar después.</p>
+    </div>
+  </section>
+
+  <section id="servicios" style="background: var(--paper-warm);">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div class="section-title">Servicios <span class="pill-soon">Próximamente</span></div>
+        <div class="section-label">Hoy, publicación gratuita</div>
+      </div>
+      <p style="max-width:640px; font-size:14.5px; color:var(--ink-soft); margin-bottom:24px;">Índex AR es hoy un espacio de análisis abierto y gratuito. A medida que la cobertura y la comunidad crezcan, este es el tipo de consultoría a medida que se va a sumar — sin costo alguno mientras tanto.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Informes a medida</h4>
+          <p>Análisis puntual de coyuntura o sector, encargado por una empresa o inversor.</p>
+        </div>
+        <div class="service-card">
+          <h4>Asesoramiento a pymes</h4>
+          <p>Lectura de pricing, costos y contexto macro aplicada a un negocio concreto.</p>
+        </div>
+        <div class="service-card">
+          <h4>Charlas y presentaciones</h4>
+          <p>Contexto económico y político explicado a un equipo o directorio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="secciones">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div class="section-title">Qué vas a encontrar</div>
+        <div class="section-label">Cuatro secciones fijas</div>
+      </div>
+    </div>
+    <div class="wrap reveal" style="padding: 0;">
+      <div class="pillars">
+        <div class="pillar tint-economia">
+          <span class="pillar-num">I</span>
+          <h3>Economía</h3>
+          <p>Inflación, tipo de cambio, tasas, reservas y actividad — la película completa detrás del dato de la semana.</p>
+        </div>
+        <div class="pillar tint-finanzas">
+          <span class="pillar-num">II</span>
+          <h3>Finanzas</h3>
+          <p>Deuda, riesgo país, mercado de capitales y sistema financiero — cómo se financia el país y quién le presta.</p>
+        </div>
+        <div class="pillar tint-mercados">
+          <span class="pillar-num">III</span>
+          <h3>Mercados</h3>
+          <p>Sectores, precios relativos y organización industrial — por qué los precios se mueven como se mueven.</p>
+        </div>
+        <div class="pillar tint-energia">
+          <span class="pillar-num">IV</span>
+          <h3>Energía / Agro</h3>
+          <p>Los sectores que sostienen la balanza comercial — producción, exportación y su peso en la macro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="archivo">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div class="section-title">Archivo de publicaciones</div>
+        <div class="section-label">Buscá y filtrá</div>
+      </div>
+      <div class="archive-note">Ejemplo — estas filas son ilustrativas. Reemplazalas por tus publicaciones reales a medida que las subas.</div>
+      <div class="filters">
+        <input id="archive-q" class="f-input" placeholder="Buscar por título…" oninput="applyArchiveFilters()" style="flex:1; min-width:200px;">
+        <select id="archive-cat" class="f-input" onchange="applyArchiveFilters()">
+          <option value="">Todas las secciones</option>
+          <option value="economia">Economía</option>
+          <option value="finanzas">Finanzas</option>
+          <option value="mercados">Mercados</option>
+          <option value="energia">Energía/Agro</option>
+        </select>
+        <span class="f-count" id="archive-count"></span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="archive-table">
+          <thead>
+            <tr><th>Fecha</th><th>Sección</th><th>Título</th></tr>
+          </thead>
+          <tbody id="archive-body">
+            <tr data-cat="economia" data-title="por qué la inflación núcleo no cede">
+              <td>14 jul 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Por qué la inflación núcleo no cede</td>
+            </tr>
+            <tr data-cat="finanzas" data-title="riesgo país qué mide y qué no">
+              <td>10 jul 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Riesgo país: qué mide y qué no</td>
+            </tr>
+            <tr data-cat="mercados" data-title="el raro caso de los precios que no bajan">
+              <td>07 jul 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>El raro caso de los precios que no bajan</td>
+            </tr>
+            <tr data-cat="energia" data-title="la cosecha que puede cambiar las reservas">
+              <td>03 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>La cosecha que puede cambiar las reservas</td>
+            </tr>
+            <tr data-cat="economia" data-title="lectura del último dato de actividad">
+              <td>30 jun 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Lectura del último dato de actividad económica</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="seguir">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <div class="section-title">Seguí Índex AR</div>
+        <div class="section-label">El mismo análisis, cuatro formatos</div>
+      </div>
+      <div class="channels">
+        <div class="channel-card">
+          <div class="channel-name">Newsletter</div>
+          <div class="channel-desc">El análisis completo, dos veces por semana en tu mail.</div>
+          <a class="channel-cta" href="#newsletter">SUSCRIBIRME →</a>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">LinkedIn</div>
+          <div class="channel-desc">Resumen profesional de cada publicación.</div>
+          <a class="channel-cta" href="#">SEGUIR →</a>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Twitter / X</div>
+          <div class="channel-desc">Hilos cortos, directo al mecanismo.</div>
+          <a class="channel-cta" href="#">SEGUIR →</a>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Blog</div>
+          <div class="channel-desc">Archivo completo de todas las publicaciones.</div>
+          <a class="channel-cta" href="#">EXPLORAR →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Índex AR</div>
+          <p>Lectura económica y política de la Argentina, escrita desde el seno de la economía real.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navegación</div>
+          <a href="#sobre">Sobre</a>
+          <a href="#secciones">Secciones</a>
+          <a href="#newsletter">Newsletter</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Colofón</div>
+          <p>Tipografías: Fraunces, Source Serif 4, IBM Plex Mono, Inter.<br>Datos en vivo: DolarAPI, ArgentinaDatos, Series de Tiempo (Ministerio de Economía / INDEC).</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Índex AR. Todos los derechos reservados. Obra protegida por la Ley 11.723 de Propiedad Intelectual (Argentina). Prohibida su reproducción total o parcial sin autorización expresa del autor.</span>
+        <span>contacto@indexar.com.ar</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      ARQUITECTURA
+      ------------
+      IndexAR.data  → capa de datos: fetch con reintentos + cache localStorage (TTL 5 min, stale-while-revalidate)
+      IndexAR.ui    → capa de presentación: pinta valores, sparkline, tema
+      IndexAR.bus   → pub/sub mínimo para desacoplar ambas capas
+
+      Por qué stale-while-revalidate: si alguien vuelve a la página dentro de los 5 minutos,
+      ve el último dato guardado al instante (sin esperar la red) mientras en paralelo se
+      pide el dato fresco y se repinta solo si cambió. Resiliente ante conexiones lentas.
+    */
+    var IndexAR = (function () {
+      var bus = {};
+      function on(evt, fn) { (bus[evt] = bus[evt] || []).push(fn); }
+      function emit(evt, payload) { (bus[evt] || []).forEach(function (fn) { fn(payload); }); }
+
+      var CACHE_TTL_MS = 5 * 60 * 1000;
+
+      function cacheGet(key) {
+        try {
+          var raw = localStorage.getItem('indexar:' + key);
+          if (!raw) return null;
+          var parsed = JSON.parse(raw);
+          return parsed;
+        } catch (e) { return null; }
+      }
+      function cacheSet(key, value) {
+        try {
+          localStorage.setItem('indexar:' + key, JSON.stringify({ value: value, ts: Date.now() }));
+        } catch (e) { /* localStorage puede fallar en modo privado — no es crítico, seguimos sin cache */ }
+      }
+
+      async function fetchWithRetry(url, retries) {
+        retries = retries === undefined ? 2 : retries;
+        var attempt = 0;
+        var lastErr;
+        while (attempt <= retries) {
+          try {
+            var res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return await res.json();
+          } catch (e) {
+            lastErr = e;
+            attempt++;
+            if (attempt <= retries) {
+              var backoff = 300 * Math.pow(2, attempt); // 600ms, 1200ms...
+              await new Promise(function (resolve) { setTimeout(resolve, backoff); });
+            }
+          }
+        }
+        throw lastErr;
+      }
+
+      // Descarta valores de caché corruptos (por ejemplo, series con puntos
+      // NaN guardadas por una versión anterior del sitio) para que nunca se
+      // vuelvan a mostrar, aunque estén "frescos".
+      function isValidCached(value) {
+        if (Array.isArray(value)) {
+          return value.every(function (d) { return d && typeof d.v === 'number' && isFinite(d.v); });
+        }
+        return true;
+      }
+
+      // Trae datos: si hay cache fresca la devuelve al toque, y si está vencida
+      // igual la devuelve pero dispara una actualización en segundo plano.
+      async function getData(key, url, parser) {
+        var cached = cacheGet(key);
+        if (cached && !isValidCached(cached.value)) cached = null;
+        var isFresh = cached && (Date.now() - cached.ts) < CACHE_TTL_MS;
+
+        if (cached) {
+          emit(key, cached.value);
+        }
+        if (isFresh) return cached.value;
+
+        try {
+          var raw = await fetchWithRetry(url);
+          var parsed = parser(raw);
+          cacheSet(key, parsed);
+          emit(key, parsed);
+          return parsed;
+        } catch (e) {
+          if (cached) return cached.value; // nos quedamos con lo viejo antes que romper la UI
+          emit(key, null);
+          throw e;
+        }
+      }
+
+      return { on: on, emit: emit, getData: getData };
+    })();
+
+    // ---- Capa de datos: una función por indicador ----
+    function loadDolarBlue() {
+      return IndexAR.getData('dolar-blue', 'https://dolarapi.com/v1/dolares/blue', function (d) {
+        return { text: '$' + Math.round(d.venta), trend: null };
+      }).catch(function () { IndexAR.emit('dolar-blue', { text: 'No disponible', trend: null }); });
+    }
+
+    function loadDolarOficial() {
+      return IndexAR.getData('dolar-oficial', 'https://dolarapi.com/v1/dolares/oficial', function (d) {
+        return { text: '$' + Math.round(d.venta), trend: null };
+      }).catch(function () { IndexAR.emit('dolar-oficial', { text: 'No disponible', trend: null }); });
+    }
+
+    function loadReservas() {
+      var url = 'https://apis.datos.gob.ar/series/api/series/?ids=174.1_RRVAS_IDOS_0_0_36&last=2&format=json';
+      return IndexAR.getData('reservas', url, function (d) {
+        var rows = (d.data || []).filter(function (row) { return typeof row[1] === 'number' && isFinite(row[1]); });
+        if (rows.length < 1) throw new Error('sin datos');
+        var lastVal = rows[rows.length - 1][1];
+        var prevVal = rows.length > 1 ? rows[rows.length - 2][1] : null;
+        return { text: 'US$ ' + Math.round(lastVal).toLocaleString('es-AR') + 'M', trend: prevVal != null ? (lastVal > prevVal ? 'up' : 'down') : null };
+      }).catch(function () { IndexAR.emit('reservas', { text: 'No disponible', trend: null }); });
+    }
+
+    function loadInflacion() {
+      return IndexAR.getData('inflacion', 'https://api.argentinadatos.com/v1/finanzas/indices/inflacion', function (list) {
+        var last = list[list.length - 1];
+        var prev = list[list.length - 2];
+        return { text: last.valor.toFixed(1) + '%', trend: prev && last.valor > prev.valor ? 'down' : 'up' };
+      }).catch(function () { IndexAR.emit('inflacion', { text: 'No disponible', trend: null }); });
+    }
+
+    function loadRiesgoPais() {
+      return IndexAR.getData('riesgo-pais', 'https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais/ultimo', function (d) {
+        return { text: d.valor + ' pb', trend: null };
+      }).catch(function () { IndexAR.emit('riesgo-pais', { text: 'No disponible', trend: null }); });
+    }
+
+    function loadActividad() {
+      var url = 'https://apis.datos.gob.ar/series/api/series/?ids=143.3_NO_PR_2004_A_21:percent_change_a_year_ago&last=2&format=json';
+      return IndexAR.getData('actividad', url, function (d) {
+        var rows = d.data;
+        var prevVal = rows[0][1];
+        var lastVal = rows[1][1];
+        return { text: (lastVal * 100).toFixed(1) + '%', trend: lastVal > prevVal ? 'up' : 'down' };
+      }).catch(function () { IndexAR.emit('actividad', { text: 'No disponible', trend: null }); });
+    }
+
+    // Saca del final de la lista los registros sin valor numérico válido
+    // (algunas fuentes publican el mes en curso con el dato todavía en null).
+    function cleanSeries(list, valueKey) {
+      return (list || [])
+        .filter(function (d) { return d && typeof d[valueKey] === 'number' && isFinite(d[valueKey]); })
+        .map(function (d) { return { v: d[valueKey], f: d.fecha }; });
+    }
+
+    function loadSparklineData() {
+      var dolar = IndexAR.getData('sparkline-dolar', 'https://api.argentinadatos.com/v1/cotizaciones/dolares/blue', function (list) {
+        return cleanSeries(list, 'venta').slice(-30);
+      }).catch(function () { IndexAR.emit('sparkline-dolar', null); });
+
+      var inflacion = IndexAR.getData('sparkline-inflacion', 'https://api.argentinadatos.com/v1/finanzas/indices/inflacion', function (list) {
+        return cleanSeries(list, 'valor').slice(-12);
+      }).catch(function () { IndexAR.emit('sparkline-inflacion', null); });
+
+      var riesgo = IndexAR.getData('sparkline-riesgo', 'https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais', function (list) {
+        return cleanSeries(list, 'valor').slice(-30);
+      }).catch(function () { IndexAR.emit('sparkline-riesgo', null); });
+
+      var actividad = IndexAR.getData('sparkline-actividad', 'https://apis.datos.gob.ar/series/api/series/?ids=143.3_NO_PR_2004_A_21:percent_change_a_year_ago&last=12&format=json', function (d) {
+        return (d.data || [])
+          .filter(function (row) { return typeof row[1] === 'number' && isFinite(row[1]); })
+          .map(function (row) { return { v: row[1] * 100, f: row[0] }; });
+      }).catch(function () { IndexAR.emit('sparkline-actividad', null); });
+
+      var reservas = IndexAR.getData('sparkline-reservas', 'https://apis.datos.gob.ar/series/api/series/?ids=174.1_RRVAS_IDOS_0_0_36&last=30&format=json', function (d) {
+        return (d.data || [])
+          .filter(function (row) { return typeof row[1] === 'number' && isFinite(row[1]); })
+          .map(function (row) { return { v: row[1], f: row[0] }; });
+      }).catch(function () { IndexAR.emit('sparkline-reservas', null); });
+
+      return Promise.all([dolar, inflacion, riesgo, actividad, reservas]);
+    }
+
+    // ---- Presentación: ticker (marquee oscuro) ----
+    ['dolar-blue', 'dolar-oficial', 'inflacion', 'riesgo-pais', 'actividad', 'reservas'].forEach(function (key) {
+      IndexAR.on(key, function (payload) {
+        if (!payload) return;
+        document.querySelectorAll('.ticker-val[data-key="' + key + '"]').forEach(function (el) {
+          el.textContent = payload.text;
+          el.classList.remove('ticker-up', 'ticker-down');
+          if (payload.trend === 'up') el.classList.add('ticker-up');
+          if (payload.trend === 'down') el.classList.add('ticker-down');
+        });
+      });
+    });
+
+    // ---- Presentación: panel de KPIs + termómetro del día ----
+    var thermoState = { up: 0, down: 0, neutral: 0 };
+    var thermoSeen = {};
+    ['dolar-blue', 'dolar-oficial', 'inflacion', 'riesgo-pais', 'actividad', 'reservas'].forEach(function (key) {
+      IndexAR.on(key, function (payload) {
+        if (!payload) return;
+        var valueEl = document.querySelector('.kpi-value[data-key="' + key + '"]');
+        var cardEl = valueEl ? valueEl.closest('.kpi-card') : null;
+        if (valueEl) animateCount(valueEl, payload.text);
+        if (cardEl) {
+          if (payload.trend === 'up') cardEl.setAttribute('data-trend', 'up');
+          else if (payload.trend === 'down') cardEl.setAttribute('data-trend', 'down');
+        }
+        // Solo contamos una vez por indicador, aunque el evento se dispare de nuevo (cache + red)
+        if (payload.trend === 'up' || payload.trend === 'down') {
+          if (thermoSeen[key]) thermoState[thermoSeen[key]]--;
+          thermoState[payload.trend]++;
+          thermoSeen[key] = payload.trend;
+          renderThermo();
+        }
+      });
+    });
+
+    function renderThermo() {
+      var svg = document.getElementById('thermo-donut');
+      var up = thermoState.up, down = thermoState.down;
+      var total = up + down;
+      var upLabel = document.getElementById('thermo-up-label');
+      var downLabel = document.getElementById('thermo-down-label');
+      if (total === 0) return;
+      var r = 50, cx = 60, cy = 60, circumference = 2 * Math.PI * r;
+      var upLen = (up / total) * circumference;
+      svg.innerHTML =
+        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#E4DFCF" stroke-width="16"/>' +
+        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#3D8F5F" stroke-width="16" ' +
+          'stroke-dasharray="' + upLen.toFixed(1) + ' ' + circumference.toFixed(1) + '" ' +
+          'transform="rotate(-90 ' + cx + ' ' + cy + ')" stroke-linecap="round"/>' +
+        '<text x="' + cx + '" y="' + (cy + 6) + '" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="22" fill="#122A45">' + up + '/' + total + '</text>';
+      upLabel.textContent = up + ' indicador' + (up === 1 ? '' : 'es') + ' al alza';
+      downLabel.textContent = down + ' indicador' + (down === 1 ? '' : 'es') + ' a la baja';
+    }
+
+    // ---- Función genérica de sparkline: sirve para dólar, inflación y riesgo país ----
+    function renderSparkline(slideIndex, data, opts) {
+      var svg = document.getElementById('spark-svg-' + slideIndex);
+      var caption = document.getElementById('spark-caption-' + slideIndex);
+      var valueEl = document.getElementById('spark-value-' + slideIndex);
+      // Nos quedamos solo con puntos numéricos válidos, sin importar qué
+      // haya llegado (caché vieja, respuesta parcial, etc.)
+      var clean = (data || []).filter(function (d) { return d && typeof d.v === 'number' && isFinite(d.v); });
+      if (clean.length < 2) {
+        svg.innerHTML = '';
+        valueEl.textContent = '—';
+        caption.textContent = 'No se pudo cargar el gráfico en este momento.';
+        return;
+      }
+      data = clean;
+      var values = data.map(function (d) { return d.v; });
+      var min = Math.min.apply(null, values);
+      var max = Math.max.apply(null, values);
+      // Área de trazado con margen para los ejes (izquierda para el eje Y, abajo para el eje X)
+      var w = 320, h = 130, padL = 40, padR = 10, padT = 14, padB = 20;
+      var plotW = w - padL - padR, plotH = h - padT - padB;
+
+      var points = values.map(function (v, i) {
+        var x = padL + (i / (values.length - 1)) * plotW;
+        var y = padT + plotH - ((v - min) / ((max - min) || 1)) * plotH;
+        return [x, y];
+      });
+      var pathD = points.map(function (p, i) {
+        return (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1);
+      }).join(' ');
+      var last = points[points.length - 1];
+      var first = points[0];
+      var areaD = pathD + ' L' + last[0].toFixed(1) + ',' + (padT + plotH) + ' L' + first[0].toFixed(1) + ',' + (padT + plotH) + ' Z';
+      var gradId = 'sparkGrad' + slideIndex;
+
+      // Eje Y: dos líneas guía (máximo y mínimo) con su etiqueta de valor
+      var yAxis =
+        '<line x1="' + padL + '" y1="' + padT + '" x2="' + w + '" y2="' + padT + '" stroke="var(--rule)" stroke-width="1" stroke-dasharray="2 3"/>' +
+        '<text x="' + (padL - 6) + '" y="' + (padT + 4) + '" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)">' + opts.formatAxis(max) + '</text>' +
+        '<line x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + w + '" y2="' + (padT + plotH) + '" stroke="var(--rule)" stroke-width="1" stroke-dasharray="2 3"/>' +
+        '<text x="' + (padL - 6) + '" y="' + (padT + plotH + 4) + '" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)">' + opts.formatAxis(min) + '</text>';
+
+      // Eje X: fecha del primer y último punto de la serie
+      var xAxis =
+        '<text x="' + first[0].toFixed(1) + '" y="' + (h - 2) + '" text-anchor="start" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)">' + opts.formatDate(data[0].f) + '</text>' +
+        '<text x="' + last[0].toFixed(1) + '" y="' + (h - 2) + '" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)">' + opts.formatDate(data[data.length - 1].f) + '</text>';
+
+      svg.innerHTML =
+        '<defs><linearGradient id="' + gradId + '" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0%" stop-color="#75AADB" stop-opacity="0.4"/>' +
+        '<stop offset="100%" stop-color="#75AADB" stop-opacity="0"/>' +
+        '</linearGradient></defs>' +
+        yAxis +
+        '<path d="' + areaD + '" fill="url(#' + gradId + ')" stroke="none"/>' +
+        '<path d="' + pathD + '" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--navy)"/>' +
+        '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="3.5" fill="#75AADB" stroke="var(--navy)" stroke-width="1.5"/>' +
+        xAxis;
+
+      var lastVal = values[values.length - 1];
+      var change = (((lastVal - values[0]) / values[0]) * 100).toFixed(1);
+      animateCount(valueEl, opts.formatValue(lastVal));
+      caption.textContent = opts.caption(values.length, change);
+    }
+
+    function formatShortDate(iso) {
+      if (!iso) return '';
+      var parts = iso.split('-');
+      if (parts.length < 3) return iso;
+      return parts[2] + '/' + parts[1];
+    }
+    function formatMonthDate(iso) {
+      if (!iso) return '';
+      var meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+      var parts = iso.split('-');
+      if (parts.length < 2) return iso;
+      var m = parseInt(parts[1], 10) - 1;
+      return (meses[m] || parts[1]) + " '" + parts[0].slice(2);
+    }
+
+    IndexAR.on('sparkline-dolar', function (data) {
+      renderSparkline(0, data, {
+        formatValue: function (v) { return '$' + Math.round(v); },
+        formatAxis: function (v) { return '$' + Math.round(v); },
+        formatDate: formatShortDate,
+        caption: function (n, change) { return 'Evolución dólar blue, últimos ' + n + ' registros · variación ' + (change > 0 ? '+' : '') + change + '% · Fuente: DolarApi / ArgentinaDatos.'; }
+      });
+    });
+
+    IndexAR.on('sparkline-inflacion', function (data) {
+      renderSparkline(1, data, {
+        formatValue: function (v) { return v.toFixed(1) + '%'; },
+        formatAxis: function (v) { return v.toFixed(1) + '%'; },
+        formatDate: formatMonthDate,
+        caption: function (n, change) { return 'Evolución inflación mensual, últimos ' + n + ' meses · variación acumulada ' + (change > 0 ? '+' : '') + change + '% · Fuente: ArgentinaDatos / BCRA.'; }
+      });
+    });
+
+    IndexAR.on('sparkline-riesgo', function (data) {
+      renderSparkline(2, data, {
+        formatValue: function (v) { return Math.round(v) + ' pb'; },
+        formatAxis: function (v) { return Math.round(v); },
+        formatDate: formatShortDate,
+        caption: function (n, change) { return 'Evolución riesgo país, últimos ' + n + ' registros · variación ' + (change > 0 ? '+' : '') + change + '% · Fuente: ArgentinaDatos / Ámbito.'; }
+      });
+    });
+
+    IndexAR.on('sparkline-actividad', function (data) {
+      renderSparkline(3, data, {
+        formatValue: function (v) { return (v > 0 ? '+' : '') + v.toFixed(1) + '%'; },
+        formatAxis: function (v) { return (v > 0 ? '+' : '') + v.toFixed(1) + '%'; },
+        formatDate: formatMonthDate,
+        caption: function (n, change) { return 'Actividad económica (EMAE, var. interanual), últimos ' + n + ' meses · variación acumulada ' + (change > 0 ? '+' : '') + change + '% · Fuente: INDEC / datos.gob.ar.'; }
+      });
+    });
+
+    IndexAR.on('sparkline-reservas', function (data) {
+      renderSparkline(4, data, {
+        formatValue: function (v) { return 'US$ ' + Math.round(v).toLocaleString('es-AR') + 'M'; },
+        formatAxis: function (v) { return Math.round(v / 1000) + 'k'; },
+        formatDate: formatShortDate,
+        caption: function (n, change) { return 'Reservas internacionales del BCRA (millones de USD), últimos ' + n + ' días · variación ' + (change > 0 ? '+' : '') + change + '% · Fuente: datos.gob.ar / BCRA.'; }
+      });
+    });
+
+    // ---- Carrusel de gráficos ----
+    function initCarousel() {
+      var slides = document.querySelectorAll('.carousel-slide');
+      var pos = document.getElementById('carousel-pos');
+      var prev = document.getElementById('carousel-prev');
+      var next = document.getElementById('carousel-next');
+      var total = slides.length;
+      var current = 0;
+
+      function show(i) {
+        current = (i + total) % total;
+        slides.forEach(function (s, idx) { s.classList.toggle('active', idx === current); });
+        pos.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+      }
+      prev.addEventListener('click', function () { show(current - 1); });
+      next.addEventListener('click', function () { show(current + 1); });
+      show(0);
+    }
+
+    // ---- Alto real del header pegajoso (masthead + nav), para que el
+    // encabezado de la tabla de archivo se pegue justo debajo y no se
+    // superponga con la primera fila ----
+    function syncHeaderHeight() {
+      var masthead = document.querySelector('.masthead-bar');
+      var head = document.querySelector('header');
+      var h = (masthead ? masthead.offsetHeight : 0) + (head ? head.offsetHeight : 0);
+      if (h > 0) document.documentElement.style.setProperty('--header-h', h + 'px');
+    }
+
+    // ---- Tema oscuro/claro, con detección de preferencia del sistema ----
+    function initTheme() {
+      var btn = document.getElementById('theme-toggle');
+      var saved = null;
+      try { saved = localStorage.getItem('indexar:theme'); } catch (e) {}
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'light');
+      applyTheme(theme);
+
+      btn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        try { localStorage.setItem('indexar:theme', next); } catch (e) {}
+      });
+
+      function applyTheme(t) {
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          btn.textContent = 'Claro';
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          btn.textContent = 'Oscuro';
+        }
+      }
+    }
+
+    function setMastheadDate() {
+      var d = new Date();
+      document.getElementById('masthead-date').textContent =
+        d.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function setupReveal() {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { obs.observe(el); });
+    }
+
+    // ---- Barra de progreso de lectura (throttled con requestAnimationFrame) ----
+    function initScrollProgress() {
+      var bar = document.getElementById('scroll-progress');
+      var ticking = false;
+      function update() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = pct + '%';
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      });
+      update();
+    }
+
+    // ---- Web Share API con fallback a portapapeles ----
+    function initShare() {
+      var btn = document.getElementById('share-btn');
+      btn.addEventListener('click', async function () {
+        var shareData = {
+          title: 'Índex AR',
+          text: 'Lectura económica y política de la Argentina.',
+          url: window.location.href
+        };
+        if (navigator.share) {
+          try { await navigator.share(shareData); } catch (e) { /* el usuario canceló, no hacemos nada */ }
+        } else {
+          try {
+            await navigator.clipboard.writeText(shareData.url);
+            var original = btn.textContent;
+            btn.textContent = 'Enlace copiado';
+            setTimeout(function () { btn.textContent = original; }, 1800);
+          } catch (e) { /* clipboard no disponible, silenciosamente ignoramos */ }
+        }
+      });
+    }
+
+    // ---- Transiciones suaves entre secciones (View Transitions API, con fallback silencioso) ----
+    function initViewTransitions() {
+      if (!document.startViewTransition) return; // navegadores sin soporte siguen con scroll normal, sin errores
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var target = document.querySelector(link.getAttribute('href'));
+          if (!target) return;
+          e.preventDefault();
+          document.startViewTransition(function () {
+            target.scrollIntoView({ behavior: 'auto', block: 'start' });
+          });
+        });
+      });
+    }
+
+    function initScrollSpy() {
+      var ids = ['sobre', 'secciones', 'archivo', 'newsletter'];
+      var links = {};
+      ids.forEach(function (id) {
+        var link = document.querySelector('nav a[href="#' + id + '"]');
+        if (link) links[id] = link;
+      });
+      if (!('IntersectionObserver' in window)) return;
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var id = entry.target.id;
+          if (!links[id]) return;
+          if (entry.isIntersecting) {
+            Object.values(links).forEach(function (l) { l.classList.remove('is-active'); });
+            links[id].classList.add('is-active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -50% 0px' });
+      ids.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) obs.observe(el);
+      });
+    }
+
+    function applyArchiveFilters() {
+      var q = (document.getElementById('archive-q').value || '').toLowerCase().trim();
+      var cat = document.getElementById('archive-cat').value;
+      var rows = document.querySelectorAll('#archive-body tr');
+      var shown = 0;
+      rows.forEach(function (tr) {
+        var matchesQ = !q || (tr.dataset.title || '').indexOf(q) !== -1;
+        var matchesCat = !cat || tr.dataset.cat === cat;
+        var visible = matchesQ && matchesCat;
+        tr.dataset.hidden = visible ? '' : '1';
+        if (visible) shown++;
+      });
+      document.getElementById('archive-count').textContent = shown + ' publicaci' + (shown === 1 ? 'ón' : 'ones');
+    }
+    applyArchiveFilters();
+
+    // ---- Conteo animado: anima cualquier texto tipo "$1530", "402 pb", "2.1%" desde 0 ----
+    function animateCount(el, finalText) {
+      var match = finalText.match(/^([^\d-]*)(-?[\d.,]+)(.*)$/);
+      if (!match) { el.textContent = finalText; return; }
+      var prefix = match[1], numStr = match[2], suffix = match[3];
+      var finalNum = parseFloat(numStr.replace(/\./g, '').replace(',', '.'));
+      if (isNaN(finalNum)) { el.textContent = finalText; return; }
+      var decimals = (numStr.split(/[.,]/)[1] || '').length > 0 && numStr.indexOf(',') > -1 ? 1 : 0;
+      var start = 0;
+      var duration = 900;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = start + (finalNum - start) * eased;
+        var display = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toLocaleString('es-AR');
+        el.textContent = prefix + display + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = finalText;
+      }
+      requestAnimationFrame(step);
+    }
+
+    setMastheadDate();
+    setupReveal();
+    initTheme();
+    initScrollProgress();
+    initShare();
+    initViewTransitions();
+    initScrollSpy();
+    initCarousel();
+    syncHeaderHeight();
+    window.addEventListener('resize', syncHeaderHeight);
+    window.addEventListener('load', syncHeaderHeight);
+
+    loadDolarBlue();
+    loadDolarOficial();
+    loadInflacion();
+    loadRiesgoPais();
+    loadActividad();
+    loadReservas();
+    loadSparklineData();
+  </script>
+
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('newsletter-email').value;
+      var msg = document.getElementById('newsletter-msg');
+      msg.textContent = 'Confirmación enviada a ' + email + ' — al conectar tu servicio real de newsletter, esta suscripción queda activa.';
+      document.getElementById('newsletter-email').value = '';
+    });
+  </script>
+</body>
+</html>

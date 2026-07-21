@@ -1,0 +1,26 @@
+<svg viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .wordmark { font-family: 'Arial', 'Helvetica', sans-serif; font-weight: 800; }
+      .tagline { font-family: 'Arial', 'Helvetica', sans-serif; font-weight: 500; }
+    </style>
+  </defs>
+
+  <!-- "I" como barra propia, para controlar su forma -->
+  <rect x="10" y="48" width="9" height="42" rx="2" fill="#122A45"/>
+
+  <!-- Línea de tendencia = punto de la "i" -->
+  <polyline points="5,44 14,33 20,39 27,18" fill="none" stroke="#75AADB" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="27" cy="18" r="3.2" fill="#75AADB"/>
+
+  <!-- Resto del wordmark -->
+  <text x="26" y="90" class="wordmark" font-size="58" letter-spacing="0.5">
+    <tspan fill="#122A45">NDEX</tspan><tspan fill="#75AADB" dx="14">AR</tspan>
+  </text>
+
+  <!-- Hairline rule -->
+  <line x1="10" y1="112" x2="340" y2="112" stroke="#122A45" stroke-width="1.5"/>
+
+  <!-- Tagline -->
+  <text x="10" y="134" class="tagline" font-size="13" letter-spacing="1.8px" fill="#5A6472">LECTURA ECON&#211;MICA Y POL&#205;TICA</text>
+</svg>
