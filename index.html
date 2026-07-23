@@ -688,7 +688,7 @@
         <div class="kpi-card" id="kpi-actividad">
           <div class="kpi-label">Actividad económica</div>
           <div class="kpi-value" data-key="actividad">—</div>
-          <div class="kpi-sub">Fuente: Ministerio de Economía (EMAE)</div>
+          <div class="kpi-sub" id="kpi-actividad-sub">Fuente: Ministerio de Economía (EMAE)</div>
         </div>
         <div class="kpi-card" id="kpi-reservas">
           <div class="kpi-label">Reservas del BCRA</div>
@@ -730,20 +730,20 @@
       </div>
       <div class="faq-grid">
         <div class="faq-item">
-          <div class="faq-q">"No entiendo por qué sube el dólar más allá de 'está todo mal'."</div>
-          <div class="faq-a">Cada nota va al mecanismo: qué lo empuja, quién compra, quién vende, y qué mirar para saber si el movimiento sigue.</div>
+          <div class="faq-q">¿Por qué sube el dólar?</div>
+          <div class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio — puede ser por emisión, por expectativa de devaluación, por estacionalidad (turismo, importaciones) o porque el Central deja de intervenir. Cada nota identifica cuál de esas causas está pesando en el momento.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">"Me cuesta separar la grieta política del dato económico real."</div>
-          <div class="faq-a">Leemos las medidas de gobierno por su efecto concreto en precios, tasas y actividad — no por la bandera de quien las anuncia.</div>
+          <div class="faq-q">¿Qué es el riesgo país?</div>
+          <div class="faq-a">Es la diferencia entre la tasa que paga Argentina por endeudarse y la que paga Estados Unidos por el mismo plazo, medida en puntos básicos. Cuanto más alto, más caro (o directamente imposible) le resulta al país financiarse en el mercado internacional.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">"Ya me cansé de los promedios inventados y los datos puestos a ojo."</div>
-          <div class="faq-a">Todo lo que ves en el panel sale en vivo de fuentes públicas y verificables: BCRA, INDEC, ArgentinaDatos. Nada se tipea a mano.</div>
+          <div class="faq-q">¿Qué activos hay en las reservas del BCRA?</div>
+          <div class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso el número bruto no siempre refleja cuánto puede usar el Central libremente.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">"No tengo tiempo para leer un informe de 20 páginas todas las semanas."</div>
-          <div class="faq-a">Cada publicación entra en un café: qué pasó, por qué pasó, qué mirar de acá en adelante. Nada más.</div>
+          <div class="faq-q">¿Por qué la actividad económica sube pero los salarios bajan?</div>
+          <div class="faq-a">Son dos mediciones distintas: la actividad (EMAE) mide el volumen que se produce y vende en la economía, mientras que el salario real mide el poder de compra de ese ingreso. Se puede producir y vender más y, al mismo tiempo, que los salarios no le hayan ganado a la inflación acumulada.</div>
         </div>
       </div>
     </div>
@@ -761,12 +761,12 @@
       </div>
       <div class="about-grid">
         <div class="about-body">
-          <p><span class="drop-cap">L</span>a Argentina no tiene problema de datos: sobran índices, licitaciones y comunicados del Central todas las semanas. Lo que casi nadie se toma el tiempo de explicar es el paso de después — qué mueve ese número por dentro y qué hace la política económica cuando reacciona a él.</p>
-          <p>Índex AR nace de esa costumbre: agarrar un dato puntual y explicarlo como se explicaría en una charla de café con otro economista, sin la solemnidad de un informe de 20 páginas. Qué pasó, por qué pasó, qué mirar de acá en más — con la fuente primaria siempre a mano para que cada uno la chequee por su cuenta.</p>
+          <p><span class="drop-cap">Í</span>ndex AR nace de una costumbre bien argentina: analizar los distintos estimadores económicos —inflación, actividad, reservas, riesgo país— para poder tomar mejores decisiones. De inversión, de desarrollo productivo, o simplemente para discutir economía con información en vez de con intuición.</p>
+          <p>Cada nota parte de un dato puntual y lo explica como se explicaría en una charla de café con otro economista, sin la solemnidad de un informe de 20 páginas. Qué pasó, por qué pasó, qué mirar de acá en más — con la fuente primaria siempre a mano para que cada uno la chequee por su cuenta.</p>
         </div>
         <div class="margin-note">
           <strong>Nota editorial</strong>
-          Índex AR está a cargo de Marcos Ibáñez, economista. Esta sección se actualiza a medida que la cobertura crece. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
+          Índex AR está a cargo de Marcos J. Ibáñez, Licenciado en Economía de la Universidad Nacional de Avellaneda (UNDAV). Todos los datos citados en las publicaciones se referencian con su fuente primaria.
         </div>
       </div>
     </div>
@@ -1074,6 +1074,10 @@
         var rows = d.data;
         var prevVal = rows[0][1];
         var lastVal = rows[1][1];
+        var lastDate = new Date(rows[1][0] + 'T00:00:00');
+        var mesLabel = lastDate.toLocaleDateString('es-AR', { month: 'long', year: 'numeric' });
+        var sub = document.getElementById('kpi-actividad-sub');
+        if (sub) sub.textContent = 'Dato de ' + mesLabel + ' · Ministerio de Economía (EMAE)';
         return { text: (lastVal * 100).toFixed(1) + '%', trend: lastVal > prevVal ? 'up' : 'down' };
       }).catch(function () { IndexAR.emit('actividad', { text: 'No disponible', trend: null }); });
     }
@@ -1228,9 +1232,10 @@
         xAxis;
 
       var lastVal = values[values.length - 1];
-      var change = (((lastVal - values[0]) / values[0]) * 100).toFixed(1);
+      var pctChange = (((lastVal - values[0]) / values[0]) * 100).toFixed(1);
+      var ppDiff = (lastVal - values[0]).toFixed(1);
       animateCount(valueEl, opts.formatValue(lastVal));
-      caption.textContent = opts.caption(values.length, change);
+      caption.textContent = opts.caption(values.length, opts.changeInPoints ? ppDiff : pctChange);
     }
 
     function formatShortDate(iso) {
@@ -1262,7 +1267,8 @@
         formatValue: function (v) { return v.toFixed(1) + '%'; },
         formatAxis: function (v) { return v.toFixed(1) + '%'; },
         formatDate: formatMonthDate,
-        caption: function (n, change) { return 'Evolución inflación mensual, últimos ' + n + ' meses · variación acumulada ' + (change > 0 ? '+' : '') + change + '% · Fuente: ArgentinaDatos / BCRA.'; }
+        changeInPoints: true,
+        caption: function (n, change) { return 'Evolución inflación mensual, últimos ' + n + ' meses · ' + (change > 0 ? '+' : '') + change + ' puntos porcentuales · Fuente: ArgentinaDatos / BCRA.'; }
       });
     });
 
@@ -1280,7 +1286,8 @@
         formatValue: function (v) { return (v > 0 ? '+' : '') + v.toFixed(1) + '%'; },
         formatAxis: function (v) { return (v > 0 ? '+' : '') + v.toFixed(1) + '%'; },
         formatDate: formatMonthDate,
-        caption: function (n, change) { return 'Actividad económica (EMAE, var. interanual), últimos ' + n + ' meses · variación acumulada ' + (change > 0 ? '+' : '') + change + '% · Fuente: INDEC / datos.gob.ar.'; }
+        changeInPoints: true,
+        caption: function (n, change) { return 'Actividad económica (EMAE, var. interanual), últimos ' + n + ' meses · ' + (change > 0 ? '+' : '') + change + ' puntos porcentuales · Fuente: INDEC / datos.gob.ar.'; }
       });
     });
 
