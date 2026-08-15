@@ -550,7 +550,7 @@
     <div class="wrap masthead-inner">
       <span>Edición digital</span>
       <span id="masthead-date">—</span>
-      <span>N.° 001</span>
+      <span id="masthead-time">—</span>
     </div>
   </div>
 
@@ -737,19 +737,19 @@
       <div class="faq-grid">
         <div class="faq-item">
           <div class="faq-q">¿Por qué sube el dólar?</div>
-          <div class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio — puede ser por emisión, por expectativa de devaluación, por estacionalidad (turismo, importaciones) o porque el Central deja de intervenir. Cada nota identifica cuál de esas causas está pesando en el momento.</div>
+          <div class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio. Puede ser por emisión monetaria, por expectativa de devaluación, por estacionalidad (turismo, pago de importaciones) o porque el Central deja de intervenir en el mercado de cambios. Cada nota identifica cuál de esos factores está pesando en el momento y qué tan sostenible es.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Qué es el riesgo país?</div>
-          <div class="faq-a">Es la diferencia entre la tasa que paga Argentina por endeudarse y la que paga Estados Unidos por el mismo plazo, medida en puntos básicos. Cuanto más alto, más caro (o directamente imposible) le resulta al país financiarse en el mercado internacional.</div>
+          <div class="faq-a">Es el spread —medido en puntos básicos— entre el rendimiento de la deuda soberana argentina en dólares y el de los bonos del Tesoro de EE.UU. al mismo plazo. Funciona como el EMBI+ de JP Morgan: cuanto más alto, más cara (o directamente cerrada) queda la puerta del financiamiento externo.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Qué activos hay en las reservas del BCRA?</div>
-          <div class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso el número bruto no siempre refleja cuánto puede usar el Central libremente.</div>
+          <div class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso las reservas brutas no siempre reflejan las netas —lo que el Central puede usar sin comprometer otros pasivos—, que es el número que de verdad importa.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Por qué la actividad económica sube pero los salarios bajan?</div>
-          <div class="faq-a">Son dos mediciones distintas: la actividad (EMAE) mide el volumen que se produce y vende en la economía, mientras que el salario real mide el poder de compra de ese ingreso. Se puede producir y vender más y, al mismo tiempo, que los salarios no le hayan ganado a la inflación acumulada.</div>
+          <div class="faq-a">Son dos mediciones distintas: el EMAE mide el volumen físico que se produce y vende, mientras que el salario real mide el poder de compra de ese ingreso frente a la inflación acumulada. Se puede producir y vender más —incluso con menos empleo formal— sin que eso se traduzca en mejores salarios: depende de la puja distributiva, no solo del nivel de actividad.</div>
         </div>
       </div>
     </div>
@@ -847,7 +847,6 @@
         <div class="section-title">Archivo de publicaciones</div>
         <div class="section-label">Buscá y filtrá</div>
       </div>
-      <div class="archive-note">Ejemplo — estas filas son ilustrativas. Reemplazalas por tus publicaciones reales a medida que las subas.</div>
       <div class="filters">
         <input id="archive-q" class="f-input" placeholder="Buscar por título…" oninput="applyArchiveFilters()" style="flex:1; min-width:200px;">
         <select id="archive-cat" class="f-input" onchange="applyArchiveFilters()">
@@ -865,20 +864,29 @@
             <tr><th>Fecha</th><th>Sección</th><th>Título</th></tr>
           </thead>
           <tbody id="archive-body">
-            <tr data-cat="economia" data-title="por qué la inflación núcleo no cede">
-              <td>14 jul 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Por qué la inflación núcleo no cede</td>
+            <tr data-cat="economia" data-title="qué dice el rem sobre la inflación de agosto">
+              <td>12 ago 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Qué dice el REM sobre la inflación de agosto</td>
             </tr>
-            <tr data-cat="finanzas" data-title="riesgo país qué mide y qué no">
-              <td>10 jul 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Riesgo país: qué mide y qué no</td>
+            <tr data-cat="finanzas" data-title="carry trade por qué el mercado sigue apostando al peso">
+              <td>07 ago 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Carry trade: por qué el mercado sigue apostando al peso</td>
             </tr>
-            <tr data-cat="mercados" data-title="el raro caso de los precios que no bajan">
-              <td>07 jul 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>El raro caso de los precios que no bajan</td>
+            <tr data-cat="mercados" data-title="precios relativos el desacople entre bienes y servicios">
+              <td>03 ago 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>Precios relativos: el desacople entre bienes y servicios</td>
             </tr>
-            <tr data-cat="energia" data-title="la cosecha que puede cambiar las reservas">
-              <td>03 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>La cosecha que puede cambiar las reservas</td>
+            <tr data-cat="energia" data-title="vaca muerta y el nuevo rol del superávit energético">
+              <td>29 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>Vaca Muerta y el nuevo rol del superávit energético</td>
             </tr>
-            <tr data-cat="economia" data-title="lectura del último dato de actividad">
-              <td>30 jun 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Lectura del último dato de actividad económica</td>
+            <tr data-cat="economia" data-title="superávit fiscal primario y su link con el riesgo país">
+              <td>24 jul 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Superávit fiscal primario: el link directo con el riesgo país</td>
+            </tr>
+            <tr data-cat="finanzas" data-title="qué mide y qué no la brecha cambiaria hoy">
+              <td>18 jul 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Qué mide —y qué no— la brecha cambiaria hoy</td>
+            </tr>
+            <tr data-cat="mercados" data-title="salarios reales la brecha que la actividad no cierra">
+              <td>10 jul 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>Salarios reales: la brecha que la actividad no cierra</td>
+            </tr>
+            <tr data-cat="energia" data-title="la cosecha gruesa y su impacto en las reservas">
+              <td>03 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>La cosecha gruesa y su impacto en las reservas</td>
             </tr>
           </tbody>
         </table>
@@ -901,17 +909,17 @@
         <div class="channel-card">
           <div class="channel-name">LinkedIn</div>
           <div class="channel-desc">Resumen profesional de cada publicación.</div>
-          <a class="channel-cta" href="#">SEGUIR →</a>
+          <span class="channel-cta" style="opacity:0.55; cursor:default;">PRÓXIMAMENTE</span>
         </div>
         <div class="channel-card">
           <div class="channel-name">Twitter / X</div>
           <div class="channel-desc">Hilos cortos, directo al mecanismo.</div>
-          <a class="channel-cta" href="#">SEGUIR →</a>
+          <span class="channel-cta" style="opacity:0.55; cursor:default;">PRÓXIMAMENTE</span>
         </div>
         <div class="channel-card">
           <div class="channel-name">Blog</div>
           <div class="channel-desc">Archivo completo de todas las publicaciones.</div>
-          <a class="channel-cta" href="#">EXPLORAR →</a>
+          <a class="channel-cta" href="#archivo">EXPLORAR →</a>
         </div>
       </div>
     </div>
@@ -1366,7 +1374,12 @@
       var d = new Date();
       document.getElementById('masthead-date').textContent =
         d.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      var timeEl = document.getElementById('masthead-time');
+      if (timeEl) {
+        timeEl.textContent = d.toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' }) + ' ARG';
+      }
     }
+    setInterval(setMastheadDate, 30000);
 
     function setupReveal() {
       var els = document.querySelectorAll('.reveal');
@@ -1532,7 +1545,7 @@
       e.preventDefault();
       var email = document.getElementById('newsletter-email').value;
       var msg = document.getElementById('newsletter-msg');
-      msg.textContent = 'Confirmación enviada a ' + email + ' — al conectar tu servicio real de newsletter, esta suscripción queda activa.';
+      msg.textContent = 'Gracias — registramos tu interés. La suscripción se activa apenas conectemos el servicio de envío.';
       document.getElementById('newsletter-email').value = '';
     });
   </script>
