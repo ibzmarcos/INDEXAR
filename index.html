@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Índex AR — Lectura económica y política de la Argentina</title>
 <meta name="description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo: dólar, riesgo país, inflación, actividad y reservas del BCRA.">
-<meta name="theme-color" content="#0A0E14">
+<meta name="theme-color" content="#2554E8">
  
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -41,7 +41,34 @@
      =================================================================== */
  
   :root {
-    /* -- paleta dark (default) -- */
+    /* -- paleta clara vívida (default) -- */
+    --bg: #FFFFFF;
+    --bg-alt: #F1F5F9;
+    --panel: #FFFFFF;
+    --panel-warm: #F8FAFC;
+    --rule: rgba(15,23,42,0.09);
+    --rule-strong: rgba(15,23,42,0.16);
+    --text: #0F172A;
+    --text-soft: #5B6478;
+    --ink-soft: #5B6478;
+    --gold: #2554E8;
+    --gold-text: #1D45C4;
+    --green: #16A34A;
+    --red: #DC2626;
+    --navy-solid: #0F172A;
+    --paper-fixed: #FFFFFF;
+    --card-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -12px rgba(15,23,42,0.10);
+ 
+    --font-display: 'Fraunces', serif;
+    --font-serif: 'Source Serif 4', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-ui: 'Inter', sans-serif;
+ 
+    --header-h: 92px;
+    color-scheme: light;
+  }
+ 
+  [data-theme="dark"] {
     --bg: #0A0E14;
     --bg-alt: #0D1119;
     --panel: #11161F;
@@ -51,39 +78,14 @@
     --text: #F2EFE9;
     --text-soft: #8B93A1;
     --ink-soft: #8B93A1;
-    --gold: #C9A96A;
-    --gold-text: #D7BC85;
+    --gold: #5B8DEF;
+    --gold-text: #8BAAF5;
     --green: #2EE6A8;
     --red: #FF5C5C;
-    --navy-solid: #C9A96A;
+    --navy-solid: #5B8DEF;
     --paper-fixed: #0A0E14;
- 
-    --font-display: 'Fraunces', serif;
-    --font-serif: 'Source Serif 4', serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-    --font-ui: 'Inter', sans-serif;
- 
-    --header-h: 92px;
+    --card-shadow: 0 12px 30px -18px rgba(0,0,0,0.6);
     color-scheme: dark;
-  }
- 
-  [data-theme="light"] {
-    --bg: #F7F4EC;
-    --bg-alt: #F1ECDD;
-    --panel: #FFFFFF;
-    --panel-warm: #F1ECDD;
-    --rule: rgba(15,18,26,0.12);
-    --rule-strong: rgba(15,18,26,0.22);
-    --text: #14171F;
-    --text-soft: #5B6272;
-    --ink-soft: #5B6272;
-    --gold: #9C7A3F;
-    --gold-text: #8A6A32;
-    --green: #1E9E6F;
-    --red: #C93B3B;
-    --navy-solid: #14171F;
-    --paper-fixed: #F7F4EC;
-    color-scheme: light;
   }
  
   * { box-sizing: border-box; }
@@ -100,15 +102,16 @@
     font-family: var(--font-serif);
     -webkit-font-smoothing: antialiased;
     position: relative;
+  }
+  [data-theme="dark"] body {
     background-image:
       linear-gradient(var(--rule) 1px, transparent 1px),
       linear-gradient(90deg, var(--rule) 1px, transparent 1px);
     background-size: 64px 64px;
     background-attachment: fixed;
   }
-  [data-theme="light"] body { background-image: none; }
  
-  ::selection { background: var(--gold); color: #0A0E14; }
+  ::selection { background: var(--gold); color: #fff; }
  
   a { color: inherit; text-decoration: none; }
   img, svg { display: block; max-width: 100%; }
@@ -184,11 +187,10 @@
  
   .btn-nav-cta {
     font-family: var(--font-ui); font-weight: 600; font-size: 12.5px;
-    background: var(--gold); color: #0A0E14; padding: 9px 18px; border-radius: 2px;
+    background: var(--gold); color: #fff; padding: 9px 18px; border-radius: 2px;
     transition: filter 0.15s ease, transform 0.15s ease;
   }
   .btn-nav-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
-  [data-theme="light"] .btn-nav-cta { color: #fff; }
  
   /* -- Portada de apertura (estilo PxQ: imagen/gráfico de fondo + overlay + título centrado) -- */
   .cover-hero {
@@ -208,7 +210,7 @@
     font-family: var(--font-display); font-weight: 600; color: #F2EFE9;
     font-size: clamp(3.2rem, 9vw, 7.5rem); line-height: 1; letter-spacing: -2px; margin: 18px 0 22px;
   }
-  .cover-title em { font-style: italic; font-weight: 500; color: #C9A96A; }
+  .cover-title em { font-style: italic; font-weight: 500; color: #6C9BFF; }
   .cover-sub {
     font-family: var(--font-serif); font-size: clamp(15px, 2vw, 19px); color: #C6CBD4;
     max-width: 520px; margin: 0 auto; line-height: 1.6;
@@ -220,7 +222,7 @@
     width: 26px; height: 42px; border: 1.5px solid rgba(242,239,233,0.5); border-radius: 14px;
   }
   .cover-scroll span {
-    display: block; width: 4px; height: 8px; background: #C9A96A; border-radius: 2px;
+    display: block; width: 4px; height: 8px; background: #6C9BFF; border-radius: 2px;
     margin: 7px auto; animation: scroll-cue 1.8s ease infinite;
   }
   @keyframes scroll-cue { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(14px); opacity: 0; } 100% { opacity: 0; } }
@@ -253,17 +255,15 @@
     padding: 13px 22px; border-radius: 2px; border: 1px solid var(--rule-strong);
     transition: all 0.15s ease; cursor: pointer; background: transparent; color: var(--text);
   }
-  .btn-solid { background: var(--gold); border-color: var(--gold); color: #0A0E14; }
-  [data-theme="light"] .btn-solid { color: #fff; }
+  .btn-solid { background: var(--gold); border-color: var(--gold); color: #fff; }
   .btn-solid:hover { filter: brightness(1.1); transform: translateY(-1px); }
   .btn-outline:hover { border-color: var(--gold); color: var(--gold-text); }
  
   /* -- Panel de figura destacada (hero derecha) -- */
   .hero-figure {
-    background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
-    padding: 22px 24px 18px; position: relative; box-shadow: 0 24px 60px -30px rgba(0,0,0,0.55);
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 22px 24px 18px; position: relative; box-shadow: var(--card-shadow);
   }
-  [data-theme="light"] .hero-figure { box-shadow: 0 24px 50px -32px rgba(20,23,31,0.18); }
   .carousel-slide { display: none; }
   .carousel-slide.active { display: block; }
   .figure-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
@@ -306,10 +306,9 @@
   .pill-live {
     display: inline-flex; align-items: center; gap: 6px;
     font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1.2px;
-    text-transform: uppercase; background: var(--navy-solid); color: #0A0E14;
+    text-transform: uppercase; background: var(--navy-solid); color: #fff;
     padding: 4px 10px 4px 8px; border-radius: 20px;
   }
-  [data-theme="light"] .pill-live { color: #fff; }
   .pill-live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse-dot 1.6s ease-in-out infinite; }
   @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
  
@@ -320,8 +319,8 @@
   @media (max-width: 480px) { .kpi-grid { grid-template-columns: 1fr; } }
  
   .kpi-card {
-    background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
-    padding: 18px 20px; position: relative; overflow: hidden;
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 18px 20px; position: relative; overflow: hidden; box-shadow: var(--card-shadow);
     transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
   .kpi-card:hover { border-color: var(--rule-strong); transform: translateY(-2px); box-shadow: 0 14px 30px -18px rgba(0,0,0,0.5); }
@@ -339,7 +338,7 @@
  
   /* -- Termómetro del día -- */
   .thermo-card {
-    background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; box-shadow: var(--card-shadow);
     padding: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center;
   }
   .thermo-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-soft); }
@@ -394,7 +393,6 @@
     display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.6px;
     text-transform: uppercase; padding: 3px 9px; border-radius: 20px; color: #0A0E14; white-space: nowrap;
   }
-  [data-theme="light"] .tag-pill { color: #fff; }
   .tag-economia { background: #7FA8D9; }
   .tag-finanzas { background: #C97A6D; }
   .tag-mercados { background: #6FAF87; }
@@ -437,7 +435,7 @@
   .about-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
   .about-avatar {
     width: 62px; height: 62px; border-radius: 50%; background: var(--gold);
-    color: #0A0E14; display: flex; align-items: center; justify-content: center;
+    color: #fff; display: flex; align-items: center; justify-content: center;
     font-family: var(--font-display); font-weight: 700; font-size: 21px; flex-shrink: 0;
   }
   .about-credentials { font-family: var(--font-mono); font-size: 12px; color: var(--text-soft); }
@@ -461,10 +459,9 @@
   .numbered-item p { font-family: var(--font-serif); font-size: 13.5px; color: var(--text-soft); margin: 0; line-height: 1.55; }
   .pill-soon {
     display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
-    text-transform: uppercase; background: var(--gold); color: #0A0E14; padding: 3px 9px; border-radius: 20px;
+    text-transform: uppercase; background: var(--gold); color: #fff; padding: 3px 9px; border-radius: 20px;
     vertical-align: middle; margin-left: 10px;
   }
-  [data-theme="light"] .pill-soon { color: #fff; }
  
   /* -- Margin note (nota editorial) -- */
   .margin-note {
@@ -500,6 +497,7 @@
  
   /* -- Reveal on scroll -- */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .kpi-card.reveal { transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.15s ease, box-shadow 0.15s ease; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
  
   /* -- Servicios teaser -- */
@@ -568,12 +566,12 @@
       <svg class="cover-chart" viewBox="0 0 1200 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="coverFade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#C9A96A" stop-opacity="0.5"/>
-            <stop offset="100%" stop-color="#C9A96A" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#6C9BFF" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#6C9BFF" stop-opacity="0"/>
           </linearGradient>
         </defs>
         <path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70 L1200,500 L0,500 Z" fill="url(#coverFade)"/>
-        <path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70" fill="none" stroke="#C9A96A" stroke-width="2" opacity="0.7"/>
+        <path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70" fill="none" stroke="#6C9BFF" stroke-width="2" opacity="0.7"/>
       </svg>
     </div>
     <div class="cover-overlay"></div>
@@ -1255,15 +1253,15 @@
  
       svg.innerHTML =
         '<defs><linearGradient id="' + gradId + '" x1="0" y1="0" x2="0" y2="1">' +
-        '<stop offset="0%" stop-color="#C9A96A" stop-opacity="0.35"/>' +
-        '<stop offset="100%" stop-color="#C9A96A" stop-opacity="0"/>' +
+        '<stop offset="0%" style="stop-color:var(--gold)" stop-opacity="0.32"/>' +
+        '<stop offset="100%" style="stop-color:var(--gold)" stop-opacity="0"/>' +
         '</linearGradient>' +
         '<filter id="glow' + slideIndex + '" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
         '</defs>' +
         yAxis +
         '<path d="' + areaD + '" fill="url(#' + gradId + ')" stroke="none"/>' +
-        '<path d="' + pathD + '" fill="none" stroke="#C9A96A" stroke-width="2" filter="url(#glow' + slideIndex + ')"/>' +
-        '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="3.5" fill="#C9A96A" stroke="var(--panel)" stroke-width="1.5" filter="url(#glow' + slideIndex + ')"/>' +
+        '<path d="' + pathD + '" fill="none" style="stroke:var(--gold)" stroke-width="2" filter="url(#glow' + slideIndex + ')"/>' +
+        '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="3.5" style="fill:var(--gold)" stroke="var(--panel)" stroke-width="1.5" filter="url(#glow' + slideIndex + ')"/>' +
         xAxis;
  
       var lastVal = values[values.length - 1];
@@ -1364,29 +1362,29 @@
       if (h > 0) document.documentElement.style.setProperty('--header-h', h + 'px');
     }
  
-    // ---- Tema oscuro (por defecto) / claro, con detección de preferencia del sistema ----
+    // ---- Tema claro (por defecto) / oscuro, con detección de preferencia del sistema ----
     function initTheme() {
       var btn = document.getElementById('theme-toggle');
       var saved = null;
       try { saved = localStorage.getItem('indexar:theme'); } catch (e) {}
-      var systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      var theme = saved || (systemLight ? 'light' : 'dark');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'light');
       applyTheme(theme);
  
       btn.addEventListener('click', function () {
-        var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-        var next = current === 'light' ? 'dark' : 'light';
+        var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = current === 'dark' ? 'light' : 'dark';
         applyTheme(next);
         try { localStorage.setItem('indexar:theme', next); } catch (e) {}
       });
  
       function applyTheme(t) {
-        if (t === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          btn.textContent = 'Oscuro';
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          btn.textContent = 'Claro';
         } else {
           document.documentElement.removeAttribute('data-theme');
-          btn.textContent = 'Claro';
+          btn.textContent = 'Oscuro';
         }
       }
     }
@@ -1403,6 +1401,23 @@
     setInterval(setMastheadDate, 30000);
  
     function setupReveal() {
+      // Además de las secciones completas, animamos de a uno los elementos
+      // "chicos" (tarjetas, filas, ítems) con un desfasaje entre ellos, para
+      // que se sienta movimiento real en toda la página al ir bajando, no
+      // solo en un par de puntos sueltos.
+      var groups = [
+        '.kpi-grid .kpi-card',
+        '.pillars-editorial .pillar-row',
+        '.accordion .accordion-item',
+        '.numbered-list .numbered-item'
+      ];
+      groups.forEach(function (sel) {
+        document.querySelectorAll(sel).forEach(function (el, i) {
+          el.classList.add('reveal', 'reveal-item');
+          el.style.transitionDelay = (Math.min(i, 6) * 70) + 'ms';
+        });
+      });
+ 
       var els = document.querySelectorAll('.reveal');
       if (!('IntersectionObserver' in window)) {
         els.forEach(function (el) { el.classList.add('is-visible'); });
