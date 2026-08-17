@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-<!--
-  Índex AR — sitio original, creado y publicado por su autor.
-  Registro de autoría / línea de tiempo: primera publicación en producción — 2026.
-  Repositorio con historial de versiones fechado: [agregar URL de GitHub cuando esté creado].
-  Todo el contenido, diseño y estructura de esta obra están protegidos por la Ley 11.723
-  de Propiedad Intelectual de la República Argentina. Queda prohibida su reproducción
-  total o parcial sin autorización expresa del autor.
--->
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Índex AR — Lectura económica y política de la Argentina</title>
-<meta name="description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo. Escrito desde el seno de la economía real.">
-<meta name="theme-color" content="#122A45">
-<meta name="author" content="Índex AR">
-<meta name="copyright" content="© 2026 Índex AR. Todos los derechos reservados. Protegido por la Ley 11.723 (Argentina).">
-<link rel="canonical" href="https://indexar.netlify.app/">
+<meta name="description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo: dólar, riesgo país, inflación, actividad y reservas del BCRA.">
+<meta name="theme-color" content="#0A0E14">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -25,15 +14,8 @@
 <meta property="og:description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo.">
 <meta property="og:locale" content="es_AR">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Índex AR">
-<meta name="twitter:description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0E14'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2EFE9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%23C9A96A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%23C9A96A'/%3E%3C/svg%3E">
 
-<!-- Favicon propio, generado a partir del isotipo (sin archivo externo) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23122A45'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2F0E9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%2375AADB' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%2375AADB'/%3E%3C/svg%3E">
-
-<!-- Datos estructurados, para que buscadores entiendan qué es este sitio y quién lo publica -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -42,509 +24,453 @@
   "description": "Análisis macroeconómico y político de la Argentina.",
   "knowsLanguage": "es",
   "copyrightYear": "2026",
-  "copyrightHolder": {
-    "@type": "Organization",
-    "name": "Índex AR"
-  }
+  "copyrightHolder": { "@type": "Organization", "name": "Índex AR" }
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  /* ===================================================================
+     ÍNDEX AR — sistema de diseño
+     Editorial financiero de alta gama: sobriedad tipo Financial Times +
+     densidad de datos tipo terminal (Bloomberg). Dark-first, con
+     alternativa clara tipo "paper" editorial.
+     =================================================================== */
 
   :root {
-    --paper: #F2F0E9;
-    --paper-warm: #EAE6DA;
-    --ink: #14171F;
-    --ink-soft: #4A4E58;
-    --navy: #122A45;
-    --celeste: #75AADB;
-    --celeste-deep: #3E6FA0;
-    --wine: #7A3030;
-    --green-note: #3D6B52;
-    --amber: #C99A2E;
-    --rule: #D8D3C4;
-    --navy-solid: #122A45;
-    --paper-fixed: #F2F0E9;
+    /* -- paleta dark (default) -- */
+    --bg: #0A0E14;
+    --bg-alt: #0D1119;
+    --panel: #11161F;
+    --panel-warm: #141A24;
+    --rule: rgba(242,239,233,0.10);
+    --rule-strong: rgba(242,239,233,0.18);
+    --text: #F2EFE9;
+    --text-soft: #8B93A1;
+    --ink-soft: #8B93A1;
+    --gold: #C9A96A;
+    --gold-text: #D7BC85;
+    --green: #2EE6A8;
+    --red: #FF5C5C;
+    --navy-solid: #C9A96A;
+    --paper-fixed: #0A0E14;
+
+    --font-display: 'Fraunces', serif;
+    --font-serif: 'Source Serif 4', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-ui: 'Inter', sans-serif;
+
+    --header-h: 92px;
+    color-scheme: dark;
+  }
+
+  [data-theme="light"] {
+    --bg: #F7F4EC;
+    --bg-alt: #F1ECDD;
+    --panel: #FFFFFF;
+    --panel-warm: #F1ECDD;
+    --rule: rgba(15,18,26,0.12);
+    --rule-strong: rgba(15,18,26,0.22);
+    --text: #14171F;
+    --text-soft: #5B6272;
+    --ink-soft: #5B6272;
+    --gold: #9C7A3F;
+    --gold-text: #8A6A32;
+    --green: #1E9E6F;
+    --red: #C93B3B;
+    --navy-solid: #14171F;
+    --paper-fixed: #F7F4EC;
     color-scheme: light;
   }
 
-  [data-theme="dark"] {
-    --paper: #14171F;
-    --paper-warm: #1C202B;
-    --ink: #ECEAE2;
-    --ink-soft: #A7ABB6;
-    --navy: #9FC3E8;
-    --celeste: #75AADB;
-    --celeste-deep: #8FBCE6;
-    --rule: #2C303B;
-    color-scheme: dark;
-  }
-  [data-theme="dark"] .ticker-strip,
-  [data-theme="dark"] .masthead-bar,
-  [data-theme="dark"] footer {
-    background: #0B0D12;
-  }
-  [data-theme="dark"] .hero-figure { background: var(--paper-warm); border-color: var(--rule); }
-
-  .theme-toggle {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: none;
-    border: 1.5px solid var(--ink-soft);
-    color: var(--ink-soft);
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all 0.15s ease;
-  }
-  .theme-toggle:hover { border-color: var(--celeste-deep); color: var(--celeste-deep); }
-
-  /* Barra de progreso de lectura */
-  #scroll-progress {
-    position: fixed;
-    top: 0; left: 0;
-    height: 3px;
-    width: 0%;
-    background: var(--celeste-deep);
-    z-index: 1001;
-    transition: width 0.1s linear;
-  }
-
-  /* Skip link — accesibilidad real, invisible hasta que se navega por teclado */
-  .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    background: var(--celeste-deep);
-    color: #fff;
-    padding: 12px 20px;
-    z-index: 1000;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-  }
-  .skip-link:focus { left: 12px; top: 12px; }
-
-  @media print {
-    .masthead-bar, .ticker-strip, nav, #newsletter, .hero-ctas, .theme-toggle, footer .footer-bottom span:last-child { display: none !important; }
-    body { background: #fff; color: #000; }
-    a[href]::after { content: " (" attr(href) ")"; font-size: 10px; }
-  }
-
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
+  * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
 
   body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
     position: relative;
-    transition: background-color 0.25s ease, color 0.25s ease;
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-attachment: fixed;
   }
+  [data-theme="light"] body { background-image: none; }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.035;
-    mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
+  ::selection { background: var(--gold); color: #0A0E14; }
 
   a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
 
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 640px) { .wrap { padding: 0 18px; } }
+
+  section, .pillar-row { scroll-margin-top: var(--header-h, 90px); }
+  h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; font-weight: 600; }
+
+
+  /* -- Barra de progreso de scroll -- */
+  #scroll-progress {
+    position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+    background: var(--gold); z-index: 900; transition: width 0.1s linear;
+  }
+
+  /* -- Masthead superior -- */
   .masthead-bar {
-    background: var(--ink);
-    color: #9AA0AC;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
+    background: var(--bg-alt); border-bottom: 1px solid var(--rule);
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1px; color: var(--text-soft);
   }
-  .masthead-inner { display: flex; justify-content: space-between; padding: 7px 0; flex-wrap: wrap; gap: 6px; }
-  .masthead-inner span:nth-child(2) { color: var(--celeste); }
+  .masthead-inner { display: flex; justify-content: space-between; padding: 7px 0; flex-wrap: wrap; gap: 6px; text-transform: uppercase; }
+  .masthead-inner span:nth-child(2) { color: var(--gold-text); }
 
-  header {
-    border-bottom: 2px solid var(--ink);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 500;
-    background: var(--paper);
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  /* -- Ticker tape -- */
+  .ticker-strip {
+    background: var(--panel); color: var(--gold-text); overflow: hidden; white-space: nowrap;
+    border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.4px;
   }
-  .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  nav {
-    display: flex; gap: 30px; align-items: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; font-weight: 500;
-    color: var(--ink-soft);
-  }
-  nav a { position: relative; padding-bottom: 3px; }
-  nav a::after {
-    content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px;
-    background: var(--celeste-deep); transition: width 0.25s ease;
-  }
-  nav a:hover { color: var(--navy); }
-  nav a:hover::after { width: 100%; }
-  nav a.is-active { color: var(--navy); }
-  nav a.is-active::after { width: 100%; }
-
-  /* Panel de indicadores — tarjetas KPI */
-  .kpi-panel-head {
-    display: flex; align-items: center; gap: 12px; margin-bottom: 22px; flex-wrap: wrap;
-  }
-  .pill-live {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1.2px;
-    text-transform: uppercase; background: var(--navy-solid); color: #fff;
-    padding: 4px 10px 4px 8px; border-radius: 20px;
-  }
-  .pill-live-dot {
-    width: 7px; height: 7px; border-radius: 50%; background: #7FD16A;
-    animation: pulse-dot 1.8s ease-in-out infinite;
-  }
-  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-
-  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .kpi-card {
-    background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 2px;
-    padding: 18px 20px; position: relative;
-    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .kpi-card:hover { border-color: var(--ink-soft); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(20,23,31,0.08); }
-  .kpi-card::before {
-    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--rule);
-  }
-  .kpi-card[data-trend="up"]::before { background: #3D8F5F; }
-  .kpi-card[data-trend="down"]::before { background: #B23B30; }
-  .kpi-label {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1px;
-    text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; margin-top: 6px;
-  }
-  .kpi-value { font-family: 'Fraunces', serif; font-weight: 700; font-size: 32px; color: var(--navy); line-height: 1; font-variant-numeric: tabular-nums; }
-  .kpi-sub { font-size: 11.5px; color: var(--ink-soft); margin-top: 6px; }
-
-  /* Donut termómetro del día */
-  .thermo-wrap { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; margin-top: 26px; }
-  .thermo-legend { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
-  .thermo-legend-item { display: flex; align-items: center; gap: 8px; color: var(--ink-soft); }
-  .thermo-dot { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
-
-  @media (max-width: 900px) {
-    .kpi-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 480px) {
-    .kpi-grid { grid-template-columns: 1fr; }
-  }
-
-  /* Archivo filtrable */
-  .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
-  .f-input {
-    font-family: 'Inter', sans-serif; font-size: 13.5px; padding: 9px 12px;
-    border: 1.5px solid var(--ink); border-radius: 2px; background: var(--paper); color: var(--ink);
-  }
-  .f-count { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-soft); margin-left: auto; }
-  .archive-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; }
-  .archive-table th {
-    text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px;
-    text-transform: uppercase; color: var(--ink-soft); padding: 9px 10px; border-bottom: 1.5px solid var(--ink);
-    background: var(--paper);
-  }
-  .archive-table td { padding: 12px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
-  .archive-table tbody tr { transition: background 0.15s ease; }
-  .archive-table tbody tr:hover { background: var(--paper-warm); }
-  .archive-table tbody tr[data-hidden="1"] { display: none; }
-  .tag-pill {
-    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.6px;
-    text-transform: uppercase; padding: 3px 9px; border-radius: 20px; color: #fff; white-space: nowrap;
-  }
-  .tag-economia { background: var(--celeste-deep); }
-  .tag-finanzas { background: var(--wine); }
-  .tag-mercados { background: var(--green-note); }
-  .tag-energia { background: #8A6A1F; }
-  /* Bloque de color sólido (rompe la monotonía del papel) */
-  .archive-note {
-    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--ink-soft);
-    background: var(--paper-warm); border-left: 2px solid var(--celeste); padding: 10px 14px; margin-bottom: 18px;
-  }
-
-  .block-navy {
-    background:
-      radial-gradient(ellipse 900px 500px at 15% 0%, rgba(117,170,219,0.16), transparent 60%),
-      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 28px),
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 28px),
-      var(--navy-solid);
-    color: var(--paper-fixed);
-    position: relative;
-    overflow: hidden;
-    padding: 100px 0 90px;
-    border-bottom: none;
-  }
-  .block-navy::before, .block-navy::after {
-    content: "";
-    position: absolute; left: -5%; right: -5%; height: 60px;
-    background: var(--paper); z-index: 2;
-  }
-  .block-navy::before { top: -30px; transform: skewY(-2.2deg); }
-  .block-navy::after { bottom: -30px; transform: skewY(-2.2deg); }
-  .block-navy > .wrap { position: relative; z-index: 3; }
-  .block-navy .section-title { color: var(--paper-fixed); }
-  .block-navy .section-label { color: var(--celeste); }
-  .block-navy .faq-q { color: var(--celeste); }
-  .block-navy .faq-a { color: #B9C2CE; }
-  .block-navy .faq-item { border-top-color: rgba(255,255,255,0.18); }
-
-  /* Frase manifiesto — quiebre tipográfico grande entre secciones */
-  .manifesto {
-    padding: 76px 0;
-    text-align: center;
-    background: var(--paper-warm);
-    border-bottom: 1px solid var(--rule);
-  }
-  .manifesto p {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: clamp(28px, 4vw, 44px);
-    line-height: 1.25;
-    max-width: 900px;
-    margin: 0 auto;
-    color: var(--navy);
-  }
-  .manifesto p em { color: var(--celeste-deep); font-style: italic; }
-
-  /* Tarjetas de pillar con tinte de color propio (no todas beige) */
-  .pillar.tint-economia { background: color-mix(in srgb, var(--celeste) 5%, var(--paper)); }
-  .pillar.tint-finanzas { background: color-mix(in srgb, var(--wine) 4%, var(--paper)); }
-  .pillar.tint-mercados { background: color-mix(in srgb, var(--green-note) 4%, var(--paper)); }
-  .pillar.tint-energia { background: color-mix(in srgb, var(--amber) 6%, var(--paper)); }
-  .pillar.tint-economia .pillar-num { color: var(--celeste-deep); }
-  .pillar.tint-finanzas .pillar-num { color: var(--wine); }
-  .pillar.tint-mercados .pillar-num { color: var(--green-note); }
-  .pillar.tint-energia .pillar-num { color: #8A6A1F; }
-
-  /* Hook tipo FAQ del lector */
-  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
-  .faq-item { border-top: 1px solid var(--rule); padding-top: 16px; }
-  .faq-q {
-    font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; font-size: 19px;
-    color: var(--navy); margin-bottom: 8px; line-height: 1.3;
-  }
-  .faq-a { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; }
-  @media (max-width: 780px) { .faq-grid { grid-template-columns: 1fr; } }
-
-  /* Avatar monograma para Sobre */
-  .about-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
-  .about-avatar {
-    width: 64px; height: 64px; border-radius: 50%; background: var(--navy-solid);
-    color: var(--celeste); display: flex; align-items: center; justify-content: center;
-    font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; flex-shrink: 0;
-  }
-  .about-credentials { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-soft); }
-  .about-credentials a { color: var(--celeste-deep); }
-
-  /* Teaser de servicios futuros */
-  .pill-soon {
-    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
-    text-transform: uppercase; background: var(--amber); color: var(--ink); padding: 3px 9px; border-radius: 20px;
-  }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .service-card {
-    border: 1px solid var(--rule); padding: 20px; background: var(--paper-warm); opacity: 0.85;
-  }
-  .service-card h4 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
-  .service-card p { font-size: 13px; color: var(--ink-soft); }
-  @media (max-width: 780px) { .services-grid { grid-template-columns: 1fr; } }
-
-
-  .ticker-strip { background: var(--ink); color: var(--amber); overflow: hidden; white-space: nowrap; border-bottom: 2px solid var(--ink); }
   .ticker-track {
-    display: inline-block; padding: 9px 0;
-    font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.5px;
-    animation: scroll-left 32s linear infinite;
+    display: inline-block; padding: 11px 0; animation: scroll-left 42s linear infinite;
   }
-  .ticker-track span { margin-right: 48px; }
-  .ticker-up { color: #7FD1A8; }
-  .ticker-down { color: #E28B7D; }
+  .ticker-strip:hover .ticker-track { animation-play-state: paused; }
+  .ticker-track span { margin-right: 46px; }
+  .ticker-val { font-weight: 600; letter-spacing: 0.2px; }
+  .ticker-up { color: var(--green); }
+  .ticker-down { color: var(--red); }
   @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } html { scroll-behavior: auto; } }
 
-  .hero { padding: 60px 0 0; border-bottom: 1px solid var(--rule); position: relative; }
-  .hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 52px; align-items: end; padding-bottom: 48px; }
+  /* -- Header -- */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 20px 0;
+    position: sticky; top: 0; z-index: 500;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  header.is-scrolled { box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  nav { display: flex; align-items: center; gap: 30px; }
+  nav a {
+    font-family: var(--font-ui); font-size: 13.5px; font-weight: 500; color: var(--text-soft);
+    position: relative; padding-bottom: 3px; transition: color 0.15s ease;
+  }
+  nav a::after {
+    content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px; background: var(--gold);
+    transition: width 0.2s ease;
+  }
+  nav a:hover, nav a.is-active { color: var(--text); }
+  nav a:hover::after, nav a.is-active::after { width: 100%; }
+  .theme-toggle {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+    background: transparent; color: var(--text); border: 1px solid var(--rule-strong); border-radius: 2px;
+    padding: 7px 14px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .theme-toggle:hover { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 10%, transparent); }
+  @media (max-width: 860px) { nav { display: none; } }
+
+  .btn-nav-cta {
+    font-family: var(--font-ui); font-weight: 600; font-size: 12.5px;
+    background: var(--gold); color: #0A0E14; padding: 9px 18px; border-radius: 2px;
+    transition: filter 0.15s ease, transform 0.15s ease;
+  }
+  .btn-nav-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  [data-theme="light"] .btn-nav-cta { color: #fff; }
+
+  /* -- Hero editorial asimétrico -- */
+  .hero { padding: 76px 0 90px; border-bottom: 1px solid var(--rule); position: relative; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 44px; } .hero { padding: 52px 0 60px; } }
+
   .eyebrow {
-    font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 2px;
-    color: var(--celeste-deep); text-transform: uppercase; margin-bottom: 20px;
-    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold-text); margin-bottom: 22px; display: flex; align-items: center; gap: 10px;
   }
-  .eyebrow::before { content: ""; width: 22px; height: 1.5px; background: var(--celeste-deep); display: inline-block; }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); }
+
   h1 {
-    font-family: 'Fraunces', serif; font-optical-sizing: auto; font-weight: 600;
-    font-size: 58px; line-height: 1.05; letter-spacing: -1px;
+    font-family: var(--font-display); font-optical-sizing: auto; font-weight: 600;
+    font-size: clamp(2.75rem, 6vw, 5.4rem); line-height: 1.02; letter-spacing: -1.5px;
   }
+  h1 em { font-style: italic; font-weight: 500; color: var(--gold-text); }
+
   .hero-sub {
-    margin-top: 24px; font-family: 'Source Serif 4', serif; font-size: 19px;
-    color: var(--ink-soft); max-width: 520px; line-height: 1.55;
+    margin-top: 26px; font-family: var(--font-serif); font-size: 18.5px;
+    color: var(--text-soft); max-width: 480px; line-height: 1.6;
   }
-  .hero-ctas { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-ctas { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; }
   .btn {
-    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13.5px;
-    padding: 13px 22px; border-radius: 2px; border: 2px solid var(--ink);
-    transition: all 0.15s ease; cursor: pointer;
+    font-family: var(--font-ui); font-weight: 600; font-size: 13.5px;
+    padding: 13px 22px; border-radius: 2px; border: 1px solid var(--rule-strong);
+    transition: all 0.15s ease; cursor: pointer; background: transparent; color: var(--text);
   }
-  .btn-solid { background: var(--ink); color: var(--paper); }
-  .btn-solid:hover { background: var(--navy-solid); border-color: var(--navy-solid); }
-  .btn-outline:hover { background: var(--ink); color: var(--paper); }
+  .btn-solid { background: var(--gold); border-color: var(--gold); color: #0A0E14; }
+  [data-theme="light"] .btn-solid { color: #fff; }
+  .btn-solid:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-text); }
 
-  .hero-figure { border: 1.5px solid var(--ink); background: var(--paper-warm); padding: 18px 20px 16px; }
-  .figure-label {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1.5px;
-    color: var(--ink-soft); text-transform: uppercase; display: flex; justify-content: space-between; margin-bottom: 10px;
+  /* -- Panel de figura destacada (hero derecha) -- */
+  .hero-figure {
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+    padding: 22px 24px 18px; position: relative; box-shadow: 0 24px 60px -30px rgba(0,0,0,0.55);
   }
-  .figure-label .figure-tag { display: inline-flex; align-items: center; gap: 6px; }
-  .figure-label .figure-tag::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--celeste-deep); flex-shrink: 0; }
-  .figure-value { font-family: 'Fraunces', serif; font-weight: 600; font-size: 15px; color: var(--navy); font-variant-numeric: tabular-nums; }
-  .hero-figure svg { width: 100%; height: auto; display: block; }
-
-  /* Carrusel de gráficos */
+  [data-theme="light"] .hero-figure { box-shadow: 0 24px 50px -32px rgba(20,23,31,0.18); }
   .carousel-slide { display: none; }
   .carousel-slide.active { display: block; }
-  .carousel-nav {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule);
+  .figure-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .figure-tag {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-text);
   }
-  .carousel-arrow {
-    width: 26px; height: 26px; border: 1px solid var(--ink); background: none; color: var(--ink);
-    font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1;
-    display: flex; align-items: center; justify-content: center; cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-  .carousel-arrow:hover { background: var(--ink); color: var(--paper); }
-  .carousel-pos {
-    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--ink-soft);
-  }
+  .figure-tag::before { content: "■ "; }
+  .figure-value { font-family: var(--font-display); font-weight: 600; font-size: 17px; color: var(--text); font-variant-numeric: tabular-nums; }
   .figure-caption {
-    margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; line-height: 1.5;
-    color: var(--ink-soft); border-top: 1px solid var(--rule); padding-top: 9px;
+    margin-top: 10px; font-family: var(--font-mono); font-size: 10.5px; line-height: 1.5;
+    color: var(--text-soft); border-top: 1px solid var(--rule); padding-top: 9px;
   }
+  .carousel-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+  .carousel-arrow {
+    background: transparent; border: 1px solid var(--rule-strong); color: var(--text); width: 30px; height: 30px;
+    border-radius: 2px; cursor: pointer; font-size: 16px; transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .carousel-arrow:hover { border-color: var(--gold); color: var(--gold-text); }
+  .carousel-pos { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px; color: var(--text-soft); }
 
-  .toc {
-    display: flex; flex-wrap: wrap; gap: 10px; padding: 20px 0 0; border-top: 1.5px solid var(--ink);
+  /* -- Barra de confianza: fuentes de datos reales -- */
+  .trust-bar { border-bottom: 1px solid var(--rule); background: var(--bg-alt); }
+  .trust-bar-inner {
+    display: flex; align-items: center; gap: 32px; flex-wrap: wrap; padding: 18px 0;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
   }
-  .toc a {
-    display: flex; align-items: center; gap: 8px; flex: 1 1 160px;
-    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.5px;
-    color: var(--ink); text-decoration: none; padding: 12px 14px;
-    border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-warm);
-    transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
-  }
-  .toc a:hover { border-color: var(--celeste-deep); background: var(--paper); transform: translateY(-1px); }
-  .toc-num {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 20px; height: 20px; border-radius: 50%; background: var(--celeste-deep); color: #fff;
-    font-size: 10px; flex-shrink: 0;
-  }
+  .trust-label { color: var(--text-soft); }
+  .trust-item { color: var(--gold-text); opacity: 0.85; }
 
-  section { padding: 68px 0; border-bottom: 1px solid var(--rule); }
-  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 10px; }
-  .section-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 30px; }
+  /* -- Panel de indicadores -- */
+  #panel { padding: 68px 0; border-bottom: 1px solid var(--rule); }
+  .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 12px; }
+  .section-title { font-family: var(--font-display); font-size: 30px; font-weight: 600; display: flex; align-items: center; gap: 14px; }
   .section-label {
-    font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1.5px; color: var(--ink-soft); text-transform: uppercase;
-    display: inline-flex; align-items: center; gap: 7px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px; color: var(--text-soft); text-transform: uppercase;
+    display: flex; align-items: center; gap: 8px;
   }
-  .section-label::before {
-    content: ""; display: inline-block; width: 8px; height: 8px; background: var(--celeste-deep); flex-shrink: 0;
-  }
-  .block-navy .section-label::before { background: var(--celeste); }
+  .section-label::before { content: "■"; color: var(--gold); font-size: 9px; }
 
-  .about-grid { display: grid; grid-template-columns: 1fr 280px; gap: 56px; align-items: start; }
-  .about-body { max-width: 62ch; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: var(--ink); }
-  .about-body p + p { margin-top: 16px; }
-  .about-body .drop-cap {
-    float: left; font-family: 'Fraunces', serif; font-weight: 600; font-size: 74px;
-    line-height: 0.78; padding: 6px 8px 0 0; color: var(--navy);
+  .pill-live {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1.2px;
+    text-transform: uppercase; background: var(--navy-solid); color: #0A0E14;
+    padding: 4px 10px 4px 8px; border-radius: 20px;
   }
-  .margin-note {
-    font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.6; color: var(--ink-soft);
-    border-left: 2px solid var(--celeste); padding-left: 16px;
-  }
-  .margin-note strong { display: block; color: var(--ink); text-transform: uppercase; letter-spacing: 1px; font-size: 10.5px; margin-bottom: 8px; }
+  [data-theme="light"] .pill-live { color: #fff; }
+  .pill-live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse-dot 1.6s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  .pillars { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
-  .pillar { padding: 26px 22px; border-right: 1px solid var(--rule); transition: background 0.2s ease; }
-  .pillar:hover { filter: brightness(0.96); }
-  .pillar:last-child { border-right: none; }
+  .kpi-grid-wrap { display: grid; grid-template-columns: 1fr 220px; gap: 20px; align-items: stretch; }
+  @media (max-width: 980px) { .kpi-grid-wrap { grid-template-columns: 1fr; } }
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 900px) { .kpi-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .kpi-grid { grid-template-columns: 1fr; } }
+
+  .kpi-card {
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+    padding: 18px 20px; position: relative; overflow: hidden;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .kpi-card:hover { border-color: var(--rule-strong); transform: translateY(-2px); box-shadow: 0 14px 30px -18px rgba(0,0,0,0.5); }
+  .kpi-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--rule-strong); }
+  .kpi-card[data-trend="up"]::before { background: var(--green); }
+  .kpi-card[data-trend="down"]::before { background: var(--red); }
+  .kpi-label {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--text-soft); margin-bottom: 8px; margin-top: 6px;
+  }
+  .kpi-value { font-family: var(--font-display); font-weight: 700; font-size: 30px; color: var(--text); line-height: 1; font-variant-numeric: tabular-nums; }
+  .kpi-card[data-trend="up"] .kpi-value { color: var(--green); }
+  .kpi-card[data-trend="down"] .kpi-value { color: var(--red); }
+  .kpi-sub { font-size: 11.5px; color: var(--text-soft); margin-top: 8px; font-family: var(--font-mono); }
+
+  /* -- Termómetro del día -- */
+  .thermo-card {
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+    padding: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center;
+  }
+  .thermo-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-soft); }
+  .thermo-labels { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-soft); line-height: 1.7; }
+  #thermo-up-label::before { content: "▲ "; color: var(--green); }
+  #thermo-down-label::before { content: "▼ "; color: var(--red); }
+
+  /* -- Secciones I-IV, layout editorial asimétrico -- */
+  #secciones { padding: 78px 0; border-bottom: 1px solid var(--rule); }
+  .pillars-editorial { display: flex; flex-direction: column; }
+  .pillar-row {
+    display: grid; grid-template-columns: 110px 1fr 1.3fr; gap: 32px; align-items: start;
+    padding: 34px 0; border-top: 1px solid var(--rule);
+  }
+  .pillar-row:last-child { border-bottom: 1px solid var(--rule); }
   .pillar-num {
-    font-family: 'Fraunces', serif; font-style: italic; font-size: 26px; color: var(--rule);
-    transition: color 0.2s ease; display: block; margin-bottom: 14px;
+    font-family: var(--font-display); font-style: italic; font-size: 52px; font-weight: 500; color: var(--gold-text);
+    line-height: 1; opacity: 0.85;
   }
-  .pillar:hover .pillar-num { filter: brightness(0.85); }
-  .pillar h3 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 8px; }
-  .pillar p { font-size: 14px; color: var(--ink-soft); }
-
-  .channels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .channel-card {
-    border: 2px solid var(--ink); padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
-    transition: background 0.15s ease;
+  .pillar-row h3 { font-size: 26px; font-weight: 600; }
+  .pillar-row p { font-family: var(--font-serif); font-size: 15.5px; color: var(--text-soft); line-height: 1.65; margin: 0; }
+  .pillar-tags { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .pillar-tag {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.8px; text-transform: uppercase;
+    color: var(--text-soft); border: 1px solid var(--rule-strong); border-radius: 20px; padding: 3px 10px;
   }
-  .channel-card:hover { background: var(--paper-warm); }
-  .channel-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; }
-  .channel-desc { font-size: 13px; color: var(--ink-soft); }
-  .channel-cta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--navy); margin-top: auto; }
+  @media (max-width: 720px) { .pillar-row { grid-template-columns: 1fr; gap: 10px; } .pillar-num { font-size: 38px; } }
 
-  footer { padding: 44px 0 36px; background: var(--ink); color: #9AA0AC; }
-  .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1.4fr; gap: 32px; font-size: 12.5px; line-height: 1.7; }
-  .footer-brand { font-family: 'Fraunces', serif; color: var(--paper); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-  .footer-col-title { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--celeste); margin-bottom: 10px; }
-  .footer-col a { display: block; color: #B9BCC4; margin-bottom: 5px; }
-  .footer-col a:hover { color: var(--paper); }
-  .footer-bottom {
-    margin-top: 34px; padding-top: 18px; border-top: 1px solid #2A2E38; display: flex; justify-content: space-between;
-    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #71757F; flex-wrap: wrap; gap: 8px;
+  /* -- Archivo de publicaciones -- */
+  #publicaciones { padding: 78px 0; border-bottom: 1px solid var(--rule); }
+  .filters { display: flex; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; align-items: center; }
+  .f-input {
+    font-family: var(--font-ui); font-size: 13.5px; padding: 11px 14px; border: 1px solid var(--rule-strong);
+    border-radius: 2px; background: var(--panel); color: var(--text);
   }
+  .f-input:focus { border-color: var(--gold); outline: none; }
+  .f-count { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-soft); }
 
-  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .archive-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14.5px; }
+  .archive-table th {
+    text-align: left; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--text-soft); padding: 10px 10px; border-bottom: 1px solid var(--rule-strong);
+  }
+  .archive-table td { padding: 15px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; font-family: var(--font-serif); }
+  .archive-table td:first-child { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-soft); white-space: nowrap; }
+  .archive-table tbody tr { transition: background 0.15s ease; }
+  .archive-table tbody tr:hover { background: var(--panel); }
+  .archive-table tbody tr:hover td:last-child { color: var(--gold-text); }
+  .archive-table tbody tr[data-hidden="1"] { display: none; }
+
+  .tag-pill {
+    display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.6px;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 20px; color: #0A0E14; white-space: nowrap;
+  }
+  [data-theme="light"] .tag-pill { color: #fff; }
+  .tag-economia { background: #7FA8D9; }
+  .tag-finanzas { background: #C97A6D; }
+  .tag-mercados { background: #6FAF87; }
+  .tag-energia  { background: var(--gold); }
+
+  /* -- Newsletter -- */
+  #newsletter { padding: 84px 0; text-align: center; position: relative; }
+  .newsletter-panel {
+    max-width: 640px; margin: 0 auto; padding: 52px 40px; border: 1px solid var(--gold); border-radius: 4px;
+    background: var(--panel);
+    box-shadow: 0 0 0 1px rgba(201,169,106,0.08), 0 30px 70px -40px rgba(201,169,106,0.25);
+  }
+  @media (max-width: 640px) { .newsletter-panel { padding: 36px 22px; } }
+
+  /* -- FAQ acordeón -- */
+  #sobre { padding: 90px 0; border-bottom: 1px solid var(--rule); }
+  .accordion { max-width: 780px; }
+  .accordion-item { border-top: 1px solid var(--rule); }
+  .accordion-item:last-child { border-bottom: 1px solid var(--rule); }
+  .accordion-trigger {
+    width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    background: none; border: none; text-align: left; cursor: pointer; padding: 26px 0;
+    font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 21px; color: var(--text);
+  }
+  .accordion-trigger:hover .faq-q-text { color: var(--gold-text); }
+  .accordion-icon {
+    font-family: var(--font-mono); font-size: 20px; color: var(--gold); flex-shrink: 0;
+    transition: transform 0.25s ease; width: 24px; text-align: center;
+  }
+  .accordion-trigger[aria-expanded="true"] .accordion-icon { transform: rotate(45deg); }
+  .accordion-panel { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .accordion-panel.is-open { max-height: 260px; }
+  .accordion-panel-inner { padding-bottom: 26px; }
+  .faq-a { font-size: 15px; color: var(--text-soft); line-height: 1.7; font-family: var(--font-serif); max-width: 640px; margin: 0; }
+
+  /* -- Sobre el autor + servicios -- */
+  #sobre-detalle { padding: 90px 0; border-bottom: 1px solid var(--rule); }
+  .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; margin-top: 30px; }
+  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .about-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+  .about-avatar {
+    width: 62px; height: 62px; border-radius: 50%; background: var(--gold);
+    color: #0A0E14; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 21px; flex-shrink: 0;
+  }
+  .about-credentials { font-family: var(--font-mono); font-size: 12px; color: var(--text-soft); }
+  .drop-cap { float: left; font-family: var(--font-display); font-size: 64px; line-height: 0.8; padding: 6px 8px 0 0; color: var(--gold-text); font-weight: 600; }
+  .about-body p { font-family: var(--font-serif); font-size: 16.5px; line-height: 1.75; color: var(--text); }
+
+  .numbered-list { border-top: 1px solid var(--rule); }
+  .about-pullquote {
+    font-family: var(--font-display); font-weight: 500; font-style: italic;
+    font-size: clamp(22px, 2.6vw, 30px); line-height: 1.4; color: var(--text);
+    max-width: 820px; margin: 26px 0 40px; padding-left: 22px; border-left: 2px solid var(--gold);
+  }
+  .service-bullets { margin: 0; padding-left: 16px; }
+  .service-bullets li { font-family: var(--font-serif); font-size: 13.5px; color: var(--text-soft); line-height: 1.6; margin-bottom: 3px; }
+
+  .numbered-item {
+    display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--rule);
+  }
+  .numbered-item .n { font-family: var(--font-mono); font-size: 13px; color: var(--gold-text); padding-top: 3px; }
+  .numbered-item h4 { font-family: var(--font-ui); font-size: 15px; font-weight: 600; margin-bottom: 5px; }
+  .numbered-item p { font-family: var(--font-serif); font-size: 13.5px; color: var(--text-soft); margin: 0; line-height: 1.55; }
+  .pill-soon {
+    display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; background: var(--gold); color: #0A0E14; padding: 3px 9px; border-radius: 20px;
+    vertical-align: middle; margin-left: 10px;
+  }
+  [data-theme="light"] .pill-soon { color: #fff; }
+
+  /* -- Margin note (nota editorial) -- */
+  .margin-note {
+    background: var(--panel); border-left: 2px solid var(--gold); padding: 14px 18px; font-size: 13px;
+    color: var(--text-soft); line-height: 1.6; margin-top: 10px;
+  }
+  .margin-note strong { display: block; color: var(--text); text-transform: uppercase; letter-spacing: 1px; font-size: 10.5px; margin-bottom: 8px; font-family: var(--font-mono); }
+
+  /* -- Manifiesto -- */
+  .manifesto { padding: 70px 0; text-align: center; border-bottom: 1px solid var(--rule); }
+  .manifesto p {
+    font-family: var(--font-display); font-style: italic; font-weight: 500;
+    font-size: clamp(26px, 4vw, 42px); line-height: 1.25; max-width: 880px; margin: 0 auto; color: var(--text);
+  }
+  .manifesto p em { color: var(--gold-text); font-style: italic; }
+
+  /* -- Footer -- */
+  footer { padding: 60px 0 30px; }
+  .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; padding-bottom: 34px; border-bottom: 1px solid var(--rule); }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 26px; } }
+  .footer-brand { font-family: var(--font-display); font-weight: 700; font-size: 20px; margin-bottom: 10px; }
+  .footer-grid p { font-family: var(--font-serif); font-size: 13.5px; color: var(--text-soft); line-height: 1.6; margin: 0; }
+  .footer-col-title { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-text); margin-bottom: 12px; }
+  .footer-col a { display: block; font-size: 13.5px; color: var(--text-soft); margin-bottom: 8px; transition: color 0.15s ease; }
+  .footer-col a:hover { color: var(--gold-text); }
+  .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; font-family: var(--font-mono); font-size: 10.5px; color: var(--text-soft); flex-wrap: wrap; }
+
+  /* -- Reveal on scroll -- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .about-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 780px) {
-    h1 { font-size: 38px; }
-    .pillars { grid-template-columns: 1fr 1fr; }
-    .pillar:nth-child(2) { border-right: none; }
-    .pillar:nth-child(3), .pillar:nth-child(4) { border-top: 1px solid var(--rule); }
-    .channels { grid-template-columns: 1fr 1fr; }
-    .toc { display: none; }
-  }
-  @media (max-width: 480px) {
-    .pillars { grid-template-columns: 1fr; }
-    .pillar { border-right: none !important; border-top: 1px solid var(--rule); }
-    .pillar:first-child { border-top: none; }
-    .channels { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .about-body .drop-cap { font-size: 58px; }
-  }
+  /* -- Servicios teaser -- */
+  #servicios { padding: 78px 0; border-bottom: 1px solid var(--rule); }
 
-  :focus-visible { outline: 2px solid var(--celeste-deep); outline-offset: 2px; }
+  @media print {
+    .masthead-bar, .ticker-strip, nav, #newsletter, .hero-ctas, .theme-toggle, .btn-nav-cta, #scroll-progress, footer .footer-bottom span:last-child { display: none !important; }
+    body { background: #fff; color: #000; }
+  }
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
-  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="scroll-progress"></div>
 
   <div class="masthead-bar">
     <div class="wrap masthead-inner">
@@ -553,28 +479,6 @@
       <span id="masthead-time">—</span>
     </div>
   </div>
-
-  <header>
-    <div class="wrap header-inner">
-      <a href="#" style="display:flex; align-items:center;">
-        <svg viewBox="0 0 320 100" width="180" height="56" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="48" width="9" height="42" rx="2" fill="#122A45"/>
-          <polyline points="5,44 14,33 20,39 27,18" fill="none" stroke="#75AADB" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="27" cy="18" r="3.2" fill="#75AADB"/>
-          <text x="26" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="58" letter-spacing="0.5">
-            <tspan fill="#122A45">NDEX</tspan><tspan fill="#75AADB" dx="14">AR</tspan>
-          </text>
-        </svg>
-      </a>
-      <nav aria-label="Navegación principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#secciones">Secciones</a>
-        <a href="#archivo">Archivo</a>
-        <a href="#newsletter">Newsletter</a>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro" type="button">Oscuro</button>
-      </nav>
-    </div>
-  </header>
 
   <div class="ticker-strip" aria-live="polite" aria-atomic="false" aria-label="Indicadores económicos en vivo">
     <div class="ticker-track">
@@ -593,258 +497,201 @@
     </div>
   </div>
 
+  <header>
+    <div class="wrap header-inner">
+      <a href="#" style="display:flex; align-items:center;">
+        <svg viewBox="0 0 320 100" width="168" height="52" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="66" font-family="Fraunces, serif" font-weight="700" font-size="52" fill="var(--text)">Índex</text>
+          <text x="150" y="66" font-family="Fraunces, serif" font-weight="700" font-style="italic" font-size="52" fill="var(--gold)">AR</text>
+          <polyline points="4,30 22,10 36,20 58,-6" fill="none" stroke="var(--gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,14)"/>
+        </svg>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#sobre-detalle">Sobre</a>
+        <a href="#secciones">Secciones</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">Claro</button>
+        <a class="btn-nav-cta" href="#newsletter">Suscribirme</a>
+      </div>
+    </div>
+  </header>
+
   <main id="main">
-  <section class="hero" style="border-bottom:none;">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">Análisis independiente · Argentina</div>
-          <h1>Lectura económica y política de la Argentina.</h1>
-          <div class="hero-ctas">
-            <a class="btn btn-solid" href="#newsletter">Suscribirme a la newsletter</a>
-            <a class="btn btn-outline" href="#secciones">Ver qué vas a encontrar</a>
-            <button class="btn btn-outline" id="share-btn" type="button">Compartir</button>
-          </div>
-        </div>
-        <div class="hero-figure reveal">
-          <div class="carousel-slide active" data-slide="0">
-            <div class="figure-label">
-              <span class="figure-tag">Fig. 01 — Dólar blue</span>
-              <span class="figure-value" id="spark-value-0">—</span>
-            </div>
-            <svg id="spark-svg-0" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-            <div class="figure-caption" id="spark-caption-0">Cargando serie histórica…</div>
-          </div>
-          <div class="carousel-slide" data-slide="1">
-            <div class="figure-label">
-              <span class="figure-tag">Fig. 02 — Inflación mensual</span>
-              <span class="figure-value" id="spark-value-1">—</span>
-            </div>
-            <svg id="spark-svg-1" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-            <div class="figure-caption" id="spark-caption-1">Cargando serie histórica…</div>
-          </div>
-          <div class="carousel-slide" data-slide="2">
-            <div class="figure-label">
-              <span class="figure-tag">Fig. 03 — Riesgo país</span>
-              <span class="figure-value" id="spark-value-2">—</span>
-            </div>
-            <svg id="spark-svg-2" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-            <div class="figure-caption" id="spark-caption-2">Cargando serie histórica…</div>
-          </div>
-          <div class="carousel-slide" data-slide="3">
-            <div class="figure-label">
-              <span class="figure-tag">Fig. 04 — Actividad económica</span>
-              <span class="figure-value" id="spark-value-3">—</span>
-            </div>
-            <svg id="spark-svg-3" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-            <div class="figure-caption" id="spark-caption-3">Cargando serie histórica…</div>
-          </div>
-          <div class="carousel-slide" data-slide="4">
-            <div class="figure-label">
-              <span class="figure-tag">Fig. 05 — Reservas del BCRA</span>
-              <span class="figure-value" id="spark-value-4">—</span>
-            </div>
-            <svg id="spark-svg-4" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-            <div class="figure-caption" id="spark-caption-4">Cargando serie histórica…</div>
-          </div>
-          <div class="carousel-nav">
-            <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Gráfico anterior">‹</button>
-            <span class="carousel-pos" id="carousel-pos">01 / 05</span>
-            <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Gráfico siguiente">›</button>
-          </div>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Análisis independiente · Argentina</div>
+        <h1>Lectura económica y política de <em>la Argentina.</em></h1>
+        <p class="hero-sub">Estimadores oficiales, mecanismos detrás del dato y la lectura que necesitás para decidir — sin relleno, con la fuente primaria siempre a la vista.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="#newsletter">Suscribirme a la newsletter</a>
+          <a class="btn btn-outline" href="#secciones">Ver qué vas a encontrar</a>
+          <button class="btn btn-outline" id="share-btn" type="button">Compartir</button>
         </div>
       </div>
-      <div class="toc">
-        <a href="#secciones"><span class="toc-num">01</span>Economía</a>
-        <a href="#secciones"><span class="toc-num">02</span>Finanzas</a>
-        <a href="#secciones"><span class="toc-num">03</span>Mercados</a>
-        <a href="#secciones"><span class="toc-num">04</span>Energía/Agro</a>
-        <a href="#newsletter"><span class="toc-num">05</span>Newsletter</a>
+      <div class="hero-figure reveal">
+        <div class="carousel-slide active" data-slide="0">
+          <div class="figure-label">
+            <span class="figure-tag">Fig. 01 — Dólar blue</span>
+            <span class="figure-value" id="spark-value-0">—</span>
+          </div>
+          <svg id="spark-svg-0" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="figure-caption" id="spark-caption-0">Cargando serie histórica…</div>
+        </div>
+        <div class="carousel-slide" data-slide="1">
+          <div class="figure-label">
+            <span class="figure-tag">Fig. 02 — Inflación mensual</span>
+            <span class="figure-value" id="spark-value-1">—</span>
+          </div>
+          <svg id="spark-svg-1" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="figure-caption" id="spark-caption-1">Cargando serie histórica…</div>
+        </div>
+        <div class="carousel-slide" data-slide="2">
+          <div class="figure-label">
+            <span class="figure-tag">Fig. 03 — Riesgo país</span>
+            <span class="figure-value" id="spark-value-2">—</span>
+          </div>
+          <svg id="spark-svg-2" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="figure-caption" id="spark-caption-2">Cargando serie histórica…</div>
+        </div>
+        <div class="carousel-slide" data-slide="3">
+          <div class="figure-label">
+            <span class="figure-tag">Fig. 04 — Actividad económica</span>
+            <span class="figure-value" id="spark-value-3">—</span>
+          </div>
+          <svg id="spark-svg-3" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="figure-caption" id="spark-caption-3">Cargando serie histórica…</div>
+        </div>
+        <div class="carousel-slide" data-slide="4">
+          <div class="figure-label">
+            <span class="figure-tag">Fig. 05 — Reservas del BCRA</span>
+            <span class="figure-value" id="spark-value-4">—</span>
+          </div>
+          <svg id="spark-svg-4" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="figure-caption" id="spark-caption-4">Cargando serie histórica…</div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Gráfico anterior">‹</button>
+          <span class="carousel-pos" id="carousel-pos">01 / 05</span>
+          <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Gráfico siguiente">›</button>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="trust-bar reveal">
+    <div class="wrap trust-bar-inner">
+      <span class="trust-label">Datos en vivo de</span>
+      <span class="trust-item">BCRA</span>
+      <span class="trust-item">INDEC</span>
+      <span class="trust-item">Ministerio de Economía</span>
+      <span class="trust-item">ArgentinaDatos</span>
+      <span class="trust-item">DolarAPI</span>
+    </div>
+  </div>
 
   <section id="panel" class="reveal">
     <div class="wrap">
-      <div class="kpi-panel-head">
-        <div class="section-title" style="font-size:26px;">Panel de indicadores</div>
+      <div class="section-head">
+        <div class="section-title">Panel de indicadores</div>
         <span class="pill-live"><span class="pill-live-dot"></span>En vivo</span>
       </div>
-      <div class="kpi-grid">
-        <div class="kpi-card" id="kpi-dolar-blue">
-          <div class="kpi-label">Dólar blue</div>
-          <div class="kpi-value" data-key="dolar-blue">—</div>
-          <div class="kpi-sub">Fuente: DolarAPI</div>
+      <div class="kpi-grid-wrap">
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-dolar-blue">
+            <div class="kpi-label">Dólar blue</div>
+            <div class="kpi-value" data-key="dolar-blue">—</div>
+            <div class="kpi-sub">Fuente: DolarAPI</div>
+          </div>
+          <div class="kpi-card" id="kpi-dolar-oficial">
+            <div class="kpi-label">Dólar oficial</div>
+            <div class="kpi-value" data-key="dolar-oficial">—</div>
+            <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
+          </div>
+          <div class="kpi-card" id="kpi-inflacion">
+            <div class="kpi-label">Inflación mensual</div>
+            <div class="kpi-value" data-key="inflacion">—</div>
+            <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
+          </div>
+          <div class="kpi-card" id="kpi-riesgo-pais">
+            <div class="kpi-label">Riesgo país</div>
+            <div class="kpi-value" data-key="riesgo-pais">—</div>
+            <div class="kpi-sub">Fuente: ArgentinaDatos / Ámbito</div>
+          </div>
+          <div class="kpi-card" id="kpi-actividad">
+            <div class="kpi-label">Actividad económica</div>
+            <div class="kpi-value" data-key="actividad">—</div>
+            <div class="kpi-sub" id="kpi-actividad-sub">Fuente: Ministerio de Economía (EMAE)</div>
+          </div>
+          <div class="kpi-card" id="kpi-reservas">
+            <div class="kpi-label">Reservas del BCRA</div>
+            <div class="kpi-value" data-key="reservas">—</div>
+            <div class="kpi-sub">Fuente: datos.gob.ar / BCRA</div>
+          </div>
         </div>
-        <div class="kpi-card" id="kpi-dolar-oficial">
-          <div class="kpi-label">Dólar oficial</div>
-          <div class="kpi-value" data-key="dolar-oficial">—</div>
-          <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
-        </div>
-        <div class="kpi-card" id="kpi-inflacion">
-          <div class="kpi-label">Inflación mensual</div>
-          <div class="kpi-value" data-key="inflacion">—</div>
-          <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
-        </div>
-        <div class="kpi-card" id="kpi-riesgo-pais">
-          <div class="kpi-label">Riesgo país</div>
-          <div class="kpi-value" data-key="riesgo-pais">—</div>
-          <div class="kpi-sub">Fuente: ArgentinaDatos / Ámbito</div>
-        </div>
-        <div class="kpi-card" id="kpi-actividad">
-          <div class="kpi-label">Actividad económica</div>
-          <div class="kpi-value" data-key="actividad">—</div>
-          <div class="kpi-sub" id="kpi-actividad-sub">Fuente: Ministerio de Economía (EMAE)</div>
-        </div>
-        <div class="kpi-card" id="kpi-reservas">
-          <div class="kpi-label">Reservas del BCRA</div>
-          <div class="kpi-value" data-key="reservas">—</div>
-          <div class="kpi-sub">Fuente: datos.gob.ar / BCRA</div>
-        </div>
-      </div>
-
-      <div class="thermo-wrap">
-        <svg id="thermo-donut" viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg"></svg>
-        <div class="thermo-legend">
-          <div class="figure-tag" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:4px;">Termómetro del día</div>
-          <div class="thermo-legend-item"><span class="thermo-dot" style="background:#3D8F5F;"></span><span id="thermo-up-label">— indicadores al alza</span></div>
-          <div class="thermo-legend-item"><span class="thermo-dot" style="background:#B23B30;"></span><span id="thermo-down-label">— indicadores a la baja</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="newsletter" style="background: var(--ink); border-bottom: 2px solid var(--ink);">
-    <div class="wrap reveal" style="text-align:center;">
-      <div class="section-label" style="color: var(--celeste); margin-bottom:14px;">Newsletter</div>
-      <div class="section-title" style="color: var(--paper); font-size:34px; max-width:640px; margin:0 auto 14px;">Recibí el análisis completo en tu mail</div>
-      <p style="color:#B9BCC4; max-width:520px; margin:0 auto 30px; font-size:16px; font-family:'Source Serif 4',serif;">Dos o tres veces por semana, sin spam ni relleno. Cancelás cuando quieras.</p>
-      <form id="newsletter-form" style="display:flex; gap:10px; max-width:440px; margin:0 auto; flex-wrap:wrap; justify-content:center;">
-        <input type="email" id="newsletter-email" required placeholder="tu@email.com"
-          style="flex:1; min-width:220px; padding:14px 16px; border:2px solid var(--paper); border-radius:2px; background:transparent; color:var(--paper); font-family:'Inter',sans-serif; font-size:14px;">
-        <button type="submit" class="btn btn-solid" style="background:var(--celeste); border-color:var(--celeste); color:var(--ink);">Suscribirme</button>
-      </form>
-      <p id="newsletter-msg" style="margin-top:14px; font-size:13px; color:var(--celeste); min-height:18px;"></p>
-    </div>
-  </section>
-
-  <section id="sobre" class="block-navy">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div class="section-title">¿Por qué seguir Índex AR?</div>
-        <div class="section-label">Antes de suscribirte</div>
-      </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <div class="faq-q">¿Por qué sube el dólar?</div>
-          <div class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio. Puede ser por emisión monetaria, por expectativa de devaluación, por estacionalidad (turismo, pago de importaciones) o porque el Central deja de intervenir en el mercado de cambios. Cada nota identifica cuál de esos factores está pesando en el momento y qué tan sostenible es.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Qué es el riesgo país?</div>
-          <div class="faq-a">Es el spread —medido en puntos básicos— entre el rendimiento de la deuda soberana argentina en dólares y el de los bonos del Tesoro de EE.UU. al mismo plazo. Funciona como el EMBI+ de JP Morgan: cuanto más alto, más cara (o directamente cerrada) queda la puerta del financiamiento externo.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Qué activos hay en las reservas del BCRA?</div>
-          <div class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso las reservas brutas no siempre reflejan las netas —lo que el Central puede usar sin comprometer otros pasivos—, que es el número que de verdad importa.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Por qué la actividad económica sube pero los salarios bajan?</div>
-          <div class="faq-a">Son dos mediciones distintas: el EMAE mide el volumen físico que se produce y vende, mientras que el salario real mide el poder de compra de ese ingreso frente a la inflación acumulada. Se puede producir y vender más —incluso con menos empleo formal— sin que eso se traduzca en mejores salarios: depende de la puja distributiva, no solo del nivel de actividad.</div>
+        <div class="thermo-card">
+          <div class="thermo-title">Termómetro del día</div>
+          <svg id="thermo-donut" viewBox="0 0 120 120" width="110" height="110"></svg>
+          <div class="thermo-labels">
+            <div id="thermo-up-label">0 indicadores al alza</div>
+            <div id="thermo-down-label">0 indicadores a la baja</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="sobre-detalle">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div class="section-title">Sobre Índex AR</div>
-        <div class="section-label">Quién escribe</div>
-      </div>
-      <div class="about-header">
-        <div class="about-avatar">MI</div>
-        <div class="about-credentials">Publicación independiente de economía y política</div>
-      </div>
-      <div class="about-grid">
-        <div class="about-body">
-          <p><span class="drop-cap">Í</span>ndex AR nace de una costumbre bien argentina: analizar los distintos estimadores económicos —inflación, actividad, reservas, riesgo país— para poder tomar mejores decisiones. De inversión, de desarrollo productivo, o simplemente para discutir economía con información en vez de con intuición.</p>
-          <p>Cada nota parte de un dato puntual y lo explica como se explicaría en una charla de café con otro economista, sin la solemnidad de un informe de 20 páginas. Qué pasó, por qué pasó, qué mirar de acá en más — con la fuente primaria siempre a mano para que cada uno la chequee por su cuenta.</p>
-        </div>
-        <div class="margin-note">
-          <strong>Nota editorial</strong>
-          Índex AR está a cargo de Marcos J. Ibáñez, Licenciado en Economía de la Universidad Nacional de Avellaneda (UNDAV). Todos los datos citados en las publicaciones se referencian con su fuente primaria.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="manifesto reveal">
+  <section id="secciones" class="reveal">
     <div class="wrap">
-      <p>Un dato suelto no dice mucho. Lo que importa es <em>por qué</em> se movió — y qué puede pasar después.</p>
-    </div>
-  </section>
-
-  <section id="servicios" style="background: var(--paper-warm);">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div class="section-title">Servicios <span class="pill-soon">Próximamente</span></div>
-        <div class="section-label">Hoy, publicación gratuita</div>
-      </div>
-      <p style="max-width:640px; font-size:14.5px; color:var(--ink-soft); margin-bottom:24px;">Índex AR es hoy un espacio de análisis abierto y gratuito. A medida que la cobertura y la comunidad crezcan, este es el tipo de consultoría a medida que se va a sumar — sin costo alguno mientras tanto.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <h4>Informes a medida</h4>
-          <p>Análisis puntual de coyuntura o sector, encargado por una empresa o inversor.</p>
-        </div>
-        <div class="service-card">
-          <h4>Asesoramiento a pymes</h4>
-          <p>Lectura de pricing, costos y contexto macro aplicada a un negocio concreto.</p>
-        </div>
-        <div class="service-card">
-          <h4>Charlas y presentaciones</h4>
-          <p>Contexto económico y político explicado a un equipo o directorio.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="secciones">
-    <div class="wrap reveal">
       <div class="section-head">
         <div class="section-title">Qué vas a encontrar</div>
         <div class="section-label">Cuatro secciones fijas</div>
       </div>
-    </div>
-    <div class="wrap reveal" style="padding: 0;">
-      <div class="pillars">
-        <div class="pillar tint-economia">
+      <div class="pillars-editorial">
+        <div class="pillar-row" id="pillar-economia">
           <span class="pillar-num">I</span>
           <h3>Economía</h3>
-          <p>Inflación, tipo de cambio, tasas, reservas y actividad — la película completa detrás del dato de la semana.</p>
+          <div>
+            <p>Inflación, tipo de cambio, tasas, reservas y actividad — la película completa detrás del dato de la semana.</p>
+            <div class="pillar-tags"><span class="pillar-tag">Inflación</span><span class="pillar-tag">EMAE</span><span class="pillar-tag">Tipo de cambio</span></div>
+          </div>
         </div>
-        <div class="pillar tint-finanzas">
+        <div class="pillar-row" id="pillar-finanzas">
           <span class="pillar-num">II</span>
           <h3>Finanzas</h3>
-          <p>Deuda, riesgo país, mercado de capitales y sistema financiero — cómo se financia el país y quién le presta.</p>
+          <div>
+            <p>Deuda, riesgo país, mercado de capitales y sistema financiero — cómo se financia el país y quién le presta.</p>
+            <div class="pillar-tags"><span class="pillar-tag">Riesgo país</span><span class="pillar-tag">Deuda soberana</span><span class="pillar-tag">Tasas</span></div>
+          </div>
         </div>
-        <div class="pillar tint-mercados">
+        <div class="pillar-row" id="pillar-mercados">
           <span class="pillar-num">III</span>
           <h3>Mercados</h3>
-          <p>Sectores, precios relativos y organización industrial — por qué los precios se mueven como se mueven.</p>
+          <div>
+            <p>Sectores, precios relativos y organización industrial — por qué los precios se mueven como se mueven.</p>
+            <div class="pillar-tags"><span class="pillar-tag">Precios relativos</span><span class="pillar-tag">Salarios reales</span></div>
+          </div>
         </div>
-        <div class="pillar tint-energia">
+        <div class="pillar-row" id="pillar-energia">
           <span class="pillar-num">IV</span>
           <h3>Energía / Agro</h3>
-          <p>Los sectores que sostienen la balanza comercial — producción, exportación y su peso en la macro.</p>
+          <div>
+            <p>Los sectores que sostienen la balanza comercial — producción, exportación y su peso en la macro.</p>
+            <div class="pillar-tags"><span class="pillar-tag">Vaca Muerta</span><span class="pillar-tag">Cosecha gruesa</span><span class="pillar-tag">Balanza comercial</span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="archivo">
-    <div class="wrap reveal">
+  <section id="publicaciones" class="reveal">
+    <div class="wrap">
       <div class="section-head">
-        <div class="section-title">Archivo de publicaciones</div>
+        <div class="section-title">Publicaciones</div>
         <div class="section-label">Buscá y filtrá</div>
       </div>
       <div class="filters">
@@ -894,32 +741,136 @@
     </div>
   </section>
 
-  <section id="seguir">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div class="section-title">Seguí Índex AR</div>
-        <div class="section-label">El mismo análisis, cuatro formatos</div>
+  <section id="newsletter" class="reveal">
+    <div class="wrap">
+      <div class="newsletter-panel">
+        <div class="section-title" style="font-size:32px; justify-content:center; margin-bottom:14px;">Recibí el análisis completo en tu mail</div>
+        <p style="color:var(--text-soft); max-width:480px; margin:0 auto 30px; font-size:16px; font-family:'Source Serif 4',serif;">Dos o tres veces por semana, sin spam ni relleno. Cancelás cuando quieras.</p>
+        <form id="newsletter-form" style="display:flex; gap:10px; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center;">
+          <input type="email" id="newsletter-email" required placeholder="tu@email.com"
+            style="flex:1; min-width:220px; padding:14px 16px; border:1px solid var(--rule-strong); border-radius:2px; background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:14px;">
+          <button type="submit" class="btn btn-solid">Suscribirme</button>
+        </form>
+        <p id="newsletter-msg" style="margin-top:14px; font-size:13px; color:var(--gold-text); min-height:18px;"></p>
       </div>
-      <div class="channels">
-        <div class="channel-card">
-          <div class="channel-name">Newsletter</div>
-          <div class="channel-desc">El análisis completo, dos veces por semana en tu mail.</div>
-          <a class="channel-cta" href="#newsletter">SUSCRIBIRME →</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-title">¿Por qué seguir Índex AR?</div>
+        <div class="section-label">Antes de suscribirte</div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="true">
+            <span class="faq-q-text">¿Por qué sube el dólar?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel is-open">
+            <div class="accordion-panel-inner">
+              <p class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio. Puede ser por emisión monetaria, por expectativa de devaluación, por estacionalidad (turismo, pago de importaciones) o porque el Central deja de intervenir en el mercado de cambios. Cada nota identifica cuál de esos factores está pesando en el momento y qué tan sostenible es.</p>
+            </div>
+          </div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">LinkedIn</div>
-          <div class="channel-desc">Resumen profesional de cada publicación.</div>
-          <span class="channel-cta" style="opacity:0.55; cursor:default;">PRÓXIMAMENTE</span>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="faq-q-text">¿Qué es el riesgo país?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel-inner">
+              <p class="faq-a">Es el spread —medido en puntos básicos— entre el rendimiento de la deuda soberana argentina en dólares y el de los bonos del Tesoro de EE.UU. al mismo plazo. Funciona como el EMBI+ de JP Morgan: cuanto más alto, más cara (o directamente cerrada) queda la puerta del financiamiento externo.</p>
+            </div>
+          </div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">Twitter / X</div>
-          <div class="channel-desc">Hilos cortos, directo al mecanismo.</div>
-          <span class="channel-cta" style="opacity:0.55; cursor:default;">PRÓXIMAMENTE</span>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="faq-q-text">¿Qué activos hay en las reservas del BCRA?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel-inner">
+              <p class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso las reservas brutas no siempre reflejan las netas —lo que el Central puede usar sin comprometer otros pasivos—, que es el número que de verdad importa.</p>
+            </div>
+          </div>
         </div>
-        <div class="channel-card">
-          <div class="channel-name">Blog</div>
-          <div class="channel-desc">Archivo completo de todas las publicaciones.</div>
-          <a class="channel-cta" href="#archivo">EXPLORAR →</a>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="faq-q-text">¿Por qué la actividad económica sube pero los salarios bajan?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel-inner">
+              <p class="faq-a">Son dos mediciones distintas: el EMAE mide el volumen físico que se produce y vende, mientras que el salario real mide el poder de compra de ese ingreso frente a la inflación acumulada. Se puede producir y vender más —incluso con menos empleo formal— sin que eso se traduzca en mejores salarios: depende de la puja distributiva, no solo del nivel de actividad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto reveal">
+    <div class="wrap">
+      <p>Un dato suelto no dice mucho. Lo que importa es <em>por qué</em> se movió — y qué puede pasar después.</p>
+    </div>
+  </section>
+
+  <section id="sobre-detalle" class="reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-title">Sobre Índex AR</div>
+        <div class="section-label">Quién escribe</div>
+      </div>
+      <p class="about-pullquote">Índex AR traduce los estimadores oficiales —inflación, actividad, reservas, riesgo país— en una lectura que se pueda usar para decidir.</p>
+      <div class="about-header">
+        <div class="about-avatar">MI</div>
+        <div class="about-credentials">Publicación independiente de economía y política</div>
+      </div>
+      <div class="about-grid">
+        <div class="about-body">
+          <p><span class="drop-cap">Í</span>ndex AR nace de una costumbre bien argentina: analizar los distintos estimadores económicos —inflación, actividad, reservas, riesgo país— para poder tomar mejores decisiones. De inversión, de desarrollo productivo, o simplemente para discutir economía con información en vez de con intuición.</p>
+          <div class="margin-note">
+            <strong>Nota editorial</strong>
+            Índex AR está a cargo de Marcos J. Ibáñez, Licenciado en Economía de la Universidad Nacional de Avellaneda (UNDAV). Todos los datos citados en las publicaciones se referencian con su fuente primaria.
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" style="margin-bottom:16px;">Servicios <span class="pill-soon">Próximamente</span></div>
+          <p style="font-family:'Source Serif 4',serif; font-size:14px; color:var(--text-soft); margin:0 0 6px; line-height:1.6;">Índex AR es hoy un espacio de análisis abierto y gratuito. A medida que la cobertura y la comunidad crezcan, esto es lo que se va a sumar:</p>
+          <div class="numbered-list">
+            <div class="numbered-item">
+              <span class="n">01</span>
+              <div>
+                <h4>Informes a medida</h4>
+                <ul class="service-bullets">
+                  <li>Análisis puntual de coyuntura o de un sector específico.</li>
+                  <li>Escenarios y proyecciones encargados por una empresa o inversor.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="numbered-item">
+              <span class="n">02</span>
+              <div>
+                <h4>Asesoramiento a pymes</h4>
+                <ul class="service-bullets">
+                  <li>Lectura de pricing y costos frente al contexto macro.</li>
+                  <li>Monitoreo de tipo de cambio, tasas e inflación aplicado al negocio.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="numbered-item">
+              <span class="n">03</span>
+              <div>
+                <h4>Charlas y presentaciones</h4>
+                <ul class="service-bullets">
+                  <li>Contexto económico y político explicado a un equipo o directorio.</li>
+                  <li>Sesiones de preguntas y respuestas en vivo sobre la coyuntura.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -936,8 +887,9 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Navegación</div>
-          <a href="#sobre">Sobre</a>
+          <a href="#sobre-detalle">Sobre</a>
           <a href="#secciones">Secciones</a>
+          <a href="#publicaciones">Publicaciones</a>
           <a href="#newsletter">Newsletter</a>
         </div>
         <div class="footer-col">
@@ -951,7 +903,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     /*
       ARQUITECTURA
@@ -1132,12 +1083,13 @@
       return Promise.all([dolar, inflacion, riesgo, actividad, reservas]);
     }
 
-    // ---- Presentación: ticker (marquee oscuro) ----
+    // ---- Presentación: ticker (marquee) ----
     ['dolar-blue', 'dolar-oficial', 'inflacion', 'riesgo-pais', 'actividad', 'reservas'].forEach(function (key) {
       IndexAR.on(key, function (payload) {
         if (!payload) return;
         document.querySelectorAll('.ticker-val[data-key="' + key + '"]').forEach(function (el) {
-          el.textContent = payload.text;
+          var arrow = payload.trend === 'up' ? '▲ ' : payload.trend === 'down' ? '▼ ' : '';
+          el.textContent = arrow + payload.text;
           el.classList.remove('ticker-up', 'ticker-down');
           if (payload.trend === 'up') el.classList.add('ticker-up');
           if (payload.trend === 'down') el.classList.add('ticker-down');
@@ -1178,11 +1130,11 @@
       var r = 50, cx = 60, cy = 60, circumference = 2 * Math.PI * r;
       var upLen = (up / total) * circumference;
       svg.innerHTML =
-        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#E4DFCF" stroke-width="16"/>' +
-        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#3D8F5F" stroke-width="16" ' +
+        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" style="stroke:var(--rule)" stroke-width="16"/>' +
+        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#2EE6A8" stroke-width="16" ' +
           'stroke-dasharray="' + upLen.toFixed(1) + ' ' + circumference.toFixed(1) + '" ' +
           'transform="rotate(-90 ' + cx + ' ' + cy + ')" stroke-linecap="round"/>' +
-        '<text x="' + cx + '" y="' + (cy + 6) + '" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="22" fill="#122A45">' + up + '/' + total + '</text>';
+        '<text x="' + cx + '" y="' + (cy + 6) + '" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="22" style="fill:var(--text)">' + up + '/' + total + '</text>';
       upLabel.textContent = up + ' indicador' + (up === 1 ? '' : 'es') + ' al alza';
       downLabel.textContent = down + ' indicador' + (down === 1 ? '' : 'es') + ' a la baja';
     }
@@ -1236,13 +1188,15 @@
 
       svg.innerHTML =
         '<defs><linearGradient id="' + gradId + '" x1="0" y1="0" x2="0" y2="1">' +
-        '<stop offset="0%" stop-color="#75AADB" stop-opacity="0.4"/>' +
-        '<stop offset="100%" stop-color="#75AADB" stop-opacity="0"/>' +
-        '</linearGradient></defs>' +
+        '<stop offset="0%" stop-color="#C9A96A" stop-opacity="0.35"/>' +
+        '<stop offset="100%" stop-color="#C9A96A" stop-opacity="0"/>' +
+        '</linearGradient>' +
+        '<filter id="glow' + slideIndex + '" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+        '</defs>' +
         yAxis +
         '<path d="' + areaD + '" fill="url(#' + gradId + ')" stroke="none"/>' +
-        '<path d="' + pathD + '" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--navy)"/>' +
-        '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="3.5" fill="#75AADB" stroke="var(--navy)" stroke-width="1.5"/>' +
+        '<path d="' + pathD + '" fill="none" stroke="#C9A96A" stroke-width="2" filter="url(#glow' + slideIndex + ')"/>' +
+        '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="3.5" fill="#C9A96A" stroke="var(--panel)" stroke-width="1.5" filter="url(#glow' + slideIndex + ')"/>' +
         xAxis;
 
       var lastVal = values[values.length - 1];
@@ -1343,29 +1297,29 @@
       if (h > 0) document.documentElement.style.setProperty('--header-h', h + 'px');
     }
 
-    // ---- Tema oscuro/claro, con detección de preferencia del sistema ----
+    // ---- Tema oscuro (por defecto) / claro, con detección de preferencia del sistema ----
     function initTheme() {
       var btn = document.getElementById('theme-toggle');
       var saved = null;
       try { saved = localStorage.getItem('indexar:theme'); } catch (e) {}
-      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = saved || (systemDark ? 'dark' : 'light');
+      var systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      var theme = saved || (systemLight ? 'light' : 'dark');
       applyTheme(theme);
 
       btn.addEventListener('click', function () {
-        var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-        var next = current === 'dark' ? 'light' : 'dark';
+        var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        var next = current === 'light' ? 'dark' : 'light';
         applyTheme(next);
         try { localStorage.setItem('indexar:theme', next); } catch (e) {}
       });
 
       function applyTheme(t) {
-        if (t === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          btn.textContent = 'Claro';
+        if (t === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          btn.textContent = 'Oscuro';
         } else {
           document.documentElement.removeAttribute('data-theme');
-          btn.textContent = 'Oscuro';
+          btn.textContent = 'Claro';
         }
       }
     }
@@ -1456,7 +1410,7 @@
     }
 
     function initScrollSpy() {
-      var ids = ['sobre', 'secciones', 'archivo', 'newsletter'];
+      var ids = ['sobre-detalle', 'secciones', 'publicaciones', 'newsletter'];
       var links = {};
       ids.forEach(function (id) {
         var link = document.querySelector('nav a[href="#' + id + '"]');
@@ -1519,6 +1473,27 @@
       requestAnimationFrame(step);
     }
 
+    // ---- Acordeón de preguntas frecuentes ----
+    function setupAccordion() {
+      document.querySelectorAll('.accordion-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var panel = btn.nextElementSibling;
+          var isOpen = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+          panel.classList.toggle('is-open', !isOpen);
+        });
+      });
+    }
+
+    // ---- Sombra del header al scrollear ----
+    function setupHeaderShadow() {
+      var header = document.querySelector('header');
+      if (!header) return;
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      });
+    }
+
     setMastheadDate();
     setupReveal();
     initTheme();
@@ -1527,6 +1502,8 @@
     initViewTransitions();
     initScrollSpy();
     initCarousel();
+    setupAccordion();
+    setupHeaderShadow();
     syncHeaderHeight();
     window.addEventListener('resize', syncHeaderHeight);
     window.addEventListener('load', syncHeaderHeight);
