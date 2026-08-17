@@ -3,24 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Índex AR — Lectura económica y política de la Argentina</title>
-<meta name="description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo: dólar, riesgo país, inflación, actividad y reservas del BCRA.">
+<title>Índex AR | Research económico argentino — Datos, escenarios y mercados</title>
+<meta name="description" content="Índex AR: análisis macroeconómico, finanzas y research sobre Argentina, con datos oficiales, indicadores en vivo e informes propios.">
+<meta name="author" content="Marcos J. Ibáñez">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="application-name" content="Índex AR">
+<link rel="canonical" href="https://indexar.netlify.app/">
 <meta name="theme-color" content="#2554E8">
+<meta name="author" content="Marcos J. Ibáñez — Índex AR">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="keywords" content="economía argentina, macroeconomía, research económico, finanzas, mercados, inflación, dólar, riesgo país, reservas, deuda, inversión">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://indexar.netlify.app/">
  
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Índex AR">
-<meta property="og:title" content="Índex AR — Lectura económica y política de la Argentina">
-<meta property="og:description" content="Análisis macroeconómico y político de la Argentina, con datos en vivo.">
+<meta property="og:title" content="Índex AR | Research económico argentino">
+<meta property="og:description" content="Datos, escenarios y análisis económico para entender qué está pasando y qué puede cambiar después.">
 <meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://indexar.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Índex AR — Research económico argentino">
+<meta name="twitter:description" content="Macroeconomía, finanzas, mercados y datos de Argentina.">
  
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0E14'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2EFE9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%23C9A96A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%23C9A96A'/%3E%3C/svg%3E">
  
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "WebSite",
   "name": "Índex AR",
+  "url": "https://indexar.netlify.app/",
+  "publisher": {
+    "@type": "Person",
+    "name": "Marcos J. Ibáñez",
+    "jobTitle": "Economista"
+  },
   "description": "Análisis macroeconómico y político de la Argentina.",
   "knowsLanguage": "es",
   "copyrightYear": "2026",
@@ -503,11 +522,289 @@
   /* -- Servicios teaser -- */
   #servicios { padding: 78px 0; border-bottom: 1px solid var(--rule); }
  
+
+  /* -- Identidad profesional / portfolio -- */
+  .professional-strip { border-bottom:1px solid var(--rule); background:var(--panel); }
+  .professional-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px 0; }
+  .professional-id { display:flex; align-items:center; gap:12px; }
+  .professional-avatar { width:38px; height:38px; border-radius:50%; display:grid; place-items:center; background:var(--gold); color:#fff; font:700 14px var(--font-display); }
+  .professional-name { font:600 13px var(--font-ui); }
+  .professional-role { margin-top:2px; font:10px var(--font-mono); letter-spacing:.7px; color:var(--text-soft); text-transform:uppercase; }
+  .professional-links { display:flex; gap:8px; flex-wrap:wrap; }
+  .mini-link { font:600 11px var(--font-ui); border:1px solid var(--rule-strong); padding:7px 10px; border-radius:2px; color:var(--text-soft); }
+  .mini-link:hover { border-color:var(--gold); color:var(--gold-text); }
+  @media(max-width:640px){ .professional-inner{align-items:flex-start; flex-direction:column;} }
+
+  .hero-proof { margin-top:28px; display:grid; grid-template-columns:repeat(3,1fr); max-width:540px; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+  .proof-item { padding:14px 16px 14px 0; border-right:1px solid var(--rule); }
+  .proof-item:last-child { border-right:0; padding-left:16px; }
+  .proof-value { font:600 16px var(--font-display); }
+  .proof-label { margin-top:3px; font:9.5px var(--font-mono); letter-spacing:.7px; text-transform:uppercase; color:var(--text-soft); }
+  @media(max-width:520px){ .hero-proof{grid-template-columns:1fr;} .proof-item,.proof-item:last-child{border-right:0;border-bottom:1px solid var(--rule);padding:12px 0;} .proof-item:last-child{border-bottom:0;} }
+
+  /* -- Research / portfolio -- */
+  #research { padding:82px 0; border-bottom:1px solid var(--rule); background:var(--bg-alt); }
+  .research-intro { max-width:760px; font:17px/1.7 var(--font-serif); color:var(--text-soft); margin:-8px 0 34px; }
+  .research-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .research-card { background:var(--panel); border:1px solid var(--rule); padding:24px; border-radius:7px; box-shadow:var(--card-shadow); display:flex; flex-direction:column; min-height:250px; transition:transform .15s ease,border-color .15s ease; }
+  .research-card:hover { transform:translateY(-3px); border-color:var(--gold); }
+  .research-meta { font:10px var(--font-mono); text-transform:uppercase; letter-spacing:1px; color:var(--gold-text); }
+  .research-card h3 { font:600 23px/1.2 var(--font-display); margin:12px 0 10px; }
+  .research-card p { font:14px/1.6 var(--font-serif); color:var(--text-soft); margin:0; }
+  .research-card a { margin-top:auto; padding-top:20px; font:600 11px var(--font-ui); color:var(--gold-text); }
+  @media(max-width:900px){ .research-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:600px){ .research-grid{grid-template-columns:1fr;} }
+
+  /* -- Metodología -- */
+  #metodologia { padding:78px 0; border-bottom:1px solid var(--rule); }
+  .method-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; }
+  .method-list { border-top:1px solid var(--rule); }
+  .method-item { display:grid; grid-template-columns:38px 1fr; gap:16px; padding:17px 0; border-bottom:1px solid var(--rule); }
+  .method-num { font:12px var(--font-mono); color:var(--gold-text); }
+  .method-item strong { display:block; font:600 14px var(--font-ui); margin-bottom:4px; }
+  .method-item span { font:13.5px/1.55 var(--font-serif); color:var(--text-soft); }
+  .method-note { border-left:2px solid var(--gold); padding:20px 22px; background:var(--panel); }
+  .method-note h3 { font:600 24px var(--font-display); margin:0 0 10px; }
+  .method-note p { font:14px/1.7 var(--font-serif); color:var(--text-soft); margin:0; }
+  @media(max-width:760px){ .method-grid{grid-template-columns:1fr;} }
+
+  /* -- Contacto profesional -- */
+  .contact-card { margin-top:26px; padding:20px; border:1px solid var(--rule); background:var(--panel); }
+  .contact-card a { color:var(--gold-text); font:600 13px var(--font-ui); }
+
+  @media print { .professional-strip,#research,#metodologia{break-inside:avoid;} }
+
   @media print {
     .masthead-bar, .ticker-strip, nav, #newsletter, .hero-ctas, .theme-toggle, .btn-nav-cta, #scroll-progress, footer .footer-bottom span:last-child { display: none !important; }
     body { background: #fff; color: #000; }
   }
+
+/* =====================================================================
+   ÍNDEX AR — CAPA SIGNATURE / 2026
+   Visual system propio: no depende de plantillas ni librerías UI.
+   ===================================================================== */
+:root{
+  --ix-electric:#2554E8;
+  --ix-electric-soft:rgba(37,84,232,.10);
+  --ix-ink:#0B1220;
+  --ix-grid:rgba(15,23,42,.055);
+  --ix-radius:18px;
+}
+[data-theme="dark"]{
+  --ix-grid:rgba(242,239,233,.055);
+  --ix-electric-soft:rgba(91,141,239,.12);
+}
+body:before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:9990;
+  opacity:.16;
+  background-image:linear-gradient(var(--ix-grid) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--ix-grid) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 72%);
+}
+header nav a.is-active{color:var(--gold-text)!important}
+header{
+  position:sticky!important; top:0; z-index:1000;
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  background:color-mix(in srgb,var(--bg) 88%,transparent)!important;
+  border-bottom:1px solid var(--rule)!important;
+}
+.header-inner{min-height:78px!important}
+.professional-strip{
+  position:relative; overflow:hidden;
+  background:linear-gradient(90deg,var(--navy-solid),color-mix(in srgb,var(--navy-solid) 84%,var(--gold)));
+  color:#fff;
+}
+.professional-strip:after{
+  content:""; position:absolute; width:420px;height:420px; right:-180px; top:-220px;
+  border:1px solid rgba(255,255,255,.14); border-radius:50%;
+  box-shadow:0 0 0 45px rgba(255,255,255,.025),0 0 0 90px rgba(255,255,255,.018);
+}
+.professional-name{font-family:var(--font-display);font-size:15px;font-weight:700;color:#fff}
+.professional-role{color:rgba(255,255,255,.68)!important}
+.mini-link{color:rgba(255,255,255,.75)!important}
+.mini-link:hover{color:#fff!important}
+
+/* Hero de consultora: más tensión visual y jerarquía */
+.cover-hero{min-height:min(760px,82vh)!important}
+.cover-content{max-width:1120px!important}
+.cover-title{font-size:clamp(72px,13vw,170px)!important;letter-spacing:-.065em!important}
+.cover-sub{font-size:clamp(19px,2vw,27px)!important;max-width:720px!important}
+.hero{position:relative;overflow:hidden}
+.hero:before{
+  content:"INDEX/AR"; position:absolute; right:-55px; top:20px;
+  font:600 clamp(90px,15vw,210px)/1 var(--font-mono);
+  letter-spacing:-.08em; color:var(--ix-electric-soft);
+  pointer-events:none; user-select:none;
+}
+.hero-grid{position:relative;z-index:1}
+.hero h1{font-size:clamp(46px,6vw,78px)!important;letter-spacing:-.045em!important}
+.hero-proof{
+  display:grid!important;grid-template-columns:repeat(3,1fr);gap:1px!important;
+  background:var(--rule-strong);border:1px solid var(--rule-strong);
+  border-radius:12px;overflow:hidden;margin:30px 0!important;
+}
+.proof-item{background:var(--panel);padding:17px 18px!important}
+.proof-value{font-family:var(--font-mono);font-size:13px!important;letter-spacing:.04em;text-transform:uppercase}
+.proof-label{font-size:12px!important;margin-top:5px}
+.btn{transition:transform .22s ease,box-shadow .22s ease,background .22s ease!important}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px -18px var(--gold)}
+.hero-figure{
+  border:1px solid var(--rule-strong)!important;border-radius:20px!important;
+  box-shadow:0 30px 80px -48px rgba(15,23,42,.5)!important;
+  overflow:hidden;
+}
+[data-theme="dark"] .hero-figure{box-shadow:0 30px 90px -45px rgba(0,0,0,.9)!important}
+
+/* Nueva capa visual: terminal ejecutiva */
+.intel-deck{
+  padding:30px 0 12px;
+  background:var(--bg-alt);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.intel-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:16px}
+.intel-kicker{font:600 10px/1 var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
+.intel-title{font:500 clamp(24px,3vw,36px)/1.05 var(--font-display);margin:8px 0 0;letter-spacing:-.03em}
+.intel-live{font:500 10px var(--font-mono);color:var(--green);white-space:nowrap}
+.intel-live:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-right:7px;box-shadow:0 0 0 5px color-mix(in srgb,currentColor 12%,transparent)}
+.intel-grid{display:grid;grid-template-columns:1.35fr .8fr .8fr .8fr;gap:10px}
+.intel-card{
+  position:relative;min-height:132px;padding:20px;border:1px solid var(--rule);
+  background:var(--panel);border-radius:var(--ix-radius);overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.intel-card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--gold) 45%,var(--rule));box-shadow:0 20px 40px -30px rgba(15,23,42,.55)}
+.intel-card.featured{background:linear-gradient(145deg,var(--panel),var(--ix-electric-soft))}
+.intel-card .tag{font:500 10px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--text-soft)}
+.intel-card h3{font:600 19px/1.12 var(--font-display);margin:12px 0 8px;max-width:280px}
+.intel-card p{font:13px/1.45 var(--font-ui);color:var(--text-soft);margin:0}
+.intel-number{font:600 30px var(--font-mono);letter-spacing:-.06em;margin-top:12px}
+.intel-card svg{position:absolute;right:-8px;bottom:-8px;width:55%;height:72px;opacity:.5}
+.intel-card.featured svg{width:44%;height:86px;opacity:.8}
+
+/* Secciones como productos, no como tarjetas genéricas */
+#secciones .section-card{
+  position:relative;overflow:hidden;border-radius:16px!important;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+#secciones .section-card:after{
+  content:"↗";position:absolute;right:18px;top:15px;font:18px var(--font-mono);
+  color:var(--gold);opacity:.55;transition:transform .25s ease;
+}
+#secciones .section-card:hover{transform:translateY(-5px);box-shadow:0 24px 50px -35px rgba(15,23,42,.55)}
+#secciones .section-card:hover:after{transform:translate(3px,-3px)}
+
+/* Research: firma visual */
+#research{position:relative}
+#research:before{
+  content:"RESEARCH";position:absolute;right:0;top:40px;
+  font:600 11px var(--font-mono);letter-spacing:.2em;color:var(--text-soft);opacity:.6;
+}
+.research-card{
+  position:relative;overflow:hidden;border-radius:18px!important;
+  background:linear-gradient(135deg,var(--panel),var(--bg-alt))!important;
+}
+.research-card:before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);
+}
+.research-card .research-index{font:500 10px var(--font-mono);letter-spacing:.15em;color:var(--gold-text)}
+
+/* Metodología: escalera visual */
+.method-grid{grid-template-columns:repeat(4,1fr)!important;gap:0!important;border:1px solid var(--rule);border-radius:18px;overflow:hidden}
+.method-step{padding:26px 22px!important;background:var(--panel);border-right:1px solid var(--rule);position:relative}
+.method-step:last-child{border-right:0}
+.method-step:after{content:"";position:absolute;right:-5px;top:34px;width:9px;height:9px;background:var(--gold);border-radius:50%;z-index:2}
+.method-step:last-child:after{display:none}
+.method-step .n{font:600 11px var(--font-mono);color:var(--gold-text);letter-spacing:.15em}
+.method-step h3{font-size:22px!important;margin:18px 0 8px!important}
+.method-step p{font-size:14px!important;color:var(--text-soft);line-height:1.55}
+
+/* Footer premium */
+footer{position:relative;overflow:hidden}
+footer:before{
+  content:"ÍNDEX AR";position:absolute;right:-10px;bottom:-58px;
+  font:700 150px var(--font-display);letter-spacing:-.08em;color:var(--ix-electric-soft);pointer-events:none;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .intel-grid{grid-template-columns:1fr 1fr}
+  .intel-card.featured{grid-column:1/-1}
+  .method-grid{grid-template-columns:1fr 1fr!important}
+  .method-step:nth-child(2){border-right:0}
+  .method-step:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .method-step:after{display:none}
+}
+@media(max-width:640px){
+  .professional-links{display:none}
+  .hero-proof{grid-template-columns:1fr!important}
+  .cover-hero{min-height:680px!important}
+  .intel-head{align-items:start;flex-direction:column}
+  .intel-grid{grid-template-columns:1fr}
+  .intel-card.featured{grid-column:auto}
+  .method-grid{grid-template-columns:1fr!important}
+  .method-step{border-right:0!important;border-bottom:1px solid var(--rule)}
+  .method-step:last-child{border-bottom:0}
+  .hero:before{font-size:80px;right:-25px}
+}
+
+/* Protección razonable contra selección accidental; no pretende impedir
+   herramientas del navegador ni la inspección del código. */
+.brand-mark,.cover-title,.intel-title{user-select:none}
+
+
+/* ================================================================
+   ÍNDEX AR V3 — Research Intelligence Layer
+   Objetivo: convertir una publicación en una plataforma de
+   inteligencia económica. Diseño propio, no basado en templates.
+   ================================================================ */
+:root{--signal:rgba(37,84,232,.11);--signal-strong:#2554E8;--ink:#0b0f16;--paper:#f7f6f2}
+.intelligence-shell{margin:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:linear-gradient(180deg,var(--panel),var(--bg));position:relative;overflow:hidden}
+.intelligence-shell:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(128,128,128,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(128,128,128,.055) 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(to bottom,black,transparent 85%);pointer-events:none}
+.intel-top{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:78px 0 34px;position:relative}
+.intel-eyebrow{font:600 10px var(--font-mono);letter-spacing:2px;text-transform:uppercase;color:var(--gold-text);margin-bottom:12px}
+.intel-title{font:600 clamp(34px,5vw,66px) var(--font-display);line-height:.98;max-width:800px;letter-spacing:-1.8px}
+.intel-title em{font-style:italic;font-weight:500}
+.intel-desc{max-width:560px;color:var(--text-soft);font:15px/1.75 var(--font-serif);margin-top:18px}
+.intel-stamp{border:1px solid var(--rule-strong);padding:13px 15px;min-width:185px;background:color-mix(in srgb,var(--bg) 86%,transparent);font:10px/1.6 var(--font-mono);text-transform:uppercase;letter-spacing:1px}
+.intel-stamp strong{display:block;color:var(--text);font-size:15px;letter-spacing:0;margin-top:3px}
+.exec-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;padding-bottom:18px;position:relative}
+.exec-card,.scenario-card,.risk-card,.source-card,.tool-card{border:1px solid var(--rule-strong);background:color-mix(in srgb,var(--bg) 93%,transparent);box-shadow:0 18px 50px rgba(0,0,0,.035)}
+.exec-card{padding:30px}
+.exec-kicker{font:600 10px var(--font-mono);letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-text);margin-bottom:16px}
+.exec-card h3{font:500 27px/1.08 var(--font-display);margin:0 0 12px}
+.exec-card p{font:15px/1.7 var(--font-serif);color:var(--text-soft);margin:0}
+.signal-list{display:grid;gap:10px;margin-top:22px}
+.signal{display:grid;grid-template-columns:86px 1fr auto;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--rule)}
+.signal:first-child{border-top:0}
+.signal-name{font:600 10px var(--font-mono);text-transform:uppercase;letter-spacing:1px;color:var(--text-soft)}
+.signal-bar{height:5px;background:var(--rule);position:relative;overflow:hidden}.signal-bar i{display:block;height:100%;width:var(--w);background:var(--gold);transform-origin:left;animation:signalIn .8s ease both}
+.signal-value{font:600 11px var(--font-mono);white-space:nowrap}.signal-value.up{color:#237a4a}.signal-value.down{color:#a43a32}.signal-value.neutral{color:var(--text-soft)}
+@keyframes signalIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.scenario-stack{display:grid;gap:12px}.scenario-card{padding:20px}.scenario-card .s-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.scenario-card h4{font:600 17px var(--font-display);margin:0}.prob{font:600 10px var(--font-mono);padding:5px 7px;border:1px solid var(--rule-strong);color:var(--text-soft)}.scenario-card p{font:13px/1.6 var(--font-serif);color:var(--text-soft);margin:10px 0 0}.scenario-card.base{border-left:3px solid var(--gold)}
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 0 18px}.risk-card{padding:20px}.risk-label{font:600 9px var(--font-mono);letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-text)}.risk-card h4{font:600 18px var(--font-display);margin:8px 0}.risk-card p{font:13px/1.55 var(--font-serif);color:var(--text-soft);margin:0}.risk-meter{display:flex;gap:3px;margin-top:15px}.risk-meter span{height:5px;flex:1;background:var(--rule)}.risk-meter span.on{background:var(--gold)}
+.intel-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-bottom:78px}.tool-card{padding:24px;position:relative;transition:transform .25s ease,border-color .25s ease}.tool-card:hover{transform:translateY(-4px);border-color:var(--gold)}.tool-icon{font:600 16px var(--font-mono);color:var(--gold-text);margin-bottom:18px}.tool-card h4{font:600 20px var(--font-display);margin:0 0 8px}.tool-card p{font:13px/1.65 var(--font-serif);color:var(--text-soft);margin:0}.tool-link{display:inline-block;margin-top:15px;font:600 10px var(--font-mono);text-transform:uppercase;letter-spacing:1px;color:var(--text)}
+.provenance{display:flex;flex-wrap:wrap;gap:8px;padding:18px 0 34px;border-top:1px solid var(--rule);position:relative}.prov{font:9px var(--font-mono);text-transform:uppercase;letter-spacing:.9px;padding:7px 9px;border:1px solid var(--rule);color:var(--text-soft)}
+/* Anti-scraping: no bloqueamos al usuario, dificultamos automatizaciones superficiales y dejamos claro el origen. */
+[data-origin]{position:relative}.content-origin{font:9px var(--font-mono);color:var(--text-soft);opacity:.7;letter-spacing:.8px;margin-top:16px}
+@media(max-width:900px){.exec-grid,.risk-grid,.intel-grid-3{grid-template-columns:1fr}.intel-top{align-items:start;flex-direction:column}.intel-stamp{min-width:0;width:100%}}
+@media(max-width:620px){.intel-top{padding:56px 0 28px}.exec-card{padding:22px}.signal{grid-template-columns:72px 1fr}.signal-value{display:none}.intel-grid-3{padding-bottom:56px}}
+@media(prefers-reduced-motion:reduce){.signal-bar i,.tool-card{animation:none;transition:none}}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Marcos J. Ibáñez",
+  "jobTitle":"Economista y analista de research",
+  "url":"https://indexar.netlify.app/",
+  "worksFor":{"@type":"Organization","name":"Índex AR"},
+  "knowsAbout":["Macroeconomía","Economía argentina","Finanzas","Mercados","Análisis de datos","Research económico"]
+}
+</script>
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -551,6 +848,7 @@
         <a href="#secciones">Secciones</a>
         <a href="#publicaciones">Publicaciones</a>
         <a href="#newsletter">Newsletter</a>
+          <a href="#metodologia">Metodología</a>
       </nav>
       <div style="display:flex; align-items:center; gap:12px;">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">Claro</button>
@@ -558,6 +856,23 @@
       </div>
     </div>
   </header>
+
+  <div class="professional-strip" aria-label="Perfil profesional">
+    <div class="wrap professional-inner">
+      <div class="professional-id">
+        <div class="professional-avatar" aria-hidden="true">MI</div>
+        <div>
+          <div class="professional-name">Marcos J. Ibáñez</div>
+          <div class="professional-role">Economista · Research · Macroeconomía · Finanzas</div>
+        </div>
+      </div>
+      <div class="professional-links">
+        <a class="mini-link" href="#sobre-detalle">Perfil profesional</a>
+        <a class="mini-link" href="#research">Research</a>
+        <a class="mini-link" href="#metodologia">Metodología</a>
+      </div>
+    </div>
+  </div>
  
   <main id="main">
  
@@ -589,11 +904,16 @@
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Análisis independiente · Argentina</div>
-        <h1>Lectura económica y política de <em>la Argentina.</em></h1>
-        <p class="hero-sub">Estimadores oficiales, mecanismos detrás del dato y la lectura que necesitás para decidir — sin relleno, con la fuente primaria siempre a la vista.</p>
+        <h1>Research económico argentino para entender <em>qué cambia después.</em></h1>
+        <p class="hero-sub">Datos, mecanismos, escenarios y mercados en una lectura ejecutiva. Sin confundir el dato con la opinión: cada señal tiene fuente, fecha de corte y contexto.</p>
+        <div class="hero-proof" aria-label="Propuesta de valor profesional">
+          <div class="proof-item"><div class="proof-value">Datos</div><div class="proof-label">Fuentes primarias</div></div>
+          <div class="proof-item"><div class="proof-value">Research</div><div class="proof-label">Análisis propio</div></div>
+          <div class="proof-item"><div class="proof-value">Argentina</div><div class="proof-label">Foco local</div></div>
+        </div>
         <div class="hero-ctas">
           <a class="btn btn-solid" href="#newsletter">Suscribirme a la newsletter</a>
-          <a class="btn btn-outline" href="#secciones">Ver qué vas a encontrar</a>
+          <a class="btn btn-outline" href="#research">Ver research</a>
           <button class="btn btn-outline" id="share-btn" type="button">Compartir</button>
         </div>
       </div>
@@ -658,6 +978,44 @@
     </div>
   </div>
  
+
+  <section class="intel-deck" aria-label="Panel ejecutivo de Índex AR">
+    <div class="wrap">
+      <div class="intel-head">
+        <div>
+          <div class="intel-kicker">Índex Intelligence / 01</div>
+          <h2 class="intel-title">Del indicador al mecanismo.</h2>
+        </div>
+        <div class="intel-live">sistema editorial activo</div>
+      </div>
+      <div class="intel-grid">
+        <article class="intel-card featured">
+          <div class="tag">Lectura de coyuntura</div>
+          <h3>No mostramos solamente qué cambió. Buscamos explicar qué lo mueve.</h3>
+          <p>Datos primarios + contexto + mecanismo económico + escenarios.</p>
+          <svg viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 75 C35 72 45 50 72 58 S112 72 138 42 S182 55 205 25 S245 30 300 5" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </article>
+        <article class="intel-card">
+          <div class="tag">01 / Datos</div>
+          <div class="intel-number">01</div>
+          <p>Fuente primaria y serie identificable.</p>
+        </article>
+        <article class="intel-card">
+          <div class="tag">02 / Modelo</div>
+          <div class="intel-number">02</div>
+          <p>Relaciones económicas antes que opinión.</p>
+        </article>
+        <article class="intel-card">
+          <div class="tag">03 / Decisión</div>
+          <div class="intel-number">03</div>
+          <p>Qué implica para empresas, mercados y hogares.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="panel" class="reveal">
     <div class="wrap">
       <div class="section-head">
@@ -752,6 +1110,87 @@
     </div>
   </section>
  
+
+  <section id="intelligence" class="intelligence-shell" data-origin="indexar">
+    <div class="wrap">
+      <div class="intel-top">
+        <div>
+          <div class="intel-eyebrow">Índex Intelligence / Economic Decision System</div>
+          <h2 class="intel-title">No alcanza con saber <em>qué pasó.</em><br>Hay que detectar qué puede cambiar.</h2>
+          <p class="intel-desc">Una capa de análisis pensada para inversores, empresas y recruiters: indicadores, mecanismos de transmisión, escenarios y riesgos en una misma lectura. Los valores de ejemplo de esta maqueta son etiquetas de interfaz; los datos deben conectarse a fuentes verificadas antes de publicarse como señales de mercado.</p>
+        </div>
+        <div class="intel-stamp">Sistema de research<strong>ÍNDEX / AR</strong>Edición 2026 · Argentina</div>
+      </div>
+
+      <div class="exec-grid">
+        <article class="exec-card">
+          <div class="exec-kicker">Executive macro brief · arquitectura</div>
+          <h3>El tablero debe responder cinco preguntas antes de mostrar veinte gráficos.</h3>
+          <p>Estado del ciclo, inflación, política fiscal/monetaria, sector externo y condiciones financieras. La interfaz separa <strong>dato observado</strong>, <strong>interpretación</strong> y <strong>escenario</strong> para evitar que una proyección se confunda con un hecho.</p>
+          <div class="signal-list" aria-label="Ejemplo de semáforo de indicadores">
+            <div class="signal"><span class="signal-name">Actividad</span><span class="signal-bar"><i style="--w:68%"></i></span><span class="signal-value neutral">MONITOREAR</span></div>
+            <div class="signal"><span class="signal-name">Inflación</span><span class="signal-bar"><i style="--w:52%"></i></span><span class="signal-value down">RIESGO</span></div>
+            <div class="signal"><span class="signal-name">Externo</span><span class="signal-bar"><i style="--w:79%"></i></span><span class="signal-value up">SOPORTE</span></div>
+            <div class="signal"><span class="signal-name">Finanzas</span><span class="signal-bar"><i style="--w:44%"></i></span><span class="signal-value neutral">MIXTO</span></div>
+          </div>
+          <div class="content-origin">Diseño conceptual · no interpretar estos porcentajes como datos reales.</div>
+        </article>
+
+        <div class="scenario-stack" aria-label="Matriz de escenarios">
+          <article class="scenario-card base"><div class="s-head"><h4>Escenario base</h4><span class="prob">HIPÓTESIS</span></div><p>Trayectoria central construida con supuestos explícitos y variables de seguimiento.</p></article>
+          <article class="scenario-card"><div class="s-head"><h4>Upside</h4><span class="prob">CONDICIONAL</span></div><p>Qué tendría que ocurrir para que la trayectoria mejore: shock externo, desinflación, crédito, inversión o productividad.</p></article>
+          <article class="scenario-card"><div class="s-head"><h4>Downside</h4><span class="prob">CONDICIONAL</span></div><p>Qué combinación de shocks podría deteriorar el escenario y cuáles serían las primeras variables en reaccionar.</p></article>
+        </div>
+      </div>
+
+      <div class="risk-grid">
+        <article class="risk-card"><div class="risk-label">Riesgo 01</div><h4>Inflación / nominalidad</h4><p>Seguimiento de precios, salarios, expectativas, tipo de cambio y mecanismos de propagación.</p><div class="risk-meter"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div></article>
+        <article class="risk-card"><div class="risk-label">Riesgo 02</div><h4>Sector externo</h4><p>Reservas, cuenta corriente, energía, deuda y capacidad de generación de divisas.</p><div class="risk-meter"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div></article>
+        <article class="risk-card"><div class="risk-label">Riesgo 03</div><h4>Financiamiento</h4><p>Curva de tasas, riesgo soberano, liquidez y condiciones de acceso al mercado.</p><div class="risk-meter"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div></article>
+      </div>
+
+      <div class="intel-grid-3">
+        <article class="tool-card"><div class="tool-icon">01 / NOWCAST</div><h4>Radar de coyuntura</h4><p>Una lectura compacta del ciclo: actividad, empleo, consumo, inversión, recaudación y crédito. El objetivo es detectar giros antes de que aparezcan en un único indicador.</p><span class="tool-link">Próximamente →</span></article>
+        <article class="tool-card"><div class="tool-icon">02 / SCENARIO</div><h4>Motor de escenarios</h4><p>Escenarios con supuestos trazables: qué pasa si cambia el dólar, la tasa, el salario real, el precio de commodities o la demanda externa.</p><span class="tool-link">Próximamente →</span></article>
+        <article class="tool-card"><div class="tool-icon">03 / DATA</div><h4>Data room económico</h4><p>Series históricas, metadatos, frecuencia, fecha de actualización y fuente primaria. La procedencia del dato forma parte del producto.</p><span class="tool-link">Próximamente →</span></article>
+      </div>
+
+      <div class="provenance" aria-label="Principios de calidad del dato">
+        <span class="prov">Fuente primaria</span><span class="prov">Fecha de corte</span><span class="prov">Frecuencia</span><span class="prov">Unidad</span><span class="prov">Revisión histórica</span><span class="prov">Supuestos explícitos</span><span class="prov">Hecho ≠ hipótesis ≠ escenario</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-title">Research e informes</div>
+        <div class="section-label">Portfolio de investigación</div>
+      </div>
+      <p class="research-intro">Índex AR no busca solamente mostrar qué pasó. La propuesta es construir una biblioteca de análisis reproducibles: datos, hipótesis, mecanismos, evidencia y conclusiones. Este espacio funciona también como portfolio profesional de investigación económica.</p>
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="research-meta">Macro · Distribución</div>
+          <h3>Inflación, salarios y puja distributiva</h3>
+          <p>Cómo interactúan salarios, márgenes y tipo de cambio en la dinámica de precios argentina.</p>
+          <a href="#publicaciones">Ver publicaciones relacionadas →</a>
+        </article>
+        <article class="research-card">
+          <div class="research-meta">Finanzas · Deuda</div>
+          <h3>Riesgo país y financiamiento</h3>
+          <p>Qué explica los cambios en el costo de financiamiento soberano y qué señales aporta el mercado.</p>
+          <a href="#publicaciones">Ver publicaciones relacionadas →</a>
+        </article>
+        <article class="research-card">
+          <div class="research-meta">Sector externo</div>
+          <h3>Reservas, energía y restricción externa</h3>
+          <p>El vínculo entre exportaciones, energía, acumulación de reservas y capacidad de crecimiento.</p>
+          <a href="#publicaciones">Ver publicaciones relacionadas →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="publicaciones" class="reveal">
     <div class="wrap">
       <div class="section-head">
@@ -805,6 +1244,28 @@
     </div>
   </section>
  
+  <section id="metodologia" class="reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-title">Cómo trabajo</div>
+        <div class="section-label">Metodología</div>
+      </div>
+      <div class="method-grid">
+        <div class="method-list">
+          <div class="method-item"><span class="method-num">01</span><div><strong>Fuente primaria</strong><span>Prioridad a organismos oficiales, series públicas y documentación metodológica.</span></div></div>
+          <div class="method-item"><span class="method-num">02</span><div><strong>Datos antes que opinión</strong><span>Los argumentos parten de indicadores observables y se explicitan los supuestos.</span></div></div>
+          <div class="method-item"><span class="method-num">03</span><div><strong>Contexto histórico</strong><span>Un dato coyuntural se interpreta dentro de su tendencia, base de comparación y régimen macroeconómico.</span></div></div>
+          <div class="method-item"><span class="method-num">04</span><div><strong>Escenarios</strong><span>Cuando corresponde, se separan hechos, hipótesis y escenarios posibles para evitar falsas certezas.</span></div></div>
+        </div>
+        <div class="method-note">
+          <h3>La regla editorial</h3>
+          <p>Un gráfico no es una conclusión. Cada publicación busca explicar qué cambió, por qué pudo haber cambiado, qué evidencia respalda esa explicación y qué indicadores conviene seguir después.</p>
+          <div class="contact-card"><strong style="font:600 11px var(--font-mono);text-transform:uppercase;letter-spacing:1px;">Contacto profesional</strong><br><a href="mailto:contacto@indexar.com.ar">contacto@indexar.com.ar</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="newsletter" class="reveal">
     <div class="wrap">
       <div class="newsletter-panel">
@@ -891,14 +1352,14 @@
       <p class="about-pullquote">Índex AR traduce los estimadores oficiales —inflación, actividad, reservas, riesgo país— en una lectura que se pueda usar para decidir.</p>
       <div class="about-header">
         <div class="about-avatar">MI</div>
-        <div class="about-credentials">Publicación independiente de economía y política</div>
+        <div class="about-credentials">Marcos J. Ibáñez · Economista · Fundador de Índex AR</div>
       </div>
       <div class="about-grid">
         <div class="about-body">
-          <p><span class="drop-cap">Í</span>ndex AR nace de una costumbre bien argentina: analizar los distintos estimadores económicos —inflación, actividad, reservas, riesgo país— para poder tomar mejores decisiones. De inversión, de desarrollo productivo, o simplemente para discutir economía con información en vez de con intuición.</p>
+          <p><span class="drop-cap">Í</span>ndex AR nace de una idea simple: convertir datos económicos dispersos en investigación que pueda ser leída, contrastada y utilizada para tomar decisiones. El proyecto combina formación económica, análisis cuantitativo, lectura de coyuntura y desarrollo web para construir una plataforma de research sobre Argentina.</p>
           <div class="margin-note">
-            <strong>Nota editorial</strong>
-            Índex AR está a cargo de Marcos J. Ibáñez, Licenciado en Economía de la Universidad Nacional de Avellaneda (UNDAV). Todos los datos citados en las publicaciones se referencian con su fuente primaria.
+            <strong>Perfil profesional</strong>
+            Marcos J. Ibáñez es economista de la Universidad Nacional de Avellaneda (UNDAV). Índex AR funciona como proyecto independiente de research y como portfolio público de análisis económico. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
           </div>
         </div>
         <div>
@@ -948,7 +1409,8 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">Índex AR</div>
-          <p>Lectura económica y política de la Argentina, escrita desde el seno de la economía real.</p>
+          <div style="font:500 10px var(--font-mono);letter-spacing:.16em;color:var(--gold-text);margin-top:8px;">ARG / RESEARCH / 2026</div>
+          <p>Research económico argentino basado en datos, escenarios y evidencia. Una plataforma independiente de Marcos J. Ibáñez.</p>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Navegación</div>
@@ -956,6 +1418,10 @@
           <a href="#secciones">Secciones</a>
           <a href="#publicaciones">Publicaciones</a>
           <a href="#newsletter">Newsletter</a>
+          <a href="#intelligence">Intelligence</a>
+          <a href="#research">Research</a>
+        <a href="#metodologia">Método</a>
+          <a href="#metodologia">Metodología</a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Colofón</div>
@@ -1060,6 +1526,37 @@
       return { on: on, emit: emit, getData: getData };
     })();
  
+
+    // ---- Capa de interacción: navegación contextual + firma visual ----
+    (function(){
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('header nav a[href^="#"]'));
+      var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+      function updateActive(){
+        var y = window.scrollY + 150, current = null;
+        sections.forEach(function(s){ if(s.offsetTop <= y) current = s.id; });
+        navLinks.forEach(function(a){
+          var active = current && a.getAttribute('href') === '#'+current;
+          a.classList.toggle('is-active', !!active);
+        });
+      }
+      if(!reduced){
+        window.addEventListener('scroll', updateActive, {passive:true});
+      }
+      updateActive();
+
+      if(!reduced && window.matchMedia('(pointer:fine)').matches){
+        var cards = document.querySelectorAll('.intel-card,.research-card,.section-card');
+        cards.forEach(function(card){
+          card.addEventListener('pointermove', function(e){
+            var r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+            card.style.setProperty('--mx',(x*100)+'%');
+            card.style.setProperty('--my',(y*100)+'%');
+          });
+        });
+      }
+    })();
+
     // ---- Capa de datos: una función por indicador ----
     function loadDolarBlue() {
       return IndexAR.getData('dolar-blue', 'https://dolarapi.com/v1/dolares/blue', function (d) {
@@ -1628,6 +2125,23 @@
       document.getElementById('newsletter-email').value = '';
     });
   </script>
+
+<script>
+/* ÍNDEX AR — integridad de contenido
+   No se deshabilita el navegador ni se bloquea la accesibilidad. La protección real
+   se logra con contenido dinámico, datos propios, trazabilidad y servidor; este
+   módulo solo reduce copias accidentales y añade una marca de origen al copiar texto. */
+(function(){
+  document.addEventListener('copy',function(e){
+    try{
+      var sel=window.getSelection(); if(!sel || !sel.toString().trim()) return;
+      var stamp='\n\n— Índex AR · Research económico argentino — https://indexar.netlify.app/';
+      if(e.clipboardData){e.clipboardData.setData('text/plain',sel.toString()+stamp);e.preventDefault();}
+    }catch(_){ }
+  });
+  document.querySelectorAll('[data-origin]').forEach(function(el){el.setAttribute('data-content-owner','Índex AR — Marcos J. Ibáñez');});
+})();
+</script>
 </body>
 </html>
  
