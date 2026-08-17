@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Índex AR | Research económico argentino — Datos, escenarios y mercados</title>
-<meta name="description" content="Índex AR: análisis macroeconómico, finanzas y research sobre Argentina, con datos oficiales, indicadores en vivo e informes propios.">
-<meta name="author" content="Marcos J. Ibáñez">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Índex AR | Research económico argentino — Datos, mercados y escenarios</title>
+<meta name="description" content="Research económico argentino: datos oficiales, mercados, macroeconomía aplicada, escenarios e informes propios.">
+
 <meta name="application-name" content="Índex AR">
-<link rel="canonical" href="https://indexar.netlify.app/">
 <meta name="theme-color" content="#2554E8">
 <meta name="author" content="Marcos J. Ibáñez — Índex AR">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -20,12 +18,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Índex AR">
 <meta property="og:title" content="Índex AR | Research económico argentino">
-<meta property="og:description" content="Datos, escenarios y análisis económico para entender qué está pasando y qué puede cambiar después.">
+<meta property="og:description" content="Investigación económica aplicada a Argentina: datos, contexto, mecanismos y escenarios.">
 <meta property="og:locale" content="es_AR">
 <meta property="og:url" content="https://indexar.netlify.app/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Índex AR — Research económico argentino">
-<meta name="twitter:description" content="Macroeconomía, finanzas, mercados y datos de Argentina.">
+<meta name="twitter:description" content="Macroeconomía, finanzas, mercados y análisis de datos sobre Argentina.">
  
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0E14'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2EFE9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%23C9A96A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%23C9A96A'/%3E%3C/svg%3E">
  
@@ -792,6 +790,114 @@ footer:before{
 @media(max-width:900px){.exec-grid,.risk-grid,.intel-grid-3{grid-template-columns:1fr}.intel-top{align-items:start;flex-direction:column}.intel-stamp{min-width:0;width:100%}}
 @media(max-width:620px){.intel-top{padding:56px 0 28px}.exec-card{padding:22px}.signal{grid-template-columns:72px 1fr}.signal-value{display:none}.intel-grid-3{padding-bottom:56px}}
 @media(prefers-reduced-motion:reduce){.signal-bar i,.tool-card{animation:none;transition:none}}
+
+/* ================================================================
+   V4 — CAPA PREMIUM: identidad humana + research profesional
+   ================================================================ */
+:root{
+  --ix-paper:#F4F2EC;
+  --ix-ink2:#0B1320;
+  --ix-blue:#2148D8;
+  --ix-copper:#A65B3F;
+  --ix-olive:#68705A;
+  --ix-sand:#D9D1C1;
+}
+body{background:var(--ix-paper);}
+[data-theme="dark"] body{background:#090D14;}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;opacity:.045;background-image:radial-gradient(rgba(20,20,20,.8) .55px,transparent .55px);background-size:5px 5px;mix-blend-mode:multiply;}
+[data-theme="dark"] body:after{opacity:.025;mix-blend-mode:screen;}
+
+/* Evita sensación de plantilla: menos tarjetas, más composición editorial. */
+.section-title{letter-spacing:-.025em;}
+.section-label{letter-spacing:.12em;}
+.cover-hero{background:#08111E!important;}
+.cover-overlay{background:linear-gradient(180deg,rgba(8,17,30,.42),rgba(8,17,30,.78) 62%,#08111E 100%)!important;}
+.cover-hero .eyebrow{color:#D9C9A6!important;}
+.cover-title em{color:#83A5FF!important;}
+.cover-sub{max-width:760px!important;color:#D9DEE7!important;}
+.hero{background:linear-gradient(180deg,var(--ix-paper),var(--bg));}
+[data-theme="dark"] .hero{background:linear-gradient(180deg,#090D14,#0B1018);}
+.hero h1 em{color:var(--ix-copper)!important;}
+.btn-solid{background:var(--ix-blue)!important;border-color:var(--ix-blue)!important;}
+.btn-outline:hover{border-color:var(--ix-copper)!important;color:var(--ix-copper)!important;}
+
+/* Bloque de tesis: producto editorial propio. */
+#tesis{padding:84px 0;border-bottom:1px solid var(--rule);background:var(--bg);}
+.thesis-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;}
+.thesis-main{border:1px solid var(--rule-strong);background:var(--panel);padding:34px;border-radius:2px;position:relative;overflow:hidden;}
+.thesis-main:before{content:"TESIS";position:absolute;right:-8px;top:12px;font:700 82px/1 var(--font-display);letter-spacing:-.08em;color:var(--ix-electric-soft);pointer-events:none;}
+.thesis-kicker{font:600 10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ix-copper);}
+.thesis-main h3{font-size:34px;line-height:1.08;margin:15px 0 13px;max-width:700px;}
+.thesis-main p{font:15px/1.7 var(--font-serif);color:var(--text-soft);max-width:700px;margin:0;}
+.thesis-points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:26px;border:1px solid var(--rule);}
+.thesis-point{background:var(--panel);padding:17px;min-height:112px;}
+.thesis-point b{display:block;font:600 10px var(--font-mono);letter-spacing:.11em;text-transform:uppercase;color:var(--text-soft);margin-bottom:8px;}
+.thesis-point span{font:600 16px/1.25 var(--font-display);}
+.thesis-side{display:grid;gap:12px;}
+.thesis-box{border:1px solid var(--rule);background:var(--panel);padding:22px;}
+.thesis-box .mini-head{font:600 10px var(--font-mono);letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);}
+.thesis-box h4{font-size:21px;margin:9px 0 7px;}
+.thesis-box p{font:13px/1.6 var(--font-serif);color:var(--text-soft);margin:0;}
+.thesis-status{display:inline-flex;align-items:center;gap:7px;font:600 10px var(--font-mono);text-transform:uppercase;letter-spacing:.1em;margin-top:14px;color:var(--ix-olive);}
+.thesis-status:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;}
+@media(max-width:820px){.thesis-grid{grid-template-columns:1fr}.thesis-points{grid-template-columns:1fr}}
+
+/* Mapa de transmisión: economía explicada como relaciones, no como slogans. */
+#mapa-transmision{padding:82px 0;border-bottom:1px solid var(--rule);background:var(--ix-paper);}
+[data-theme="dark"] #mapa-transmision{background:#0C1119;}
+.transmission-intro{max-width:740px;font:17px/1.7 var(--font-serif);color:var(--text-soft);margin:0 0 30px;}
+.transmission-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:stretch;}
+.transmission-card{background:var(--panel);border:1px solid var(--rule);padding:22px 18px;position:relative;min-height:190px;}
+.transmission-card:not(:last-child):after{content:"→";position:absolute;right:-17px;top:50%;transform:translateY(-50%);font:24px var(--font-mono);color:var(--ix-copper);z-index:3;background:var(--ix-paper);padding:3px;}
+.transmission-card .n{font:600 10px var(--font-mono);color:var(--gold-text);letter-spacing:.14em;}
+.transmission-card h3{font-size:22px;margin:15px 0 8px;}
+.transmission-card p{font:13px/1.55 var(--font-serif);color:var(--text-soft);margin:0;}
+.transmission-foot{margin-top:15px;font:10px var(--font-mono);text-transform:uppercase;letter-spacing:.09em;color:var(--text-soft);}
+@media(max-width:900px){.transmission-grid{grid-template-columns:1fr 1fr}.transmission-card:not(:last-child):after{display:none}}
+@media(max-width:560px){.transmission-grid{grid-template-columns:1fr}}
+
+/* Archivo de pensamiento: imágenes históricas con función editorial. */
+#archivo-pensamiento{padding:82px 0;border-bottom:1px solid var(--rule);}
+.think-intro{max-width:760px;font:16px/1.7 var(--font-serif);color:var(--text-soft);margin:0 0 30px;}
+.think-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.think-card{border:1px solid var(--rule);background:var(--panel);overflow:hidden;}
+.think-img{height:260px;background:#D8D4CB;overflow:hidden;position:relative;}
+.think-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(.95);transition:transform .5s ease,filter .3s ease;}
+.think-card:hover .think-img img{transform:scale(1.035);filter:grayscale(.55) contrast(1);}
+.think-body{padding:20px;}
+.think-tag{font:600 9px var(--font-mono);text-transform:uppercase;letter-spacing:.14em;color:var(--ix-copper);}
+.think-body h3{font-size:24px;margin:9px 0 7px;}
+.think-body p{font:13px/1.6 var(--font-serif);color:var(--text-soft);margin:0 0 14px;}
+.think-credit{font:9px/1.5 var(--font-mono);color:var(--text-soft);border-top:1px solid var(--rule);padding-top:10px;}
+.think-credit a{color:var(--gold-text);text-decoration:underline;text-underline-offset:2px;}
+@media(max-width:820px){.think-grid{grid-template-columns:1fr}.think-img{height:300px}}
+
+/* Perfil profesional: habla de capacidad sin sonar a CV automático. */
+#perfil-profesional{padding:82px 0;border-bottom:1px solid var(--rule);background:var(--navy-solid);color:#fff;position:relative;overflow:hidden;}
+#perfil-profesional:before{content:"MI / RESEARCH";position:absolute;right:-20px;bottom:-35px;font:700 120px/1 var(--font-display);letter-spacing:-.09em;color:rgba(255,255,255,.035);}
+.profile-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;position:relative;z-index:1;}
+.profile-kicker{font:600 10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:#B8C9FF;}
+.profile-grid h2{font-size:clamp(34px,4vw,58px);line-height:1.02;margin:13px 0 16px;}
+.profile-grid .lead{font:17px/1.7 var(--font-serif);color:rgba(255,255,255,.7);margin:0;}
+.profile-list{border-top:1px solid rgba(255,255,255,.15);}
+.profile-row{display:grid;grid-template-columns:145px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+.profile-row b{font:600 10px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.52);}
+.profile-row span{font:14px/1.55 var(--font-ui);color:#fff;}
+.profile-note{margin-top:22px;padding:15px 17px;border-left:2px solid #B8C9FF;background:rgba(255,255,255,.045);font:12px/1.6 var(--font-serif);color:rgba(255,255,255,.65);}
+@media(max-width:820px){.profile-grid{grid-template-columns:1fr;gap:35px}.profile-row{grid-template-columns:110px 1fr}}
+
+/* Footer limpio y sin frases de marketing genéricas. */
+.footer-col a[href="#metodologia"]:last-child{display:none;}
+
+/* Human touch: elimina algunas señales visuales de dashboard genérico. */
+.intel-card,.research-card,.tool-card,.kpi-card,.hero-figure{border-radius:2px!important;}
+.research-card:before{background:var(--ix-copper)!important;}
+.section-label::before{color:var(--ix-copper)!important;}
+.pillar-num{color:var(--ix-copper)!important;}
+
+/* Accesibilidad de imágenes */
+.think-img img{aspect-ratio:4/3;}
+
 </style>
 
 <script type="application/ld+json">
@@ -805,7 +911,27 @@ footer:before{
   "knowsAbout":["Macroeconomía","Economía argentina","Finanzas","Mercados","Análisis de datos","Research económico"]
 }
 </script>
+<link rel="preload" as="image" href="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg">
+
+<style>
+.economist-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+.economist-card{appearance:none;border:1px solid var(--line,#d9d4ca);background:var(--paper,#f7f5ef);color:inherit;text-align:left;padding:0;cursor:pointer;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+.economist-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(18,35,55,.12);border-color:rgba(24,86,124,.45)}
+.economist-card:focus-visible{outline:3px solid #c77b45;outline-offset:4px}
+.economist-card .think-img{aspect-ratio:4/3;background:#e8e3d8;overflow:hidden}
+.economist-card .think-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.03);transition:transform .45s ease,filter .45s ease}
+.economist-card:hover .think-img img{transform:scale(1.035);filter:grayscale(0) contrast(1.05)}
+.economist-card .think-body{padding:1rem 1rem 1.1rem}
+.library-cta{display:inline-block;margin-top:.65rem;font-family:var(--mono,monospace);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#18567c}
+.library-modal{position:fixed;inset:0;z-index:9999;display:none}.library-modal.is-open{display:block}
+.library-backdrop{position:absolute;inset:0;background:rgba(10,20,30,.68);backdrop-filter:blur(5px)}
+.library-panel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(980px,92vw);max-height:88vh;overflow:auto;background:#f7f5ef;color:#182b3b;border:1px solid rgba(255,255,255,.25);box-shadow:0 30px 90px rgba(0,0,0,.35);padding:clamp(1.5rem,4vw,3rem)}
+.library-close{position:absolute;right:1rem;top:.8rem;border:0;background:transparent;font-size:2rem;line-height:1;cursor:pointer;color:#182b3b}.library-kicker,.library-section-label{font-family:var(--mono,monospace);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#8a5b3c}.library-panel h2{font-family:var(--serif,Georgia,serif);font-size:clamp(2.2rem,5vw,4rem);margin:.25rem 0 .5rem}.library-intro{max-width:760px;font-size:1.02rem;line-height:1.65;color:#53616d}.library-layout{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}.library-list{display:grid;gap:.7rem;margin-top:.7rem}.library-item{display:block;padding:.9rem 1rem;border:1px solid #d9d4ca;background:#fff;text-decoration:none;color:#182b3b;transition:border-color .2s ease,transform .2s ease}.library-item:hover{border-color:#18567c;transform:translateX(3px)}.library-item strong{display:block;font-family:var(--serif,Georgia,serif);font-size:1.02rem}.library-item span{display:block;margin-top:.25rem;font-size:.82rem;color:#68737d}.library-note{margin-top:2rem;padding-top:1rem;border-top:1px solid #d9d4ca;font-size:.76rem;line-height:1.55;color:#68737d}
+@media(max-width:1000px){.economist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.library-layout{grid-template-columns:1fr}}
+@media(max-width:560px){.economist-grid{grid-template-columns:1fr}.library-panel{max-height:92vh}.library-panel h2{font-size:2.4rem}}
+</style>
 </head>
+<!-- V4 visuales históricas: Prebisch (CEPAL), Ferrer y Keynes (Wikimedia Commons). Revisar licencias/atribución antes de producción comercial. -->
 <body>
   <div id="scroll-progress"></div>
  
@@ -848,7 +974,8 @@ footer:before{
         <a href="#secciones">Secciones</a>
         <a href="#publicaciones">Publicaciones</a>
         <a href="#newsletter">Newsletter</a>
-          <a href="#metodologia">Metodología</a>
+          <a href="#tesis">Tesis</a>
+          <a href="#metodologia">Método</a>
       </nav>
       <div style="display:flex; align-items:center; gap:12px;">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">Claro</button>
@@ -893,7 +1020,7 @@ footer:before{
     <div class="cover-content">
       <div class="eyebrow" style="justify-content:center;">Análisis independiente · Argentina · Desde 2026</div>
       <h1 class="cover-title">Índex <em>AR</em></h1>
-      <p class="cover-sub">Lectura económica y política de la Argentina, con datos oficiales en vivo.</p>
+      <p class="cover-sub">Investigación económica aplicada a la Argentina: datos, contexto y escenarios con una lectura propia.</p>
     </div>
     <a href="#hero-main" class="cover-scroll" aria-label="Bajar a los indicadores">
       <span></span>
@@ -904,8 +1031,8 @@ footer:before{
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Análisis independiente · Argentina</div>
-        <h1>Research económico argentino para entender <em>qué cambia después.</em></h1>
-        <p class="hero-sub">Datos, mecanismos, escenarios y mercados en una lectura ejecutiva. Sin confundir el dato con la opinión: cada señal tiene fuente, fecha de corte y contexto.</p>
+        <h1>Economía argentina: <em>qué cambió, por qué y qué mirar ahora.</em></h1>
+        <p class="hero-sub">Datos, contexto y escenarios para leer la coyuntura sin atajos. Cada análisis distingue el dato observado, la interpretación y los supuestos que sostienen un escenario.</p>
         <div class="hero-proof" aria-label="Propuesta de valor profesional">
           <div class="proof-item"><div class="proof-value">Datos</div><div class="proof-label">Fuentes primarias</div></div>
           <div class="proof-item"><div class="proof-value">Research</div><div class="proof-label">Análisis propio</div></div>
@@ -984,9 +1111,9 @@ footer:before{
       <div class="intel-head">
         <div>
           <div class="intel-kicker">Índex Intelligence / 01</div>
-          <h2 class="intel-title">Del indicador al mecanismo.</h2>
+          <h2 class="intel-title">Del dato al mecanismo.</h2>
         </div>
-        <div class="intel-live">sistema editorial activo</div>
+        <div class="intel-live">actualización editorial</div>
       </div>
       <div class="intel-grid">
         <article class="intel-card featured">
@@ -1115,17 +1242,17 @@ footer:before{
     <div class="wrap">
       <div class="intel-top">
         <div>
-          <div class="intel-eyebrow">Índex Intelligence / Economic Decision System</div>
-          <h2 class="intel-title">No alcanza con saber <em>qué pasó.</em><br>Hay que detectar qué puede cambiar.</h2>
-          <p class="intel-desc">Una capa de análisis pensada para inversores, empresas y recruiters: indicadores, mecanismos de transmisión, escenarios y riesgos en una misma lectura. Los valores de ejemplo de esta maqueta son etiquetas de interfaz; los datos deben conectarse a fuentes verificadas antes de publicarse como señales de mercado.</p>
+          <div class="intel-eyebrow">Mesa de Coyuntura / Lectura económica</div>
+          <h2 class="intel-title">No alcanza con mirar el dato.<br><em>Hay que entender el mecanismo.</em></h2>
+          <p class="intel-desc">Una lectura de coyuntura pensada para quienes necesitan entender la economía y sus efectos sobre decisiones reales: empresas, inversores y equipos profesionales. El sitio separa datos observados, interpretación y escenarios; no presenta supuestos como hechos.</p>
         </div>
         <div class="intel-stamp">Sistema de research<strong>ÍNDEX / AR</strong>Edición 2026 · Argentina</div>
       </div>
 
       <div class="exec-grid">
         <article class="exec-card">
-          <div class="exec-kicker">Executive macro brief · arquitectura</div>
-          <h3>El tablero debe responder cinco preguntas antes de mostrar veinte gráficos.</h3>
+          <div class="exec-kicker">Lectura de coyuntura · estructura</div>
+          <h3>Primero las preguntas; después los gráficos.</h3>
           <p>Estado del ciclo, inflación, política fiscal/monetaria, sector externo y condiciones financieras. La interfaz separa <strong>dato observado</strong>, <strong>interpretación</strong> y <strong>escenario</strong> para evitar que una proyección se confunda con un hecho.</p>
           <div class="signal-list" aria-label="Ejemplo de semáforo de indicadores">
             <div class="signal"><span class="signal-name">Actividad</span><span class="signal-bar"><i style="--w:68%"></i></span><span class="signal-value neutral">MONITOREAR</span></div>
@@ -1150,9 +1277,9 @@ footer:before{
       </div>
 
       <div class="intel-grid-3">
-        <article class="tool-card"><div class="tool-icon">01 / NOWCAST</div><h4>Radar de coyuntura</h4><p>Una lectura compacta del ciclo: actividad, empleo, consumo, inversión, recaudación y crédito. El objetivo es detectar giros antes de que aparezcan en un único indicador.</p><span class="tool-link">Próximamente →</span></article>
-        <article class="tool-card"><div class="tool-icon">02 / SCENARIO</div><h4>Motor de escenarios</h4><p>Escenarios con supuestos trazables: qué pasa si cambia el dólar, la tasa, el salario real, el precio de commodities o la demanda externa.</p><span class="tool-link">Próximamente →</span></article>
-        <article class="tool-card"><div class="tool-icon">03 / DATA</div><h4>Data room económico</h4><p>Series históricas, metadatos, frecuencia, fecha de actualización y fuente primaria. La procedencia del dato forma parte del producto.</p><span class="tool-link">Próximamente →</span></article>
+        <article class="tool-card"><div class="tool-icon">01 / NOWCAST</div><h4>Radar de coyuntura</h4><p>Actividad, empleo, consumo, inversión, recaudación y crédito reunidos para seguir el ciclo y detectar cambios de ritmo.</p><span class="tool-link">Próximamente →</span></article>
+        <article class="tool-card"><div class="tool-icon">02 / SCENARIO</div><h4>Escenarios</h4><p>Escenarios con supuestos trazables: qué pasa si cambia el dólar, la tasa, el salario real, el precio de commodities o la demanda externa.</p><span class="tool-link">Próximamente →</span></article>
+        <article class="tool-card"><div class="tool-icon">03 / DATA</div><h4>Base de datos económica</h4><p>Series históricas, metadatos, frecuencia, fecha de actualización y fuente primaria. La procedencia del dato es parte del análisis.</p><span class="tool-link">Próximamente →</span></article>
       </div>
 
       <div class="provenance" aria-label="Principios de calidad del dato">
@@ -1161,13 +1288,113 @@ footer:before{
     </div>
   </section>
 
-  <section id="research" class="reveal">
+  
+
+<section id="tesis" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title">Tesis de la semana</div>
+      <div class="section-label">Cómo se construye una lectura</div>
+    </div>
+    <div class="thesis-grid">
+      <article class="thesis-main" data-origin="indexar">
+        <div class="thesis-kicker">Plantilla de análisis · no es una recomendación financiera</div>
+        <h3>La macro no se entiende por una variable aislada.</h3>
+        <p>Una tesis útil empieza por una pregunta concreta, identifica las variables que pueden moverla y establece qué evidencia la confirmaría o la debilitaría. Esta estructura permite pasar de la descripción de la coyuntura a una hipótesis contrastable.</p>
+        <div class="thesis-points">
+          <div class="thesis-point"><b>Pregunta</b><span>¿Qué está explicando el cambio?</span></div>
+          <div class="thesis-point"><b>Evidencia</b><span>¿Qué indicadores deberían moverse?</span></div>
+          <div class="thesis-point"><b>Invalidación</b><span>¿Qué dato obligaría a revisar la lectura?</span></div>
+        </div>
+      </article>
+      <div class="thesis-side">
+        <article class="thesis-box"><div class="mini-head">Dato observado</div><h4>Separar nivel, variación y tendencia</h4><p>Una mejora mensual no necesariamente cambia el régimen. Cada indicador debe leerse contra su base de comparación, frecuencia y comportamiento previo.</p><div class="thesis-status">criterio editorial</div></article>
+        <article class="thesis-box"><div class="mini-head">Escenario</div><h4>Supuestos visibles</h4><p>Cuando se plantea un escenario, se explicitan las condiciones que deberían cumplirse. Sin supuestos visibles, una proyección es solamente una cifra.</p><div class="thesis-status">criterio editorial</div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mapa-transmision" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title">Mapa de transmisión</div>
+      <div class="section-label">Pensar la economía como sistema</div>
+    </div>
+    <p class="transmission-intro">La utilidad de un indicador aparece cuando podemos conectarlo con otros. Índex AR incorpora mapas de transmisión para mostrar cómo un shock puede propagarse desde una variable financiera o externa hacia precios, ingresos, demanda y actividad.</p>
+    <div class="transmission-grid">
+      <article class="transmission-card"><div class="n">01 / SHOCK</div><h3>Tipo de cambio</h3><p>Movimiento cambiario, expectativas y precios relativos. El punto de partida del escenario.</p><div class="transmission-foot">Variable inicial</div></article>
+      <article class="transmission-card"><div class="n">02 / PRECIOS</div><h3>Inflación</h3><p>Pass-through, bienes transables, regulados y persistencia. La transmisión no es instantánea ni homogénea.</p><div class="transmission-foot">Mecanismo nominal</div></article>
+      <article class="transmission-card"><div class="n">03 / INGRESOS</div><h3>Salario real</h3><p>La evolución de precios frente a ingresos modifica poder adquisitivo, consumo y decisiones de cobertura.</p><div class="transmission-foot">Ingreso disponible</div></article>
+      <article class="transmission-card"><div class="n">04 / ACTIVIDAD</div><h3>Demanda e inversión</h3><p>Consumo, crédito e inversión responden a rentabilidad esperada, incertidumbre y condiciones financieras.</p><div class="transmission-foot">Resultado macro</div></article>
+    </div>
+  </div>
+</section>
+
+<section id="archivo-pensamiento" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title">Archivo de pensamiento</div>
+      <div class="section-label">Ideas que informan el análisis</div>
+    </div>
+    <p class="think-intro">La investigación aplicada no parte de cero. Esta pequeña biblioteca visual conecta la coyuntura argentina con tradiciones de pensamiento económico que ayudan a formular mejores preguntas sobre desarrollo, distribución, restricción externa, demanda y macroeconomía.</p>
+    <div class="think-grid economist-grid">
+  <button class="think-card economist-card" type="button" data-economist="prebisch" aria-label="Abrir biblioteca de Raúl Prebisch">
+    <div class="think-img"><img alt="Retrato histórico de Raúl Prebisch" loading="lazy" src="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg"></div>
+    <div class="think-body"><div class="think-tag">Argentina · CEPAL</div><h3>Raúl Prebisch</h3><p>Centro-periferia, estructura productiva y restricción externa.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="ferrer" aria-label="Abrir biblioteca de Aldo Ferrer">
+    <div class="think-img"><img alt="Retrato de Aldo Ferrer" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aldo%20Ferrer.jpg?width=900"></div>
+    <div class="think-body"><div class="think-tag">Argentina · Desarrollo</div><h3>Aldo Ferrer</h3><p>Desarrollo, estructura productiva y densidad nacional.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="keynes" aria-label="Abrir biblioteca de John Maynard Keynes">
+    <div class="think-img"><img alt="Retrato histórico de John Maynard Keynes" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/John%20Maynard%20Keynes.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">Macroeconomía</div><h3>John Maynard Keynes</h3><p>Demanda efectiva, incertidumbre y dinámica macroeconómica.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="sraffa" aria-label="Abrir biblioteca de Piero Sraffa">
+    <div class="think-img"><img alt="Retrato histórico de Piero Sraffa" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Piero%20Sraffa%20late-1920s.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">Clásicos · Distribución</div><h3>Piero Sraffa</h3><p>Producción, precios, excedente y crítica de la teoría marginalista.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="ricardo" aria-label="Abrir biblioteca de David Ricardo">
+    <div class="think-img"><img alt="Retrato de David Ricardo" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20David%20Ricardo%20by%20Thomas%20Phillips.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">Clásicos · Distribución</div><h3>David Ricardo</h3><p>Valor, distribución, renta, comercio y tributación.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="smith" aria-label="Abrir biblioteca de Adam Smith">
+    <div class="think-img"><img alt="Retrato de Adam Smith" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/AdamSmith.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">Clásicos · Economía política</div><h3>Adam Smith</h3><p>División del trabajo, precios, comercio e instituciones.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="friedman" aria-label="Abrir biblioteca de Milton Friedman">
+    <div class="think-img"><img alt="Retrato de Milton Friedman" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Milton%20Friedman.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">Monetarismo · Política económica</div><h3>Milton Friedman</h3><p>Dinero, inflación, consumo, libertad económica y política pública.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  </button>
+</div>
+  </div>
+</section>
+
+<section id="perfil-profesional" class="reveal">
+  <div class="wrap profile-grid">
+    <div>
+      <div class="profile-kicker">Perfil profesional</div>
+      <h2>Economía, datos y criterio.</h2>
+      <p class="lead">Índex AR también es un espacio donde mostrar cómo trabajo: formular una pregunta, ordenar evidencia, construir una explicación y comunicarla de forma clara.</p>
+      <div class="profile-note">La plataforma está pensada como portfolio profesional. Los proyectos publicados deben mostrar el proceso, no solamente el resultado: fuentes, metodología, código o cálculos cuando corresponda y límites de la evidencia.</div>
+    </div>
+    <div class="profile-list">
+      <div class="profile-row"><b>Research</b><span>Macroeconomía argentina, inflación, sector externo, finanzas públicas, mercados y desarrollo.</span></div>
+      <div class="profile-row"><b>Cuantitativo</b><span>Series de tiempo, econometría aplicada, análisis de datos y visualización.</span></div>
+      <div class="profile-row"><b>Finanzas</b><span>Deuda, tasas, riesgo, escenarios y lectura de variables financieras.</span></div>
+      <div class="profile-row"><b>Producto</b><span>Dashboards, publicaciones, bases de datos y herramientas económicas accesibles desde la web.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="reveal">
     <div class="wrap">
       <div class="section-head">
         <div class="section-title">Research e informes</div>
         <div class="section-label">Portfolio de investigación</div>
       </div>
-      <p class="research-intro">Índex AR no busca solamente mostrar qué pasó. La propuesta es construir una biblioteca de análisis reproducibles: datos, hipótesis, mecanismos, evidencia y conclusiones. Este espacio funciona también como portfolio profesional de investigación económica.</p>
+      <p class="research-intro">El objetivo es dejar un registro de cómo se construye cada argumento: datos, hipótesis, mecanismo, evidencia y conclusión. El archivo funciona además como portfolio público de investigación económica.</p>
       <div class="research-grid">
         <article class="research-card">
           <div class="research-meta">Macro · Distribución</div>
@@ -1258,8 +1485,8 @@ footer:before{
           <div class="method-item"><span class="method-num">04</span><div><strong>Escenarios</strong><span>Cuando corresponde, se separan hechos, hipótesis y escenarios posibles para evitar falsas certezas.</span></div></div>
         </div>
         <div class="method-note">
-          <h3>La regla editorial</h3>
-          <p>Un gráfico no es una conclusión. Cada publicación busca explicar qué cambió, por qué pudo haber cambiado, qué evidencia respalda esa explicación y qué indicadores conviene seguir después.</p>
+          <h3>Cómo se decide qué publicar</h3>
+          <p>Un gráfico no es una conclusión. Antes de publicar, la pregunta es qué cambió, contra qué se compara, qué mecanismo puede explicarlo y qué evidencia podría refutar esa explicación.</p>
           <div class="contact-card"><strong style="font:600 11px var(--font-mono);text-transform:uppercase;letter-spacing:1px;">Contacto profesional</strong><br><a href="mailto:contacto@indexar.com.ar">contacto@indexar.com.ar</a></div>
         </div>
       </div>
@@ -1339,7 +1566,7 @@ footer:before{
   <section class="manifesto reveal">
     <div class="manifesto-bg parallax" data-speed="0.15" aria-hidden="true"></div>
     <div class="wrap">
-      <p>Un dato suelto no dice mucho. Lo que importa es <em>por qué</em> se movió — y qué puede pasar después.</p>
+      <p>Un dato aislado describe. La economía empieza cuando podemos explicar <em>por qué se movió</em>.</p>
     </div>
   </section>
  
@@ -1359,7 +1586,7 @@ footer:before{
           <p><span class="drop-cap">Í</span>ndex AR nace de una idea simple: convertir datos económicos dispersos en investigación que pueda ser leída, contrastada y utilizada para tomar decisiones. El proyecto combina formación económica, análisis cuantitativo, lectura de coyuntura y desarrollo web para construir una plataforma de research sobre Argentina.</p>
           <div class="margin-note">
             <strong>Perfil profesional</strong>
-            Marcos J. Ibáñez es economista de la Universidad Nacional de Avellaneda (UNDAV). Índex AR funciona como proyecto independiente de research y como portfolio público de análisis económico. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
+            Marcos J. Ibáñez es economista de la Universidad Nacional de Avellaneda (UNDAV). Índex AR es un proyecto independiente de investigación y un portfolio público de análisis económico. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
           </div>
         </div>
         <div>
@@ -1420,8 +1647,11 @@ footer:before{
           <a href="#newsletter">Newsletter</a>
           <a href="#intelligence">Intelligence</a>
           <a href="#research">Research</a>
+          <a href="#tesis">Tesis</a>
+          <a href="#mapa-transmision">Mapa de transmisión</a>
+          <a href="#archivo-pensamiento">Pensamiento económico</a>
+          <a href="#perfil-profesional">Perfil profesional</a>
         <a href="#metodologia">Método</a>
-          <a href="#metodologia">Metodología</a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Colofón</div>
@@ -1957,7 +2187,7 @@ footer:before{
       btn.addEventListener('click', async function () {
         var shareData = {
           title: 'Índex AR',
-          text: 'Lectura económica y política de la Argentina.',
+          text: 'Índex AR — investigación económica aplicada a la Argentina.',
           url: window.location.href
         };
         if (navigator.share) {
@@ -1989,7 +2219,7 @@ footer:before{
     }
  
     function initScrollSpy() {
-      var ids = ['sobre-detalle', 'secciones', 'publicaciones', 'newsletter'];
+      var ids = ['secciones', 'tesis', 'mapa-transmision', 'research', 'publicaciones', 'metodologia', 'newsletter', 'sobre-detalle'];
       var links = {};
       ids.forEach(function (id) {
         var link = document.querySelector('nav a[href="#' + id + '"]');
@@ -2140,6 +2370,40 @@ footer:before{
     }catch(_){ }
   });
   document.querySelectorAll('[data-origin]').forEach(function(el){el.setAttribute('data-content-owner','Índex AR — Marcos J. Ibáñez');});
+})();
+</script>
+
+<div class="library-modal" id="economist-library" aria-hidden="true">
+  <div class="library-backdrop" data-library-close></div>
+  <section class="library-panel" role="dialog" aria-modal="true" aria-labelledby="library-title">
+    <button class="library-close" type="button" data-library-close aria-label="Cerrar biblioteca">×</button>
+    <div class="library-kicker">ÍNDEX AR · BIBLIOTECA DE PENSAMIENTO ECONÓMICO</div>
+    <h2 id="library-title">Biblioteca</h2>
+    <p id="library-intro" class="library-intro"></p>
+    <div class="library-layout">
+      <div><div class="library-section-label">OBRAS CENTRALES</div><div id="library-works" class="library-list"></div></div>
+      <div><div class="library-section-label">ARCHIVOS Y RECURSOS</div><div id="library-resources" class="library-list"></div></div>
+    </div>
+    <div class="library-note">Índex AR selecciona bibliografía para orientar la lectura. Los enlaces conducen a catálogos, archivos o repositorios externos; no se alojan copias de obras protegidas.</div>
+  </section>
+</div>
+
+<script>
+(function(){
+const LIB={
+ prebisch:{name:'Raúl Prebisch',intro:'Economista argentino y referente de la tradición estructuralista latinoamericana. La biblioteca prioriza textos sobre centro-periferia, desarrollo y restricción externa.',works:[['El desarrollo económico de la América Latina y algunos de sus principales problemas','1949 · CEPAL','https://repositorio.cepal.org/handle/11362/40010'],['Hacia una dinámica del desarrollo latinoamericano','1963 · CEPAL','https://repositorio.cepal.org/handle/11362/40062']],resources:[['Repositorio CEPAL · Raúl Prebisch','Archivo institucional','https://repositorio.cepal.org/'],['CEPAL · Biblioteca','Catálogo y documentos','https://biblioguias.cepal.org/'] ]},
+ ferrer:{name:'Aldo Ferrer',intro:'Una entrada argentina al desarrollo: estructura productiva, restricción externa, densidad nacional y transformación económica.',works:[['La economía argentina','1963 · obra central','https://catalogo.bn.gov.ar/'],['Vivir con lo nuestro','1983 · desarrollo y estructura productiva','https://catalogo.bn.gov.ar/']],resources:[['Biblioteca Nacional Mariano Moreno','Catálogo bibliográfico','https://catalogo.bn.gov.ar/'],['CEPAL · Desarrollo económico','Documentos regionales','https://www.cepal.org/es'] ]},
+ keynes:{name:'John Maynard Keynes',intro:'Biblioteca para estudiar demanda efectiva, incertidumbre, dinero, inversión, empleo y política macroeconómica.',works:[['The Economic Consequences of the Peace','1919 · economía internacional','https://archive.org/search?query=The%20Economic%20Consequences%20of%20the%20Peace%20Keynes'],['A Treatise on Money','1930 · dinero y sistema monetario','https://archive.org/search?query=A%20Treatise%20on%20Money%20Keynes'],['The General Theory of Employment, Interest and Money','1936 · macroeconomía','https://archive.org/search?query=General%20Theory%20Keynes']],resources:[['Cambridge · Keynes papers','Archivo y manuscritos','https://www.jesus.cam.ac.uk/collections/archives/archives-keynes-papers'],['Internet Archive','Textos digitalizados','https://archive.org/'] ]},
+ sraffa:{name:'Piero Sraffa',intro:'La biblioteca sraffiana se centra en producción, precios, excedente, distribución y la reconstrucción de la tradición clásica.',works:[['Production of Commodities by Means of Commodities','1960 · obra central','https://archive.org/search?query=Production%20of%20Commodities%20by%20Means%20of%20Commodities%20Sraffa'],['The Laws of Returns under Competitive Conditions','1926 · artículo','https://www.jstor.org/action/doBasicSearch?Query=The%20Laws%20of%20Returns%20under%20Competitive%20Conditions%20Sraffa']],resources:[['Piero Sraffa Archives · Trinity College Cambridge','Papeles personales y profesionales','https://archives.trin.cam.ac.uk/index.php/papers-of-piero-sraffa-1898-1983-economist'],['Sraffa · bibliografía y archivo','Materiales catalogados por Trinity','https://trin-2.maxarchiveservices.co.uk/index.php/bibliography'] ]},
+ ricardo:{name:'David Ricardo',intro:'Biblioteca clásica sobre valor, distribución, renta diferencial, comercio internacional y tributación.',works:[['On the Principles of Political Economy and Taxation','1817 · obra central','https://www.loc.gov/item/05020722/'],['The Works and Correspondence of David Ricardo','1951–1973 · edición crítica de Piero Sraffa y Maurice Dobb','https://oll.libertyfund.org/titles/ricardo-the-works-and-correspondence-of-david-ricardo-11-vols']],resources:[['Library of Congress · Ricardo','Edición digitalizada de 1819','https://www.loc.gov/item/05020722/'],['UNSAM · catálogo bibliográfico','Obras y correspondencia','https://buscador.unsam.edu.ar/Record/57842'] ]},
+ smith:{name:'Adam Smith',intro:'Biblioteca de economía política clásica: división del trabajo, precios, comercio, instituciones, moral y riqueza.',works:[['The Theory of Moral Sentiments','1759 · filosofía moral','https://www.loc.gov/item/18015943/'],['An Inquiry into the Nature and Causes of the Wealth of Nations','1776 · economía política','https://www7.adamsmithworks.org/documents/text-repository']],resources:[['Adam Smith Works · Text Repository','Textos completos y recursos','https://www7.adamsmithworks.org/documents/text-repository'],['Library of Congress · Smith','Catálogo y ediciones históricas','https://www.loc.gov/'] ]},
+ friedman:{name:'Milton Friedman',intro:'Biblioteca para estudiar monetarismo, inflación, consumo, política monetaria, libertad económica y debate de políticas públicas.',works:[['A Theory of the Consumption Function','1957 · consumo e ingreso permanente','https://catalog.hathitrust.org/Search/Home?lookfor=A%20Theory%20of%20the%20Consumption%20Function%20Friedman&type=all&inst='],['Capitalism and Freedom','1962 · política económica','https://guides.loc.gov/milton-friedman/resources'],['A Monetary History of the United States, 1867–1960','1963 · con Anna J. Schwartz','https://catalog.loc.gov/'],['Free to Choose','1980 · con Rose Friedman','https://miltonfriedman.hoover.org/']],resources:[['Collected Works of Milton Friedman · Hoover','Más de 1.400 materiales digitales','https://miltonfriedman.hoover.org/'],['Library of Congress · Friedman Resource Guide','Bibliografía y catálogo','https://guides.loc.gov/milton-friedman/resources'] ]}
+};
+const modal=document.getElementById('economist-library'),title=document.getElementById('library-title'),intro=document.getElementById('library-intro'),works=document.getElementById('library-works'),resources=document.getElementById('library-resources');
+function openLib(key){const d=LIB[key];if(!d)return; title.textContent=d.name; intro.textContent=d.intro; works.innerHTML=d.works.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener"><strong>${x[0]}</strong><span>${x[1]} · consultar recurso</span></a>`).join(''); resources.innerHTML=d.resources.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener"><strong>${x[0]}</strong><span>${x[1]}</span></a>`).join(''); modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';location.hash='biblioteca-'+key;}
+function closeLib(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';if(location.hash.startsWith('#biblioteca-'))history.replaceState(null,'',location.pathname+location.search);}
+document.querySelectorAll('[data-economist]').forEach(b=>b.addEventListener('click',()=>openLib(b.dataset.economist)));document.querySelectorAll('[data-library-close]').forEach(b=>b.addEventListener('click',closeLib));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))closeLib()});
+const h=location.hash.match(/^#biblioteca-(.+)$/);if(h&&LIB[h[1]])openLib(h[1]);
 })();
 </script>
 </body>
