@@ -914,6 +914,77 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
 <link rel="preload" as="image" href="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg">
 
 <style>
+/* ================================================================
+   ÍNDEX AR V8 — NAVEGACIÓN LATERAL + CARRUSEL DE PENSAMIENTO
+   Objetivo: reducir longitud percibida, mejorar descubrimiento y
+   convertir la biblioteca en un módulo horizontal navegable.
+   ================================================================ */
+:root{--menu-width:390px;--menu-ease:cubic-bezier(.22,.61,.36,1)}
+
+/* --- Menú lateral fijo --- */
+.index-menu-trigger{
+  position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:2200;
+  width:52px;height:52px;border:1px solid color-mix(in srgb,var(--rule-strong) 80%,transparent);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);color:var(--text);
+  border-radius:4px;box-shadow:0 12px 35px rgba(0,0,0,.14);backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);cursor:pointer;display:grid;place-items:center;
+  transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.index-menu-trigger:hover{transform:translateY(-50%) translateX(-3px);border-color:var(--gold);box-shadow:0 15px 40px rgba(0,0,0,.2)}
+.index-menu-trigger .hamburger-icon,.index-menu-trigger .hamburger-icon::before,.index-menu-trigger .hamburger-icon::after{
+  display:block;width:21px;height:2px;background:currentColor;border-radius:2px;content:"";transition:transform .25s ease,opacity .2s ease
+}
+.index-menu-trigger .hamburger-icon{position:relative}
+.index-menu-trigger .hamburger-icon::before{position:absolute;top:-7px}
+.index-menu-trigger .hamburger-icon::after{position:absolute;top:7px}
+body.menu-open .index-menu-trigger .hamburger-icon{background:transparent}
+body.menu-open .index-menu-trigger .hamburger-icon::before{transform:translateY(7px) rotate(45deg)}
+body.menu-open .index-menu-trigger .hamburger-icon::after{transform:translateY(-7px) rotate(-45deg)}
+body.menu-open .index-menu-trigger{opacity:0;pointer-events:none}
+.index-menu-label{position:absolute;right:64px;white-space:nowrap;font:600 9px var(--font-mono,monospace);letter-spacing:.14em;text-transform:uppercase;opacity:0;transform:translateX(5px);pointer-events:none;transition:opacity .18s ease,transform .18s ease}
+.index-menu-trigger:hover .index-menu-label{opacity:1;transform:none}
+.index-menu-overlay{position:fixed;inset:0;background:rgba(3,8,14,.46);backdrop-filter:blur(2px);z-index:2150;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.index-menu-drawer{position:fixed;right:0;top:0;bottom:0;width:min(var(--menu-width),92vw);z-index:2180;background:var(--bg);border-left:1px solid var(--rule-strong);box-shadow:-30px 0 80px rgba(0,0,0,.18);transform:translateX(105%);transition:transform .42s var(--menu-ease);display:flex;flex-direction:column;overflow:auto}
+body.menu-open .index-menu-overlay{opacity:1;visibility:visible}
+body.menu-open .index-menu-drawer{transform:none}
+.index-menu-head{padding:24px 26px 18px;border-bottom:1px solid var(--rule);display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.index-menu-brand{font-family:var(--font-display,Georgia,serif);font-size:25px;line-height:1}.index-menu-brand small{display:block;margin-top:7px;font:500 9px var(--font-mono,monospace);letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text)}
+.index-menu-close{border:1px solid var(--rule-strong);background:transparent;color:var(--text);width:36px;height:36px;border-radius:3px;font-size:22px;line-height:1;cursor:pointer}
+.index-menu-close:hover{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 8%,transparent)}
+.index-menu-body{padding:18px 18px 30px}
+.index-menu-group{margin-bottom:20px}.index-menu-group-label{padding:0 9px 8px;font:600 9px var(--font-mono,monospace);letter-spacing:.15em;text-transform:uppercase;color:var(--gold-text)}
+.index-menu-link{display:flex;align-items:center;gap:12px;width:100%;padding:11px 10px;border-radius:3px;color:var(--text-soft);font:500 14px var(--font-ui,Inter,sans-serif);text-decoration:none;transition:background .16s ease,color .16s ease,transform .16s ease}
+.index-menu-link .idx{width:25px;font:600 9px var(--font-mono,monospace);color:var(--gold-text);opacity:.8}.index-menu-link:hover{background:var(--panel);color:var(--text);transform:translateX(3px)}
+.index-menu-link.current{background:color-mix(in srgb,var(--gold) 10%,var(--panel));color:var(--text)}
+.index-menu-foot{margin-top:auto;padding:16px 26px;border-top:1px solid var(--rule);font:11px/1.55 var(--font-mono,monospace);color:var(--text-soft)}
+.index-menu-foot strong{color:var(--text)}
+body.menu-open{overflow:hidden}
+
+/* --- Carrusel de economistas --- */
+.economist-carousel{position:relative;margin-top:18px}
+.economist-grid{display:flex!important;grid-template-columns:none!important;gap:18px;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding:5px 4px 18px 2px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch;cursor:grab}
+.economist-grid:active{cursor:grabbing}
+.economist-card{flex:0 0 clamp(250px,27vw,305px);scroll-snap-align:start}
+.economist-grid::-webkit-scrollbar{height:7px}.economist-grid::-webkit-scrollbar-track{background:transparent}.economist-grid::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--gold) 70%,transparent);border-radius:99px}
+.economist-carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:2px}
+.economist-carousel-hint{font:500 10px var(--font-mono,monospace);letter-spacing:.09em;text-transform:uppercase;color:var(--text-soft)}
+.economist-carousel-buttons{display:flex;gap:7px}.economist-carousel-btn{width:40px;height:36px;border:1px solid var(--rule-strong);background:var(--bg);color:var(--text);border-radius:2px;cursor:pointer;font-size:18px;line-height:1;transition:background .15s ease,border-color .15s ease,transform .15s ease}.economist-carousel-btn:hover{border-color:var(--gold);background:var(--panel);transform:translateY(-1px)}
+@media(max-width:700px){
+  .index-menu-trigger{right:14px;top:auto;bottom:18px;transform:none;width:50px;height:50px;border-radius:50%}
+  .index-menu-trigger:hover{transform:translateY(-2px)}.index-menu-label{display:none}
+  .economist-card{flex-basis:78vw;max-width:320px}.economist-grid{gap:14px;padding-bottom:14px}
+  .economist-carousel-hint{font-size:9px}.economist-carousel-buttons{display:none}
+}
+@media(prefers-reduced-motion:reduce){.index-menu-drawer,.index-menu-overlay,.economist-grid,.index-menu-trigger,.index-menu-link{transition:none!important;scroll-behavior:auto!important}}
+
+[data-theme="dark"] .index-menu-trigger{background:rgba(14,21,30,.9);border-color:#344150;box-shadow:0 14px 40px rgba(0,0,0,.42)}
+[data-theme="dark"] .index-menu-trigger:hover{border-color:#8FB1FF}.index-menu-drawer{color:var(--text)}
+[data-theme="dark"] .index-menu-overlay{background:rgba(0,0,0,.62)}
+[data-theme="dark"] .index-menu-drawer{background:#0E151E;border-color:#2D3947;box-shadow:-30px 0 90px rgba(0,0,0,.58)}
+[data-theme="dark"] .index-menu-link:hover{background:#151F2B}[data-theme="dark"] .index-menu-link.current{background:#182535}
+
+</style>
+<style>
 .economist-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
 .economist-card{appearance:none;border:1px solid var(--line,#d9d4ca);background:var(--paper,#f7f5ef);color:inherit;text-align:left;padding:0;cursor:pointer;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
 .economist-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(18,35,55,.12);border-color:rgba(24,86,124,.45)}
@@ -930,8 +1001,207 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
 @media(max-width:1000px){.economist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.library-layout{grid-template-columns:1fr}}
 @media(max-width:560px){.economist-grid{grid-template-columns:1fr}.library-panel{max-height:92vh}.library-panel h2{font-size:2.4rem}}
 </style>
+<style>
+
+/* =====================================================================
+   ÍNDEX AR — DARK MODE AUDIT / V6.1
+   Corrección de contraste para la Biblioteca de Economistas y elementos
+   que tenían colores fijos heredados de la versión clara.
+   ===================================================================== */
+[data-theme="dark"] .economist-card{
+  background:#101720;
+  color:#F2EFE9;
+  border-color:#2A3440;
+  box-shadow:none;
+}
+[data-theme="dark"] .economist-card:hover{
+  border-color:#6F91D8;
+  box-shadow:0 18px 42px rgba(0,0,0,.38);
+}
+[data-theme="dark"] .economist-card .think-img{
+  background:#151D27;
+}
+[data-theme="dark"] .economist-card .think-img img{
+  filter:grayscale(.08) contrast(1.04) brightness(.88);
+}
+[data-theme="dark"] .economist-card:hover .think-img img{
+  filter:grayscale(0) contrast(1.06) brightness(.96);
+}
+[data-theme="dark"] .economist-card .think-body,
+[data-theme="dark"] .economist-card h3,
+[data-theme="dark"] .economist-card p{
+  color:#F2EFE9;
+}
+[data-theme="dark"] .economist-card p{
+  color:#AEB7C4;
+}
+[data-theme="dark"] .economist-card .think-tag,
+[data-theme="dark"] .economist-card .think-tagline,
+[data-theme="dark"] .economist-card .think-meta{
+  color:#C6A878;
+}
+[data-theme="dark"] .library-cta{
+  color:#8FB1FF;
+}
+[data-theme="dark"] .economist-card:hover .library-cta,
+[data-theme="dark"] .economist-card:focus-visible .library-cta{
+  color:#C6D5FF;
+}
+[data-theme="dark"] .library-modal{
+  color-scheme:dark;
+}
+[data-theme="dark"] .library-backdrop{
+  background:rgba(2,7,14,.80);
+  backdrop-filter:blur(7px) saturate(115%);
+}
+[data-theme="dark"] .library-panel{
+  background:#0E151E;
+  color:#F2EFE9;
+  border-color:#344150;
+  box-shadow:0 30px 100px rgba(0,0,0,.62);
+}
+[data-theme="dark"] .library-close{
+  color:#E7ECF3;
+}
+[data-theme="dark"] .library-close:hover{
+  color:#AFC5FF;
+}
+[data-theme="dark"] .library-kicker,
+[data-theme="dark"] .library-section-label{
+  color:#C6A878;
+}
+[data-theme="dark"] .library-panel h2{
+  color:#F7F4EE;
+}
+[data-theme="dark"] .library-intro{
+  color:#AEB7C4;
+}
+[data-theme="dark"] .library-item{
+  background:#141D28;
+  border-color:#2C3745;
+  color:#F2EFE9;
+}
+[data-theme="dark"] .library-item:hover{
+  background:#182332;
+  border-color:#6F91D8;
+}
+[data-theme="dark"] .library-item strong{
+  color:#F2EFE9;
+}
+[data-theme="dark"] .library-item span{
+  color:#9FAAB8;
+}
+[data-theme="dark"] .library-note{
+  border-top-color:#2C3745;
+  color:#909BA9;
+}
+[data-theme="dark"] .think-card{
+  background:#101720;
+  border-color:#2A3440;
+}
+[data-theme="dark"] .think-body h3{
+  color:#F2EFE9;
+}
+[data-theme="dark"] .think-body p{
+  color:#AEB7C4;
+}
+[data-theme="dark"] .think-credit{
+  color:#8995A5;
+  border-top-color:#2A3440;
+}
+[data-theme="dark"] .think-credit a{
+  color:#8FB1FF;
+}
+/* Corrección general de textos que podrían conservar negro de la versión clara. */
+[data-theme="dark"] button,
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea{
+  color:var(--text);
+}
+[data-theme="dark"] .archive-table th,
+[data-theme="dark"] .archive-table td{
+  color:var(--text-soft);
+}
+[data-theme="dark"] .archive-table td:last-child{
+  color:var(--text);
+}
+[data-theme="dark"] .archive-table tbody tr:hover td:last-child{
+  color:var(--gold-text);
+}
+/* Enlaces dentro de contenido económico: contraste AA/AAA según tamaño. */
+[data-theme="dark"] a{
+  text-decoration-color:rgba(143,177,255,.45);
+}
+[data-theme="dark"] a:hover{
+  text-decoration-color:currentColor;
+}
+/* Chips y etiquetas con fondo claro heredado. */
+[data-theme="dark"] .tag-economia,
+[data-theme="dark"] .tag-mercados,
+[data-theme="dark"] .tag-politica,
+[data-theme="dark"] .tag-opinion{
+  color:#071019;
+}
+/* Reduce el brillo de fotografías en dark sin volverlas apagadas. */
+[data-theme="dark"] .think-img img,
+[data-theme="dark"] .economist-card img{
+  transition:filter .35s ease,transform .45s ease;
+}
+</style>
+
+<style id="v7-library-system">
+/* ÍNDEX AR V7 — Biblioteca ordenada y verificable */
+.library-index{
+  display:flex;flex-wrap:wrap;gap:.55rem;margin:1.2rem 0 1.5rem;
+  padding:.8rem;border:1px solid var(--line,#d9d4ca);background:rgba(255,255,255,.55)
+}
+.library-filter{
+  border:1px solid var(--line,#d9d4ca);background:transparent;color:var(--ink,#182b3b);
+  padding:.62rem .82rem;font:600 .68rem/1 var(--mono,monospace);letter-spacing:.07em;
+  text-transform:uppercase;cursor:pointer;transition:.2s ease
+}
+.library-filter:hover,.library-filter.is-active{background:#18567c;color:#fff;border-color:#18567c}
+.library-index-note{width:100%;font-size:.82rem;color:#68737d;padding:.15rem .2rem 0}
+.economist-card[data-tradition]{position:relative}
+.economist-card.is-hidden{display:none}
+.library-verified{
+  display:inline-flex;align-items:center;gap:.35rem;margin-top:.72rem;
+  font:600 .62rem/1 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase;
+  color:#3e7659
+}
+.library-verified::before{content:"✓";display:inline-grid;place-items:center;width:1.05rem;height:1.05rem;border-radius:50%;border:1px solid currentColor}
+.library-modal-meta{
+  display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0 0
+}
+.library-pill{
+  display:inline-flex;align-items:center;border:1px solid #d9d4ca;padding:.38rem .55rem;
+  font:600 .62rem/1 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase;color:#52616d
+}
+.library-route{
+  margin:1.4rem 0 0;padding:1rem 1.1rem;border-left:3px solid #18567c;background:#f1eee6
+}
+.library-route strong{display:block;font:700 .67rem/1.2 var(--mono,monospace);letter-spacing:.08em;text-transform:uppercase;color:#18567c;margin-bottom:.45rem}
+.library-route span{font-size:.88rem;line-height:1.55;color:#53616d}
+.library-item .source-status{
+  display:block;margin-top:.4rem;font:600 .62rem/1 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase;color:#3e7659
+}
+.library-note strong{color:inherit}
+[data-theme="dark"] .library-index{background:rgba(255,255,255,.035);border-color:var(--line)}
+[data-theme="dark"] .library-filter{color:var(--ink);border-color:var(--line)}
+[data-theme="dark"] .library-filter:hover,[data-theme="dark"] .library-filter.is-active{background:#3f8bb8;border-color:#3f8bb8;color:#08131d}
+[data-theme="dark"] .library-index-note{color:#aeb8c1}
+[data-theme="dark"] .library-verified{color:#75b98f}
+[data-theme="dark"] .library-pill{border-color:#40515f;color:#b9c4cc}
+[data-theme="dark"] .library-route{background:#182733;border-left-color:#62a4cf}
+[data-theme="dark"] .library-route strong{color:#70afd7}
+[data-theme="dark"] .library-route span{color:#b9c4cc}
+[data-theme="dark"] .library-item .source-status{color:#75b98f}
+@media(max-width:560px){.library-index{padding:.65rem}.library-filter{flex:1 1 calc(50% - .55rem)}}
+</style>
+
 </head>
-<!-- V4 visuales históricas: Prebisch (CEPAL), Ferrer y Keynes (Wikimedia Commons). Revisar licencias/atribución antes de producción comercial. -->
+<!-- Visuales históricas: Prebisch (CEPAL), Ferrer/Keynes/Sraffa/Ricardo/Smith/Friedman (Wikimedia Commons) y Michał Kalecki (Wikimedia Commons, CC BY 2.5 ES). Revisar licencias/atribución de cada archivo antes de producción comercial. -->
 <body>
   <div id="scroll-progress"></div>
  
@@ -983,6 +1253,47 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
       </div>
     </div>
   </header>
+
+<!-- ÍNDEX AR V8 · Menú lateral de navegación global -->
+<button class="index-menu-trigger" id="index-menu-trigger" type="button" aria-label="Abrir menú de Índex AR" aria-controls="index-menu-drawer" aria-expanded="false">
+  <span class="hamburger-icon" aria-hidden="true"></span>
+  <span class="index-menu-label">Explorar Índex AR</span>
+</button>
+<div class="index-menu-overlay" id="index-menu-overlay" data-menu-close></div>
+<aside class="index-menu-drawer" id="index-menu-drawer" aria-label="Menú principal" aria-hidden="true">
+  <div class="index-menu-head">
+    <div class="index-menu-brand">ÍNDEX AR<small>Research económico · Argentina</small></div>
+    <button class="index-menu-close" type="button" id="index-menu-close" aria-label="Cerrar menú">×</button>
+  </div>
+  <div class="index-menu-body">
+    <div class="index-menu-group">
+      <div class="index-menu-group-label">Lectura rápida</div>
+      <a class="index-menu-link" href="#intelligence"><span class="idx">01</span>Intelligence · indicadores</a>
+      <a class="index-menu-link" href="#tesis"><span class="idx">02</span>Tesis de la semana</a>
+      <a class="index-menu-link" href="#mapa-transmision"><span class="idx">03</span>Mapa de transmisión</a>
+    </div>
+    <div class="index-menu-group">
+      <div class="index-menu-group-label">Research</div>
+      <a class="index-menu-link" href="#archivo-pensamiento"><span class="idx">04</span>Archivo de pensamiento</a>
+      <a class="index-menu-link" href="#research"><span class="idx">05</span>Research e informes</a>
+      <a class="index-menu-link" href="#publicaciones"><span class="idx">06</span>Publicaciones</a>
+      <a class="index-menu-link" href="#metodologia"><span class="idx">07</span>Metodología</a>
+    </div>
+    <div class="index-menu-group">
+      <div class="index-menu-group-label">Perfil</div>
+      <a class="index-menu-link" href="#perfil-profesional"><span class="idx">08</span>Perfil profesional</a>
+      <a class="index-menu-link" href="#sobre"><span class="idx">09</span>Preguntas frecuentes</a>
+      <a class="index-menu-link" href="#newsletter"><span class="idx">10</span>Newsletter</a>
+    </div>
+    <div class="index-menu-group">
+      <div class="index-menu-group-label">Accesos</div>
+      <a class="index-menu-link" href="#secciones"><span class="idx">11</span>Indicadores económicos</a>
+      <a class="index-menu-link" href="#panel"><span class="idx">12</span>Inicio / panel principal</a>
+    </div>
+  </div>
+  <div class="index-menu-foot"><strong>Índex AR</strong><br>Datos · evidencia · contexto · escenarios</div>
+</aside>
+
 
   <div class="professional-strip" aria-label="Perfil profesional">
     <div class="wrap professional-inner">
@@ -1338,34 +1649,55 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
       <div class="section-label">Ideas que informan el análisis</div>
     </div>
     <p class="think-intro">La investigación aplicada no parte de cero. Esta pequeña biblioteca visual conecta la coyuntura argentina con tradiciones de pensamiento económico que ayudan a formular mejores preguntas sobre desarrollo, distribución, restricción externa, demanda y macroeconomía.</p>
-    <div class="think-grid economist-grid">
-  <button class="think-card economist-card" type="button" data-economist="prebisch" aria-label="Abrir biblioteca de Raúl Prebisch">
-    <div class="think-img"><img alt="Retrato histórico de Raúl Prebisch" loading="lazy" src="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg"></div>
-    <div class="think-body"><div class="think-tag">Argentina · CEPAL</div><h3>Raúl Prebisch</h3><p>Centro-periferia, estructura productiva y restricción externa.</p><span class="library-cta">Abrir biblioteca →</span></div>
+    <div class="library-index" aria-label="Índice de tradiciones económicas">
+      <button class="library-filter is-active" type="button" data-tradition-filter="all">Todos <span>(10)</span></button>
+      <button class="library-filter" type="button" data-tradition-filter="clasicos">Clásicos <span>(3)</span></button>
+      <button class="library-filter" type="button" data-tradition-filter="keynesianos">Keynesianos / Cambridge <span>(4)</span></button>
+      <button class="library-filter" type="button" data-tradition-filter="estructuralistas">Estructuralistas <span>(2)</span></button>
+      <button class="library-filter" type="button" data-tradition-filter="monetarismo">Monetarismo <span>(1)</span></button>
+      <div class="library-index-note">Orden de lectura sugerido: clásicos → Cambridge y poskeynesianos → estructuralismo latinoamericano → monetarismo. Cada ficha enlaza únicamente a catálogos, archivos o repositorios que fueron comprobados.</div>
+    </div>
+    <div class="economist-carousel" aria-label="Carrusel de economistas y tradiciones">
+      <div class="think-grid economist-grid" id="economist-carousel-track">
+  <button class="think-card economist-card" type="button" data-economist="smith" data-tradition="clasicos" aria-label="Abrir biblioteca de Adam Smith">
+    <div class="think-img"><img alt="Retrato histórico de Adam Smith" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/AdamSmith.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">01 · Clásicos</div><h3>Adam Smith</h3><p>División del trabajo, precios, comercio, instituciones y economía política.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Fuentes verificadas</span></div>
   </button>
-  <button class="think-card economist-card" type="button" data-economist="ferrer" aria-label="Abrir biblioteca de Aldo Ferrer">
-    <div class="think-img"><img alt="Retrato de Aldo Ferrer" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aldo%20Ferrer.jpg?width=900"></div>
-    <div class="think-body"><div class="think-tag">Argentina · Desarrollo</div><h3>Aldo Ferrer</h3><p>Desarrollo, estructura productiva y densidad nacional.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  <button class="think-card economist-card" type="button" data-economist="ricardo" data-tradition="clasicos" aria-label="Abrir biblioteca de David Ricardo">
+    <div class="think-img"><img alt="Retrato histórico de David Ricardo" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20David%20Ricardo%20by%20Thomas%20Phillips.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">02 · Clásicos</div><h3>David Ricardo</h3><p>Valor, distribución, renta diferencial, comercio internacional y tributación.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Fuentes verificadas</span></div>
   </button>
-  <button class="think-card economist-card" type="button" data-economist="keynes" aria-label="Abrir biblioteca de John Maynard Keynes">
-    <div class="think-img"><img alt="Retrato histórico de John Maynard Keynes" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/John%20Maynard%20Keynes.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">Macroeconomía</div><h3>John Maynard Keynes</h3><p>Demanda efectiva, incertidumbre y dinámica macroeconómica.</p><span class="library-cta">Abrir biblioteca →</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="sraffa" aria-label="Abrir biblioteca de Piero Sraffa">
+  <button class="think-card economist-card" type="button" data-economist="sraffa" data-tradition="clasicos" aria-label="Abrir biblioteca de Piero Sraffa">
     <div class="think-img"><img alt="Retrato histórico de Piero Sraffa" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Piero%20Sraffa%20late-1920s.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">Clásicos · Distribución</div><h3>Piero Sraffa</h3><p>Producción, precios, excedente y crítica de la teoría marginalista.</p><span class="library-cta">Abrir biblioteca →</span></div>
+    <div class="think-body"><div class="think-tag">03 · Clásicos contemporáneos</div><h3>Piero Sraffa</h3><p>Producción, precios, excedente, distribución y reconstrucción de la tradición clásica.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Archivo Trinity verificado</span></div>
   </button>
-  <button class="think-card economist-card" type="button" data-economist="ricardo" aria-label="Abrir biblioteca de David Ricardo">
-    <div class="think-img"><img alt="Retrato de David Ricardo" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20David%20Ricardo%20by%20Thomas%20Phillips.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">Clásicos · Distribución</div><h3>David Ricardo</h3><p>Valor, distribución, renta, comercio y tributación.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  <button class="think-card economist-card" type="button" data-economist="keynes" data-tradition="keynesianos" aria-label="Abrir biblioteca de John Maynard Keynes">
+    <div class="think-img"><img alt="Retrato histórico de John Maynard Keynes" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/John%20Maynard%20Keynes.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">04 · Keynesianismo</div><h3>John Maynard Keynes</h3><p>Demanda efectiva, incertidumbre, inversión, dinero, empleo y política macroeconómica.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Cambridge verificado</span></div>
   </button>
-  <button class="think-card economist-card" type="button" data-economist="smith" aria-label="Abrir biblioteca de Adam Smith">
-    <div class="think-img"><img alt="Retrato de Adam Smith" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/AdamSmith.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">Clásicos · Economía política</div><h3>Adam Smith</h3><p>División del trabajo, precios, comercio e instituciones.</p><span class="library-cta">Abrir biblioteca →</span></div>
+  <button class="think-card economist-card" type="button" data-economist="kalecki" data-tradition="keynesianos" aria-label="Abrir biblioteca de Michał Kalecki">
+    <div class="think-img"><img alt="Retrato de Michał Kalecki" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Michal%20Kalecki.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">05 · Poskeynesianismo</div><h3>Michał Kalecki</h3><p>Demanda efectiva, inversión, distribución, mark-up, ciclo y conflicto político.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">UNAM verificado</span></div>
   </button>
-  <button class="think-card economist-card" type="button" data-economist="friedman" aria-label="Abrir biblioteca de Milton Friedman">
+  <button class="think-card economist-card" type="button" data-economist="robinson" data-tradition="keynesianos" aria-label="Abrir biblioteca de Joan Robinson">
+    <div class="think-img"><img alt="Retrato histórico de Joan Robinson" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Joan%20Robinson%20Ramsey%20Muspratt.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">06 · Cambridge</div><h3>Joan Robinson</h3><p>Competencia imperfecta, acumulación, crecimiento y controversia del capital.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Bibliografía Cambridge verificada</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="minsky" data-tradition="keynesianos" aria-label="Abrir biblioteca de Hyman Minsky">
+    <div class="think-img"><img alt="Retrato de Hyman Minsky" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/HymanMinsky-1.jpg?width=700"></div>
+    <div class="think-body"><div class="think-tag">07 · Poskeynesianismo financiero</div><h3>Hyman Minsky</h3><p>Fragilidad financiera, deuda, ciclos, inversión y crisis endógenas.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Levy Institute verificado</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="prebisch" data-tradition="estructuralistas" aria-label="Abrir biblioteca de Raúl Prebisch">
+    <div class="think-img"><img alt="Retrato histórico de Raúl Prebisch" loading="lazy" src="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg"></div>
+    <div class="think-body"><div class="think-tag">08 · Estructuralismo latinoamericano</div><h3>Raúl Prebisch</h3><p>Centro-periferia, estructura productiva, términos de intercambio y restricción externa.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">CEPAL verificado</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="ferrer" data-tradition="estructuralistas" aria-label="Abrir biblioteca de Aldo Ferrer">
+    <div class="think-img"><img alt="Retrato de Aldo Ferrer" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aldo%20Ferrer.jpg?width=900"></div>
+    <div class="think-body"><div class="think-tag">09 · Desarrollo argentino</div><h3>Aldo Ferrer</h3><p>Estructura productiva, densidad nacional, desarrollo e inserción internacional.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Biblioteca Nacional / FCE verificados</span></div>
+  </button>
+  <button class="think-card economist-card" type="button" data-economist="friedman" data-tradition="monetarismo" aria-label="Abrir biblioteca de Milton Friedman">
     <div class="think-img"><img alt="Retrato de Milton Friedman" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Milton%20Friedman.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">Monetarismo · Política económica</div><h3>Milton Friedman</h3><p>Dinero, inflación, consumo, libertad económica y política pública.</p><span class="library-cta">Abrir biblioteca →</span></div>
+    <div class="think-body"><div class="think-tag">10 · Monetarismo</div><h3>Milton Friedman</h3><p>Dinero, inflación, consumo, expectativas, política monetaria y libertad económica.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Hoover verificado</span></div>
   </button>
 </div>
   </div>
@@ -1378,6 +1710,14 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
       <h2>Economía, datos y criterio.</h2>
       <p class="lead">Índex AR también es un espacio donde mostrar cómo trabajo: formular una pregunta, ordenar evidencia, construir una explicación y comunicarla de forma clara.</p>
       <div class="profile-note">La plataforma está pensada como portfolio profesional. Los proyectos publicados deben mostrar el proceso, no solamente el resultado: fuentes, metodología, código o cálculos cuando corresponda y límites de la evidencia.</div>
+      </div>
+      <div class="economist-carousel-controls">
+        <div class="economist-carousel-hint">Deslizá hacia la derecha · 10 economistas · biblioteca verificada</div>
+        <div class="economist-carousel-buttons" aria-label="Controles del carrusel">
+          <button type="button" class="economist-carousel-btn" id="economist-prev" aria-label="Economista anterior">←</button>
+          <button type="button" class="economist-carousel-btn" id="economist-next" aria-label="Siguiente economista">→</button>
+        </div>
+      </div>
     </div>
     <div class="profile-list">
       <div class="profile-row"><b>Research</b><span>Macroeconomía argentina, inflación, sector externo, finanzas públicas, mercados y desarrollo.</span></div>
@@ -2380,29 +2720,189 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
     <div class="library-kicker">ÍNDEX AR · BIBLIOTECA DE PENSAMIENTO ECONÓMICO</div>
     <h2 id="library-title">Biblioteca</h2>
     <p id="library-intro" class="library-intro"></p>
+    <div id="library-meta" class="library-modal-meta"></div>
+    <div id="library-route" class="library-route"></div>
     <div class="library-layout">
       <div><div class="library-section-label">OBRAS CENTRALES</div><div id="library-works" class="library-list"></div></div>
-      <div><div class="library-section-label">ARCHIVOS Y RECURSOS</div><div id="library-resources" class="library-list"></div></div>
+      <div><div class="library-section-label">CATÁLOGOS · ARCHIVOS · RECURSOS</div><div id="library-resources" class="library-list"></div></div>
     </div>
-    <div class="library-note">Índex AR selecciona bibliografía para orientar la lectura. Los enlaces conducen a catálogos, archivos o repositorios externos; no se alojan copias de obras protegidas.</div>
+    <div class="library-note"><strong>Criterio de verificación.</strong> Índex AR no enlaza a búsquedas genéricas ni a páginas que no fueron comprobadas. Cada recurso de esta biblioteca apunta a una institución, editorial, archivo, repositorio o catálogo que identifica la obra o conserva materiales del autor. Los enlaces pueden cambiar con el tiempo; si alguno deja de funcionar, deberá reemplazarse por su registro institucional equivalente.</div>
   </section>
 </div>
 
 <script>
 (function(){
 const LIB={
- prebisch:{name:'Raúl Prebisch',intro:'Economista argentino y referente de la tradición estructuralista latinoamericana. La biblioteca prioriza textos sobre centro-periferia, desarrollo y restricción externa.',works:[['El desarrollo económico de la América Latina y algunos de sus principales problemas','1949 · CEPAL','https://repositorio.cepal.org/handle/11362/40010'],['Hacia una dinámica del desarrollo latinoamericano','1963 · CEPAL','https://repositorio.cepal.org/handle/11362/40062']],resources:[['Repositorio CEPAL · Raúl Prebisch','Archivo institucional','https://repositorio.cepal.org/'],['CEPAL · Biblioteca','Catálogo y documentos','https://biblioguias.cepal.org/'] ]},
- ferrer:{name:'Aldo Ferrer',intro:'Una entrada argentina al desarrollo: estructura productiva, restricción externa, densidad nacional y transformación económica.',works:[['La economía argentina','1963 · obra central','https://catalogo.bn.gov.ar/'],['Vivir con lo nuestro','1983 · desarrollo y estructura productiva','https://catalogo.bn.gov.ar/']],resources:[['Biblioteca Nacional Mariano Moreno','Catálogo bibliográfico','https://catalogo.bn.gov.ar/'],['CEPAL · Desarrollo económico','Documentos regionales','https://www.cepal.org/es'] ]},
- keynes:{name:'John Maynard Keynes',intro:'Biblioteca para estudiar demanda efectiva, incertidumbre, dinero, inversión, empleo y política macroeconómica.',works:[['The Economic Consequences of the Peace','1919 · economía internacional','https://archive.org/search?query=The%20Economic%20Consequences%20of%20the%20Peace%20Keynes'],['A Treatise on Money','1930 · dinero y sistema monetario','https://archive.org/search?query=A%20Treatise%20on%20Money%20Keynes'],['The General Theory of Employment, Interest and Money','1936 · macroeconomía','https://archive.org/search?query=General%20Theory%20Keynes']],resources:[['Cambridge · Keynes papers','Archivo y manuscritos','https://www.jesus.cam.ac.uk/collections/archives/archives-keynes-papers'],['Internet Archive','Textos digitalizados','https://archive.org/'] ]},
- sraffa:{name:'Piero Sraffa',intro:'La biblioteca sraffiana se centra en producción, precios, excedente, distribución y la reconstrucción de la tradición clásica.',works:[['Production of Commodities by Means of Commodities','1960 · obra central','https://archive.org/search?query=Production%20of%20Commodities%20by%20Means%20of%20Commodities%20Sraffa'],['The Laws of Returns under Competitive Conditions','1926 · artículo','https://www.jstor.org/action/doBasicSearch?Query=The%20Laws%20of%20Returns%20under%20Competitive%20Conditions%20Sraffa']],resources:[['Piero Sraffa Archives · Trinity College Cambridge','Papeles personales y profesionales','https://archives.trin.cam.ac.uk/index.php/papers-of-piero-sraffa-1898-1983-economist'],['Sraffa · bibliografía y archivo','Materiales catalogados por Trinity','https://trin-2.maxarchiveservices.co.uk/index.php/bibliography'] ]},
- ricardo:{name:'David Ricardo',intro:'Biblioteca clásica sobre valor, distribución, renta diferencial, comercio internacional y tributación.',works:[['On the Principles of Political Economy and Taxation','1817 · obra central','https://www.loc.gov/item/05020722/'],['The Works and Correspondence of David Ricardo','1951–1973 · edición crítica de Piero Sraffa y Maurice Dobb','https://oll.libertyfund.org/titles/ricardo-the-works-and-correspondence-of-david-ricardo-11-vols']],resources:[['Library of Congress · Ricardo','Edición digitalizada de 1819','https://www.loc.gov/item/05020722/'],['UNSAM · catálogo bibliográfico','Obras y correspondencia','https://buscador.unsam.edu.ar/Record/57842'] ]},
- smith:{name:'Adam Smith',intro:'Biblioteca de economía política clásica: división del trabajo, precios, comercio, instituciones, moral y riqueza.',works:[['The Theory of Moral Sentiments','1759 · filosofía moral','https://www.loc.gov/item/18015943/'],['An Inquiry into the Nature and Causes of the Wealth of Nations','1776 · economía política','https://www7.adamsmithworks.org/documents/text-repository']],resources:[['Adam Smith Works · Text Repository','Textos completos y recursos','https://www7.adamsmithworks.org/documents/text-repository'],['Library of Congress · Smith','Catálogo y ediciones históricas','https://www.loc.gov/'] ]},
- friedman:{name:'Milton Friedman',intro:'Biblioteca para estudiar monetarismo, inflación, consumo, política monetaria, libertad económica y debate de políticas públicas.',works:[['A Theory of the Consumption Function','1957 · consumo e ingreso permanente','https://catalog.hathitrust.org/Search/Home?lookfor=A%20Theory%20of%20the%20Consumption%20Function%20Friedman&type=all&inst='],['Capitalism and Freedom','1962 · política económica','https://guides.loc.gov/milton-friedman/resources'],['A Monetary History of the United States, 1867–1960','1963 · con Anna J. Schwartz','https://catalog.loc.gov/'],['Free to Choose','1980 · con Rose Friedman','https://miltonfriedman.hoover.org/']],resources:[['Collected Works of Milton Friedman · Hoover','Más de 1.400 materiales digitales','https://miltonfriedman.hoover.org/'],['Library of Congress · Friedman Resource Guide','Bibliografía y catálogo','https://guides.loc.gov/milton-friedman/resources'] ]}
+ smith:{
+  name:'Adam Smith',tradition:'Clásicos · economía política',verified:'Adam Smith Works · Library of Congress',
+  intro:'Biblioteca de economía política clásica: división del trabajo, precios, comercio, instituciones, moral y riqueza.',
+  route:'Ruta sugerida: Theory of Moral Sentiments → Wealth of Nations → lectura comparada sobre precios, trabajo, comercio e instituciones.',
+  works:[
+   ['The Theory of Moral Sentiments','1759 · texto completo y guía de lectura','https://www.adamsmithworks.org/documents/asw-edition','Adam Smith Works'],
+   ['An Inquiry into the Nature and Causes of the Wealth of Nations','1776 · texto completo y estructura por libros','https://www.adamsmithworks.org/documents/cannan-edition','Adam Smith Works']
+  ],
+  resources:[
+   ['Adam Smith Works · Full Texts','Textos completos de Smith','https://www.adamsmithworks.org/texts'],
+   ['Library of Congress · The Wealth of Nations','Registro bibliográfico','https://www.loc.gov/item/2002564559/']
+  ]},
+ ricardo:{
+  name:'David Ricardo',tradition:'Clásicos · distribución',verified:'Library of Congress · Liberty Fund',
+  intro:'Biblioteca clásica sobre valor, distribución, renta diferencial, comercio internacional y tributación.',
+  route:'Ruta sugerida: Principles of Political Economy and Taxation → distribución → renta → comercio internacional.',
+  works:[
+   ['On the Principles of Political Economy and Taxation','1819 · edición digitalizada de la Library of Congress','https://www.loc.gov/item/05020722/','Library of Congress'],
+   ['The Works and Correspondence of David Ricardo','1951–1973 · edición crítica de Sraffa y Dobb','https://oll.libertyfund.org/titles/ricardo-the-works-and-correspondence-of-david-ricardo-11-vols','Liberty Fund']
+  ],
+  resources:[
+   ['Library of Congress · Ricardo','Registro, imágenes y PDF','https://www.loc.gov/item/05020722/'],
+   ['Liberty Fund · Works and Correspondence','Colección bibliográfica','https://oll.libertyfund.org/titles/ricardo-the-works-and-correspondence-of-david-ricardo-11-vols']
+  ]},
+ sraffa:{
+  name:'Piero Sraffa',tradition:'Clásicos contemporáneos · excedente',verified:'Trinity College Cambridge',
+  intro:'Biblioteca sraffiana centrada en producción, precios, excedente, distribución y reconstrucción de la tradición clásica.',
+  route:'Ruta sugerida: textos de 1926 → Production of Commodities → archivo Sraffa → Works and Correspondence of David Ricardo.',
+  works:[
+   ['The Laws of Returns under Competitive Conditions','1926 · Economic Journal · referencia bibliográfica','https://www.cambridge.org/core/books/the-structure-of-post-keynesian-economics/53C29363A6598C8E938B3F3770E78DCB','Cambridge University Press'],
+   ['Production of Commodities by Means of Commodities','1960 · obra central · referencia bibliográfica','https://www.cambridge.org/core/books/abs/a-brief-history-of-economic-thought/bibliography/A0894FE982234CE0502DD4B87CB0F6E0','Cambridge University Press']
+  ],
+  resources:[
+   ['Papers of Piero Sraffa · Trinity College','Archivo, bibliografía y papeles personales','https://archives.trin.cam.ac.uk/index.php/papers-of-piero-sraffa-1898-1983-economist'],
+   ['Trinity College · Sraffa · Publications','Sección archivística de publicaciones','https://archives.trin.cam.ac.uk/index.php/informationobject/browse?levels=7715&repos=440&sf_culture=en&sort=alphabetic&sortDir=desc&topLod=0']
+  ]},
+ keynes:{
+  name:'John Maynard Keynes',tradition:'Keynesianismo · macroeconomía',verified:'University of Cambridge · Royal Economic Society',
+  intro:'Biblioteca para estudiar demanda efectiva, incertidumbre, dinero, inversión, empleo y política macroeconómica.',
+  route:'Ruta sugerida: A Treatise on Money → General Theory → Essays → Collected Writings.',
+  works:[
+   ['The General Theory of Employment, Interest and Money','1936 · referencia bibliográfica en Cambridge','https://www.cambridge.org/core/books/history-of-economics/john-maynard-keynes/AA9DC9129B632B348AB8BDE56C2E13CB','Cambridge University Press'],
+   ['A Treatise on Money','1930 · referencia dentro de la bibliografía de Cambridge','https://www.cambridge.org/core/books/brief-history-of-economic-thought/36D092BA5236C0816CC1C958C9B97CBA','Cambridge University Press']
+  ],
+  resources:[
+   ['The Collected Writings of John Maynard Keynes','30 volúmenes publicados por Cambridge University Press para la Royal Economic Society','https://www.cam.ac.uk/research/news/keynes-comes-home-to-cambridge'],
+   ['Keynes · Cambridge · History of Economics','Capítulo con bibliografía especializada','https://www.cambridge.org/core/books/history-of-economics/john-maynard-keynes/AA9DC9129B632B348AB8BDE56C2E13CB']
+  ]},
+ kalecki:{
+  name:'Michał Kalecki',tradition:'Poskeynesianismo · distribución',verified:'UNAM · Ola Financiera',
+  intro:'Biblioteca poskeynesiana para estudiar demanda efectiva, inversión, distribución del ingreso, grado de monopolio, mark-up, ciclos y aspectos políticos del pleno empleo.',
+  route:'Ruta sugerida: Political Aspects of Full Employment → Theory of Economic Dynamics → essays sobre distribución, inversión y ciclo.',
+  works:[
+   ['Political Aspects of Full Employment','1943 · texto completo en español · UNAM','https://www.olafinanciera.unam.mx/new_web/21/pdfs/KaleckiOlaFinanciera21.pdf','UNAM · Ola Financiera'],
+   ['Theory of Economic Dynamics','1954 · ficha bibliográfica y vista previa','https://books.google.com/books?id=k6SwDw1U-FcC','Google Books']
+  ],
+  resources:[
+   ['Repositorio UNAM · Political Aspects of Full Employment','Registro institucional y texto completo','https://repositorio.unam.mx/contenidos/ficha/political-aspects-of-full-employment-4111807'],
+   ['Ola Financiera · UNAM','Publicación académica','https://www.olafinanciera.unam.mx/new_web/21/pdfs/KaleckiOlaFinanciera21.pdf']
+  ]},
+ robinson:{
+  name:'Joan Robinson',tradition:'Cambridge · poskeynesianismo',verified:'Cambridge University Press',
+  intro:'Biblioteca sobre competencia imperfecta, empleo, acumulación, crecimiento y la controversia del capital de Cambridge.',
+  route:'Ruta sugerida: Economics of Imperfect Competition → Essays in the Theory of Employment → Accumulation of Capital → Collected Economic Papers.',
+  works:[
+   ['The Economics of Imperfect Competition','1933 · obra central · referencia bibliográfica académica','https://www.cambridge.org/core/books/full-industry-equilibrium/references/F069A281DE02F4446CFC1CE7C54BD7B4','Cambridge University Press'],
+   ['The Accumulation of Capital','1956 · referencia bibliográfica académica','https://www.cambridge.org/core/books/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449','Cambridge University Press'],
+   ['Collected Economic Papers','1951–1980 · seis volúmenes','https://www.cambridge.org/core/books/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449','Cambridge University Press']
+  ],
+  resources:[
+   ['Cambridge · Bibliography of Post-Keynesian Economics','Bibliografía con las principales obras de Robinson','https://www.cambridge.org/core/books/abs/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449'],
+   ['Cambridge · Robinson on accumulation','Capítulo académico sobre su aporte a la acumulación','https://www.cambridge.org/core/books/keyness-general-theory-and-accumulation/robinson-on-the-accumulation-of-capital/884B9D84413BE7439754CA57C1AB985B']
+  ]},
+ minsky:{
+  name:'Hyman P. Minsky',tradition:'Poskeynesianismo · finanzas',verified:'Levy Economics Institute',
+  intro:'Biblioteca para estudiar fragilidad financiera, deuda, inversión, ciclos y crisis endógenas.',
+  route:'Ruta sugerida: Stabilizing an Unstable Economy → Financial Instability Hypothesis → archivo Minsky.',
+  works:[
+   ['Stabilizing an Unstable Economy','1986 · obra central · edición del Levy Economics Institute','https://www.levyinstitute.org/publications/stabilizing-an-unstable-economy/','Levy Economics Institute'],
+   ['Can “It” Happen Again? Essays on Instability and Finance','1982 · ensayos sobre inestabilidad y finanzas','https://www.levyinstitute.org/people/hyman-p-minsky/','Levy Economics Institute']
+  ],
+  resources:[
+   ['Hyman P. Minsky · Levy Institute','Biografía, publicaciones y archivo','https://www.levyinstitute.org/people/hyman-p-minsky/'],
+   ['Minsky Archive','Archivo de escritos, correspondencia y materiales','https://www.levyinstitute.org/people/hyman-p-minsky/']
+  ]},
+ prebisch:{
+  name:'Raúl Prebisch',tradition:'Estructuralismo latinoamericano',verified:'CEPAL · Naciones Unidas',
+  intro:'Biblioteca estructuralista sobre centro-periferia, desarrollo, términos de intercambio, productividad y restricción externa.',
+  route:'Ruta sugerida: El desarrollo económico de América Latina → Las cinco etapas de mi pensamiento → dinámica del desarrollo latinoamericano.',
+  works:[
+   ['El desarrollo económico de América Latina y algunos de sus principales problemas','1949 · CEPAL · texto institucional','https://repositorio.cepal.org/entities/publication/20359a15-6e4e-4582-ac46-4eb075919e1b/full','CEPAL'],
+   ['Raúl Prebisch: un aporte al estudio de su pensamiento','1987 · incluye bibliografía de su obra 1920–1986','https://repositorio.cepal.org/handle/11362/2564','CEPAL']
+  ],
+  resources:[
+   ['Perfil de Raúl Prebisch · CEPAL','Biografía y obras destacadas','https://www.cepal.org/es/equipo/raul-prebisch'],
+   ['Repositorio CEPAL · Bibliografía Prebisch','Documento con bibliografía 1920–1986','https://repositorio.cepal.org/handle/11362/2564']
+  ]},
+ ferrer:{
+  name:'Aldo Ferrer',tradition:'Desarrollo · estructura económica argentina',verified:'Biblioteca Nacional · Fondo de Cultura Económica',
+  intro:'Biblioteca argentina sobre estructura productiva, desarrollo, densidad nacional, inserción internacional y restricción externa.',
+  route:'Ruta sugerida: La economía argentina → Vivir con lo nuestro → Historia de la globalización → El capitalismo argentino.',
+  works:[
+   ['La economía argentina','1963 · obra central · registro y referencia institucional','https://fce.com.ar/tienda/economia/la-economia-argentina-ferrer/','Fondo de Cultura Económica'],
+   ['Vivir con lo nuestro. Nosotros y la globalización','1983 · ficha editorial y bibliográfica','https://fce.com.ar/tienda/historia/vivir-con-lo-nuestro/','Fondo de Cultura Económica']
+  ],
+  resources:[
+   ['Fondo de Cultura Económica · La economía argentina','Ficha bibliográfica, edición y datos de la obra','https://fce.com.ar/tienda/economia/la-economia-argentina-ferrer/'],
+   ['Fondo de Cultura Económica · Aldo Ferrer','Listado de obras publicadas','https://fce.com.ar/autores/aldo-ferrer/']
+  ]},
+ friedman:{
+  name:'Milton Friedman',tradition:'Monetarismo · política económica',verified:'Hoover Institution · Stanford',
+  intro:'Biblioteca para estudiar monetarismo, inflación, consumo, política monetaria, expectativas y libertad económica.',
+  route:'Ruta sugerida: A Theory of the Consumption Function → A Monetary History → Capitalism and Freedom → trabajos monetarios.',
+  works:[
+   ['A Theory of the Consumption Function','1957 · referencia bibliográfica','https://guides.loc.gov/milton-friedman/resources','Library of Congress'],
+   ['A Monetary History of the United States, 1867–1960','1963 · con Anna J. Schwartz · referencia bibliográfica','https://guides.loc.gov/milton-friedman/resources','Library of Congress'],
+   ['Capitalism and Freedom','1962 · política económica · referencia bibliográfica','https://guides.loc.gov/milton-friedman/resources','Library of Congress']
+  ],
+  resources:[
+   ['Collected Works of Milton Friedman · Hoover','Más de 1.400 materiales digitales','https://miltonfriedman.hoover.org/'],
+   ['Hoover · The Timeless Ideas of Milton Friedman','Descripción del archivo y obras digitalizadas','https://www.hoover.org/research/timeless-ideas-milton-friedman']
+  ]}
 };
-const modal=document.getElementById('economist-library'),title=document.getElementById('library-title'),intro=document.getElementById('library-intro'),works=document.getElementById('library-works'),resources=document.getElementById('library-resources');
-function openLib(key){const d=LIB[key];if(!d)return; title.textContent=d.name; intro.textContent=d.intro; works.innerHTML=d.works.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener"><strong>${x[0]}</strong><span>${x[1]} · consultar recurso</span></a>`).join(''); resources.innerHTML=d.resources.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener"><strong>${x[0]}</strong><span>${x[1]}</span></a>`).join(''); modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';location.hash='biblioteca-'+key;}
+const modal=document.getElementById('economist-library'),title=document.getElementById('library-title'),intro=document.getElementById('library-intro'),works=document.getElementById('library-works'),resources=document.getElementById('library-resources'),meta=document.getElementById('library-meta'),route=document.getElementById('library-route');
+function openLib(key){
+  const d=LIB[key];if(!d)return;
+  title.textContent=d.name;intro.textContent=d.intro;
+  meta.innerHTML=`<span class="library-pill">${d.tradition}</span><span class="library-pill">✓ ${d.verified}</span>`;
+  route.innerHTML=`<strong>Orden sugerido de lectura</strong><span>${d.route}</span>`;
+  works.innerHTML=d.works.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener noreferrer"><strong>${x[0]}</strong><span>${x[1]}</span><span class="source-status">✓ Recurso comprobado · ${x[3]}</span></a>`).join('');
+  resources.innerHTML=d.resources.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener noreferrer"><strong>${x[0]}</strong><span>${x[1]}</span><span class="source-status">✓ Fuente institucional comprobada</span></a>`).join('');
+  modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';location.hash='biblioteca-'+key;
+}
 function closeLib(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';if(location.hash.startsWith('#biblioteca-'))history.replaceState(null,'',location.pathname+location.search);}
-document.querySelectorAll('[data-economist]').forEach(b=>b.addEventListener('click',()=>openLib(b.dataset.economist)));document.querySelectorAll('[data-library-close]').forEach(b=>b.addEventListener('click',closeLib));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))closeLib()});
+document.querySelectorAll('[data-economist]').forEach(b=>b.addEventListener('click',()=>openLib(b.dataset.economist)));
+document.querySelectorAll('[data-library-close]').forEach(b=>b.addEventListener('click',closeLib));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))closeLib()});
+document.querySelectorAll('[data-tradition-filter]').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('[data-tradition-filter]').forEach(b=>b.classList.remove('is-active'));btn.classList.add('is-active');
+  const filter=btn.dataset.traditionFilter;
+  document.querySelectorAll('.economist-card[data-tradition]').forEach(card=>{card.classList.toggle('is-hidden',filter!=='all'&&card.dataset.tradition!==filter);});
+}));
+
+
+/* --- Menú lateral global --- */
+const menuTrigger=document.getElementById('index-menu-trigger');
+const menuDrawer=document.getElementById('index-menu-drawer');
+const menuClose=document.getElementById('index-menu-close');
+const menuOverlay=document.getElementById('index-menu-overlay');
+function openIndexMenu(){document.body.classList.add('menu-open');menuTrigger.setAttribute('aria-expanded','true');menuDrawer.setAttribute('aria-hidden','false');setTimeout(()=>menuClose.focus(),180)}
+function closeIndexMenu(){document.body.classList.remove('menu-open');menuTrigger.setAttribute('aria-expanded','false');menuDrawer.setAttribute('aria-hidden','true');menuTrigger.focus()}
+menuTrigger.addEventListener('click',()=>document.body.classList.contains('menu-open')?closeIndexMenu():openIndexMenu());
+menuClose.addEventListener('click',closeIndexMenu);menuOverlay.addEventListener('click',closeIndexMenu);
+document.querySelectorAll('.index-menu-link').forEach(link=>link.addEventListener('click',()=>{closeIndexMenu();}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open'))closeIndexMenu();});
+
+/* --- Carrusel de economistas --- */
+const economistTrack=document.getElementById('economist-carousel-track');
+const economistPrev=document.getElementById('economist-prev');
+const economistNext=document.getElementById('economist-next');
+function moveEconomists(dir){if(!economistTrack)return;const card=economistTrack.querySelector('.economist-card:not(.is-hidden)');const step=card?card.getBoundingClientRect().width+18:330;economistTrack.scrollBy({left:dir*step,behavior:'smooth'});}
+if(economistPrev)economistPrev.addEventListener('click',()=>moveEconomists(-1));
+if(economistNext)economistNext.addEventListener('click',()=>moveEconomists(1));
+let dragStartX=null,dragScroll=null;
+if(economistTrack){
+  economistTrack.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'){dragStartX=e.clientX;dragScroll=economistTrack.scrollLeft;economistTrack.setPointerCapture?.(e.pointerId);}});
+  economistTrack.addEventListener('pointermove',e=>{if(dragStartX===null)return;economistTrack.scrollLeft=dragScroll-(e.clientX-dragStartX)*1.15;});
+  ['pointerup','pointercancel','pointerleave'].forEach(ev=>economistTrack.addEventListener(ev,()=>{dragStartX=null;}));
+}
+
 const h=location.hash.match(/^#biblioteca-(.+)$/);if(h&&LIB[h[1]])openLib(h[1]);
 })();
 </script>
