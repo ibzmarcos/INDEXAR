@@ -1,57 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="es-AR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Índex AR | Research económico argentino — Datos, mercados y escenarios</title>
-<meta name="description" content="Research económico argentino: datos oficiales, mercados, macroeconomía aplicada, escenarios e informes propios.">
-
-<meta name="application-name" content="Índex AR">
-<meta name="theme-color" content="#2554E8">
-<meta name="author" content="Marcos J. Ibáñez — Índex AR">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<meta name="keywords" content="economía argentina, macroeconomía, research económico, finanzas, mercados, inflación, dólar, riesgo país, reservas, deuda, inversión">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://indexar.netlify.app/">
- 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Index AR | Research económico argentino, datos y análisis</title>
+<meta content="Index AR: research económico argentino con datos de fuentes primarias, análisis macroeconómico, escenarios y publicaciones sobre inflación, finanzas, sector externo, actividad y distribución." name="description"/>
+<meta content="Index AR" name="application-name"/>
+<meta content="#2554E8" name="theme-color"/>
+<meta content="Marcos J. Ibáñez — Index AR" name="author"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="economía argentina, research económico, macroeconomía argentina, inflación, finanzas, mercados, sector externo, riesgo país, econometría, análisis económico" name="keywords"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<link href="https://indexar.netlify.app/" rel="canonical"/>
 <!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Índex AR">
-<meta property="og:title" content="Índex AR | Research económico argentino">
-<meta property="og:description" content="Investigación económica aplicada a Argentina: datos, contexto, mecanismos y escenarios.">
-<meta property="og:locale" content="es_AR">
-<meta property="og:url" content="https://indexar.netlify.app/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Índex AR — Research económico argentino">
-<meta name="twitter:description" content="Macroeconomía, finanzas, mercados y análisis de datos sobre Argentina.">
- 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0E14'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2EFE9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%23C9A96A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%23C9A96A'/%3E%3C/svg%3E">
- 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Índex AR",
-  "url": "https://indexar.netlify.app/",
-  "publisher": {
-    "@type": "Person",
-    "name": "Marcos J. Ibáñez",
-    "jobTitle": "Economista"
-  },
-  "description": "Análisis macroeconómico y político de la Argentina.",
-  "knowsLanguage": "es",
-  "copyrightYear": "2026",
-  "copyrightHolder": { "@type": "Organization", "name": "Índex AR" }
-}
-</script>
- 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
- 
+<meta content="website" property="og:type"/>
+<meta content="Index AR" property="og:site_name"/>
+<meta content="Index AR | Research económico argentino" property="og:title"/>
+<meta content="Datos, evidencia y análisis propio sobre la economía argentina." property="og:description"/>
+<meta content="es_AR" property="og:locale"/>
+<meta content="https://indexar.netlify.app/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Index AR | Research económico argentino" name="twitter:title"/>
+<meta content="Datos, evidencia y análisis propio sobre la economía argentina." name="twitter:description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0E14'/%3E%3Crect x='30' y='42' width='11' height='40' rx='2' fill='%23F2EFE9'/%3E%3Cpolyline points='24,38 34,26 41,32 50,10' fill='none' stroke='%23C9A96A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='10' r='4.5' fill='%23C9A96A'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://indexar.netlify.app/#website", "url": "https://indexar.netlify.app/", "name": "Index AR", "description": "Research económico argentino con datos, análisis y escenarios.", "inLanguage": "es-AR"}, {"@type": "Person", "@id": "https://indexar.netlify.app/#marcos-ibanez", "name": "Marcos J. Ibáñez", "jobTitle": "Economista", "url": "https://indexar.netlify.app/", "knowsAbout": ["Economía argentina", "Macroeconomía", "Finanzas", "Econometría", "Research económico"]}, {"@type": "WebPage", "@id": "https://indexar.netlify.app/#webpage", "url": "https://indexar.netlify.app/", "name": "Index AR | Research económico argentino", "isPartOf": {"@id": "https://indexar.netlify.app/#website"}, "about": {"@id": "https://indexar.netlify.app/#marcos-ibanez"}, "inLanguage": "es-AR"}]}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   /* ===================================================================
-     ÍNDEX AR — sistema de diseño
+     INDEX AR — sistema de diseño
      Editorial financiero de alta gama: sobriedad tipo Financial Times +
      densidad de datos tipo terminal (Bloomberg). Dark-first, con
      alternativa clara tipo "paper" editorial.
@@ -578,7 +557,7 @@
   }
 
 /* =====================================================================
-   ÍNDEX AR — CAPA SIGNATURE / 2026
+   INDEX AR — CAPA SIGNATURE / 2026
    Visual system propio: no depende de plantillas ni librerías UI.
    ===================================================================== */
 :root{
@@ -722,7 +701,7 @@ header{
 /* Footer premium */
 footer{position:relative;overflow:hidden}
 footer:before{
-  content:"ÍNDEX AR";position:absolute;right:-10px;bottom:-58px;
+  content:"INDEX AR";position:absolute;right:-10px;bottom:-58px;
   font:700 150px var(--font-display);letter-spacing:-.08em;color:var(--ix-electric-soft);pointer-events:none;
 }
 
@@ -750,13 +729,13 @@ footer:before{
 
 /* Protección razonable contra selección accidental; no pretende impedir
    herramientas del navegador ni la inspección del código. */
-.brand-mark,.cover-title,.intel-title{user-select:none}
+
 
 
 /* ================================================================
-   ÍNDEX AR V3 — Research Intelligence Layer
+   INDEX AR V3 — Research Intelligence Layer
    Objetivo: convertir una publicación en una plataforma de
-   inteligencia económica. Diseño propio, no basado en templates.
+   research económico. Diseño propio, no basado en templates.
    ================================================================ */
 :root{--signal:rgba(37,84,232,.11);--signal-strong:#2554E8;--ink:#0b0f16;--paper:#f7f6f2}
 .intelligence-shell{margin:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:linear-gradient(180deg,var(--panel),var(--bg));position:relative;overflow:hidden}
@@ -785,7 +764,7 @@ footer:before{
 .risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 0 18px}.risk-card{padding:20px}.risk-label{font:600 9px var(--font-mono);letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-text)}.risk-card h4{font:600 18px var(--font-display);margin:8px 0}.risk-card p{font:13px/1.55 var(--font-serif);color:var(--text-soft);margin:0}.risk-meter{display:flex;gap:3px;margin-top:15px}.risk-meter span{height:5px;flex:1;background:var(--rule)}.risk-meter span.on{background:var(--gold)}
 .intel-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-bottom:78px}.tool-card{padding:24px;position:relative;transition:transform .25s ease,border-color .25s ease}.tool-card:hover{transform:translateY(-4px);border-color:var(--gold)}.tool-icon{font:600 16px var(--font-mono);color:var(--gold-text);margin-bottom:18px}.tool-card h4{font:600 20px var(--font-display);margin:0 0 8px}.tool-card p{font:13px/1.65 var(--font-serif);color:var(--text-soft);margin:0}.tool-link{display:inline-block;margin-top:15px;font:600 10px var(--font-mono);text-transform:uppercase;letter-spacing:1px;color:var(--text)}
 .provenance{display:flex;flex-wrap:wrap;gap:8px;padding:18px 0 34px;border-top:1px solid var(--rule);position:relative}.prov{font:9px var(--font-mono);text-transform:uppercase;letter-spacing:.9px;padding:7px 9px;border:1px solid var(--rule);color:var(--text-soft)}
-/* Anti-scraping: no bloqueamos al usuario, dificultamos automatizaciones superficiales y dejamos claro el origen. */
+/* Provenance and authorship are explicit; normal browser interaction remains unrestricted. */
 [data-origin]{position:relative}.content-origin{font:9px var(--font-mono);color:var(--text-soft);opacity:.7;letter-spacing:.8px;margin-top:16px}
 @media(max-width:900px){.exec-grid,.risk-grid,.intel-grid-3{grid-template-columns:1fr}.intel-top{align-items:start;flex-direction:column}.intel-stamp{min-width:0;width:100%}}
 @media(max-width:620px){.intel-top{padding:56px 0 28px}.exec-card{padding:22px}.signal{grid-template-columns:72px 1fr}.signal-value{display:none}.intel-grid-3{padding-bottom:56px}}
@@ -898,8 +877,9 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
 /* Accesibilidad de imágenes */
 .think-img img{aspect-ratio:4/3;}
 
-</style>
 
+.economist-bibliography-note{margin:8px 0 10px;font:500 10px/1.5 var(--font-mono,monospace);letter-spacing:.04em;color:var(--text-soft)}
+</style>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -907,15 +887,14 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9989;op
   "name":"Marcos J. Ibáñez",
   "jobTitle":"Economista y analista de research",
   "url":"https://indexar.netlify.app/",
-  "worksFor":{"@type":"Organization","name":"Índex AR"},
+  "worksFor":{"@type":"Organization","name":"Index AR"},
   "knowsAbout":["Macroeconomía","Economía argentina","Finanzas","Mercados","Análisis de datos","Research económico"]
 }
 </script>
-<link rel="preload" as="image" href="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg">
-
+<link as="image" href="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg" rel="preload"/>
 <style>
 /* ================================================================
-   ÍNDEX AR V8 — NAVEGACIÓN LATERAL + CARRUSEL DE PENSAMIENTO
+   INDEX AR V8 — NAVEGACIÓN LATERAL + CARRUSEL DE PENSAMIENTO
    Objetivo: reducir longitud percibida, mejorar descubrimiento y
    convertir la biblioteca en un módulo horizontal navegable.
    ================================================================ */
@@ -962,7 +941,7 @@ body.menu-open{overflow:hidden}
 
 /* --- Carrusel de economistas --- */
 .economist-carousel{position:relative;margin-top:18px}
-.economist-grid{display:flex!important;grid-template-columns:none!important;gap:18px;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding:5px 4px 18px 2px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch;cursor:grab}
+.economist-grid{position:relative;z-index:10;display:flex!important;grid-template-columns:none!important;gap:18px;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding:5px 4px 18px 2px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch;cursor:grab}
 .economist-grid:active{cursor:grabbing}
 .economist-card{flex:0 0 clamp(250px,27vw,305px);scroll-snap-align:start}
 .economist-grid::-webkit-scrollbar{height:7px}.economist-grid::-webkit-scrollbar-track{background:transparent}.economist-grid::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--gold) 70%,transparent);border-radius:99px}
@@ -986,7 +965,7 @@ body.menu-open{overflow:hidden}
 </style>
 <style>
 .economist-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
-.economist-card{appearance:none;border:1px solid var(--line,#d9d4ca);background:var(--paper,#f7f5ef);color:inherit;text-align:left;padding:0;cursor:pointer;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+.economist-card{position:relative;z-index:20;display:block;text-decoration:none;appearance:none;border:1px solid var(--line,#d9d4ca);background:var(--paper,#f7f5ef);color:inherit;text-align:left;padding:0;cursor:pointer;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
 .economist-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(18,35,55,.12);border-color:rgba(24,86,124,.45)}
 .economist-card:focus-visible{outline:3px solid #c77b45;outline-offset:4px}
 .economist-card .think-img{aspect-ratio:4/3;background:#e8e3d8;overflow:hidden}
@@ -1004,7 +983,7 @@ body.menu-open{overflow:hidden}
 <style>
 
 /* =====================================================================
-   ÍNDEX AR — DARK MODE AUDIT / V6.1
+   INDEX AR — DARK MODE AUDIT / V6.1
    Corrección de contraste para la Biblioteca de Economistas y elementos
    que tenían colores fijos heredados de la versión clara.
    ===================================================================== */
@@ -1149,9 +1128,8 @@ body.menu-open{overflow:hidden}
   transition:filter .35s ease,transform .45s ease;
 }
 </style>
-
 <style id="v7-library-system">
-/* ÍNDEX AR V7 — Biblioteca ordenada y verificable */
+/* INDEX AR V7 — Biblioteca ordenada y verificable */
 .library-index{
   display:flex;flex-wrap:wrap;gap:.55rem;margin:1.2rem 0 1.5rem;
   padding:.8rem;border:1px solid var(--line,#d9d4ca);background:rgba(255,255,255,.55)
@@ -1199,812 +1177,820 @@ body.menu-open{overflow:hidden}
 [data-theme="dark"] .library-item .source-status{color:#75b98f}
 @media(max-width:560px){.library-index{padding:.65rem}.library-filter{flex:1 1 calc(50% - .55rem)}}
 </style>
-
-</head>
+<style id="indexar-v9-ui">
+/* V9: navegación real + identidad de marca + cards enlazables */
+.index-brand-title{position:relative;display:inline-block}
+.index-brand-title .index-i{position:relative;display:inline-block}
+.index-brand-title .index-ray{position:absolute;left:50%;top:-0.30em;transform:translateX(-45%) rotate(-8deg);font-family:Arial,sans-serif;font-size:.28em;line-height:1;color:#6C9BFF;text-shadow:0 0 14px rgba(108,155,255,.38);pointer-events:none}
+.economist-card{display:block;text-decoration:none;color:inherit;cursor:pointer}
+.economist-card:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.economist-card .library-cta{display:inline-flex;align-items:center;gap:5px}
+.economist-card .library-cta::after{content:'↗';font-size:1.05em;transition:transform .2s ease}
+.economist-card:hover .library-cta::after{transform:translate(2px,-2px)}
+.index-menu-group{margin-bottom:0}.index-menu-body{padding-bottom:24px}
+.index-menu-link .idx{flex:0 0 25px}
+[data-theme="dark"] .index-brand-title .index-ray{color:#6C9BFF;text-shadow:0 0 18px rgba(108,155,255,.45)}
+@media(max-width:640px){.index-menu-trigger{right:14px}.index-brand-title .index-ray{top:-.28em}.index-menu-drawer{width:min(390px,94vw)}}
+</style>
+<style id="indexar-v9-economic-layer">
+.macro-coverage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);margin-top:22px}
+.macro-coverage>div{padding:13px 12px 13px 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:3px}
+.macro-coverage b{font:600 10px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--text)}
+.macro-coverage span{font:12px/1.45 var(--font-serif);color:var(--text-soft)}
+.risk-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+@media(max-width:1100px){.risk-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:760px){.macro-coverage{grid-template-columns:1fr}.risk-grid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.risk-card{min-width:260px;scroll-snap-align:start}}
+</style>
+<style>
+/* V13 — Consultoría 2.0: producto, gobernanza del dato y conversión B2B */
+.consulting-section{padding:92px 0;border-bottom:1px solid var(--rule);background:linear-gradient(180deg,var(--bg),var(--panel));}
+.service-head{display:grid;grid-template-columns:1.25fr .45fr;gap:36px;align-items:end;margin:14px 0 34px}.service-lead{max-width:760px;font:17px/1.7 var(--font-serif);color:var(--text-soft);margin:0}.service-note{border-left:2px solid var(--ix-blue);padding:12px 0 12px 18px;font:11px/1.6 var(--font-mono);text-transform:uppercase;letter-spacing:1px;color:var(--text-soft)}.service-note strong{color:var(--text);font-size:13px}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.service-card{border:1px solid var(--rule-strong);padding:25px;background:var(--panel);min-height:245px;display:flex;flex-direction:column}.service-card>span{font:700 11px var(--font-mono);color:var(--ix-blue);letter-spacing:1px}.service-card h3{font:600 22px/1.1 var(--font-display);margin:22px 0 10px}.service-card p{font:14px/1.65 var(--font-serif);color:var(--text-soft);margin:0}.service-card a{margin-top:auto;padding-top:18px;font:700 10px var(--font-mono);text-transform:uppercase;letter-spacing:1px;color:var(--text);text-decoration:none}.service-card a:hover{color:var(--ix-blue)}.service-cta{margin-top:18px;border-top:1px solid var(--rule-strong);padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px}.service-cta strong{display:block;font:600 20px var(--font-display)}.service-cta span{display:block;color:var(--text-soft);font:14px var(--font-serif);margin-top:4px}.data-governance-note,.research-byline,.footer-standards{font:11px/1.65 var(--font-mono);color:var(--text-soft);border-top:1px solid var(--rule);padding:15px 0;margin-top:18px}.data-governance-note strong,.research-byline strong{color:var(--text)}.risk-status{margin-top:15px;padding-top:10px;border-top:1px solid var(--rule);font:9px var(--font-mono);text-transform:uppercase;letter-spacing:.8px;color:var(--text-soft)}.footer-standards{margin-top:25px;max-width:900px}.index-menu-link[href="#servicios"] .idx{color:var(--ix-blue)}
+@media(max-width:980px){.service-grid{grid-template-columns:1fr 1fr}.service-head{grid-template-columns:1fr}.service-note{max-width:340px}}
+@media(max-width:560px){.consulting-section{padding:68px 0}.service-grid{grid-template-columns:1fr}.service-card{min-height:0}.service-cta{align-items:flex-start;flex-direction:column}.service-cta .btn{width:100%;text-align:center}}
+[data-theme="dark"] .consulting-section{background:linear-gradient(180deg,#090D14,#0B1018)}
+</style></head>
 <!-- Visuales históricas: Prebisch (CEPAL), Ferrer/Keynes/Sraffa/Ricardo/Smith/Friedman (Wikimedia Commons) y Michał Kalecki (Wikimedia Commons, CC BY 2.5 ES). Revisar licencias/atribución de cada archivo antes de producción comercial. -->
 <body>
-  <div id="scroll-progress"></div>
- 
-  <div class="masthead-bar">
-    <div class="wrap masthead-inner">
-      <span>Edición digital</span>
-      <span id="masthead-date">—</span>
-      <span id="masthead-time">—</span>
-    </div>
-  </div>
- 
-  <div class="ticker-strip" aria-live="polite" aria-atomic="false" aria-label="Indicadores económicos en vivo">
-    <div class="ticker-track">
-      <span>DÓLAR BLUE <span class="ticker-val" data-key="dolar-blue">cargando…</span></span>
-      <span>DÓLAR OFICIAL <span class="ticker-val" data-key="dolar-oficial">cargando…</span></span>
-      <span>INFLACIÓN MENSUAL <span class="ticker-val" data-key="inflacion">cargando…</span></span>
-      <span>RIESGO PAÍS <span class="ticker-val" data-key="riesgo-pais">cargando…</span></span>
-      <span>ACTIVIDAD ECONÓMICA <span class="ticker-val" data-key="actividad">cargando…</span></span>
-      <span>RESERVAS BCRA <span class="ticker-val" data-key="reservas">cargando…</span></span>
-      <span>DÓLAR BLUE <span class="ticker-val" data-key="dolar-blue">cargando…</span></span>
-      <span>DÓLAR OFICIAL <span class="ticker-val" data-key="dolar-oficial">cargando…</span></span>
-      <span>INFLACIÓN MENSUAL <span class="ticker-val" data-key="inflacion">cargando…</span></span>
-      <span>RIESGO PAÍS <span class="ticker-val" data-key="riesgo-pais">cargando…</span></span>
-      <span>ACTIVIDAD ECONÓMICA <span class="ticker-val" data-key="actividad">cargando…</span></span>
-      <span>RESERVAS BCRA <span class="ticker-val" data-key="reservas">cargando…</span></span>
-    </div>
-  </div>
- 
-  <header>
-    <div class="wrap header-inner">
-      <a href="#" style="display:flex; align-items:center;">
-        <svg viewBox="0 0 320 100" width="168" height="52" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="66" font-family="Fraunces, serif" font-weight="700" font-size="52" fill="var(--text)">Índex</text>
-          <text x="150" y="66" font-family="Fraunces, serif" font-weight="700" font-style="italic" font-size="52" fill="var(--gold)">AR</text>
-          <polyline points="4,30 22,10 36,20 58,-6" fill="none" stroke="var(--gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,14)"/>
-        </svg>
-      </a>
-      <nav aria-label="Navegación principal">
-        <a href="#sobre-detalle">Sobre</a>
-        <a href="#secciones">Secciones</a>
-        <a href="#publicaciones">Publicaciones</a>
-        <a href="#newsletter">Newsletter</a>
-          <a href="#tesis">Tesis</a>
-          <a href="#metodologia">Método</a>
-      </nav>
-      <div style="display:flex; align-items:center; gap:12px;">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">Claro</button>
-        <a class="btn-nav-cta" href="#newsletter">Suscribirme</a>
-      </div>
-    </div>
-  </header>
-
-<!-- ÍNDEX AR V8 · Menú lateral de navegación global -->
-<button class="index-menu-trigger" id="index-menu-trigger" type="button" aria-label="Abrir menú de Índex AR" aria-controls="index-menu-drawer" aria-expanded="false">
-  <span class="hamburger-icon" aria-hidden="true"></span>
-  <span class="index-menu-label">Explorar Índex AR</span>
-</button>
-<div class="index-menu-overlay" id="index-menu-overlay" data-menu-close></div>
-<aside class="index-menu-drawer" id="index-menu-drawer" aria-label="Menú principal" aria-hidden="true">
-  <div class="index-menu-head">
-    <div class="index-menu-brand">ÍNDEX AR<small>Research económico · Argentina</small></div>
-    <button class="index-menu-close" type="button" id="index-menu-close" aria-label="Cerrar menú">×</button>
-  </div>
-  <div class="index-menu-body">
-    <div class="index-menu-group">
-      <div class="index-menu-group-label">Lectura rápida</div>
-      <a class="index-menu-link" href="#intelligence"><span class="idx">01</span>Intelligence · indicadores</a>
-      <a class="index-menu-link" href="#tesis"><span class="idx">02</span>Tesis de la semana</a>
-      <a class="index-menu-link" href="#mapa-transmision"><span class="idx">03</span>Mapa de transmisión</a>
-    </div>
-    <div class="index-menu-group">
-      <div class="index-menu-group-label">Research</div>
-      <a class="index-menu-link" href="#archivo-pensamiento"><span class="idx">04</span>Archivo de pensamiento</a>
-      <a class="index-menu-link" href="#research"><span class="idx">05</span>Research e informes</a>
-      <a class="index-menu-link" href="#publicaciones"><span class="idx">06</span>Publicaciones</a>
-      <a class="index-menu-link" href="#metodologia"><span class="idx">07</span>Metodología</a>
-    </div>
-    <div class="index-menu-group">
-      <div class="index-menu-group-label">Perfil</div>
-      <a class="index-menu-link" href="#perfil-profesional"><span class="idx">08</span>Perfil profesional</a>
-      <a class="index-menu-link" href="#sobre"><span class="idx">09</span>Preguntas frecuentes</a>
-      <a class="index-menu-link" href="#newsletter"><span class="idx">10</span>Newsletter</a>
-    </div>
-    <div class="index-menu-group">
-      <div class="index-menu-group-label">Accesos</div>
-      <a class="index-menu-link" href="#secciones"><span class="idx">11</span>Indicadores económicos</a>
-      <a class="index-menu-link" href="#panel"><span class="idx">12</span>Inicio / panel principal</a>
-    </div>
-  </div>
-  <div class="index-menu-foot"><strong>Índex AR</strong><br>Datos · evidencia · contexto · escenarios</div>
-</aside>
-
-
-  <div class="professional-strip" aria-label="Perfil profesional">
-    <div class="wrap professional-inner">
-      <div class="professional-id">
-        <div class="professional-avatar" aria-hidden="true">MI</div>
-        <div>
-          <div class="professional-name">Marcos J. Ibáñez</div>
-          <div class="professional-role">Economista · Research · Macroeconomía · Finanzas</div>
-        </div>
-      </div>
-      <div class="professional-links">
-        <a class="mini-link" href="#sobre-detalle">Perfil profesional</a>
-        <a class="mini-link" href="#research">Research</a>
-        <a class="mini-link" href="#metodologia">Metodología</a>
-      </div>
-    </div>
-  </div>
- 
-  <main id="main">
- 
-  <section class="cover-hero" id="cover">
-    <div class="cover-bg parallax" data-speed="0.35">
-      <svg class="cover-chart" viewBox="0 0 1200 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="coverFade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#6C9BFF" stop-opacity="0.5"/>
-            <stop offset="100%" stop-color="#6C9BFF" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70 L1200,500 L0,500 Z" fill="url(#coverFade)"/>
-        <path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70" fill="none" stroke="#6C9BFF" stroke-width="2" opacity="0.7"/>
-      </svg>
-    </div>
-    <div class="cover-overlay"></div>
-    <div class="cover-content">
-      <div class="eyebrow" style="justify-content:center;">Análisis independiente · Argentina · Desde 2026</div>
-      <h1 class="cover-title">Índex <em>AR</em></h1>
-      <p class="cover-sub">Investigación económica aplicada a la Argentina: datos, contexto y escenarios con una lectura propia.</p>
-    </div>
-    <a href="#hero-main" class="cover-scroll" aria-label="Bajar a los indicadores">
-      <span></span>
-    </a>
-  </section>
- 
-  <section class="hero" id="hero-main">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Análisis independiente · Argentina</div>
-        <h1>Economía argentina: <em>qué cambió, por qué y qué mirar ahora.</em></h1>
-        <p class="hero-sub">Datos, contexto y escenarios para leer la coyuntura sin atajos. Cada análisis distingue el dato observado, la interpretación y los supuestos que sostienen un escenario.</p>
-        <div class="hero-proof" aria-label="Propuesta de valor profesional">
-          <div class="proof-item"><div class="proof-value">Datos</div><div class="proof-label">Fuentes primarias</div></div>
-          <div class="proof-item"><div class="proof-value">Research</div><div class="proof-label">Análisis propio</div></div>
-          <div class="proof-item"><div class="proof-value">Argentina</div><div class="proof-label">Foco local</div></div>
-        </div>
-        <div class="hero-ctas">
-          <a class="btn btn-solid" href="#newsletter">Suscribirme a la newsletter</a>
-          <a class="btn btn-outline" href="#research">Ver research</a>
-          <button class="btn btn-outline" id="share-btn" type="button">Compartir</button>
-        </div>
-      </div>
-      <div class="hero-figure reveal">
-        <div class="carousel-slide active" data-slide="0">
-          <div class="figure-label">
-            <span class="figure-tag">Fig. 01 — Dólar blue</span>
-            <span class="figure-value" id="spark-value-0">—</span>
-          </div>
-          <svg id="spark-svg-0" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-          <div class="figure-caption" id="spark-caption-0">Cargando serie histórica…</div>
-        </div>
-        <div class="carousel-slide" data-slide="1">
-          <div class="figure-label">
-            <span class="figure-tag">Fig. 02 — Inflación mensual</span>
-            <span class="figure-value" id="spark-value-1">—</span>
-          </div>
-          <svg id="spark-svg-1" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-          <div class="figure-caption" id="spark-caption-1">Cargando serie histórica…</div>
-        </div>
-        <div class="carousel-slide" data-slide="2">
-          <div class="figure-label">
-            <span class="figure-tag">Fig. 03 — Riesgo país</span>
-            <span class="figure-value" id="spark-value-2">—</span>
-          </div>
-          <svg id="spark-svg-2" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-          <div class="figure-caption" id="spark-caption-2">Cargando serie histórica…</div>
-        </div>
-        <div class="carousel-slide" data-slide="3">
-          <div class="figure-label">
-            <span class="figure-tag">Fig. 04 — Actividad económica</span>
-            <span class="figure-value" id="spark-value-3">—</span>
-          </div>
-          <svg id="spark-svg-3" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-          <div class="figure-caption" id="spark-caption-3">Cargando serie histórica…</div>
-        </div>
-        <div class="carousel-slide" data-slide="4">
-          <div class="figure-label">
-            <span class="figure-tag">Fig. 05 — Reservas del BCRA</span>
-            <span class="figure-value" id="spark-value-4">—</span>
-          </div>
-          <svg id="spark-svg-4" viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
-          <div class="figure-caption" id="spark-caption-4">Cargando serie histórica…</div>
-        </div>
-        <div class="carousel-nav">
-          <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Gráfico anterior">‹</button>
-          <span class="carousel-pos" id="carousel-pos">01 / 05</span>
-          <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Gráfico siguiente">›</button>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <div class="trust-bar reveal">
-    <div class="wrap trust-bar-inner">
-      <span class="trust-label">Datos en vivo de</span>
-      <span class="trust-item">BCRA</span>
-      <span class="trust-item">INDEC</span>
-      <span class="trust-item">Ministerio de Economía</span>
-      <span class="trust-item">ArgentinaDatos</span>
-      <span class="trust-item">DolarAPI</span>
-    </div>
-  </div>
- 
-
-  <section class="intel-deck" aria-label="Panel ejecutivo de Índex AR">
-    <div class="wrap">
-      <div class="intel-head">
-        <div>
-          <div class="intel-kicker">Índex Intelligence / 01</div>
-          <h2 class="intel-title">Del dato al mecanismo.</h2>
-        </div>
-        <div class="intel-live">actualización editorial</div>
-      </div>
-      <div class="intel-grid">
-        <article class="intel-card featured">
-          <div class="tag">Lectura de coyuntura</div>
-          <h3>No mostramos solamente qué cambió. Buscamos explicar qué lo mueve.</h3>
-          <p>Datos primarios + contexto + mecanismo económico + escenarios.</p>
-          <svg viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 75 C35 72 45 50 72 58 S112 72 138 42 S182 55 205 25 S245 30 300 5" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </article>
-        <article class="intel-card">
-          <div class="tag">01 / Datos</div>
-          <div class="intel-number">01</div>
-          <p>Fuente primaria y serie identificable.</p>
-        </article>
-        <article class="intel-card">
-          <div class="tag">02 / Modelo</div>
-          <div class="intel-number">02</div>
-          <p>Relaciones económicas antes que opinión.</p>
-        </article>
-        <article class="intel-card">
-          <div class="tag">03 / Decisión</div>
-          <div class="intel-number">03</div>
-          <p>Qué implica para empresas, mercados y hogares.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="panel" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">Panel de indicadores</div>
-        <span class="pill-live"><span class="pill-live-dot"></span>En vivo</span>
-      </div>
-      <div class="kpi-grid-wrap">
-        <div class="kpi-grid">
-          <div class="kpi-card" id="kpi-dolar-blue">
-            <div class="kpi-label">Dólar blue</div>
-            <div class="kpi-value" data-key="dolar-blue">—</div>
-            <div class="kpi-sub">Fuente: DolarAPI</div>
-          </div>
-          <div class="kpi-card" id="kpi-dolar-oficial">
-            <div class="kpi-label">Dólar oficial</div>
-            <div class="kpi-value" data-key="dolar-oficial">—</div>
-            <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
-          </div>
-          <div class="kpi-card" id="kpi-inflacion">
-            <div class="kpi-label">Inflación mensual</div>
-            <div class="kpi-value" data-key="inflacion">—</div>
-            <div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
-          </div>
-          <div class="kpi-card" id="kpi-riesgo-pais">
-            <div class="kpi-label">Riesgo país</div>
-            <div class="kpi-value" data-key="riesgo-pais">—</div>
-            <div class="kpi-sub">Fuente: ArgentinaDatos / Ámbito</div>
-          </div>
-          <div class="kpi-card" id="kpi-actividad">
-            <div class="kpi-label">Actividad económica</div>
-            <div class="kpi-value" data-key="actividad">—</div>
-            <div class="kpi-sub" id="kpi-actividad-sub">Fuente: Ministerio de Economía (EMAE)</div>
-          </div>
-          <div class="kpi-card" id="kpi-reservas">
-            <div class="kpi-label">Reservas del BCRA</div>
-            <div class="kpi-value" data-key="reservas">—</div>
-            <div class="kpi-sub">Fuente: datos.gob.ar / BCRA</div>
-          </div>
-        </div>
-        <div class="thermo-card">
-          <div class="thermo-title">Termómetro del día</div>
-          <svg id="thermo-donut" viewBox="0 0 120 120" width="110" height="110"></svg>
-          <div class="thermo-labels">
-            <div id="thermo-up-label">0 indicadores al alza</div>
-            <div id="thermo-down-label">0 indicadores a la baja</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <section id="secciones" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">Qué vas a encontrar</div>
-        <div class="section-label">Cuatro secciones fijas</div>
-      </div>
-      <div class="pillars-editorial">
-        <div class="pillar-row" id="pillar-economia">
-          <span class="pillar-num">I</span>
-          <h3>Economía</h3>
-          <div>
-            <p>Inflación, tipo de cambio, tasas, reservas y actividad — la película completa detrás del dato de la semana.</p>
-            <div class="pillar-tags"><span class="pillar-tag">Inflación</span><span class="pillar-tag">EMAE</span><span class="pillar-tag">Tipo de cambio</span></div>
-          </div>
-        </div>
-        <div class="pillar-row" id="pillar-finanzas">
-          <span class="pillar-num">II</span>
-          <h3>Finanzas</h3>
-          <div>
-            <p>Deuda, riesgo país, mercado de capitales y sistema financiero — cómo se financia el país y quién le presta.</p>
-            <div class="pillar-tags"><span class="pillar-tag">Riesgo país</span><span class="pillar-tag">Deuda soberana</span><span class="pillar-tag">Tasas</span></div>
-          </div>
-        </div>
-        <div class="pillar-row" id="pillar-mercados">
-          <span class="pillar-num">III</span>
-          <h3>Mercados</h3>
-          <div>
-            <p>Sectores, precios relativos y organización industrial — por qué los precios se mueven como se mueven.</p>
-            <div class="pillar-tags"><span class="pillar-tag">Precios relativos</span><span class="pillar-tag">Salarios reales</span></div>
-          </div>
-        </div>
-        <div class="pillar-row" id="pillar-energia">
-          <span class="pillar-num">IV</span>
-          <h3>Energía / Agro</h3>
-          <div>
-            <p>Los sectores que sostienen la balanza comercial — producción, exportación y su peso en la macro.</p>
-            <div class="pillar-tags"><span class="pillar-tag">Vaca Muerta</span><span class="pillar-tag">Cosecha gruesa</span><span class="pillar-tag">Balanza comercial</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-
-  <section id="intelligence" class="intelligence-shell" data-origin="indexar">
-    <div class="wrap">
-      <div class="intel-top">
-        <div>
-          <div class="intel-eyebrow">Mesa de Coyuntura / Lectura económica</div>
-          <h2 class="intel-title">No alcanza con mirar el dato.<br><em>Hay que entender el mecanismo.</em></h2>
-          <p class="intel-desc">Una lectura de coyuntura pensada para quienes necesitan entender la economía y sus efectos sobre decisiones reales: empresas, inversores y equipos profesionales. El sitio separa datos observados, interpretación y escenarios; no presenta supuestos como hechos.</p>
-        </div>
-        <div class="intel-stamp">Sistema de research<strong>ÍNDEX / AR</strong>Edición 2026 · Argentina</div>
-      </div>
-
-      <div class="exec-grid">
-        <article class="exec-card">
-          <div class="exec-kicker">Lectura de coyuntura · estructura</div>
-          <h3>Primero las preguntas; después los gráficos.</h3>
-          <p>Estado del ciclo, inflación, política fiscal/monetaria, sector externo y condiciones financieras. La interfaz separa <strong>dato observado</strong>, <strong>interpretación</strong> y <strong>escenario</strong> para evitar que una proyección se confunda con un hecho.</p>
-          <div class="signal-list" aria-label="Ejemplo de semáforo de indicadores">
-            <div class="signal"><span class="signal-name">Actividad</span><span class="signal-bar"><i style="--w:68%"></i></span><span class="signal-value neutral">MONITOREAR</span></div>
-            <div class="signal"><span class="signal-name">Inflación</span><span class="signal-bar"><i style="--w:52%"></i></span><span class="signal-value down">RIESGO</span></div>
-            <div class="signal"><span class="signal-name">Externo</span><span class="signal-bar"><i style="--w:79%"></i></span><span class="signal-value up">SOPORTE</span></div>
-            <div class="signal"><span class="signal-name">Finanzas</span><span class="signal-bar"><i style="--w:44%"></i></span><span class="signal-value neutral">MIXTO</span></div>
-          </div>
-          <div class="content-origin">Diseño conceptual · no interpretar estos porcentajes como datos reales.</div>
-        </article>
-
-        <div class="scenario-stack" aria-label="Matriz de escenarios">
-          <article class="scenario-card base"><div class="s-head"><h4>Escenario base</h4><span class="prob">HIPÓTESIS</span></div><p>Trayectoria central construida con supuestos explícitos y variables de seguimiento.</p></article>
-          <article class="scenario-card"><div class="s-head"><h4>Upside</h4><span class="prob">CONDICIONAL</span></div><p>Qué tendría que ocurrir para que la trayectoria mejore: shock externo, desinflación, crédito, inversión o productividad.</p></article>
-          <article class="scenario-card"><div class="s-head"><h4>Downside</h4><span class="prob">CONDICIONAL</span></div><p>Qué combinación de shocks podría deteriorar el escenario y cuáles serían las primeras variables en reaccionar.</p></article>
-        </div>
-      </div>
-
-      <div class="risk-grid">
-        <article class="risk-card"><div class="risk-label">Riesgo 01</div><h4>Inflación / nominalidad</h4><p>Seguimiento de precios, salarios, expectativas, tipo de cambio y mecanismos de propagación.</p><div class="risk-meter"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div></article>
-        <article class="risk-card"><div class="risk-label">Riesgo 02</div><h4>Sector externo</h4><p>Reservas, cuenta corriente, energía, deuda y capacidad de generación de divisas.</p><div class="risk-meter"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div></article>
-        <article class="risk-card"><div class="risk-label">Riesgo 03</div><h4>Financiamiento</h4><p>Curva de tasas, riesgo soberano, liquidez y condiciones de acceso al mercado.</p><div class="risk-meter"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div></article>
-      </div>
-
-      <div class="intel-grid-3">
-        <article class="tool-card"><div class="tool-icon">01 / NOWCAST</div><h4>Radar de coyuntura</h4><p>Actividad, empleo, consumo, inversión, recaudación y crédito reunidos para seguir el ciclo y detectar cambios de ritmo.</p><span class="tool-link">Próximamente →</span></article>
-        <article class="tool-card"><div class="tool-icon">02 / SCENARIO</div><h4>Escenarios</h4><p>Escenarios con supuestos trazables: qué pasa si cambia el dólar, la tasa, el salario real, el precio de commodities o la demanda externa.</p><span class="tool-link">Próximamente →</span></article>
-        <article class="tool-card"><div class="tool-icon">03 / DATA</div><h4>Base de datos económica</h4><p>Series históricas, metadatos, frecuencia, fecha de actualización y fuente primaria. La procedencia del dato es parte del análisis.</p><span class="tool-link">Próximamente →</span></article>
-      </div>
-
-      <div class="provenance" aria-label="Principios de calidad del dato">
-        <span class="prov">Fuente primaria</span><span class="prov">Fecha de corte</span><span class="prov">Frecuencia</span><span class="prov">Unidad</span><span class="prov">Revisión histórica</span><span class="prov">Supuestos explícitos</span><span class="prov">Hecho ≠ hipótesis ≠ escenario</span>
-      </div>
-    </div>
-  </section>
-
-  
-
-<section id="tesis" class="reveal">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-title">Tesis de la semana</div>
-      <div class="section-label">Cómo se construye una lectura</div>
-    </div>
-    <div class="thesis-grid">
-      <article class="thesis-main" data-origin="indexar">
-        <div class="thesis-kicker">Plantilla de análisis · no es una recomendación financiera</div>
-        <h3>La macro no se entiende por una variable aislada.</h3>
-        <p>Una tesis útil empieza por una pregunta concreta, identifica las variables que pueden moverla y establece qué evidencia la confirmaría o la debilitaría. Esta estructura permite pasar de la descripción de la coyuntura a una hipótesis contrastable.</p>
-        <div class="thesis-points">
-          <div class="thesis-point"><b>Pregunta</b><span>¿Qué está explicando el cambio?</span></div>
-          <div class="thesis-point"><b>Evidencia</b><span>¿Qué indicadores deberían moverse?</span></div>
-          <div class="thesis-point"><b>Invalidación</b><span>¿Qué dato obligaría a revisar la lectura?</span></div>
-        </div>
-      </article>
-      <div class="thesis-side">
-        <article class="thesis-box"><div class="mini-head">Dato observado</div><h4>Separar nivel, variación y tendencia</h4><p>Una mejora mensual no necesariamente cambia el régimen. Cada indicador debe leerse contra su base de comparación, frecuencia y comportamiento previo.</p><div class="thesis-status">criterio editorial</div></article>
-        <article class="thesis-box"><div class="mini-head">Escenario</div><h4>Supuestos visibles</h4><p>Cuando se plantea un escenario, se explicitan las condiciones que deberían cumplirse. Sin supuestos visibles, una proyección es solamente una cifra.</p><div class="thesis-status">criterio editorial</div></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="mapa-transmision" class="reveal">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-title">Mapa de transmisión</div>
-      <div class="section-label">Pensar la economía como sistema</div>
-    </div>
-    <p class="transmission-intro">La utilidad de un indicador aparece cuando podemos conectarlo con otros. Índex AR incorpora mapas de transmisión para mostrar cómo un shock puede propagarse desde una variable financiera o externa hacia precios, ingresos, demanda y actividad.</p>
-    <div class="transmission-grid">
-      <article class="transmission-card"><div class="n">01 / SHOCK</div><h3>Tipo de cambio</h3><p>Movimiento cambiario, expectativas y precios relativos. El punto de partida del escenario.</p><div class="transmission-foot">Variable inicial</div></article>
-      <article class="transmission-card"><div class="n">02 / PRECIOS</div><h3>Inflación</h3><p>Pass-through, bienes transables, regulados y persistencia. La transmisión no es instantánea ni homogénea.</p><div class="transmission-foot">Mecanismo nominal</div></article>
-      <article class="transmission-card"><div class="n">03 / INGRESOS</div><h3>Salario real</h3><p>La evolución de precios frente a ingresos modifica poder adquisitivo, consumo y decisiones de cobertura.</p><div class="transmission-foot">Ingreso disponible</div></article>
-      <article class="transmission-card"><div class="n">04 / ACTIVIDAD</div><h3>Demanda e inversión</h3><p>Consumo, crédito e inversión responden a rentabilidad esperada, incertidumbre y condiciones financieras.</p><div class="transmission-foot">Resultado macro</div></article>
-    </div>
-  </div>
-</section>
-
-<section id="archivo-pensamiento" class="reveal">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-title">Archivo de pensamiento</div>
-      <div class="section-label">Ideas que informan el análisis</div>
-    </div>
-    <p class="think-intro">La investigación aplicada no parte de cero. Esta pequeña biblioteca visual conecta la coyuntura argentina con tradiciones de pensamiento económico que ayudan a formular mejores preguntas sobre desarrollo, distribución, restricción externa, demanda y macroeconomía.</p>
-    <div class="library-index" aria-label="Índice de tradiciones económicas">
-      <button class="library-filter is-active" type="button" data-tradition-filter="all">Todos <span>(10)</span></button>
-      <button class="library-filter" type="button" data-tradition-filter="clasicos">Clásicos <span>(3)</span></button>
-      <button class="library-filter" type="button" data-tradition-filter="keynesianos">Keynesianos / Cambridge <span>(4)</span></button>
-      <button class="library-filter" type="button" data-tradition-filter="estructuralistas">Estructuralistas <span>(2)</span></button>
-      <button class="library-filter" type="button" data-tradition-filter="monetarismo">Monetarismo <span>(1)</span></button>
-      <div class="library-index-note">Orden de lectura sugerido: clásicos → Cambridge y poskeynesianos → estructuralismo latinoamericano → monetarismo. Cada ficha enlaza únicamente a catálogos, archivos o repositorios que fueron comprobados.</div>
-    </div>
-    <div class="economist-carousel" aria-label="Carrusel de economistas y tradiciones">
-      <div class="think-grid economist-grid" id="economist-carousel-track">
-  <button class="think-card economist-card" type="button" data-economist="smith" data-tradition="clasicos" aria-label="Abrir biblioteca de Adam Smith">
-    <div class="think-img"><img alt="Retrato histórico de Adam Smith" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/AdamSmith.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">01 · Clásicos</div><h3>Adam Smith</h3><p>División del trabajo, precios, comercio, instituciones y economía política.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Fuentes verificadas</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="ricardo" data-tradition="clasicos" aria-label="Abrir biblioteca de David Ricardo">
-    <div class="think-img"><img alt="Retrato histórico de David Ricardo" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20David%20Ricardo%20by%20Thomas%20Phillips.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">02 · Clásicos</div><h3>David Ricardo</h3><p>Valor, distribución, renta diferencial, comercio internacional y tributación.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Fuentes verificadas</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="sraffa" data-tradition="clasicos" aria-label="Abrir biblioteca de Piero Sraffa">
-    <div class="think-img"><img alt="Retrato histórico de Piero Sraffa" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Piero%20Sraffa%20late-1920s.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">03 · Clásicos contemporáneos</div><h3>Piero Sraffa</h3><p>Producción, precios, excedente, distribución y reconstrucción de la tradición clásica.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Archivo Trinity verificado</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="keynes" data-tradition="keynesianos" aria-label="Abrir biblioteca de John Maynard Keynes">
-    <div class="think-img"><img alt="Retrato histórico de John Maynard Keynes" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/John%20Maynard%20Keynes.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">04 · Keynesianismo</div><h3>John Maynard Keynes</h3><p>Demanda efectiva, incertidumbre, inversión, dinero, empleo y política macroeconómica.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Cambridge verificado</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="kalecki" data-tradition="keynesianos" aria-label="Abrir biblioteca de Michał Kalecki">
-    <div class="think-img"><img alt="Retrato de Michał Kalecki" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Michal%20Kalecki.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">05 · Poskeynesianismo</div><h3>Michał Kalecki</h3><p>Demanda efectiva, inversión, distribución, mark-up, ciclo y conflicto político.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">UNAM verificado</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="robinson" data-tradition="keynesianos" aria-label="Abrir biblioteca de Joan Robinson">
-    <div class="think-img"><img alt="Retrato histórico de Joan Robinson" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Joan%20Robinson%20Ramsey%20Muspratt.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">06 · Cambridge</div><h3>Joan Robinson</h3><p>Competencia imperfecta, acumulación, crecimiento y controversia del capital.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Bibliografía Cambridge verificada</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="minsky" data-tradition="keynesianos" aria-label="Abrir biblioteca de Hyman Minsky">
-    <div class="think-img"><img alt="Retrato de Hyman Minsky" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/HymanMinsky-1.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">07 · Poskeynesianismo financiero</div><h3>Hyman Minsky</h3><p>Fragilidad financiera, deuda, ciclos, inversión y crisis endógenas.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Levy Institute verificado</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="prebisch" data-tradition="estructuralistas" aria-label="Abrir biblioteca de Raúl Prebisch">
-    <div class="think-img"><img alt="Retrato histórico de Raúl Prebisch" loading="lazy" src="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg"></div>
-    <div class="think-body"><div class="think-tag">08 · Estructuralismo latinoamericano</div><h3>Raúl Prebisch</h3><p>Centro-periferia, estructura productiva, términos de intercambio y restricción externa.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">CEPAL verificado</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="ferrer" data-tradition="estructuralistas" aria-label="Abrir biblioteca de Aldo Ferrer">
-    <div class="think-img"><img alt="Retrato de Aldo Ferrer" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aldo%20Ferrer.jpg?width=900"></div>
-    <div class="think-body"><div class="think-tag">09 · Desarrollo argentino</div><h3>Aldo Ferrer</h3><p>Estructura productiva, densidad nacional, desarrollo e inserción internacional.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Biblioteca Nacional / FCE verificados</span></div>
-  </button>
-  <button class="think-card economist-card" type="button" data-economist="friedman" data-tradition="monetarismo" aria-label="Abrir biblioteca de Milton Friedman">
-    <div class="think-img"><img alt="Retrato de Milton Friedman" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Milton%20Friedman.jpg?width=700"></div>
-    <div class="think-body"><div class="think-tag">10 · Monetarismo</div><h3>Milton Friedman</h3><p>Dinero, inflación, consumo, expectativas, política monetaria y libertad económica.</p><span class="library-cta">Abrir biblioteca →</span><span class="library-verified">Hoover verificado</span></div>
-  </button>
+<div id="scroll-progress"></div>
+<div class="masthead-bar">
+<div class="wrap masthead-inner">
+<span>Edición digital</span>
+<span id="masthead-date">—</span>
+<span id="masthead-time">—</span>
 </div>
-  </div>
+</div>
+<div aria-atomic="false" aria-label="Indicadores económicos en vivo" aria-live="polite" class="ticker-strip">
+<div class="ticker-track">
+<span>DÓLAR BLUE <span class="ticker-val" data-key="dolar-blue">cargando…</span></span>
+<span>DÓLAR OFICIAL <span class="ticker-val" data-key="dolar-oficial">cargando…</span></span>
+<span>INFLACIÓN MENSUAL <span class="ticker-val" data-key="inflacion">cargando…</span></span>
+<span>RIESGO PAÍS <span class="ticker-val" data-key="riesgo-pais">cargando…</span></span>
+<span>ACTIVIDAD ECONÓMICA <span class="ticker-val" data-key="actividad">cargando…</span></span>
+<span>RESERVAS BCRA <span class="ticker-val" data-key="reservas">cargando…</span></span>
+<span>DÓLAR BLUE <span class="ticker-val" data-key="dolar-blue">cargando…</span></span>
+<span>DÓLAR OFICIAL <span class="ticker-val" data-key="dolar-oficial">cargando…</span></span>
+<span>INFLACIÓN MENSUAL <span class="ticker-val" data-key="inflacion">cargando…</span></span>
+<span>RIESGO PAÍS <span class="ticker-val" data-key="riesgo-pais">cargando…</span></span>
+<span>ACTIVIDAD ECONÓMICA <span class="ticker-val" data-key="actividad">cargando…</span></span>
+<span>RESERVAS BCRA <span class="ticker-val" data-key="reservas">cargando…</span></span>
+</div>
+</div>
+<header>
+<div class="wrap header-inner">
+<a href="./index.html" style="display:flex; align-items:center;">
+<svg aria-label="Index AR" height="52" role="img" viewbox="0 0 320 100" width="168" xmlns="http://www.w3.org/2000/svg">
+<text fill="var(--text)" font-family="Fraunces, serif" font-size="52" font-weight="700" x="0" y="66">Index</text>
+<text fill="var(--gold)" font-family="Fraunces, serif" font-size="52" font-style="italic" font-weight="700" x="150" y="66">AR</text>
+<polyline fill="none" points="7,27 12,15 10,22 18,9" stroke="#1687ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"></polyline>
+</svg>
+</a>
+<nav aria-label="Navegación principal">
+<a href="#sobre-detalle">Sobre</a><a href="#servicios">Servicios</a>
+<a href="#secciones">Secciones</a>
+<a href="#publicaciones">Publicaciones</a>
+<a href="#newsletter">Newsletter</a>
+<a href="#tesis">Tesis</a>
+<a href="#metodologia">Método</a>
+</nav>
+<div style="display:flex; align-items:center; gap:12px;">
+<button aria-label="Cambiar tema claro/oscuro" class="theme-toggle" id="theme-toggle" type="button">Claro</button>
+<a class="btn-nav-cta" href="#newsletter">Suscribirme</a>
+</div>
+</div>
+</header>
+<!-- INDEX AR V8 · Menú lateral de navegación global -->
+<button aria-controls="index-menu-drawer" aria-expanded="false" aria-label="Abrir menú de Index AR" class="index-menu-trigger" id="index-menu-trigger" type="button">
+<span aria-hidden="true" class="hamburger-icon"></span>
+<span class="index-menu-label">Explorar Index AR</span>
+</button>
+<div class="index-menu-overlay" data-menu-close="" id="index-menu-overlay"></div>
+<aside aria-hidden="true" aria-label="Menú principal" class="index-menu-drawer" id="index-menu-drawer">
+<div class="index-menu-head">
+<div class="index-menu-brand">INDEX AR<small>Research económico · Argentina</small></div>
+<button aria-label="Cerrar menú" class="index-menu-close" id="index-menu-close" type="button">×</button>
+</div>
+<div class="index-menu-body">
+<div class="index-menu-group">
+<div class="index-menu-group-label">Navegación</div>
+<a class="index-menu-link" href="#panel"><span class="idx">01</span>Inicio · panel</a>
+<a class="index-menu-link" href="#secciones"><span class="idx">02</span>Economía</a>
+<a class="index-menu-link" href="#intelligence"><span class="idx">03</span>Intelligence · indicadores</a>
+<a class="index-menu-link" href="#tesis"><span class="idx">04</span>Tesis de la semana</a>
+<a class="index-menu-link" href="#mapa-transmision"><span class="idx">05</span>Mapa de transmisión</a>
+<a class="index-menu-link" href="#archivo-pensamiento"><span class="idx">06</span>Biblioteca de pensamiento</a>
+<a class="index-menu-link" href="#servicios"><span class="idx">07</span>Servicios</a><a class="index-menu-link" href="#perfil-profesional"><span class="idx">08</span>Perfil profesional</a>
+<a class="index-menu-link" href="#research"><span class="idx">09</span>Research e informes</a>
+<a class="index-menu-link" href="#publicaciones"><span class="idx">10</span>Publicaciones</a>
+<a class="index-menu-link" href="#metodologia"><span class="idx">11</span>Metodología</a>
+<a class="index-menu-link" href="#newsletter"><span class="idx">12</span>Newsletter</a>
+<a class="index-menu-link" href="#sobre-detalle"><span class="idx">13</span>Sobre Index AR</a>
+<a class="index-menu-link" href="#sobre"><span class="idx">14</span>Preguntas frecuentes</a>
+</div>
+</div>
+<div class="index-menu-foot"><strong>Index AR</strong><br/>Datos · evidencia · contexto · escenarios</div>
+</aside>
+<div aria-label="Perfil profesional" class="professional-strip">
+<div class="wrap professional-inner">
+<div class="professional-id">
+<div aria-hidden="true" class="professional-avatar">MI</div>
+<div>
+<div class="professional-name">Marcos J. Ibáñez</div>
+<div class="professional-role">Economista · Research · Macroeconomía · Finanzas</div>
+</div>
+</div>
+<div class="professional-links">
+<a class="mini-link" href="#sobre-detalle">Perfil profesional</a>
+<a class="mini-link" href="#research">Research</a>
+<a class="mini-link" href="#metodologia">Metodología</a>
+</div>
+</div>
+</div>
+<main id="main">
+<section class="cover-hero" id="cover">
+<div class="cover-bg parallax" data-speed="0.35">
+<svg class="cover-chart" preserveaspectratio="none" viewbox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="coverFade" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#6C9BFF" stop-opacity="0.5"></stop>
+<stop offset="100%" stop-color="#6C9BFF" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70 L1200,500 L0,500 Z" fill="url(#coverFade)"></path>
+<path d="M0,380 L60,360 L120,390 L180,320 L240,340 L300,280 L360,300 L420,240 L480,260 L540,190 L600,220 L660,160 L720,190 L780,120 L840,150 L900,90 L960,120 L1020,60 L1080,90 L1140,40 L1200,70" fill="none" opacity="0.7" stroke="#6C9BFF" stroke-width="2"></path>
+</svg>
+</div>
+<div class="cover-overlay"></div>
+<div class="cover-content">
+<div class="eyebrow" style="justify-content:center;">Análisis independiente · Argentina · Desde 2026</div>
+<h1 class="cover-title index-brand-title"><span class="index-i">I<span aria-hidden="true" class="index-ray">⚡</span></span>ndex <em>AR</em></h1>
+<p class="cover-sub">Investigación económica aplicada a la Argentina: datos, contexto y escenarios con una lectura propia.</p>
+</div>
+<a aria-label="Bajar a los indicadores" class="cover-scroll" href="#hero-main">
+<span></span>
+</a>
 </section>
-
-<section id="perfil-profesional" class="reveal">
-  <div class="wrap profile-grid">
-    <div>
-      <div class="profile-kicker">Perfil profesional</div>
-      <h2>Economía, datos y criterio.</h2>
-      <p class="lead">Índex AR también es un espacio donde mostrar cómo trabajo: formular una pregunta, ordenar evidencia, construir una explicación y comunicarla de forma clara.</p>
-      <div class="profile-note">La plataforma está pensada como portfolio profesional. Los proyectos publicados deben mostrar el proceso, no solamente el resultado: fuentes, metodología, código o cálculos cuando corresponda y límites de la evidencia.</div>
-      </div>
-      <div class="economist-carousel-controls">
-        <div class="economist-carousel-hint">Deslizá hacia la derecha · 10 economistas · biblioteca verificada</div>
-        <div class="economist-carousel-buttons" aria-label="Controles del carrusel">
-          <button type="button" class="economist-carousel-btn" id="economist-prev" aria-label="Economista anterior">←</button>
-          <button type="button" class="economist-carousel-btn" id="economist-next" aria-label="Siguiente economista">→</button>
-        </div>
-      </div>
-    </div>
-    <div class="profile-list">
-      <div class="profile-row"><b>Research</b><span>Macroeconomía argentina, inflación, sector externo, finanzas públicas, mercados y desarrollo.</span></div>
-      <div class="profile-row"><b>Cuantitativo</b><span>Series de tiempo, econometría aplicada, análisis de datos y visualización.</span></div>
-      <div class="profile-row"><b>Finanzas</b><span>Deuda, tasas, riesgo, escenarios y lectura de variables financieras.</span></div>
-      <div class="profile-row"><b>Producto</b><span>Dashboards, publicaciones, bases de datos y herramientas económicas accesibles desde la web.</span></div>
-    </div>
-  </div>
+<section class="hero" id="hero-main">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">Análisis independiente · Argentina</div>
+<h1>Economía argentina: <em>qué cambió, por qué y qué mirar ahora.</em></h1>
+<p class="hero-sub">Datos, contexto y escenarios para leer la coyuntura sin atajos. Cada análisis distingue el dato observado, la interpretación y los supuestos que sostienen un escenario.</p>
+<div aria-label="Propuesta de valor profesional" class="hero-proof">
+<div class="proof-item"><div class="proof-value">Datos</div><div class="proof-label">Fuentes primarias</div></div>
+<div class="proof-item"><div class="proof-value">Research</div><div class="proof-label">Análisis propio</div></div>
+<div class="proof-item"><div class="proof-value">Argentina</div><div class="proof-label">Foco local</div></div>
+</div>
+<div class="hero-ctas">
+<a class="btn btn-solid" href="#newsletter">Suscribirme a la newsletter</a>
+<a class="btn btn-outline" href="#research">Ver research</a>
+<button class="btn btn-outline" id="share-btn" type="button">Compartir</button>
+</div>
+</div>
+<div class="hero-figure reveal">
+<div class="carousel-slide active" data-slide="0">
+<div class="figure-label">
+<span class="figure-tag">Fig. 01 — Dólar blue</span>
+<span class="figure-value" id="spark-value-0">—</span>
+</div>
+<svg id="spark-svg-0" viewbox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="figure-caption" id="spark-caption-0">Cargando serie histórica…</div>
+</div>
+<div class="carousel-slide" data-slide="1">
+<div class="figure-label">
+<span class="figure-tag">Fig. 02 — Inflación mensual</span>
+<span class="figure-value" id="spark-value-1">—</span>
+</div>
+<svg id="spark-svg-1" viewbox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="figure-caption" id="spark-caption-1">Cargando serie histórica…</div>
+</div>
+<div class="carousel-slide" data-slide="2">
+<div class="figure-label">
+<span class="figure-tag">Fig. 03 — Riesgo país</span>
+<span class="figure-value" id="spark-value-2">—</span>
+</div>
+<svg id="spark-svg-2" viewbox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="figure-caption" id="spark-caption-2">Cargando serie histórica…</div>
+</div>
+<div class="carousel-slide" data-slide="3">
+<div class="figure-label">
+<span class="figure-tag">Fig. 04 — Actividad económica</span>
+<span class="figure-value" id="spark-value-3">—</span>
+</div>
+<svg id="spark-svg-3" viewbox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="figure-caption" id="spark-caption-3">Cargando serie histórica…</div>
+</div>
+<div class="carousel-slide" data-slide="4">
+<div class="figure-label">
+<span class="figure-tag">Fig. 05 — Reservas del BCRA</span>
+<span class="figure-value" id="spark-value-4">—</span>
+</div>
+<svg id="spark-svg-4" viewbox="0 0 320 130" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="figure-caption" id="spark-caption-4">Cargando serie histórica…</div>
+</div>
+<div class="carousel-nav">
+<button aria-label="Gráfico anterior" class="carousel-arrow" id="carousel-prev" type="button">‹</button>
+<span class="carousel-pos" id="carousel-pos">01 / 05</span>
+<button aria-label="Gráfico siguiente" class="carousel-arrow" id="carousel-next" type="button">›</button>
+</div>
+</div>
+</div>
 </section>
-
-<section id="research" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">Research e informes</div>
-        <div class="section-label">Portfolio de investigación</div>
-      </div>
-      <p class="research-intro">El objetivo es dejar un registro de cómo se construye cada argumento: datos, hipótesis, mecanismo, evidencia y conclusión. El archivo funciona además como portfolio público de investigación económica.</p>
-      <div class="research-grid">
-        <article class="research-card">
-          <div class="research-meta">Macro · Distribución</div>
-          <h3>Inflación, salarios y puja distributiva</h3>
-          <p>Cómo interactúan salarios, márgenes y tipo de cambio en la dinámica de precios argentina.</p>
-          <a href="#publicaciones">Ver publicaciones relacionadas →</a>
-        </article>
-        <article class="research-card">
-          <div class="research-meta">Finanzas · Deuda</div>
-          <h3>Riesgo país y financiamiento</h3>
-          <p>Qué explica los cambios en el costo de financiamiento soberano y qué señales aporta el mercado.</p>
-          <a href="#publicaciones">Ver publicaciones relacionadas →</a>
-        </article>
-        <article class="research-card">
-          <div class="research-meta">Sector externo</div>
-          <h3>Reservas, energía y restricción externa</h3>
-          <p>El vínculo entre exportaciones, energía, acumulación de reservas y capacidad de crecimiento.</p>
-          <a href="#publicaciones">Ver publicaciones relacionadas →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="publicaciones" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">Publicaciones</div>
-        <div class="section-label">Buscá y filtrá</div>
-      </div>
-      <div class="filters">
-        <input id="archive-q" class="f-input" placeholder="Buscar por título…" oninput="applyArchiveFilters()" style="flex:1; min-width:200px;">
-        <select id="archive-cat" class="f-input" onchange="applyArchiveFilters()">
-          <option value="">Todas las secciones</option>
-          <option value="economia">Economía</option>
-          <option value="finanzas">Finanzas</option>
-          <option value="mercados">Mercados</option>
-          <option value="energia">Energía/Agro</option>
-        </select>
-        <span class="f-count" id="archive-count"></span>
-      </div>
-      <div style="overflow-x:auto;">
-        <table class="archive-table">
-          <thead>
-            <tr><th>Fecha</th><th>Sección</th><th>Título</th></tr>
-          </thead>
-          <tbody id="archive-body">
-            <tr data-cat="economia" data-title="qué dice el rem sobre la inflación de agosto">
-              <td>12 ago 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Qué dice el REM sobre la inflación de agosto</td>
-            </tr>
-            <tr data-cat="finanzas" data-title="carry trade por qué el mercado sigue apostando al peso">
-              <td>07 ago 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Carry trade: por qué el mercado sigue apostando al peso</td>
-            </tr>
-            <tr data-cat="mercados" data-title="precios relativos el desacople entre bienes y servicios">
-              <td>03 ago 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>Precios relativos: el desacople entre bienes y servicios</td>
-            </tr>
-            <tr data-cat="energia" data-title="vaca muerta y el nuevo rol del superávit energético">
-              <td>29 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>Vaca Muerta y el nuevo rol del superávit energético</td>
-            </tr>
-            <tr data-cat="economia" data-title="superávit fiscal primario y su link con el riesgo país">
-              <td>24 jul 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Superávit fiscal primario: el link directo con el riesgo país</td>
-            </tr>
-            <tr data-cat="finanzas" data-title="qué mide y qué no la brecha cambiaria hoy">
-              <td>18 jul 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Qué mide —y qué no— la brecha cambiaria hoy</td>
-            </tr>
-            <tr data-cat="mercados" data-title="salarios reales la brecha que la actividad no cierra">
-              <td>10 jul 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>Salarios reales: la brecha que la actividad no cierra</td>
-            </tr>
-            <tr data-cat="energia" data-title="la cosecha gruesa y su impacto en las reservas">
-              <td>03 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>La cosecha gruesa y su impacto en las reservas</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
- 
-  <section id="metodologia" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">Cómo trabajo</div>
-        <div class="section-label">Metodología</div>
-      </div>
-      <div class="method-grid">
-        <div class="method-list">
-          <div class="method-item"><span class="method-num">01</span><div><strong>Fuente primaria</strong><span>Prioridad a organismos oficiales, series públicas y documentación metodológica.</span></div></div>
-          <div class="method-item"><span class="method-num">02</span><div><strong>Datos antes que opinión</strong><span>Los argumentos parten de indicadores observables y se explicitan los supuestos.</span></div></div>
-          <div class="method-item"><span class="method-num">03</span><div><strong>Contexto histórico</strong><span>Un dato coyuntural se interpreta dentro de su tendencia, base de comparación y régimen macroeconómico.</span></div></div>
-          <div class="method-item"><span class="method-num">04</span><div><strong>Escenarios</strong><span>Cuando corresponde, se separan hechos, hipótesis y escenarios posibles para evitar falsas certezas.</span></div></div>
-        </div>
-        <div class="method-note">
-          <h3>Cómo se decide qué publicar</h3>
-          <p>Un gráfico no es una conclusión. Antes de publicar, la pregunta es qué cambió, contra qué se compara, qué mecanismo puede explicarlo y qué evidencia podría refutar esa explicación.</p>
-          <div class="contact-card"><strong style="font:600 11px var(--font-mono);text-transform:uppercase;letter-spacing:1px;">Contacto profesional</strong><br><a href="mailto:contacto@indexar.com.ar">contacto@indexar.com.ar</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="newsletter" class="reveal">
-    <div class="wrap">
-      <div class="newsletter-panel">
-        <div class="section-title" style="font-size:32px; justify-content:center; margin-bottom:14px;">Recibí el análisis completo en tu mail</div>
-        <p style="color:var(--text-soft); max-width:480px; margin:0 auto 30px; font-size:16px; font-family:'Source Serif 4',serif;">Dos o tres veces por semana, sin spam ni relleno. Cancelás cuando quieras.</p>
-        <form id="newsletter-form" style="display:flex; gap:10px; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center;">
-          <input type="email" id="newsletter-email" required placeholder="tu@email.com"
-            style="flex:1; min-width:220px; padding:14px 16px; border:1px solid var(--rule-strong); border-radius:2px; background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:14px;">
-          <button type="submit" class="btn btn-solid">Suscribirme</button>
-        </form>
-        <p id="newsletter-msg" style="margin-top:14px; font-size:13px; color:var(--gold-text); min-height:18px;"></p>
-      </div>
-    </div>
-  </section>
- 
-  <section id="sobre" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">¿Por qué seguir Índex AR?</div>
-        <div class="section-label">Antes de suscribirte</div>
-      </div>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="true">
-            <span class="faq-q-text">¿Por qué sube el dólar?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-panel is-open">
-            <div class="accordion-panel-inner">
-              <p class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio. Puede ser por emisión monetaria, por expectativa de devaluación, por estacionalidad (turismo, pago de importaciones) o porque el Central deja de intervenir en el mercado de cambios. Cada nota identifica cuál de esos factores está pesando en el momento y qué tan sostenible es.</p>
-            </div>
+<div class="trust-bar reveal">
+<div class="wrap trust-bar-inner">
+<span class="trust-label">Datos en vivo de</span>
+<span class="trust-item">BCRA</span>
+<span class="trust-item">INDEC</span>
+<span class="trust-item">Ministerio de Economía</span>
+<span class="trust-item">ArgentinaDatos</span>
+<span class="trust-item">DolarAPI</span>
+</div>
+</div>
+<section aria-label="Panel ejecutivo de Index AR" class="intel-deck">
+<div class="wrap">
+<div class="intel-head">
+<div>
+<div class="intel-kicker">Monitor macroeconómico / 01</div>
+<h2 class="intel-title">Del dato al mecanismo.</h2>
+</div>
+<div class="intel-live">actualización editorial</div>
+</div>
+<div class="intel-grid">
+<article class="intel-card featured">
+<div class="tag">Lectura de coyuntura</div>
+<h3>No mostramos solamente qué cambió. Buscamos explicar qué lo mueve.</h3>
+<p>Datos primarios + contexto + mecanismo económico + escenarios.</p>
+<svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 300 90">
+<path d="M0 75 C35 72 45 50 72 58 S112 72 138 42 S182 55 205 25 S245 30 300 5" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</article>
+<article class="intel-card">
+<div class="tag">01 / Datos</div>
+<div class="intel-number">01</div>
+<p>Fuente primaria y serie identificable.</p>
+</article>
+<article class="intel-card">
+<div class="tag">02 / Modelo</div>
+<div class="intel-number">02</div>
+<p>Relaciones económicas antes que opinión.</p>
+</article>
+<article class="intel-card">
+<div class="tag">03 / Decisión</div>
+<div class="intel-number">03</div>
+<p>Qué implica para empresas, mercados y hogares.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="reveal" id="panel">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Panel de indicadores</div>
+<span class="pill-live"><span class="pill-live-dot"></span>En vivo</span>
+</div>
+<div class="kpi-grid-wrap">
+<div class="kpi-grid">
+<div class="kpi-card" id="kpi-dolar-blue">
+<div class="kpi-label">Dólar blue</div>
+<div class="kpi-value" data-key="dolar-blue">—</div>
+<div class="kpi-sub">Fuente: DolarAPI</div>
+</div>
+<div class="kpi-card" id="kpi-dolar-oficial">
+<div class="kpi-label">Dólar oficial</div>
+<div class="kpi-value" data-key="dolar-oficial">—</div>
+<div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
+</div>
+<div class="kpi-card" id="kpi-inflacion">
+<div class="kpi-label">Inflación mensual</div>
+<div class="kpi-value" data-key="inflacion">—</div>
+<div class="kpi-sub">Fuente: ArgentinaDatos / BCRA</div>
+</div>
+<div class="kpi-card" id="kpi-riesgo-pais">
+<div class="kpi-label">Riesgo país</div>
+<div class="kpi-value" data-key="riesgo-pais">—</div>
+<div class="kpi-sub">Fuente: ArgentinaDatos / Ámbito</div>
+</div>
+<div class="kpi-card" id="kpi-actividad">
+<div class="kpi-label">Actividad económica</div>
+<div class="kpi-value" data-key="actividad">—</div>
+<div class="kpi-sub" id="kpi-actividad-sub">Fuente: Ministerio de Economía (EMAE)</div>
+</div>
+<div class="kpi-card" id="kpi-reservas">
+<div class="kpi-label">Reservas del BCRA</div>
+<div class="kpi-value" data-key="reservas">—</div>
+<div class="kpi-sub">Fuente: datos.gob.ar / BCRA</div>
+</div>
+</div>
+<div class="thermo-card">
+<div class="thermo-title">Termómetro del día</div>
+<svg height="110" id="thermo-donut" viewbox="0 0 120 120" width="110"></svg>
+<div class="thermo-labels">
+<div id="thermo-up-label">0 indicadores al alza</div>
+<div id="thermo-down-label">0 indicadores a la baja</div>
+</div>
+</div>
+</div>
+</div>
+<div class="data-governance-note"><strong>Gobernanza del dato.</strong> Cada indicador debe identificar fuente, fecha de actualización, unidad, frecuencia y —cuando corresponda— revisión de la serie. Si un dato no está disponible, se muestra como no disponible.</div></section>
+<section class="reveal" id="secciones">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Qué vas a encontrar</div>
+<div class="section-label">Cuatro secciones fijas</div>
+</div>
+<div class="pillars-editorial">
+<div class="pillar-row" id="pillar-economia">
+<span class="pillar-num">I</span>
+<h3>Economía</h3>
+<div>
+<p>Inflación, tipo de cambio, tasas, reservas y actividad — la película completa detrás del dato de la semana.</p>
+<div class="pillar-tags"><span class="pillar-tag">Inflación</span><span class="pillar-tag">EMAE</span><span class="pillar-tag">Tipo de cambio</span></div>
+</div>
+</div>
+<div class="pillar-row" id="pillar-finanzas">
+<span class="pillar-num">II</span>
+<h3>Finanzas</h3>
+<div>
+<p>Deuda, riesgo país, mercado de capitales y sistema financiero — cómo se financia el país y quién le presta.</p>
+<div class="pillar-tags"><span class="pillar-tag">Riesgo país</span><span class="pillar-tag">Deuda soberana</span><span class="pillar-tag">Tasas</span></div>
+</div>
+</div>
+<div class="pillar-row" id="pillar-mercados">
+<span class="pillar-num">III</span>
+<h3>Mercados</h3>
+<div>
+<p>Sectores, precios relativos y organización industrial — por qué los precios se mueven como se mueven.</p>
+<div class="pillar-tags"><span class="pillar-tag">Precios relativos</span><span class="pillar-tag">Salarios reales</span></div>
+</div>
+</div>
+<div class="pillar-row" id="pillar-energia">
+<span class="pillar-num">IV</span>
+<h3>Energía / Agro</h3>
+<div>
+<p>Los sectores que sostienen la balanza comercial — producción, exportación y su peso en la macro.</p>
+<div class="pillar-tags"><span class="pillar-tag">Vaca Muerta</span><span class="pillar-tag">Cosecha gruesa</span><span class="pillar-tag">Balanza comercial</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="intelligence-shell" data-origin="indexar" id="intelligence">
+<div class="wrap">
+<div class="intel-top">
+<div>
+<div class="intel-eyebrow">Mesa de Coyuntura / Lectura económica</div>
+<h2 class="intel-title">No alcanza con mirar el dato.<br/><em>Hay que entender el mecanismo.</em></h2>
+<p class="intel-desc">Una lectura de coyuntura pensada para quienes necesitan entender la economía y sus efectos sobre decisiones reales: empresas, inversores y equipos profesionales. El sitio separa datos observados, interpretación y escenarios; no presenta supuestos como hechos.</p>
+</div>
+<div class="intel-stamp">Marco de análisis<strong>ÍNDEX / AR</strong>Edición 2026 · Argentina</div>
+</div>
+<div class="exec-grid">
+<article class="exec-card">
+<div class="exec-kicker">Lectura de coyuntura · estructura</div>
+<h3>Primero las preguntas; después los gráficos.</h3>
+<p>Estado del ciclo, inflación, política fiscal/monetaria, sector externo y condiciones financieras. La interfaz separa <strong>dato observado</strong>, <strong>interpretación</strong> y <strong>escenario</strong> para evitar que una proyección se confunda con un hecho.</p>
+<div aria-label="Cobertura macroeconómica de Index AR" class="macro-coverage">
+<div><b>Actividad</b><span>EMAE · PIB · industria · inversión</span></div>
+<div><b>Precios</b><span>IPC · núcleo · regulados · expectativas</span></div>
+<div><b>Fiscal</b><span>resultado · gasto · ingresos · deuda</span></div>
+<div><b>Monetario / financiero</b><span>base · tasas · crédito · liquidez</span></div>
+<div><b>Externo</b><span>reservas · comercio · energía · IED</span></div>
+<div><b>Trabajo / distribución</b><span>empleo · salarios reales · productividad</span></div>
+<div><b>Mercados</b><span>dólar · bonos · riesgo · acciones</span></div>
+</div>
+</article>
+<div aria-label="Matriz de escenarios" class="scenario-stack">
+<article class="scenario-card base"><div class="s-head"><h4>Escenario base</h4><span class="prob">HIPÓTESIS</span></div><p>Trayectoria central construida con supuestos explícitos, variables de seguimiento y condiciones de continuidad.</p></article>
+<article class="scenario-card"><div class="s-head"><h4>Upside</h4><span class="prob">CONDICIONAL</span></div><p>Qué tendría que ocurrir para que la trayectoria mejore: desinflación, crédito, inversión, productividad o un shock externo favorable.</p></article>
+<article class="scenario-card"><div class="s-head"><h4>Downside</h4><span class="prob">CONDICIONAL</span></div><p>Qué combinación de shocks podría deteriorar el escenario y cuáles serían las primeras variables en reaccionar. Si no hay modelo probabilístico, se presenta como condición y no como probabilidad.</p></article>
+</div>
+</div>
+<div class="risk-grid">
+<article class="risk-card"><div class="risk-label">Riesgo 01</div><h4>Inflación / nominalidad</h4><p>Seguimiento de precios, salarios, expectativas, tipo de cambio y mecanismos de propagación.</p><div class="risk-status">Seguimiento: datos + contexto + mecanismo</div></article>
+<article class="risk-card"><div class="risk-label">Riesgo 02</div><h4>Sector externo</h4><p>Reservas, cuenta corriente, energía, deuda y capacidad de generación de divisas.</p><div class="risk-status">Seguimiento: datos + contexto + mecanismo</div></article>
+<article class="risk-card"><div class="risk-label">Riesgo 03</div><h4>Financiamiento</h4><p>Curva de tasas, riesgo soberano, liquidez y condiciones de acceso al mercado.</p><div class="risk-status">Seguimiento: datos + contexto + mecanismo</div></article>
+<article class="risk-card"><div class="risk-label">Riesgo 04</div><h4>Fiscal / deuda</h4><p>Resultado primario y financiero, composición del gasto, vencimientos y capacidad de rollover.</p><div class="risk-status">Seguimiento: datos + contexto + mecanismo</div></article>
+<article class="risk-card"><div class="risk-label">Riesgo 05</div><h4>Ingresos / distribución</h4><p>Salarios reales, empleo, márgenes, productividad y puja distributiva como mecanismos de precios y actividad.</p><div class="risk-status">Seguimiento: datos + contexto + mecanismo</div></article>
+</div>
+<div class="intel-grid-3">
+<article class="tool-card"><div class="tool-icon">01 / NOWCAST</div><h4>Radar de coyuntura</h4><p>Actividad, empleo, consumo, inversión, recaudación y crédito reunidos para seguir el ciclo y detectar cambios de ritmo.</p><span class="tool-link">Capa de análisis →</span></article>
+<article class="tool-card"><div class="tool-icon">02 / SCENARIO</div><h4>Escenarios</h4><p>Escenarios con supuestos trazables: qué pasa si cambia el dólar, la tasa, el salario real, el precio de commodities o la demanda externa.</p><span class="tool-link">Capa de análisis →</span></article>
+<article class="tool-card"><div class="tool-icon">03 / DATA</div><h4>Base de datos económica</h4><p>Series históricas, metadatos, frecuencia, fecha de actualización y fuente primaria. La procedencia del dato es parte del análisis.</p><span class="tool-link">Capa de análisis →</span></article>
+</div>
+<div aria-label="Principios de calidad del dato" class="provenance">
+<span class="prov">Fuente primaria</span><span class="prov">Fecha de corte</span><span class="prov">Frecuencia</span><span class="prov">Unidad</span><span class="prov">Revisión histórica</span><span class="prov">Supuestos explícitos</span><span class="prov">Hecho ≠ hipótesis ≠ escenario</span>
+</div>
+</div>
+</section>
+<section class="reveal" id="tesis">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Tesis de la semana</div>
+<div class="section-label">Cómo se construye una lectura</div>
+</div>
+<div class="thesis-grid">
+<article class="thesis-main" data-origin="indexar">
+<div class="thesis-kicker">Plantilla de análisis · no es una recomendación financiera</div>
+<h3>La macro no se entiende por una variable aislada.</h3>
+<p>Una tesis útil empieza por una pregunta concreta, identifica las variables que pueden moverla y establece qué evidencia la confirmaría o la debilitaría. Esta estructura permite pasar de la descripción de la coyuntura a una hipótesis contrastable.</p>
+<div class="thesis-points">
+<div class="thesis-point"><b>Pregunta</b><span>¿Qué está explicando el cambio?</span></div>
+<div class="thesis-point"><b>Evidencia</b><span>¿Qué indicadores deberían moverse?</span></div>
+<div class="thesis-point"><b>Invalidación</b><span>¿Qué dato obligaría a revisar la lectura?</span></div>
+</div>
+</article>
+<div class="thesis-side">
+<article class="thesis-box"><div class="mini-head">Dato observado</div><h4>Separar nivel, variación y tendencia</h4><p>Una mejora mensual no necesariamente cambia el régimen. Cada indicador debe leerse contra su base de comparación, frecuencia y comportamiento previo.</p><div class="thesis-status">criterio editorial</div></article>
+<article class="thesis-box"><div class="mini-head">Escenario</div><h4>Supuestos visibles</h4><p>Cuando se plantea un escenario, se explicitan las condiciones que deberían cumplirse. Sin supuestos visibles, una proyección es solamente una cifra.</p><div class="thesis-status">criterio editorial</div></article>
+</div>
+</div>
+</div>
+</section>
+<section class="reveal" id="mapa-transmision">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Mapa de transmisión</div>
+<div class="section-label">Pensar la economía como sistema</div>
+</div>
+<p class="transmission-intro">La utilidad de un indicador aparece cuando podemos conectarlo con otros. Index AR incorpora mapas de transmisión para mostrar cómo un shock puede propagarse desde una variable financiera o externa hacia precios, ingresos, demanda y actividad.</p>
+<div class="transmission-grid">
+<article class="transmission-card"><div class="n">01 / SHOCK</div><h3>Tipo de cambio</h3><p>Movimiento cambiario, expectativas y precios relativos. El punto de partida del escenario.</p><div class="transmission-foot">Variable inicial</div></article>
+<article class="transmission-card"><div class="n">02 / PRECIOS</div><h3>Inflación</h3><p>Pass-through, bienes transables, regulados y persistencia. La transmisión no es instantánea ni homogénea.</p><div class="transmission-foot">Mecanismo nominal</div></article>
+<article class="transmission-card"><div class="n">03 / INGRESOS</div><h3>Salario real</h3><p>La evolución de precios frente a ingresos modifica poder adquisitivo, consumo y decisiones de cobertura.</p><div class="transmission-foot">Ingreso disponible</div></article>
+<article class="transmission-card"><div class="n">04 / ACTIVIDAD</div><h3>Demanda e inversión</h3><p>Consumo, crédito e inversión responden a rentabilidad esperada, incertidumbre y condiciones financieras.</p><div class="transmission-foot">Resultado macro</div></article>
+</div>
+</div>
+</section>
+<section class="reveal" id="archivo-pensamiento">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Archivo de pensamiento</div>
+<div class="section-label">Ideas que informan el análisis</div>
+</div>
+<p class="think-intro">La investigación aplicada no parte de cero. Esta pequeña biblioteca visual conecta la coyuntura argentina con tradiciones de pensamiento económico que ayudan a formular mejores preguntas sobre desarrollo, distribución, restricción externa, demanda y macroeconomía.</p>
+<div aria-label="Índice de tradiciones económicas" class="library-index">
+<button class="library-filter is-active" data-tradition-filter="all" type="button">Todos <span>(10)</span></button>
+<button class="library-filter" data-tradition-filter="clasicos" type="button">Clásicos <span>(3)</span></button>
+<button class="library-filter" data-tradition-filter="keynesianos" type="button">Keynesianos / Cambridge <span>(4)</span></button>
+<button class="library-filter" data-tradition-filter="estructuralistas" type="button">Estructuralistas <span>(2)</span></button>
+<button class="library-filter" data-tradition-filter="monetarismo" type="button">Monetarismo <span>(1)</span></button>
+<div class="library-index-note">Orden de lectura sugerido: clásicos → Cambridge y poskeynesianos → estructuralismo latinoamericano → monetarismo. Cada ficha enlaza únicamente a catálogos, archivos o repositorios que fueron comprobados.</div>
+</div>
+<div aria-label="Carrusel de economistas y tradiciones" class="economist-carousel">
+<div class="think-grid economist-grid" id="economist-carousel-track">
+<a aria-label="Abrir bibliografía verificada de Adam Smith" class="think-card economist-card" data-economist="smith" data-tradition="clasicos" href="https://www.adamsmithworks.org/texts" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato histórico de Adam Smith" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/AdamSmith.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">01 · Clásicos</div><h3>Adam Smith</h3><p>División del trabajo, precios, comercio, instituciones y economía política.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Fuentes verificadas</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de David Ricardo" class="think-card economist-card" data-economist="ricardo" data-tradition="clasicos" href="https://www.loc.gov/item/05020722/" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato histórico de David Ricardo" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20David%20Ricardo%20by%20Thomas%20Phillips.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">02 · Clásicos</div><h3>David Ricardo</h3><p>Valor, distribución, renta diferencial, comercio internacional y tributación.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Fuentes verificadas</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Piero Sraffa" class="think-card economist-card" data-economist="sraffa" data-tradition="clasicos" href="https://archives.trin.cam.ac.uk/index.php/papers-of-piero-sraffa-1898-1983-economist?sf_culture=en" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato histórico de Piero Sraffa" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Piero%20Sraffa%20late-1920s.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">03 · Clásicos contemporáneos</div><h3>Piero Sraffa</h3><p>Producción, precios, excedente, distribución y reconstrucción de la tradición clásica.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Archivo Trinity verificado</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de John Maynard Keynes" class="think-card economist-card" data-economist="keynes" data-tradition="keynesianos" href="https://www.cambridge.org/core/books/collected-writings-of-john-maynard-keynes/7997EA1078265FB69D852C86973C6BDF" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato histórico de John Maynard Keynes" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/John%20Maynard%20Keynes.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">04 · Keynesianismo</div><h3>John Maynard Keynes</h3><p>Demanda efectiva, incertidumbre, inversión, dinero, empleo y política macroeconómica.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Cambridge verificado</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Michał Kalecki" class="think-card economist-card" data-economist="kalecki" data-tradition="keynesianos" href="https://repositorio.unam.mx/contenidos/ficha/political-aspects-of-full-employment-4111807" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato de Michał Kalecki" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Michal%20Kalecki.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">05 · Poskeynesianismo</div><h3>Michał Kalecki</h3><p>Demanda efectiva, inversión, distribución, mark-up, ciclo y conflicto político.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">UNAM verificado</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Joan Robinson" class="think-card economist-card" data-economist="robinson" data-tradition="keynesianos" href="https://www.cambridge.org/core/books/abs/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato histórico de Joan Robinson" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Joan%20Robinson%20Ramsey%20Muspratt.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">06 · Cambridge</div><h3>Joan Robinson</h3><p>Competencia imperfecta, acumulación, crecimiento y controversia del capital.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Bibliografía Cambridge verificada</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Hyman Minsky" class="think-card economist-card" data-economist="minsky" data-tradition="keynesianos" href="https://www.levyinstitute.org/people/hyman-p-minsky/" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato de Hyman Minsky" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/HymanMinsky-1.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">07 · Poskeynesianismo financiero</div><h3>Hyman Minsky</h3><p>Fragilidad financiera, deuda, ciclos, inversión y crisis endógenas.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Levy Institute verificado</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Raúl Prebisch" class="think-card economist-card" data-economist="prebisch" data-tradition="estructuralistas" href="https://repositorio.cepal.org/handle/11362/2575" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato histórico de Raúl Prebisch" decoding="async" loading="lazy" src="https://repositorio.cepal.org/bitstream/handle/11362/43067/RP__0003.jpg"/></div>
+<div class="think-body"><div class="think-tag">08 · Estructuralismo latinoamericano</div><h3>Raúl Prebisch</h3><p>Centro-periferia, estructura productiva, términos de intercambio y restricción externa.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">CEPAL verificado</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Aldo Ferrer" class="think-card economist-card" data-economist="ferrer" data-tradition="estructuralistas" href="https://fce.com.ar/autores/aldo-ferrer/" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato de Aldo Ferrer" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aldo%20Ferrer.jpg?width=900"/></div>
+<div class="think-body"><div class="think-tag">09 · Desarrollo argentino</div><h3>Aldo Ferrer</h3><p>Estructura productiva, densidad nacional, desarrollo e inserción internacional.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Biblioteca Nacional / FCE verificados</span></div>
+</a>
+<a aria-label="Abrir bibliografía verificada de Milton Friedman" class="think-card economist-card" data-economist="friedman" data-tradition="monetarismo" href="https://miltonfriedman.hoover.org/browse/collection" rel="noopener noreferrer" target="_blank">
+<div class="think-img"><img alt="Retrato de Milton Friedman" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Milton%20Friedman.jpg?width=700"/></div>
+<div class="think-body"><div class="think-tag">10 · Monetarismo</div><h3>Milton Friedman</h3><p>Dinero, inflación, consumo, expectativas, política monetaria y libertad económica.</p><span class="library-cta">Bibliografía verificada ↗</span><span class="library-verified">Hoover verificado</span></div>
+</a>
+</div>
+</div>
+</div></section>
+<section class="consulting-section reveal" id="servicios">
+<div class="wrap">
+<div class="section-label">Index AR · Servicios</div>
+<div class="service-head">
+<div>
+<h2 class="section-title">Research que termina en una decisión.</h2>
+<p class="service-lead">La propuesta no es vender una pantalla llena de indicadores. Es transformar datos económicos en una lectura que pueda usarse para evaluar escenarios, riesgos y decisiones.</p>
+</div>
+<div class="service-note"><strong>Foco</strong><br/>Argentina · empresas · mercados · inversión</div>
+</div>
+<div class="service-grid">
+<article class="service-card"><span>01</span><h3>Monitoreo macroeconómico</h3><p>Seguimiento de inflación, actividad, tasas, fiscal, reservas, sector externo y condiciones financieras con fuente, fecha y frecuencia identificables.</p><a href="#panel">Ver indicadores →</a></article>
+<article class="service-card"><span>02</span><h3>Análisis sectorial</h3><p>Lectura de sectores y precios relativos para entender demanda, costos, márgenes, comercio exterior, energía y sensibilidad al ciclo.</p><a href="#research">Ver research →</a></article>
+<article class="service-card"><span>03</span><h3>Escenarios económico-financieros</h3><p>Construcción de escenarios base y alternativos a partir de supuestos explícitos. Una hipótesis no se presenta como un dato observado.</p><a href="#tesis">Ver metodología →</a></article>
+<article class="service-card"><span>04</span><h3>Data &amp; econometría aplicada</h3><p>Ordenamiento de series, indicadores, transformaciones y evidencia cuantitativa para convertir bases dispersas en información analizable.</p><a href="#metodologia">Cómo trabajo →</a></article>
+</div>
+<div class="service-cta"><div><strong>¿Necesitás una lectura económica específica?</strong><span>Consultas profesionales, research ad hoc y análisis de coyuntura.</span></div><a class="btn btn-solid" href="mailto:contacto@indexar.com.ar?subject=Consulta%20profesional%20Index%20AR">Contactar</a></div>
+</div>
+</section>
+<section class="reveal" id="perfil-profesional">
+<div class="wrap profile-grid">
+<div>
+<div class="profile-kicker">Perfil profesional</div>
+<h2>Economía, datos y criterio.</h2>
+<p class="lead">Index AR también es un espacio donde mostrar cómo trabajo: formular una pregunta, ordenar evidencia, construir una explicación y comunicarla de forma clara.</p>
+<div class="profile-note">La plataforma está pensada como portfolio profesional. Los proyectos publicados deben mostrar el proceso, no solamente el resultado: fuentes, metodología, código o cálculos cuando corresponda y límites de la evidencia.</div>
+</div>
+<div class="economist-bibliography-note">Cada tarjeta abre directamente una fuente bibliográfica institucional verificada.</div>
+<div class="economist-carousel-controls">
+<div class="economist-carousel-hint">Deslizá hacia la derecha · seleccioná un economista para abrir su bibliografía verificada</div>
+<div aria-label="Controles del carrusel" class="economist-carousel-buttons">
+<button aria-label="Economista anterior" class="economist-carousel-btn" id="economist-prev" type="button">←</button>
+<button aria-label="Siguiente economista" class="economist-carousel-btn" id="economist-next" type="button">→</button>
+</div>
+</div>
+</div>
+<div class="profile-list">
+<div class="profile-row"><b>Research</b><span>Macroeconomía argentina, inflación, sector externo, finanzas públicas, mercados y desarrollo.</span></div>
+<div class="profile-row"><b>Cuantitativo</b><span>Series de tiempo, econometría aplicada, análisis de datos y visualización.</span></div>
+<div class="profile-row"><b>Finanzas</b><span>Deuda, tasas, riesgo, escenarios y lectura de variables financieras.</span></div>
+<div class="profile-row"><b>Producto</b><span>Dashboards, publicaciones, bases de datos y herramientas económicas accesibles desde la web.</span></div>
+</div>
+</section>
+<section class="reveal" id="research">
+<div class="wrap">
+<div class="research-byline"><strong>Responsable editorial:</strong> Marcos J. Ibáñez · Economista · Index AR. <span>Las conclusiones distinguen evidencia, interpretación y escenario.</span></div><div class="section-head">
+<div class="section-title">Research e informes</div>
+<div class="section-label">Portfolio de investigación</div>
+</div>
+<p class="research-intro">El objetivo es dejar un registro de cómo se construye cada argumento: datos, hipótesis, mecanismo, evidencia y conclusión. El archivo funciona además como portfolio público de investigación económica.</p>
+<div class="research-grid">
+<article class="research-card">
+<div class="research-meta">Macro · Distribución</div>
+<h3>Inflación, salarios y puja distributiva</h3>
+<p>Cómo interactúan salarios, márgenes y tipo de cambio en la dinámica de precios argentina.</p>
+<a href="#publicaciones">Ver publicaciones relacionadas →</a>
+</article>
+<article class="research-card">
+<div class="research-meta">Finanzas · Deuda</div>
+<h3>Riesgo país y financiamiento</h3>
+<p>Qué explica los cambios en el costo de financiamiento soberano y qué señales aporta el mercado.</p>
+<a href="#publicaciones">Ver publicaciones relacionadas →</a>
+</article>
+<article class="research-card">
+<div class="research-meta">Sector externo</div>
+<h3>Reservas, energía y restricción externa</h3>
+<p>El vínculo entre exportaciones, energía, acumulación de reservas y capacidad de crecimiento.</p>
+<a href="#publicaciones">Ver publicaciones relacionadas →</a>
+</article>
+</div>
+</div>
+</section>
+<section class="reveal" id="publicaciones">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Publicaciones</div>
+<div class="section-label">Buscá y filtrá</div>
+</div>
+<div class="filters">
+<input class="f-input" id="archive-q" oninput="applyArchiveFilters()" placeholder="Buscar por título…" style="flex:1; min-width:200px;"/>
+<select class="f-input" id="archive-cat" onchange="applyArchiveFilters()">
+<option value="">Todas las secciones</option>
+<option value="economia">Economía</option>
+<option value="finanzas">Finanzas</option>
+<option value="mercados">Mercados</option>
+<option value="energia">Energía/Agro</option>
+</select>
+<span class="f-count" id="archive-count"></span>
+</div>
+<div style="overflow-x:auto;">
+<table class="archive-table">
+<thead>
+<tr><th>Fecha</th><th>Sección</th><th>Título</th></tr>
+</thead>
+<tbody id="archive-body">
+<tr data-cat="economia" data-title="qué dice el rem sobre la inflación de agosto">
+<td>12 ago 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Qué dice el REM sobre la inflación de agosto</td>
+</tr>
+<tr data-cat="finanzas" data-title="carry trade por qué el mercado sigue apostando al peso">
+<td>07 ago 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Carry trade: por qué el mercado sigue apostando al peso</td>
+</tr>
+<tr data-cat="mercados" data-title="precios relativos el desacople entre bienes y servicios">
+<td>03 ago 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>Precios relativos: el desacople entre bienes y servicios</td>
+</tr>
+<tr data-cat="energia" data-title="vaca muerta y el nuevo rol del superávit energético">
+<td>29 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>Vaca Muerta y el nuevo rol del superávit energético</td>
+</tr>
+<tr data-cat="economia" data-title="superávit fiscal primario y su link con el riesgo país">
+<td>24 jul 2026</td><td><span class="tag-pill tag-economia">Economía</span></td><td>Superávit fiscal primario: el link directo con el riesgo país</td>
+</tr>
+<tr data-cat="finanzas" data-title="qué mide y qué no la brecha cambiaria hoy">
+<td>18 jul 2026</td><td><span class="tag-pill tag-finanzas">Finanzas</span></td><td>Qué mide —y qué no— la brecha cambiaria hoy</td>
+</tr>
+<tr data-cat="mercados" data-title="salarios reales la brecha que la actividad no cierra">
+<td>10 jul 2026</td><td><span class="tag-pill tag-mercados">Mercados</span></td><td>Salarios reales: la brecha que la actividad no cierra</td>
+</tr>
+<tr data-cat="energia" data-title="la cosecha gruesa y su impacto en las reservas">
+<td>03 jul 2026</td><td><span class="tag-pill tag-energia">Energía/Agro</span></td><td>La cosecha gruesa y su impacto en las reservas</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="reveal" id="metodologia">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Cómo trabajo</div>
+<div class="section-label">Metodología</div>
+</div>
+<div class="method-grid">
+<div class="method-list">
+<div class="method-item"><span class="method-num">01</span><div><strong>Fuente primaria</strong><span>Prioridad a organismos oficiales, series públicas y documentación metodológica.</span></div></div>
+<div class="method-item"><span class="method-num">02</span><div><strong>Datos antes que opinión</strong><span>Los argumentos parten de indicadores observables y se explicitan los supuestos.</span></div></div>
+<div class="method-item"><span class="method-num">03</span><div><strong>Contexto histórico</strong><span>Un dato coyuntural se interpreta dentro de su tendencia, base de comparación y régimen macroeconómico.</span></div></div>
+<div class="method-item"><span class="method-num">04</span><div><strong>Escenarios</strong><span>Cuando corresponde, se separan hechos, hipótesis y escenarios posibles para evitar falsas certezas.</span></div></div>
+</div>
+<div class="method-note">
+<h3>Cómo se decide qué publicar</h3>
+<p>Un gráfico no es una conclusión. Antes de publicar, la pregunta es qué cambió, contra qué se compara, qué mecanismo puede explicarlo y qué evidencia podría refutar esa explicación.</p>
+<div class="contact-card"><strong style="font:600 11px var(--font-mono);text-transform:uppercase;letter-spacing:1px;">Contacto profesional</strong><br/><a href="mailto:contacto@indexar.com.ar">contacto@indexar.com.ar</a></div>
+</div>
+</div>
+</div>
+</section>
+<section class="reveal" id="newsletter">
+<div class="wrap">
+<div class="newsletter-panel">
+<div class="section-title" style="font-size:32px; justify-content:center; margin-bottom:14px;">Recibí el análisis completo en tu mail</div>
+<p style="color:var(--text-soft); max-width:480px; margin:0 auto 30px; font-size:16px; font-family:'Source Serif 4',serif;">Actualizaciones y research cuando haya información relevante, sin spam ni relleno. Cancelás cuando quieras.</p>
+<form id="newsletter-form" style="display:flex; gap:10px; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center;">
+<input id="newsletter-email" placeholder="tu@email.com" required="" style="flex:1; min-width:220px; padding:14px 16px; border:1px solid var(--rule-strong); border-radius:2px; background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:14px;" type="email"/>
+<button class="btn btn-solid" type="submit">Suscribirme</button>
+</form>
+<p id="newsletter-msg" style="margin-top:14px; font-size:13px; color:var(--gold-text); min-height:18px;"></p>
+</div>
+</div>
+</section>
+<section class="reveal" id="sobre">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">¿Por qué seguir Index AR?</div>
+<div class="section-label">Antes de suscribirte</div>
+</div>
+<div class="accordion">
+<div class="accordion-item">
+<button aria-expanded="true" class="accordion-trigger">
+<span class="faq-q-text">¿Por qué sube el dólar?</span>
+<span class="accordion-icon">+</span>
+</button>
+<div class="accordion-panel is-open">
+<div class="accordion-panel-inner">
+<p class="faq-a">Porque hay más pesos buscando dólares que dólares disponibles a ese precio. Puede ser por emisión monetaria, por expectativa de devaluación, por estacionalidad (turismo, pago de importaciones) o porque el Central deja de intervenir en el mercado de cambios. Cada nota identifica cuál de esos factores está pesando en el momento y qué tan sostenible es.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<button aria-expanded="false" class="accordion-trigger">
+<span class="faq-q-text">¿Qué es el riesgo país?</span>
+<span class="accordion-icon">+</span>
+</button>
+<div class="accordion-panel">
+<div class="accordion-panel-inner">
+<p class="faq-a">Es el spread —medido en puntos básicos— entre el rendimiento de la deuda soberana argentina en dólares y el de los bonos del Tesoro de EE.UU. al mismo plazo. Funciona como el EMBI+ de JP Morgan: cuanto más alto, más cara (o directamente cerrada) queda la puerta del financiamiento externo.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<button aria-expanded="false" class="accordion-trigger">
+<span class="faq-q-text">¿Qué activos hay en las reservas del BCRA?</span>
+<span class="accordion-icon">+</span>
+</button>
+<div class="accordion-panel">
+<div class="accordion-panel-inner">
+<p class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso las reservas brutas no siempre reflejan las netas —lo que el Central puede usar sin comprometer otros pasivos—, que es el número que de verdad importa.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<button aria-expanded="false" class="accordion-trigger">
+<span class="faq-q-text">¿Por qué la actividad económica sube pero los salarios bajan?</span>
+<span class="accordion-icon">+</span>
+</button>
+<div class="accordion-panel">
+<div class="accordion-panel-inner">
+<p class="faq-a">Son dos mediciones distintas: el EMAE mide el volumen físico que se produce y vende, mientras que el salario real mide el poder de compra de ese ingreso frente a la inflación acumulada. Se puede producir y vender más —incluso con menos empleo formal— sin que eso se traduzca en mejores salarios: depende de la puja distributiva, no solo del nivel de actividad.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="manifesto reveal">
+<div aria-hidden="true" class="manifesto-bg parallax" data-speed="0.15"></div>
+<div class="wrap">
+<p>Un dato aislado describe. La economía empieza cuando podemos explicar <em>por qué se movió</em>.</p>
+</div>
+</section>
+<section class="reveal" id="sobre-detalle">
+<div class="wrap">
+<div class="section-head">
+<div class="section-title">Sobre Index AR</div>
+<div class="section-label">Quién escribe</div>
+</div>
+<p class="about-pullquote">Index AR traduce los estimadores oficiales —inflación, actividad, reservas, riesgo país— en una lectura que se pueda usar para decidir.</p>
+<div class="about-header">
+<div class="about-avatar">MI</div>
+<div class="about-credentials">Marcos J. Ibáñez · Economista · Fundador de Index AR</div>
+</div>
+<div class="about-grid">
+<div class="about-body">
+<p><span class="drop-cap">Í</span>ndex AR nace de una idea simple: convertir datos económicos dispersos en investigación que pueda ser leída, contrastada y utilizada para tomar decisiones. El proyecto combina formación económica, análisis cuantitativo, lectura de coyuntura y desarrollo web para construir una plataforma de research sobre Argentina.</p>
+<div class="margin-note">
+<strong>Perfil profesional</strong>
+            Marcos J. Ibáñez es economista de la Universidad Nacional de Avellaneda (UNDAV). Index AR es un proyecto independiente de investigación y un portfolio público de análisis económico. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
           </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="faq-q-text">¿Qué es el riesgo país?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-panel">
-            <div class="accordion-panel-inner">
-              <p class="faq-a">Es el spread —medido en puntos básicos— entre el rendimiento de la deuda soberana argentina en dólares y el de los bonos del Tesoro de EE.UU. al mismo plazo. Funciona como el EMBI+ de JP Morgan: cuanto más alto, más cara (o directamente cerrada) queda la puerta del financiamiento externo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="faq-q-text">¿Qué activos hay en las reservas del BCRA?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-panel">
-            <div class="accordion-panel-inner">
-              <p class="faq-a">No son solo dólares en una caja fuerte: incluyen oro, depósitos en otros bancos centrales, DEGs del FMI y, según el momento, swaps de monedas como el de China. Por eso las reservas brutas no siempre reflejan las netas —lo que el Central puede usar sin comprometer otros pasivos—, que es el número que de verdad importa.</p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="faq-q-text">¿Por qué la actividad económica sube pero los salarios bajan?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-panel">
-            <div class="accordion-panel-inner">
-              <p class="faq-a">Son dos mediciones distintas: el EMAE mide el volumen físico que se produce y vende, mientras que el salario real mide el poder de compra de ese ingreso frente a la inflación acumulada. Se puede producir y vender más —incluso con menos empleo formal— sin que eso se traduzca en mejores salarios: depende de la puja distributiva, no solo del nivel de actividad.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <section class="manifesto reveal">
-    <div class="manifesto-bg parallax" data-speed="0.15" aria-hidden="true"></div>
-    <div class="wrap">
-      <p>Un dato aislado describe. La economía empieza cuando podemos explicar <em>por qué se movió</em>.</p>
-    </div>
-  </section>
- 
-  <section id="sobre-detalle" class="reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-title">Sobre Índex AR</div>
-        <div class="section-label">Quién escribe</div>
-      </div>
-      <p class="about-pullquote">Índex AR traduce los estimadores oficiales —inflación, actividad, reservas, riesgo país— en una lectura que se pueda usar para decidir.</p>
-      <div class="about-header">
-        <div class="about-avatar">MI</div>
-        <div class="about-credentials">Marcos J. Ibáñez · Economista · Fundador de Índex AR</div>
-      </div>
-      <div class="about-grid">
-        <div class="about-body">
-          <p><span class="drop-cap">Í</span>ndex AR nace de una idea simple: convertir datos económicos dispersos en investigación que pueda ser leída, contrastada y utilizada para tomar decisiones. El proyecto combina formación económica, análisis cuantitativo, lectura de coyuntura y desarrollo web para construir una plataforma de research sobre Argentina.</p>
-          <div class="margin-note">
-            <strong>Perfil profesional</strong>
-            Marcos J. Ibáñez es economista de la Universidad Nacional de Avellaneda (UNDAV). Índex AR es un proyecto independiente de investigación y un portfolio público de análisis económico. Todos los datos citados en las publicaciones se referencian con su fuente primaria.
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title" style="margin-bottom:16px;">Servicios <span class="pill-soon">Próximamente</span></div>
-          <p style="font-family:'Source Serif 4',serif; font-size:14px; color:var(--text-soft); margin:0 0 6px; line-height:1.6;">Índex AR es hoy un espacio de análisis abierto y gratuito. A medida que la cobertura y la comunidad crezcan, esto es lo que se va a sumar:</p>
-          <div class="numbered-list">
-            <div class="numbered-item">
-              <span class="n">01</span>
-              <div>
-                <h4>Informes a medida</h4>
-                <ul class="service-bullets">
-                  <li>Análisis puntual de coyuntura o de un sector específico.</li>
-                  <li>Escenarios y proyecciones encargados por una empresa o inversor.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="numbered-item">
-              <span class="n">02</span>
-              <div>
-                <h4>Asesoramiento a pymes</h4>
-                <ul class="service-bullets">
-                  <li>Lectura de pricing y costos frente al contexto macro.</li>
-                  <li>Monitoreo de tipo de cambio, tasas e inflación aplicado al negocio.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="numbered-item">
-              <span class="n">03</span>
-              <div>
-                <h4>Charlas y presentaciones</h4>
-                <ul class="service-bullets">
-                  <li>Contexto económico y político explicado a un equipo o directorio.</li>
-                  <li>Sesiones de preguntas y respuestas en vivo sobre la coyuntura.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  </main>
- 
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Índex AR</div>
-          <div style="font:500 10px var(--font-mono);letter-spacing:.16em;color:var(--gold-text);margin-top:8px;">ARG / RESEARCH / 2026</div>
-          <p>Research económico argentino basado en datos, escenarios y evidencia. Una plataforma independiente de Marcos J. Ibáñez.</p>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Navegación</div>
-          <a href="#sobre-detalle">Sobre</a>
-          <a href="#secciones">Secciones</a>
-          <a href="#publicaciones">Publicaciones</a>
-          <a href="#newsletter">Newsletter</a>
-          <a href="#intelligence">Intelligence</a>
-          <a href="#research">Research</a>
-          <a href="#tesis">Tesis</a>
-          <a href="#mapa-transmision">Mapa de transmisión</a>
-          <a href="#archivo-pensamiento">Pensamiento económico</a>
-          <a href="#perfil-profesional">Perfil profesional</a>
-        <a href="#metodologia">Método</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Colofón</div>
-          <p>Tipografías: Fraunces, Source Serif 4, IBM Plex Mono, Inter.<br>Datos en vivo: DolarAPI, ArgentinaDatos, Series de Tiempo (Ministerio de Economía / INDEC).</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Índex AR. Todos los derechos reservados. Obra protegida por la Ley 11.723 de Propiedad Intelectual (Argentina). Prohibida su reproducción total o parcial sin autorización expresa del autor.</span>
-        <span>contacto@indexar.com.ar</span>
-      </div>
-    </div>
-  </footer>
-  <script>
+</div>
+<div>
+<div class="footer-col-title" style="margin-bottom:16px;">Servicios </div>
+<p style="font-family:'Source Serif 4',serif; font-size:14px; color:var(--text-soft); margin:0 0 6px; line-height:1.6;">Index AR ofrece hoy líneas de research y análisis que pueden desarrollarse en formato público o a medida.</p>
+<div class="numbered-list">
+<div class="numbered-item">
+<span class="n">01</span>
+<div>
+<h4>Informes a medida</h4>
+<ul class="service-bullets">
+<li>Análisis puntual de coyuntura o de un sector específico.</li>
+<li>Escenarios y proyecciones encargados por una empresa o inversor.</li>
+</ul>
+</div>
+</div>
+<div class="numbered-item">
+<span class="n">02</span>
+<div>
+<h4>Asesoramiento a pymes</h4>
+<ul class="service-bullets">
+<li>Lectura de pricing y costos frente al contexto macro.</li>
+<li>Monitoreo de tipo de cambio, tasas e inflación aplicado al negocio.</li>
+</ul>
+</div>
+</div>
+<div class="numbered-item">
+<span class="n">03</span>
+<div>
+<h4>Charlas y presentaciones</h4>
+<ul class="service-bullets">
+<li>Contexto económico y político explicado a un equipo o directorio.</li>
+<li>Sesiones de preguntas y respuestas en vivo sobre la coyuntura.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">Index AR</div>
+<div style="font:500 10px var(--font-mono);letter-spacing:.16em;color:var(--gold-text);margin-top:8px;">ARG / RESEARCH / 2026</div>
+<p>Research económico argentino basado en datos, escenarios y evidencia. Una plataforma independiente de Marcos J. Ibáñez.</p>
+</div>
+<div class="footer-col">
+<div class="footer-col-title">Navegación</div>
+<a href="#sobre-detalle">Sobre</a>
+<a href="#secciones">Secciones</a>
+<a href="#publicaciones">Publicaciones</a>
+<a href="#newsletter">Newsletter</a>
+<a href="#intelligence">Intelligence</a>
+<a href="#research">Research</a>
+<a href="#tesis">Tesis</a>
+<a href="#mapa-transmision">Mapa de transmisión</a>
+<a href="#archivo-pensamiento">Pensamiento económico</a>
+<a href="#perfil-profesional">Perfil profesional</a>
+<a href="#metodologia">Método</a>
+</div>
+<div class="footer-col">
+<div class="footer-col-title">Colofón</div>
+<p>Tipografías: Fraunces, Source Serif 4, IBM Plex Mono, Inter.<br/>Datos en vivo: DolarAPI, ArgentinaDatos, Series de Tiempo (Ministerio de Economía / INDEC).</p>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Index AR. Todos los derechos reservados. Obra protegida por la Ley 11.723 de Propiedad Intelectual (Argentina). Prohibida su reproducción total o parcial sin autorización expresa del autor.</span>
+<span>contacto@indexar.com.ar</span>
+</div>
+</div>
+<div class="footer-standards">Index AR es un proyecto independiente de research económico. Los escenarios y análisis publicados no constituyen recomendación personalizada de inversión. Las fuentes y fechas de los datos deben consultarse en cada pieza.</div></footer>
+<script>
     /*
       ARQUITECTURA
       ------------
@@ -2526,8 +2512,8 @@ body.menu-open{overflow:hidden}
       var btn = document.getElementById('share-btn');
       btn.addEventListener('click', async function () {
         var shareData = {
-          title: 'Índex AR',
-          text: 'Índex AR — investigación económica aplicada a la Argentina.',
+          title: 'Index AR',
+          text: 'Index AR — investigación económica aplicada a la Argentina.',
           url: window.location.href
         };
         if (navigator.share) {
@@ -2685,8 +2671,7 @@ body.menu-open{overflow:hidden}
     loadReservas();
     loadSparklineData();
   </script>
- 
-  <script>
+<script>
     document.getElementById('newsletter-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var email = document.getElementById('newsletter-email').value;
@@ -2695,9 +2680,8 @@ body.menu-open{overflow:hidden}
       document.getElementById('newsletter-email').value = '';
     });
   </script>
-
 <script>
-/* ÍNDEX AR — integridad de contenido
+/* INDEX AR — integridad de contenido
    No se deshabilita el navegador ni se bloquea la accesibilidad. La protección real
    se logra con contenido dinámico, datos propios, trazabilidad y servidor; este
    módulo solo reduce copias accidentales y añade una marca de origen al copiar texto. */
@@ -2705,207 +2689,51 @@ body.menu-open{overflow:hidden}
   document.addEventListener('copy',function(e){
     try{
       var sel=window.getSelection(); if(!sel || !sel.toString().trim()) return;
-      var stamp='\n\n— Índex AR · Research económico argentino — https://indexar.netlify.app/';
+      var stamp='\n\n— Index AR · Research económico argentino — https://indexar.netlify.app/';
       if(e.clipboardData){e.clipboardData.setData('text/plain',sel.toString()+stamp);e.preventDefault();}
     }catch(_){ }
   });
-  document.querySelectorAll('[data-origin]').forEach(function(el){el.setAttribute('data-content-owner','Índex AR — Marcos J. Ibáñez');});
+  document.querySelectorAll('[data-origin]').forEach(function(el){el.setAttribute('data-content-owner','Index AR — Marcos J. Ibáñez');});
 })();
 </script>
-
-<div class="library-modal" id="economist-library" aria-hidden="true">
-  <div class="library-backdrop" data-library-close></div>
-  <section class="library-panel" role="dialog" aria-modal="true" aria-labelledby="library-title">
-    <button class="library-close" type="button" data-library-close aria-label="Cerrar biblioteca">×</button>
-    <div class="library-kicker">ÍNDEX AR · BIBLIOTECA DE PENSAMIENTO ECONÓMICO</div>
-    <h2 id="library-title">Biblioteca</h2>
-    <p id="library-intro" class="library-intro"></p>
-    <div id="library-meta" class="library-modal-meta"></div>
-    <div id="library-route" class="library-route"></div>
-    <div class="library-layout">
-      <div><div class="library-section-label">OBRAS CENTRALES</div><div id="library-works" class="library-list"></div></div>
-      <div><div class="library-section-label">CATÁLOGOS · ARCHIVOS · RECURSOS</div><div id="library-resources" class="library-list"></div></div>
-    </div>
-    <div class="library-note"><strong>Criterio de verificación.</strong> Índex AR no enlaza a búsquedas genéricas ni a páginas que no fueron comprobadas. Cada recurso de esta biblioteca apunta a una institución, editorial, archivo, repositorio o catálogo que identifica la obra o conserva materiales del autor. Los enlaces pueden cambiar con el tiempo; si alguno deja de funcionar, deberá reemplazarse por su registro institucional equivalente.</div>
-  </section>
-</div>
-
-<script>
+<script id="indexar-v9-navigation">
 (function(){
-const LIB={
- smith:{
-  name:'Adam Smith',tradition:'Clásicos · economía política',verified:'Adam Smith Works · Library of Congress',
-  intro:'Biblioteca de economía política clásica: división del trabajo, precios, comercio, instituciones, moral y riqueza.',
-  route:'Ruta sugerida: Theory of Moral Sentiments → Wealth of Nations → lectura comparada sobre precios, trabajo, comercio e instituciones.',
-  works:[
-   ['The Theory of Moral Sentiments','1759 · texto completo y guía de lectura','https://www.adamsmithworks.org/documents/asw-edition','Adam Smith Works'],
-   ['An Inquiry into the Nature and Causes of the Wealth of Nations','1776 · texto completo y estructura por libros','https://www.adamsmithworks.org/documents/cannan-edition','Adam Smith Works']
-  ],
-  resources:[
-   ['Adam Smith Works · Full Texts','Textos completos de Smith','https://www.adamsmithworks.org/texts'],
-   ['Library of Congress · The Wealth of Nations','Registro bibliográfico','https://www.loc.gov/item/2002564559/']
-  ]},
- ricardo:{
-  name:'David Ricardo',tradition:'Clásicos · distribución',verified:'Library of Congress · Liberty Fund',
-  intro:'Biblioteca clásica sobre valor, distribución, renta diferencial, comercio internacional y tributación.',
-  route:'Ruta sugerida: Principles of Political Economy and Taxation → distribución → renta → comercio internacional.',
-  works:[
-   ['On the Principles of Political Economy and Taxation','1819 · edición digitalizada de la Library of Congress','https://www.loc.gov/item/05020722/','Library of Congress'],
-   ['The Works and Correspondence of David Ricardo','1951–1973 · edición crítica de Sraffa y Dobb','https://oll.libertyfund.org/titles/ricardo-the-works-and-correspondence-of-david-ricardo-11-vols','Liberty Fund']
-  ],
-  resources:[
-   ['Library of Congress · Ricardo','Registro, imágenes y PDF','https://www.loc.gov/item/05020722/'],
-   ['Liberty Fund · Works and Correspondence','Colección bibliográfica','https://oll.libertyfund.org/titles/ricardo-the-works-and-correspondence-of-david-ricardo-11-vols']
-  ]},
- sraffa:{
-  name:'Piero Sraffa',tradition:'Clásicos contemporáneos · excedente',verified:'Trinity College Cambridge',
-  intro:'Biblioteca sraffiana centrada en producción, precios, excedente, distribución y reconstrucción de la tradición clásica.',
-  route:'Ruta sugerida: textos de 1926 → Production of Commodities → archivo Sraffa → Works and Correspondence of David Ricardo.',
-  works:[
-   ['The Laws of Returns under Competitive Conditions','1926 · Economic Journal · referencia bibliográfica','https://www.cambridge.org/core/books/the-structure-of-post-keynesian-economics/53C29363A6598C8E938B3F3770E78DCB','Cambridge University Press'],
-   ['Production of Commodities by Means of Commodities','1960 · obra central · referencia bibliográfica','https://www.cambridge.org/core/books/abs/a-brief-history-of-economic-thought/bibliography/A0894FE982234CE0502DD4B87CB0F6E0','Cambridge University Press']
-  ],
-  resources:[
-   ['Papers of Piero Sraffa · Trinity College','Archivo, bibliografía y papeles personales','https://archives.trin.cam.ac.uk/index.php/papers-of-piero-sraffa-1898-1983-economist'],
-   ['Trinity College · Sraffa · Publications','Sección archivística de publicaciones','https://archives.trin.cam.ac.uk/index.php/informationobject/browse?levels=7715&repos=440&sf_culture=en&sort=alphabetic&sortDir=desc&topLod=0']
-  ]},
- keynes:{
-  name:'John Maynard Keynes',tradition:'Keynesianismo · macroeconomía',verified:'University of Cambridge · Royal Economic Society',
-  intro:'Biblioteca para estudiar demanda efectiva, incertidumbre, dinero, inversión, empleo y política macroeconómica.',
-  route:'Ruta sugerida: A Treatise on Money → General Theory → Essays → Collected Writings.',
-  works:[
-   ['The General Theory of Employment, Interest and Money','1936 · referencia bibliográfica en Cambridge','https://www.cambridge.org/core/books/history-of-economics/john-maynard-keynes/AA9DC9129B632B348AB8BDE56C2E13CB','Cambridge University Press'],
-   ['A Treatise on Money','1930 · referencia dentro de la bibliografía de Cambridge','https://www.cambridge.org/core/books/brief-history-of-economic-thought/36D092BA5236C0816CC1C958C9B97CBA','Cambridge University Press']
-  ],
-  resources:[
-   ['The Collected Writings of John Maynard Keynes','30 volúmenes publicados por Cambridge University Press para la Royal Economic Society','https://www.cam.ac.uk/research/news/keynes-comes-home-to-cambridge'],
-   ['Keynes · Cambridge · History of Economics','Capítulo con bibliografía especializada','https://www.cambridge.org/core/books/history-of-economics/john-maynard-keynes/AA9DC9129B632B348AB8BDE56C2E13CB']
-  ]},
- kalecki:{
-  name:'Michał Kalecki',tradition:'Poskeynesianismo · distribución',verified:'UNAM · Ola Financiera',
-  intro:'Biblioteca poskeynesiana para estudiar demanda efectiva, inversión, distribución del ingreso, grado de monopolio, mark-up, ciclos y aspectos políticos del pleno empleo.',
-  route:'Ruta sugerida: Political Aspects of Full Employment → Theory of Economic Dynamics → essays sobre distribución, inversión y ciclo.',
-  works:[
-   ['Political Aspects of Full Employment','1943 · texto completo en español · UNAM','https://www.olafinanciera.unam.mx/new_web/21/pdfs/KaleckiOlaFinanciera21.pdf','UNAM · Ola Financiera'],
-   ['Theory of Economic Dynamics','1954 · ficha bibliográfica y vista previa','https://books.google.com/books?id=k6SwDw1U-FcC','Google Books']
-  ],
-  resources:[
-   ['Repositorio UNAM · Political Aspects of Full Employment','Registro institucional y texto completo','https://repositorio.unam.mx/contenidos/ficha/political-aspects-of-full-employment-4111807'],
-   ['Ola Financiera · UNAM','Publicación académica','https://www.olafinanciera.unam.mx/new_web/21/pdfs/KaleckiOlaFinanciera21.pdf']
-  ]},
- robinson:{
-  name:'Joan Robinson',tradition:'Cambridge · poskeynesianismo',verified:'Cambridge University Press',
-  intro:'Biblioteca sobre competencia imperfecta, empleo, acumulación, crecimiento y la controversia del capital de Cambridge.',
-  route:'Ruta sugerida: Economics of Imperfect Competition → Essays in the Theory of Employment → Accumulation of Capital → Collected Economic Papers.',
-  works:[
-   ['The Economics of Imperfect Competition','1933 · obra central · referencia bibliográfica académica','https://www.cambridge.org/core/books/full-industry-equilibrium/references/F069A281DE02F4446CFC1CE7C54BD7B4','Cambridge University Press'],
-   ['The Accumulation of Capital','1956 · referencia bibliográfica académica','https://www.cambridge.org/core/books/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449','Cambridge University Press'],
-   ['Collected Economic Papers','1951–1980 · seis volúmenes','https://www.cambridge.org/core/books/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449','Cambridge University Press']
-  ],
-  resources:[
-   ['Cambridge · Bibliography of Post-Keynesian Economics','Bibliografía con las principales obras de Robinson','https://www.cambridge.org/core/books/abs/structure-of-postkeynesian-economics/bibliography/2D190AA9EFB121ABEAB2740EF196D449'],
-   ['Cambridge · Robinson on accumulation','Capítulo académico sobre su aporte a la acumulación','https://www.cambridge.org/core/books/keyness-general-theory-and-accumulation/robinson-on-the-accumulation-of-capital/884B9D84413BE7439754CA57C1AB985B']
-  ]},
- minsky:{
-  name:'Hyman P. Minsky',tradition:'Poskeynesianismo · finanzas',verified:'Levy Economics Institute',
-  intro:'Biblioteca para estudiar fragilidad financiera, deuda, inversión, ciclos y crisis endógenas.',
-  route:'Ruta sugerida: Stabilizing an Unstable Economy → Financial Instability Hypothesis → archivo Minsky.',
-  works:[
-   ['Stabilizing an Unstable Economy','1986 · obra central · edición del Levy Economics Institute','https://www.levyinstitute.org/publications/stabilizing-an-unstable-economy/','Levy Economics Institute'],
-   ['Can “It” Happen Again? Essays on Instability and Finance','1982 · ensayos sobre inestabilidad y finanzas','https://www.levyinstitute.org/people/hyman-p-minsky/','Levy Economics Institute']
-  ],
-  resources:[
-   ['Hyman P. Minsky · Levy Institute','Biografía, publicaciones y archivo','https://www.levyinstitute.org/people/hyman-p-minsky/'],
-   ['Minsky Archive','Archivo de escritos, correspondencia y materiales','https://www.levyinstitute.org/people/hyman-p-minsky/']
-  ]},
- prebisch:{
-  name:'Raúl Prebisch',tradition:'Estructuralismo latinoamericano',verified:'CEPAL · Naciones Unidas',
-  intro:'Biblioteca estructuralista sobre centro-periferia, desarrollo, términos de intercambio, productividad y restricción externa.',
-  route:'Ruta sugerida: El desarrollo económico de América Latina → Las cinco etapas de mi pensamiento → dinámica del desarrollo latinoamericano.',
-  works:[
-   ['El desarrollo económico de América Latina y algunos de sus principales problemas','1949 · CEPAL · texto institucional','https://repositorio.cepal.org/entities/publication/20359a15-6e4e-4582-ac46-4eb075919e1b/full','CEPAL'],
-   ['Raúl Prebisch: un aporte al estudio de su pensamiento','1987 · incluye bibliografía de su obra 1920–1986','https://repositorio.cepal.org/handle/11362/2564','CEPAL']
-  ],
-  resources:[
-   ['Perfil de Raúl Prebisch · CEPAL','Biografía y obras destacadas','https://www.cepal.org/es/equipo/raul-prebisch'],
-   ['Repositorio CEPAL · Bibliografía Prebisch','Documento con bibliografía 1920–1986','https://repositorio.cepal.org/handle/11362/2564']
-  ]},
- ferrer:{
-  name:'Aldo Ferrer',tradition:'Desarrollo · estructura económica argentina',verified:'Biblioteca Nacional · Fondo de Cultura Económica',
-  intro:'Biblioteca argentina sobre estructura productiva, desarrollo, densidad nacional, inserción internacional y restricción externa.',
-  route:'Ruta sugerida: La economía argentina → Vivir con lo nuestro → Historia de la globalización → El capitalismo argentino.',
-  works:[
-   ['La economía argentina','1963 · obra central · registro y referencia institucional','https://fce.com.ar/tienda/economia/la-economia-argentina-ferrer/','Fondo de Cultura Económica'],
-   ['Vivir con lo nuestro. Nosotros y la globalización','1983 · ficha editorial y bibliográfica','https://fce.com.ar/tienda/historia/vivir-con-lo-nuestro/','Fondo de Cultura Económica']
-  ],
-  resources:[
-   ['Fondo de Cultura Económica · La economía argentina','Ficha bibliográfica, edición y datos de la obra','https://fce.com.ar/tienda/economia/la-economia-argentina-ferrer/'],
-   ['Fondo de Cultura Económica · Aldo Ferrer','Listado de obras publicadas','https://fce.com.ar/autores/aldo-ferrer/']
-  ]},
- friedman:{
-  name:'Milton Friedman',tradition:'Monetarismo · política económica',verified:'Hoover Institution · Stanford',
-  intro:'Biblioteca para estudiar monetarismo, inflación, consumo, política monetaria, expectativas y libertad económica.',
-  route:'Ruta sugerida: A Theory of the Consumption Function → A Monetary History → Capitalism and Freedom → trabajos monetarios.',
-  works:[
-   ['A Theory of the Consumption Function','1957 · referencia bibliográfica','https://guides.loc.gov/milton-friedman/resources','Library of Congress'],
-   ['A Monetary History of the United States, 1867–1960','1963 · con Anna J. Schwartz · referencia bibliográfica','https://guides.loc.gov/milton-friedman/resources','Library of Congress'],
-   ['Capitalism and Freedom','1962 · política económica · referencia bibliográfica','https://guides.loc.gov/milton-friedman/resources','Library of Congress']
-  ],
-  resources:[
-   ['Collected Works of Milton Friedman · Hoover','Más de 1.400 materiales digitales','https://miltonfriedman.hoover.org/'],
-   ['Hoover · The Timeless Ideas of Milton Friedman','Descripción del archivo y obras digitalizadas','https://www.hoover.org/research/timeless-ideas-milton-friedman']
-  ]}
-};
-const modal=document.getElementById('economist-library'),title=document.getElementById('library-title'),intro=document.getElementById('library-intro'),works=document.getElementById('library-works'),resources=document.getElementById('library-resources'),meta=document.getElementById('library-meta'),route=document.getElementById('library-route');
-function openLib(key){
-  const d=LIB[key];if(!d)return;
-  title.textContent=d.name;intro.textContent=d.intro;
-  meta.innerHTML=`<span class="library-pill">${d.tradition}</span><span class="library-pill">✓ ${d.verified}</span>`;
-  route.innerHTML=`<strong>Orden sugerido de lectura</strong><span>${d.route}</span>`;
-  works.innerHTML=d.works.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener noreferrer"><strong>${x[0]}</strong><span>${x[1]}</span><span class="source-status">✓ Recurso comprobado · ${x[3]}</span></a>`).join('');
-  resources.innerHTML=d.resources.map(x=>`<a class="library-item" href="${x[2]}" target="_blank" rel="noopener noreferrer"><strong>${x[0]}</strong><span>${x[1]}</span><span class="source-status">✓ Fuente institucional comprobada</span></a>`).join('');
-  modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';location.hash='biblioteca-'+key;
-}
-function closeLib(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';if(location.hash.startsWith('#biblioteca-'))history.replaceState(null,'',location.pathname+location.search);}
-document.querySelectorAll('[data-economist]').forEach(b=>b.addEventListener('click',()=>openLib(b.dataset.economist)));
-document.querySelectorAll('[data-library-close]').forEach(b=>b.addEventListener('click',closeLib));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))closeLib()});
-document.querySelectorAll('[data-tradition-filter]').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('[data-tradition-filter]').forEach(b=>b.classList.remove('is-active'));btn.classList.add('is-active');
-  const filter=btn.dataset.traditionFilter;
-  document.querySelectorAll('.economist-card[data-tradition]').forEach(card=>{card.classList.toggle('is-hidden',filter!=='all'&&card.dataset.tradition!==filter);});
-}));
+  const menuTrigger=document.getElementById('index-menu-trigger');
+  const menuDrawer=document.getElementById('index-menu-drawer');
+  const menuClose=document.getElementById('index-menu-close');
+  const menuOverlay=document.getElementById('index-menu-overlay');
+  function openMenu(){document.body.classList.add('menu-open');menuTrigger.setAttribute('aria-expanded','true');menuDrawer.setAttribute('aria-hidden','false');setTimeout(()=>menuClose.focus(),120)}
+  function closeMenu(){document.body.classList.remove('menu-open');menuTrigger.setAttribute('aria-expanded','false');menuDrawer.setAttribute('aria-hidden','true')}
+  menuTrigger?.addEventListener('click',()=>document.body.classList.contains('menu-open')?closeMenu():openMenu());
+  menuClose?.addEventListener('click',closeMenu); menuOverlay?.addEventListener('click',closeMenu);
+  document.querySelectorAll('.index-menu-link').forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open'))closeMenu()});
 
+  document.querySelectorAll('[data-tradition-filter]').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('[data-tradition-filter]').forEach(b=>b.classList.remove('is-active')); btn.classList.add('is-active');
+    const filter=btn.dataset.traditionFilter;
+    document.querySelectorAll('.economist-card[data-tradition]').forEach(card=>card.classList.toggle('is-hidden',filter!=='all'&&card.dataset.tradition!==filter));
+  }));
 
-/* --- Menú lateral global --- */
-const menuTrigger=document.getElementById('index-menu-trigger');
-const menuDrawer=document.getElementById('index-menu-drawer');
-const menuClose=document.getElementById('index-menu-close');
-const menuOverlay=document.getElementById('index-menu-overlay');
-function openIndexMenu(){document.body.classList.add('menu-open');menuTrigger.setAttribute('aria-expanded','true');menuDrawer.setAttribute('aria-hidden','false');setTimeout(()=>menuClose.focus(),180)}
-function closeIndexMenu(){document.body.classList.remove('menu-open');menuTrigger.setAttribute('aria-expanded','false');menuDrawer.setAttribute('aria-hidden','true');menuTrigger.focus()}
-menuTrigger.addEventListener('click',()=>document.body.classList.contains('menu-open')?closeIndexMenu():openIndexMenu());
-menuClose.addEventListener('click',closeIndexMenu);menuOverlay.addEventListener('click',closeIndexMenu);
-document.querySelectorAll('.index-menu-link').forEach(link=>link.addEventListener('click',()=>{closeIndexMenu();}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open'))closeIndexMenu();});
+  const track=document.getElementById('economist-carousel-track');
+  const prev=document.getElementById('economist-prev'); const next=document.getElementById('economist-next');
+  function move(dir){if(!track)return;const card=track.querySelector('.economist-card:not(.is-hidden)');const step=card?card.getBoundingClientRect().width+18:330;track.scrollBy({left:dir*step,behavior:'smooth'});}
+  prev?.addEventListener('click',()=>move(-1)); next?.addEventListener('click',()=>move(1));
+  document.querySelectorAll('.economist-card[href]').forEach(card=>{
+    card.addEventListener('click', function(e){
+      // El navegador debe ejecutar el href del <a>. Este fallback solo asegura
+      // navegación si otra capa de interacción llegara a interferir.
+      if(e.defaultPrevented) return;
+      const url=this.href;
+      if(url) window.open(url, '_blank', 'noopener,noreferrer');
+      e.preventDefault();
+    });
+  });
+  // Navegación nativa del carrusel: no capturamos el puntero sobre las tarjetas.
+  // Esto garantiza que el clic sobre la imagen o cualquier parte de la tarjeta
+  // active el <a href=...> y no quede interceptado por el drag del carrusel.
 
-/* --- Carrusel de economistas --- */
-const economistTrack=document.getElementById('economist-carousel-track');
-const economistPrev=document.getElementById('economist-prev');
-const economistNext=document.getElementById('economist-next');
-function moveEconomists(dir){if(!economistTrack)return;const card=economistTrack.querySelector('.economist-card:not(.is-hidden)');const step=card?card.getBoundingClientRect().width+18:330;economistTrack.scrollBy({left:dir*step,behavior:'smooth'});}
-if(economistPrev)economistPrev.addEventListener('click',()=>moveEconomists(-1));
-if(economistNext)economistNext.addEventListener('click',()=>moveEconomists(1));
-let dragStartX=null,dragScroll=null;
-if(economistTrack){
-  economistTrack.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'){dragStartX=e.clientX;dragScroll=economistTrack.scrollLeft;economistTrack.setPointerCapture?.(e.pointerId);}});
-  economistTrack.addEventListener('pointermove',e=>{if(dragStartX===null)return;economistTrack.scrollLeft=dragScroll-(e.clientX-dragStartX)*1.15;});
-  ['pointerup','pointercancel','pointerleave'].forEach(ev=>economistTrack.addEventListener(ev,()=>{dragStartX=null;}));
-}
-
-const h=location.hash.match(/^#biblioteca-(.+)$/);if(h&&LIB[h[1]])openLib(h[1]);
 })();
 </script>
 </body>
 </html>
- 
