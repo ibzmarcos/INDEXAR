@@ -11,7 +11,7 @@
 <meta property="og:description" content="Indicadores en vivo, herramientas y lectura propia de la economía argentina.">
 <meta name="theme-color" content="#2554E8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0E14'/%3E%3Ctext x='50' y='72' font-size='64' font-family='serif' font-weight='700' text-anchor='middle' fill='%23F2EFE9'%3ED%3C/text%3E%3Ccircle cx='72' cy='22' r='6' fill='%23C9A96A'/%3E%3C/svg%3E">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Marcos Javier Ibáñez","jobTitle":"Economista","alumniOf":"Universidad Nacional de Avellaneda","knowsAbout":["Economía argentina","Macroeconomía","Finanzas","Análisis de datos"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Marcos Javier Ibáñez","email":"ibzmarcos@gmail.com","jobTitle":"Economista","alumniOf":"Universidad Nacional de Avellaneda","knowsAbout":["Economía argentina","Macroeconomía","Finanzas","Análisis de datos"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -42,7 +42,6 @@ nav{display:flex;gap:26px}nav a{font:500 13.5px var(--fu);color:var(--soft)}nav 
 .av{width:38px;height:38px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font:700 14px var(--fd);flex-shrink:0}
 .sid{display:flex;gap:12px;align-items:center}.sid b{font:700 15px var(--fd);display:block}.sid span{font:10px var(--fm);letter-spacing:.7px;text-transform:uppercase;color:rgba(255,255,255,.68)}
 .strip nav a{color:rgba(255,255,255,.75);font-size:12px}.strip nav a:hover{color:#fff}.strip nav{gap:20px}
-/* portada */
 .cover{position:relative;min-height:min(760px,86vh);display:flex;align-items:center;justify-content:center;overflow:hidden;background:#08111E}
 .cbg{position:absolute;inset:0}.cbg svg{width:100%;height:100%}
 .cov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,17,30,.42),rgba(8,17,30,.8) 62%,#08111E)}
@@ -53,13 +52,11 @@ nav{display:flex;gap:26px}nav a{font:500 13.5px var(--fu);color:var(--soft)}nav 
 .ray{position:absolute;left:50%;top:-.3em;transform:translateX(-45%) rotate(-8deg);font:.28em Arial,sans-serif;text-shadow:0 0 14px rgba(108,155,255,.4)}
 .cs{max-width:680px;margin:0 auto;font-size:clamp(18px,2vw,25px);line-height:1.55;color:#D9DEE7}
 .cta{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.cta .btn:not(.s){color:#F2EFE9;border-color:rgba(242,239,233,.4)}
-/* títulos de sección */
 .sh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;gap:12px;flex-wrap:wrap}
 .st{font-size:30px}.sl{font:11px var(--fm);letter-spacing:1.5px;text-transform:uppercase;color:var(--soft)}.sl:before{content:"■ ";color:var(--acc);font-size:9px}
 .lead{max-width:720px;font-size:17px;line-height:1.7;color:var(--soft);margin:-10px 0 30px}
 .live{display:inline-flex;align-items:center;gap:6px;font:10.5px var(--fm);letter-spacing:1.2px;text-transform:uppercase;background:#0F172A;color:#fff;padding:4px 10px;border-radius:20px}
 .live:before{content:"";width:7px;height:7px;border-radius:50%;background:#2EE6A8;animation:p 1.6s infinite}@keyframes p{50%{opacity:.3}}
-/* tablero */
 .kg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .kpi{position:relative;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:20px;box-shadow:var(--sh);overflow:hidden}
 .kpi:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:var(--rs)}
@@ -71,26 +68,22 @@ nav{display:flex;gap:26px}nav a{font:500 13.5px var(--fu);color:var(--soft)}nav 
 .cp{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:20px;box-shadow:var(--sh)}
 .cp h3{font-size:18px;margin-bottom:4px}.cp small{font:11px var(--fm);color:var(--soft);display:block;margin-bottom:10px}
 .cp svg{width:100%;height:auto}.cp .a{font:9px var(--fm);fill:var(--soft)}.cp .gl{stroke:var(--rule);stroke-dasharray:2 3}.na{font:13px var(--fu);color:var(--soft)}
+.tr{font:12px/1.6 var(--fm);margin-top:10px;padding:10px 12px;background:var(--alt);border-left:2px solid var(--acc)}.tr b{font-weight:600}.tr i{display:block;font-style:normal;color:var(--soft);font-size:10.5px;margin-top:4px}
 .ch{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .cn{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}.cn button{width:38px;height:32px;border:1px solid var(--rs);background:none;color:var(--text);border-radius:2px;cursor:pointer;font-size:18px}.cn button:hover{border-color:var(--acc);color:var(--acc)}
 .cp.th{text-align:center}.cp.th svg{width:130px;margin:10px auto}.cp.th #thl{font:12px/1.9 var(--fm)}
 .note{font:11px/1.6 var(--fm);color:var(--soft);border-top:1px solid var(--rule);padding-top:14px;margin-top:22px}
-/* herramientas */
 .tl2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .tool{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:26px;box-shadow:var(--sh)}
-.tool h3{font-size:22px;margin-bottom:6px}.tool p{font:14px/1.6 var(--fu);color:var(--soft);margin:0 0 18px}
+.tool h3{font-size:22px;margin-bottom:6px}.tool p{font:14px/1.6 var(--fu);color:var(--soft);margin:0 0 18px}.tool p:last-child{margin:0}
 .fl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}.fl label{font:11px var(--fm);text-transform:uppercase;letter-spacing:.8px;color:var(--soft);display:block}
 .in{width:100%;margin-top:5px;font:14px var(--fu);padding:11px 12px;border:1px solid var(--rs);border-radius:2px;background:var(--bg);color:var(--text)}.in:focus{border-color:var(--acc);outline:0}
 .out{margin-top:14px;padding:16px;background:var(--alt);border-left:2px solid var(--acc);font:15px/1.6 var(--fu)}.out b{font:700 22px var(--fd)}.out small{color:var(--soft)}
 .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--rule);font:14px var(--fu)}.row b{font-variant-numeric:tabular-nums}
-/* áreas / agenda */
-.pr{display:grid;grid-template-columns:90px 1fr 1.4fr;gap:28px;padding:28px 0;border-top:1px solid var(--rule)}.pr:last-child{border-bottom:1px solid var(--rule)}
-.pn{font:italic 500 46px/1 var(--fd);color:var(--accT)}.pr h3{font-size:24px}.pr p{margin:0;font-size:15.5px;line-height:1.65;color:var(--soft)}
-.tags{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.tags span,.chip{font:10px var(--fm);letter-spacing:.8px;text-transform:uppercase;color:var(--soft);border:1px solid var(--rs);border-radius:20px;padding:3px 10px}
+.chip{font:10px var(--fm);letter-spacing:.8px;text-transform:uppercase;color:var(--soft);border:1px solid var(--rs);border-radius:20px;padding:3px 10px}
 table{width:100%;border-collapse:collapse;font-size:15px}th{text-align:left;font:10.5px var(--fm);letter-spacing:1px;text-transform:uppercase;color:var(--soft);padding:10px;border-bottom:1px solid var(--rs)}
 td{padding:14px 10px;border-bottom:1px solid var(--rule);vertical-align:top}td:first-child{font-weight:600}td:nth-child(n+2){color:var(--soft)}
 .empty{padding:34px;border:1px dashed var(--rs);border-radius:8px;text-align:center;color:var(--soft);font-size:16px}
-/* glosario, recursos */
 details{border-top:1px solid var(--rule)}details:last-child{border-bottom:1px solid var(--rule)}
 summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font:italic 500 20px var(--fd)}
 summary::-webkit-details-marker{display:none}summary:after{content:"+";font:20px var(--fm);color:var(--acc)}details[open] summary:after{content:"–"}
@@ -98,7 +91,6 @@ details p{margin:0 0 22px;max-width:700px;font-size:15.5px;line-height:1.7;color
 .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .rc{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:22px;transition:border-color .15s}.rc:hover{border-color:var(--acc)}
 .rc h3{font-size:19px;margin-bottom:6px}.rc p{margin:0;font:13.5px/1.55 var(--fu);color:var(--soft)}.rc span{display:block;margin-top:12px;font:600 11px var(--fm);color:var(--accT)}
-/* sobre mí */
 .ab{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}.ab p{font-size:17px;line-height:1.75;margin:0 0 16px}
 .ah{display:flex;gap:16px;align-items:center;margin-bottom:22px}.ah .av{width:62px;height:62px;font-size:21px}.ah span{font:12px var(--fm);color:var(--soft)}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
@@ -109,13 +101,12 @@ details p{margin:0 0 22px;max-width:700px;font-size:15.5px;line-height:1.7;color
 .ln{display:flex;gap:22px;justify-content:center;margin-top:24px;font:500 15px var(--fu)}.ln a:hover{color:var(--acc)}
 footer{padding:54px 0 30px}.fg{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;padding-bottom:28px;border-bottom:1px solid var(--rule)}
 footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{padding-top:20px;font:10.5px/1.7 var(--fm);color:var(--soft)}
-/* menú lateral */
 .mb{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:90;width:52px;height:52px;border:1px solid var(--rs);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);color:var(--text);border-radius:4px;cursor:pointer;font-size:22px}
 .ov{position:fixed;inset:0;background:rgba(3,8,14,.5);z-index:95;opacity:0;visibility:hidden;transition:.25s}
 .drw{position:fixed;right:0;top:0;bottom:0;width:min(360px,92vw);z-index:100;background:var(--bg);border-left:1px solid var(--rs);transform:translateX(105%);transition:transform .4s;padding:26px;overflow:auto}
 .mo .ov{opacity:1;visibility:visible}.mo .drw{transform:none}.mo{overflow:hidden}
 .drw a{display:block;padding:12px 8px;font:500 15px var(--fu);color:var(--soft);border-bottom:1px solid var(--rule)}.drw a:hover{color:var(--text)}.drw h4{font-size:24px;margin-bottom:18px}
-@media(max-width:940px){nav,.strip nav{display:none}.kg,.rg{grid-template-columns:1fr 1fr}.cg,.tl2,.ab{grid-template-columns:1fr}.ab{gap:36px}.pr{grid-template-columns:1fr;gap:8px}.wrap{padding:0 18px}.mb{top:auto;bottom:18px;transform:none;border-radius:50%;right:14px}}
+@media(max-width:940px){nav,.strip nav{display:none}.kg,.rg{grid-template-columns:1fr 1fr}.cg,.tl2,.ab{grid-template-columns:1fr}.ab{gap:36px}.wrap{padding:0 18px}.mb{top:auto;bottom:18px;transform:none;border-radius:50%;right:14px}}
 @media(max-width:560px){.kg,.rg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.btn-nav{display:none}.strip .wrap>nav{display:none}}
 @media print{.mast,.tick,header,.mb,.cover{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
@@ -126,7 +117,7 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
 <div class="tick" aria-label="Indicadores económicos en vivo"><div id="trk"></div></div>
 <header><div class="wrap hi">
  <a class="logo" href="#inicio">Dato<em>nomía</em></a>
- <nav aria-label="Principal"><a href="#tablero">Tablero</a><a href="#herramientas">Herramientas</a><a href="#agenda">Agenda</a><a href="#publicaciones">Publicaciones</a><a href="#glosario">Glosario</a><a href="#recursos">Recursos</a><a href="#sobre">Sobre mí</a></nav>
+ <nav aria-label="Principal"><a href="#tablero">Tablero</a><a href="#herramientas">Herramientas</a><a href="#agenda">Agenda</a><a href="#publicaciones">Publicaciones</a><a href="#glosario">Glosario</a><a href="#sitio">El sitio</a><a href="#sobre">Sobre mí</a></nav>
  <div class="hr"><button class="tg" id="tg" type="button" aria-label="Cambiar tema">Oscuro</button><a class="btn s btn-nav" href="#contacto">Contacto</a></div>
 </div></header>
 <div class="strip"><div class="wrap">
@@ -137,7 +128,7 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
 <button class="mb" id="mb" type="button" aria-label="Abrir menú">☰</button>
 <div class="ov"></div>
 <aside class="drw" aria-label="Menú"><h4>Datonomía</h4>
- <a href="#tablero">Tablero de indicadores</a><a href="#herramientas">Herramientas</a><a href="#areas">Qué cubro</a><a href="#agenda">Agenda de datos</a><a href="#publicaciones">Publicaciones</a><a href="#glosario">Glosario</a><a href="#recursos">Recursos y fuentes</a><a href="#sobre">Sobre mí</a><a href="#newsletter">Newsletter</a><a href="#contacto">Contacto</a>
+ <a href="#tablero">Tablero de indicadores</a><a href="#herramientas">Herramientas</a><a href="#agenda">Agenda de datos</a><a href="#publicaciones">Publicaciones</a><a href="#glosario">Glosario</a><a href="#recursos">Recursos y fuentes</a><a href="#sitio">Sobre este sitio</a><a href="#sobre">Sobre mí</a><a href="#newsletter">Newsletter</a><a href="#contacto">Contacto</a>
 </aside>
 
 <main>
@@ -156,10 +147,10 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
  <div class="sh"><h2 class="st">Tablero de indicadores</h2><span class="live">En vivo</span></div>
  <div class="kg" id="kg"></div>
  <div class="cg">
-  <div class="cp" aria-live="polite"><div class="ch"><h3 id="cth">Gráficos</h3><span class="na" id="cpos"></span></div><small id="csub"></small><div id="cch"><p class="na">Cargando…</p></div><div class="cn"><button id="cprev" type="button" aria-label="Gráfico anterior">‹</button><button id="cnext" type="button" aria-label="Gráfico siguiente">›</button></div></div>
+  <div class="cp" aria-live="polite"><div class="ch"><h3 id="cth">Gráficos</h3><span class="na" id="cpos"></span></div><small id="csub"></small><div id="cch"><p class="na">Cargando…</p></div><div class="tr" id="ctr" hidden></div><div class="cn"><button id="cprev" type="button" aria-label="Gráfico anterior">‹</button><button id="cnext" type="button" aria-label="Gráfico siguiente">›</button></div></div>
   <div class="cp th"><h3>Termómetro del día</h3><small>De los indicadores con dato previo, cuántos mejoran y cuántos empeoran</small><svg id="thd" viewBox="0 0 120 120" role="img" aria-label="Termómetro del día"></svg><div id="thl" class="na">Calculando…</div></div>
  </div>
- <p class="note">Cada indicador muestra su fuente. Si una fuente no responde, se muestra como no disponible. Las flechas indican el movimiento contra el dato anterior; el verde marca una mejora y el rojo un deterioro (menos inflación y menos riesgo país es mejor; más actividad y más reservas es mejor).</p>
+ <p class="note">Cada indicador muestra su fuente. Si una fuente no responde, se muestra como no disponible. En los gráficos, cada barra o tramo se pinta contra el dato anterior: verde si mejora, rojo si empeora (menos inflación y menos riesgo país es mejor; más actividad y más reservas es mejor).</p>
 </div></section>
 
 <section id="herramientas"><div class="wrap">
@@ -173,14 +164,6 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
    <div id="cr"><p class="na">Cargando cotizaciones…</p></div></div>
  </div>
  <p class="note">Calculadora: se compone la inflación de los meses posteriores al inicial hasta el final inclusive. Es una referencia, no un ajuste contractual (para eso rige el índice que pacten las partes).</p>
-</div></section>
-
-<section id="areas"><div class="wrap">
- <div class="sh"><h2 class="st">Qué cubro</h2><span class="sl">Cuatro áreas</span></div>
- <div class="pr"><span class="pn">I</span><h3>Economía</h3><div><p>Inflación, actividad, salarios y tipo de cambio: el pulso de corto plazo de la macro argentina.</p><div class="tags"><span>Inflación</span><span>EMAE</span><span>Salarios reales</span></div></div></div>
- <div class="pr"><span class="pn">II</span><h3>Finanzas</h3><div><p>Deuda, riesgo país, tasas y mercado de capitales: cómo se financia el país y a qué costo.</p><div class="tags"><span>Riesgo país</span><span>Tasas</span><span>Deuda soberana</span></div></div></div>
- <div class="pr"><span class="pn">III</span><h3>Sector externo</h3><div><p>Reservas, balanza comercial, energía y agro: la generación de divisas que limita o habilita el crecimiento.</p><div class="tags"><span>Reservas</span><span>Balanza comercial</span><span>Energía y agro</span></div></div></div>
- <div class="pr"><span class="pn">IV</span><h3>Finanzas públicas</h3><div><p>Resultado fiscal, gasto y recaudación: qué hace el Estado con los recursos y qué deja eso a la macro.</p><div class="tags"><span>Resultado primario</span><span>Gasto</span><span>Recaudación</span></div></div></div>
 </div></section>
 
 <section id="agenda"><div class="wrap">
@@ -227,13 +210,24 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
  </div>
 </div></section>
 
+<section id="sitio"><div class="wrap">
+ <div class="sh"><h2 class="st">Sobre este sitio</h2><span class="sl">De qué se trata Datonomía</span></div>
+ <p class="lead">Datonomía es mi proyecto personal para seguir la economía argentina con datos propios a la vista, y para practicar lo que estudio.</p>
+ <div class="tl2">
+  <div class="tool"><h3>Qué es</h3><p>Un tablero con los números que miro todos los días: dólar, inflación, riesgo país, actividad y reservas. Suma dos calculadoras para hacer cuentas propias, una agenda de qué publica cada organismo y un glosario en criollo.</p></div>
+  <div class="tool"><h3>Por qué lo armé</h3><p>Quería tener en un solo lugar lo que importa y que cualquiera pueda chequearlo. Por eso cada indicador dice de dónde sale, y si una fuente no responde lo marco como no disponible en vez de mostrar un número viejo.</p></div>
+  <div class="tool"><h3>Cómo se leen los gráficos</h3><p>Cada dato se compara con el anterior: verde si mejora, rojo si empeora. El criterio cambia según el indicador (menos inflación es mejor, más reservas también). Debajo de cada gráfico escribo si viene subiendo o cayendo, y desde hace cuánto.</p></div>
+  <div class="tool"><h3>Cómo está hecho</h3><p>Es una sola página en HTML, CSS y JavaScript, sin librerías. Los datos se piden en vivo a DolarAPI, ArgentinaDatos y datos.gob.ar, que publican series del INDEC y el BCRA. Lo diseñé, lo programé y lo mantengo yo.</p></div>
+ </div>
+</div></section>
+
 <section id="sobre"><div class="wrap">
  <div class="sh"><h2 class="st">Sobre mí</h2><span class="sl">Quién escribe</span></div>
  <div class="ab">
   <div>
    <div class="ah"><div class="av">MI</div><span>Marcos Javier Ibáñez · Economista</span></div>
-   <p>Soy estudiante avanzado de la Licenciatura en Economía en la Universidad Nacional de Avellaneda (UNDAV), próximo a graduarme. Este sitio reúne los datos que sigo, las herramientas que uso para leerlos y mis análisis sobre la economía argentina.</p>
-   <p>Trabajo desde 2021 en control de gestión y fiscalización, y desde 2025 enseño Electrónica en una escuela técnica. Esa mezcla me enseñó a ordenar números y a explicarlos con claridad.</p>
+   <p>Soy Marcos, economista de formación en la UNDAV, y estoy cerrando la tesis de la licenciatura. Me interesan la macro y las finanzas de la Argentina, y sobre todo entender qué dicen los números antes de opinar sobre ellos.</p>
+   <p>Desde 2021 trabajo en control de gestión y fiscalización en la Presidencia de la Nación, y desde 2025 doy clases de Electrónica en una escuela técnica. Una cosa me enseñó a revisar cada dato dos veces; la otra, a explicarlo para que se entienda. Datonomía salió de ahí: es donde junto lo que sigo todos los días.</p>
    <div class="chips"><span class="chip">Python</span><span class="chip">Power BI</span><span class="chip">Excel avanzado</span><span class="chip">SQL</span><span class="chip">Stata</span></div>
    <p style="margin-top:22px"><a class="btn s" data-l="cv" href="#" target="_blank" rel="noopener">Descargar CV</a></p>
   </div>
@@ -270,7 +264,7 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
 
 <script>
 // Completá estos datos. Lo que quede vacío oculta su botón o enlace.
-var C={email:'contacto@indexar.com.ar',linkedin:'',github:'https://github.com/ibzmarcos',cv:''};
+var C={email:'ibzmarcos@gmail.com',linkedin:'',github:'https://github.com/ibzmarcos',cv:''};
 // Publicaciones: agregá objetos {fecha:'12 nov 2026',seccion:'Economía',titulo:'…',url:'https://…'}
 var PUBS=[];
 
@@ -278,7 +272,6 @@ document.querySelectorAll('[data-l]').forEach(a=>{const k=a.dataset.l,v=C[k];if(
 const $=id=>document.getElementById(id),fmt=n=>n.toLocaleString('es-AR',{maximumFractionDigits:0});
 const mes=i=>new Date(i+'T00:00:00').toLocaleDateString('es-AR',{month:'short',year:'numeric'}),dd=i=>i.slice(8,10)+'/'+i.slice(5,7);
 
-// Tema y menú
 const R=document.documentElement,tg=$('tg');
 function setT(d){d?R.setAttribute('data-theme','dark'):R.removeAttribute('data-theme');tg.textContent=d?'Claro':'Oscuro'}
 let sv=null;try{sv=localStorage.getItem('mi-theme')}catch(e){}
@@ -290,10 +283,8 @@ addEventListener('keydown',e=>{if(e.key==='Escape')document.body.classList.remov
 function clock(){const d=new Date();$('md').textContent=d.toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});$('mt').textContent=d.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})+' ARG'}
 clock();setInterval(clock,30000);
 
-// Publicaciones
 $('pub').innerHTML=PUBS.length?'<table><thead><tr><th>Fecha</th><th>Sección</th><th>Título</th></tr></thead><tbody>'+PUBS.map(p=>`<tr><td>${p.fecha}</td><td>${p.seccion}</td><td>${p.url?`<a href="${p.url}">${p.titulo}</a>`:p.titulo}</td></tr>`).join('')+'</tbody></table>':'<div class="empty">Estoy preparando las primeras publicaciones. Mientras tanto, el tablero, las herramientas y el glosario ya están disponibles.</div>';
 
-// Tablero
 const KP=[['oficial','Dólar oficial','Venta · DolarAPI'],['blue','Dólar blue','Venta · DolarAPI'],['mep','Dólar MEP','Venta · DolarAPI'],['ccl','Contado con liquidación','Venta · DolarAPI'],['brecha','Brecha blue / oficial','Cálculo propio'],['infl','Inflación mensual','INDEC vía ArgentinaDatos'],['riesgo','Riesgo país','ArgentinaDatos'],['emae','Actividad (EMAE)','Var. interanual · INDEC'],['res','Reservas del BCRA','datos.gob.ar / BCRA']];
 $('kg').innerHTML=KP.map(k=>`<div class="kpi"><div class="kl">${k[1]}</div><div class="kv" data-k="${k[0]}">—</div><div class="ks">${k[2]}</div></div>`).join('');
 const TK=[['oficial','Oficial'],['blue','Blue'],['mep','MEP'],['ccl','CCL'],['brecha','Brecha'],['infl','Inflación mensual'],['riesgo','Riesgo país'],['emae','Actividad'],['res','Reservas BCRA']],D={},TH={};
@@ -303,18 +294,32 @@ function put(k,t,tr,good){const a=tr>0?'▲ ':tr<0?'▼ ':'',c=tr?(good?'g':'b')
  tick();th()}
 tick();
 const J=u=>fetch(u).then(r=>{if(!r.ok)throw 0;return r.json()});
-function chart(id,pts,bar,f,df){const el=$(id);if(!pts||pts.length<2){el.innerHTML='<p class="na">Gráfico no disponible por ahora.</p>';return}
+
+// Gráfico: cada barra/tramo se pinta contra el dato anterior. hi=1 si más es mejor, 0 si menos es mejor.
+function trend(pts,f,hi){const n=pts.length,last=pts[n-1].v,dir=Math.sign(last-pts[n-2].v);
+ if(!dir)return 'Sin cambio en el último dato.';
+ let k=0;for(let i=n-1;i>0;i--){if(Math.sign(pts[i].v-pts[i-1].v)===dir)k++;else break}
+ const up=dir>0,ok=up===!!hi;
+ return `<b class="${ok?'g':'b'}">${up?'▲ Viene subiendo':'▼ Viene cayendo'}</b> hace ${k} ${k>1?'datos seguidos':'dato'}: de ${f(pts[n-k-1].v)} a ${f(last)}. ${ok?'Eso es una mejora.':'Eso es un deterioro.'}<i>Verde: mejora vs. el dato anterior · Rojo: empeora · Gris: punto de partida</i>`}
+function chart(id,pts,bar,f,df,hi){const el=$(id),tr=$('ctr');
+ if(!pts||pts.length<2){el.innerHTML='<p class="na">Gráfico no disponible por ahora.</p>';tr.hidden=true;return}
  const W=420,H=170,L=44,T=12,pw=W-L-8,ph=H-T-22,v=pts.map(p=>p.v);let mn=Math.min(...v),mx=Math.max(...v);if(bar)mn=Math.min(0,mn);
  const y=x=>T+ph-(x-mn)/((mx-mn)||1)*ph,X=i=>L+i/(pts.length-1)*pw;
+ const col=i=>{if(!i)return 'var(--soft)';const d=pts[i].v-pts[i-1].v;return !d?'var(--soft)':((d>0)===!!hi?'var(--green)':'var(--red)')};
  let s=`<line class="gl" x1="${L}" x2="${W}" y1="${T}" y2="${T}"/><text class="a" x="${L-5}" y="${T+3}" text-anchor="end">${f(mx)}</text><line class="gl" x1="${L}" x2="${W}" y1="${T+ph}" y2="${T+ph}"/><text class="a" x="${L-5}" y="${T+ph+3}" text-anchor="end">${f(mn)}</text>`;
- if(bar){const bw=pw/pts.length*.68;s+=pts.map((p,i)=>`<rect x="${(L+(i+.5)/pts.length*pw-bw/2).toFixed(1)}" y="${Math.min(y(p.v),y(0)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.abs(y(p.v)-y(0)).toFixed(1)}" fill="var(--acc)"/>`).join('')}
- else{const d=pts.map((p,i)=>(i?'L':'M')+X(i).toFixed(1)+','+y(p.v).toFixed(1)).join('');s+=`<path d="${d}L${W-8},${T+ph}L${L},${T+ph}Z" fill="var(--acc)" opacity=".12"/><path d="${d}" fill="none" stroke="var(--acc)" stroke-width="2"/>`}
+ if(bar){const bw=pw/pts.length*.68;
+  if(mn<0)s+=`<line x1="${L}" x2="${W}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" stroke="var(--rs)"/><text class="a" x="${L-5}" y="${(y(0)+3).toFixed(1)}" text-anchor="end">0</text>`;
+  s+=pts.map((p,i)=>`<rect x="${(L+(i+.5)/pts.length*pw-bw/2).toFixed(1)}" y="${Math.min(y(p.v),y(0)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1,Math.abs(y(p.v)-y(0))).toFixed(1)}" fill="${col(i)}"/>`).join('')}
+ else{const c=col(pts.length-1);let a='';for(let i=1;i<pts.length;i++)a+=`<line x1="${X(i-1).toFixed(1)}" y1="${y(pts[i-1].v).toFixed(1)}" x2="${X(i).toFixed(1)}" y2="${y(pts[i].v).toFixed(1)}" stroke="${col(i)}" stroke-width="2.4" stroke-linecap="round"/>`;
+  const d=pts.map((p,i)=>(i?'L':'M')+X(i).toFixed(1)+','+y(p.v).toFixed(1)).join('');
+  s+=`<path d="${d}L${W-8},${T+ph}L${L},${T+ph}Z" fill="${c}" opacity=".1"/>${a}<circle cx="${X(pts.length-1).toFixed(1)}" cy="${y(pts.at(-1).v).toFixed(1)}" r="4" fill="${c}"/>`}
  s+=`<text class="a" x="${L}" y="${H-4}">${df(pts[0].f)}</text><text class="a" x="${W-8}" y="${H-4}" text-anchor="end">${df(pts.at(-1).f)}</text>`;
- el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico">${s}</svg>`}
+ el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico">${s}</svg>`;
+ tr.hidden=false;tr.innerHTML=trend(pts,f,hi)}
 
 const S=[],SL=[['Dólar blue','Últimos 30 registros · venta · DolarAPI / ArgentinaDatos'],['Inflación mensual','Últimos 12 meses · INDEC vía ArgentinaDatos'],['Riesgo país','Últimos 90 registros · puntos básicos'],['Actividad (EMAE)','Variación interanual, últimos 12 meses · INDEC'],['Reservas del BCRA','Últimos 30 registros · millones de US$']];let cur=0;
 function showS(){$('cth').textContent=SL[cur][0];$('csub').textContent=SL[cur][1];$('cpos').textContent=(cur+1)+' / '+SL.length;const s=S[cur];
- if(s===undefined)$('cch').innerHTML='<p class="na">Cargando…</p>';else if(!s)chart('cch');else chart('cch',s.p,s.b,s.f,s.d)}
+ if(s===undefined){$('cch').innerHTML='<p class="na">Cargando…</p>';$('ctr').hidden=true}else if(!s)chart('cch');else chart('cch',s.p,s.b,s.f,s.d,s.h)}
 function setS(i,s){S[i]=s;if(i===cur)showS()}
 $('cprev').onclick=()=>{cur=(cur+SL.length-1)%SL.length;showS()};$('cnext').onclick=()=>{cur=(cur+1)%SL.length;showS()};showS();
 function th(){const v=Object.values(TH),n=v.length;if(!n)return;const u=v.filter(x=>x>0).length,C=2*Math.PI*50,l=u/n*C;
@@ -328,20 +333,19 @@ J('https://dolarapi.com/v1/dolares').then(a=>{const f=c=>(a.find(x=>x.casa===c)|
  Q.blue&&Q.oficial?put('brecha',((Q.blue/Q.oficial-1)*100).toFixed(1)+'%'):put('brecha','No disponible');conv()}).catch(()=>{fail(['oficial','blue','mep','ccl','brecha']);$('cr').innerHTML='<p class="na">Cotizaciones no disponibles por ahora.</p>'});
 J('https://api.argentinadatos.com/v1/finanzas/indices/inflacion').then(l=>{l=l.filter(r=>isFinite(r.valor));W=l.slice(-61);const a=l.at(-1),b=l.at(-2);
  put('infl',a.valor.toFixed(1)+'%',Math.sign(a.valor-b.valor),a.valor<=b.valor);
- setS(1,{p:l.slice(-12).map(r=>({v:r.valor,f:r.fecha})),b:1,f:v=>v.toFixed(1)+'%',d:mes});
+ setS(1,{p:l.slice(-12).map(r=>({v:r.valor,f:r.fecha})),b:1,h:0,f:v=>v.toFixed(1)+'%',d:mes});
  const o=W.map((r,i)=>`<option value="${i}">${mes(r.fecha)}</option>`).join('');$('cf2').innerHTML=o;$('ct').innerHTML=o;$('cf2').value=Math.max(0,W.length-13);$('ct').value=W.length-1;calc()}).catch(()=>{put('infl','No disponible');setS(1,null);$('co').textContent='Serie de inflación no disponible por ahora.'});
 J('https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais').then(l=>{l=l.filter(r=>isFinite(r.valor));const a=l.at(-1),b=l.at(-2);
- put('riesgo',a.valor+' pb',Math.sign(a.valor-b.valor),a.valor<=b.valor);setS(2,{p:l.slice(-90).map(r=>({v:r.valor,f:r.fecha})),b:0,f:v=>Math.round(v),d:dd})}).catch(()=>{put('riesgo','No disponible');setS(2,null)});
+ put('riesgo',a.valor+' pb',Math.sign(a.valor-b.valor),a.valor<=b.valor);setS(2,{p:l.slice(-90).map(r=>({v:r.valor,f:r.fecha})),b:0,h:0,f:v=>Math.round(v),d:dd})}).catch(()=>{put('riesgo','No disponible');setS(2,null)});
 const DG=s=>'https://apis.datos.gob.ar/series/api/series/?format=json&last=2&ids='+s;
 J(DG('143.3_NO_PR_2004_A_21:percent_change_a_year_ago')).then(d=>{const r=d.data.filter(x=>isFinite(x[1])),a=r.at(-1)[1]*100,b=r.at(-2)[1]*100;put('emae',a.toFixed(1)+'%',Math.sign(a-b),a>=b)}).catch(()=>put('emae','No disponible'));
 J(DG('174.1_RRVAS_IDOS_0_0_36')).then(d=>{const r=d.data.filter(x=>isFinite(x[1])),a=r.at(-1)[1],b=r.at(-2)[1];put('res','US$ '+fmt(a)+'M',Math.sign(a-b),a>=b)}).catch(()=>put('res','No disponible'));
 
-J('https://api.argentinadatos.com/v1/cotizaciones/dolares/blue').then(l=>setS(0,{p:l.filter(r=>isFinite(r.venta)).slice(-30).map(r=>({v:r.venta,f:r.fecha})),b:0,f:v=>'$'+fmt(v),d:dd})).catch(()=>setS(0,null));
+J('https://api.argentinadatos.com/v1/cotizaciones/dolares/blue').then(l=>setS(0,{p:l.filter(r=>isFinite(r.venta)).slice(-30).map(r=>({v:r.venta,f:r.fecha})),b:0,h:0,f:v=>'$'+fmt(v),d:dd})).catch(()=>setS(0,null));
 const DH=(s,n)=>'https://apis.datos.gob.ar/series/api/series/?format=json&last='+n+'&ids='+s;
-J(DH('143.3_NO_PR_2004_A_21:percent_change_a_year_ago',12)).then(d=>setS(3,{p:d.data.filter(r=>isFinite(r[1])).map(r=>({v:r[1]*100,f:r[0]})),b:1,f:v=>v.toFixed(1)+'%',d:mes})).catch(()=>setS(3,null));
-J(DH('174.1_RRVAS_IDOS_0_0_36',30)).then(d=>setS(4,{p:d.data.filter(r=>isFinite(r[1])).map(r=>({v:r[1],f:r[0]})),b:0,f:v=>Math.round(v/1000)+'k',d:dd})).catch(()=>setS(4,null));
+J(DH('143.3_NO_PR_2004_A_21:percent_change_a_year_ago',12)).then(d=>setS(3,{p:d.data.filter(r=>isFinite(r[1])).map(r=>({v:r[1]*100,f:r[0]})),b:1,h:1,f:v=>v.toFixed(1)+'%',d:mes})).catch(()=>setS(3,null));
+J(DH('174.1_RRVAS_IDOS_0_0_36',30)).then(d=>setS(4,{p:d.data.filter(r=>isFinite(r[1])).map(r=>({v:r[1],f:r[0]})),b:0,h:1,f:v=>Math.round(v/1000)+'k',d:dd})).catch(()=>setS(4,null));
 
-// Herramientas
 function calc(){const a=+$('cf2').value,b=+$('ct').value,m=+$('cm').value||0,o=$('co');
  if(!W.length)return;if(b<=a){o.textContent='Elegí un mes final posterior al inicial.';return}
  let f=1;for(let i=a+1;i<=b;i++)f*=1+W[i].valor/100;
