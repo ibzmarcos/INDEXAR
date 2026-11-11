@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--alt:#F1F5F9;--panel:#fff;--rule:rgba(15,23,42,.09);--rs:rgba(15,23,42,.16);--text:#0F172A;--soft:#5B6478;--acc:#2554E8;--accT:#1D45C4;--green:#16A34A;--red:#DC2626;--sh:0 1px 2px rgba(15,23,42,.04),0 8px 24px -12px rgba(15,23,42,.1);--fd:'Fraunces',serif;--fs:'Source Serif 4',serif;--fm:'IBM Plex Mono',monospace;--fu:'Inter',sans-serif;color-scheme:light}
-[data-theme=dark]{--bg:#0A0E14;--alt:#0D1119;--panel:#11161F;--rule:rgba(242,239,233,.1);--rs:rgba(242,239,233,.18);--text:#F2EFE9;--soft:#8B93A1;--acc:#5B8DEF;--accT:#8BAAF5;--green:#2EE6A8;--red:#FF5C5C;--sh:0 12px 30px -18px rgba(0,0,0,.6);color-scheme:dark}
+:root{--bg:#fff;--alt:#F1F5F9;--panel:#fff;--rule:rgba(15,23,42,.09);--rs:rgba(15,23,42,.16);--text:#0F172A;--soft:#5B6478;--acc:#2554E8;--accT:#1D45C4;--ib:#1F8FD0;--green:#16A34A;--red:#DC2626;--sh:0 1px 2px rgba(15,23,42,.04),0 8px 24px -12px rgba(15,23,42,.1);--fd:'Fraunces',serif;--fs:'Source Serif 4',serif;--fm:'IBM Plex Mono',monospace;--fu:'Inter',sans-serif;color-scheme:light}
+[data-theme=dark]{--bg:#0A0E14;--alt:#0D1119;--panel:#11161F;--rule:rgba(242,239,233,.1);--rs:rgba(242,239,233,.18);--text:#F2EFE9;--soft:#8B93A1;--acc:#5B8DEF;--accT:#8BAAF5;--ib:#4DB3E8;--green:#2EE6A8;--red:#FF5C5C;--sh:0 12px 30px -18px rgba(0,0,0,.6);color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--bg);color:var(--text);font-family:var(--fs);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}h1,h2,h3,h4{font-family:var(--fd);margin:0;font-weight:600}
@@ -67,7 +67,7 @@ nav{display:flex;gap:26px}nav a{font:500 13.5px var(--fu);color:var(--soft)}nav 
 .cg{display:grid;grid-template-columns:1.7fr 1fr;gap:14px;margin-top:14px}
 .cp{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:20px;box-shadow:var(--sh)}
 .cp h3{font-size:18px;margin-bottom:4px}.cp small{font:11px var(--fm);color:var(--soft);display:block;margin-bottom:10px}
-.cp svg{width:100%;height:auto}.cp .a{font:9px var(--fm);fill:var(--soft)}.cp .gl{stroke:var(--rule);stroke-dasharray:2 3}.na{font:13px var(--fu);color:var(--soft)}
+.cp svg{width:100%;height:auto}.cp .a{font:9px var(--fm);fill:var(--soft)}.cp .gl{stroke:var(--rule)}.cp .dl{font:600 9px var(--fm)}#cth{font:700 15px var(--fu)}.src{font:10.5px var(--fm);color:var(--soft);margin-top:6px}.na{font:13px var(--fu);color:var(--soft)}
 .tr{font:12px/1.6 var(--fm);margin-top:10px;padding:10px 12px;background:var(--alt);border-left:2px solid var(--acc)}.tr b{font-weight:600}.tr i{display:block;font-style:normal;color:var(--soft);font-size:10.5px;margin-top:4px}
 .ch{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .cn{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}.cn button{width:38px;height:32px;border:1px solid var(--rs);background:none;color:var(--text);border-radius:2px;cursor:pointer;font-size:18px}.cn button:hover{border-color:var(--acc);color:var(--acc)}
@@ -147,10 +147,11 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
  <div class="sh"><h2 class="st">Tablero de indicadores</h2><span class="live">En vivo</span></div>
  <div class="kg" id="kg"></div>
  <div class="cg">
-  <div class="cp" aria-live="polite"><div class="ch"><h3 id="cth">Gráficos</h3><span class="na" id="cpos"></span></div><small id="csub"></small><div id="cch"><p class="na">Cargando…</p></div><div class="tr" id="ctr" hidden></div><div class="cn"><button id="cprev" type="button" aria-label="Gráfico anterior">‹</button><button id="cnext" type="button" aria-label="Gráfico siguiente">›</button></div></div>
+  <div class="cp" aria-live="polite"><div class="ch"><h3 id="cth">Gráficos</h3><span class="na" id="cpos"></span></div><small id="csub"></small><div id="cch"><p class="na">Cargando…</p></div><div class="src" id="csrc"></div><div class="tr" id="ctr" hidden></div><div class="cn"><button id="cprev" type="button" aria-label="Gráfico anterior">‹</button><button id="cnext" type="button" aria-label="Gráfico siguiente">›</button></div></div>
   <div class="cp th"><h3>Termómetro del día</h3><small>De los indicadores con dato previo, cuántos mejoran y cuántos empeoran</small><svg id="thd" viewBox="0 0 120 120" role="img" aria-label="Termómetro del día"></svg><div id="thl" class="na">Calculando…</div></div>
  </div>
- <p class="note">Cada indicador muestra su fuente. Si una fuente no responde, se muestra como no disponible. En los gráficos, cada barra o tramo se pinta contra el dato anterior: verde si mejora, rojo si empeora (menos inflación y menos riesgo país es mejor; más actividad y más reservas es mejor).</p>
+ <p class="note" id="cache" hidden>Algunas fuentes no respondieron: se muestra el último dato guardado en este navegador.</p>
+ <p class="note">Cada indicador muestra su fuente. Si una fuente no responde, se muestra como no disponible. En los gráficos, cada valor lleva una flecha contra el dato anterior: verde si mejora, rojo si empeora (menos inflación y menos riesgo país es mejor; más actividad y más reservas es mejor).</p>
 </div></section>
 
 <section id="herramientas"><div class="wrap">
@@ -259,7 +260,7 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
 <footer><div class="wrap">
  <div class="fg"><div><div class="logo">Dato<em>nomía</em></div><p>Economía argentina: datos, herramientas y análisis independientes.</p></div>
  <div><p>Datos en vivo: DolarAPI, ArgentinaDatos (INDEC, BCRA) y datos.gob.ar.<br>Tipografías: Fraunces, Source Serif 4, IBM Plex Mono e Inter.</p></div></div>
- <div class="fb">© 2026 Datonomía · Marcos Javier Ibáñez. Las opiniones y análisis de este sitio son personales y no representan la posición de ninguna institución. No constituyen recomendación de inversión.</div>
+ <div class="fb">© 2026 Datonomía · Marcos Javier Ibáñez. Todos los derechos reservados. Las opiniones y análisis de este sitio son personales y no representan la posición de ninguna institución. No constituyen recomendación de inversión.</div>
 </div></footer>
 
 <script>
@@ -267,6 +268,8 @@ footer p{font-size:13.5px;line-height:1.65;color:var(--soft);margin:8px 0 0}.fb{
 var C={email:'ibzmarcos@gmail.com',linkedin:'',github:'https://github.com/ibzmarcos',cv:''};
 // Publicaciones: agregá objetos {fecha:'12 nov 2026',seccion:'Economía',titulo:'…',url:'https://…'}
 var PUBS=[];
+// Newsletter: pegá acá el endpoint de Formspree (https://formspree.io/f/xxxx) o de Buttondown. Vacío = la sección se oculta.
+var NL_URL='';
 
 document.querySelectorAll('[data-l]').forEach(a=>{const k=a.dataset.l,v=C[k];if(!v){a.hidden=true;return}a.href=k==='email'?'mailto:'+v:v;if(a.hasAttribute('data-show'))a.textContent=v});
 const $=id=>document.getElementById(id),fmt=n=>n.toLocaleString('es-AR',{maximumFractionDigits:0});
@@ -293,7 +296,9 @@ function put(k,t,tr,good){const a=tr>0?'▲ ':tr<0?'▼ ':'',c=tr?(good?'g':'b')
  document.querySelectorAll('[data-k="'+k+'"]').forEach(e=>{e.textContent=a+t;const p=e.closest('.kpi');if(c)p.dataset.t=c})
  tick();th()}
 tick();
-const J=u=>fetch(u).then(r=>{if(!r.ok)throw 0;return r.json()});
+const fd=s=>{const d=new Date(String(s).length<=10?s+'T00:00:00':s);return isNaN(d)?'':d.toLocaleDateString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric'})};
+function stamp(k,t){document.querySelectorAll('[data-k="'+k+'"]').forEach(e=>{const x=e.parentElement.querySelector('.ks');if(x&&!x.dataset.s){x.dataset.s=1;x.textContent+=' · dato: '+t}})}
+const J=u=>fetch(u).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{try{localStorage.setItem('dn:'+u,JSON.stringify(d))}catch(e){}return d}).catch(e=>{let c=null;try{c=localStorage.getItem('dn:'+u)}catch(x){}if(c){$('cache').hidden=false;return JSON.parse(c)}throw e});
 
 // Gráfico: cada barra/tramo se pinta contra el dato anterior. hi=1 si más es mejor, 0 si menos es mejor.
 function trend(pts,f,hi){const n=pts.length,last=pts[n-1].v,dir=Math.sign(last-pts[n-2].v);
@@ -303,22 +308,28 @@ function trend(pts,f,hi){const n=pts.length,last=pts[n-1].v,dir=Math.sign(last-p
  return `<b class="${ok?'g':'b'}">${up?'▲ Viene subiendo':'▼ Viene cayendo'}</b> hace ${k} ${k>1?'datos seguidos':'dato'}: de ${f(pts[n-k-1].v)} a ${f(last)}. ${ok?'Eso es una mejora.':'Eso es un deterioro.'}<i>Verde: mejora vs. el dato anterior · Rojo: empeora · Gris: punto de partida</i>`}
 function chart(id,pts,bar,f,df,hi){const el=$(id),tr=$('ctr');
  if(!pts||pts.length<2){el.innerHTML='<p class="na">Gráfico no disponible por ahora.</p>';tr.hidden=true;return}
- const W=420,H=170,L=44,T=12,pw=W-L-8,ph=H-T-22,v=pts.map(p=>p.v);let mn=Math.min(...v),mx=Math.max(...v);if(bar)mn=Math.min(0,mn);
- const y=x=>T+ph-(x-mn)/((mx-mn)||1)*ph,X=i=>L+i/(pts.length-1)*pw;
- const col=i=>{if(!i)return 'var(--soft)';const d=pts[i].v-pts[i-1].v;return !d?'var(--soft)':((d>0)===!!hi?'var(--green)':'var(--red)')};
- let s=`<line class="gl" x1="${L}" x2="${W}" y1="${T}" y2="${T}"/><text class="a" x="${L-5}" y="${T+3}" text-anchor="end">${f(mx)}</text><line class="gl" x1="${L}" x2="${W}" y1="${T+ph}" y2="${T+ph}"/><text class="a" x="${L-5}" y="${T+ph+3}" text-anchor="end">${f(mn)}</text>`;
- if(bar){const bw=pw/pts.length*.68;
-  if(mn<0)s+=`<line x1="${L}" x2="${W}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" stroke="var(--rs)"/><text class="a" x="${L-5}" y="${(y(0)+3).toFixed(1)}" text-anchor="end">0</text>`;
-  s+=pts.map((p,i)=>`<rect x="${(L+(i+.5)/pts.length*pw-bw/2).toFixed(1)}" y="${Math.min(y(p.v),y(0)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1,Math.abs(y(p.v)-y(0))).toFixed(1)}" fill="${col(i)}"/>`).join('')}
- else{const c=col(pts.length-1);let a='';for(let i=1;i<pts.length;i++)a+=`<line x1="${X(i-1).toFixed(1)}" y1="${y(pts[i-1].v).toFixed(1)}" x2="${X(i).toFixed(1)}" y2="${y(pts[i].v).toFixed(1)}" stroke="${col(i)}" stroke-width="2.4" stroke-linecap="round"/>`;
-  const d=pts.map((p,i)=>(i?'L':'M')+X(i).toFixed(1)+','+y(p.v).toFixed(1)).join('');
-  s+=`<path d="${d}L${W-8},${T+ph}L${L},${T+ph}Z" fill="${c}" opacity=".1"/>${a}<circle cx="${X(pts.length-1).toFixed(1)}" cy="${y(pts.at(-1).v).toFixed(1)}" r="4" fill="${c}"/>`}
- s+=`<text class="a" x="${L}" y="${H-4}">${df(pts[0].f)}</text><text class="a" x="${W-8}" y="${H-4}" text-anchor="end">${df(pts.at(-1).f)}</text>`;
+ const n=pts.length,W=460,H=215,L=46,T=24,P=10,pw=W-L-P,ph=H-T-26,v=pts.map(p=>p.v);let mn=Math.min(...v),mx=Math.max(...v);
+ if(bar){mn=Math.min(0,mn);mx=Math.max(0,mx)}const pd=(mx-mn)*.1||1;mx+=pd;if(!bar||mn<0)mn-=pd;
+ const y=x=>T+ph-(x-mn)/((mx-mn)||1)*ph,X=i=>bar?L+(i+.5)/n*pw:L+i/(n-1)*pw;
+ const up=i=>i&&pts[i].v!==pts[i-1].v?(pts[i].v>pts[i-1].v):null;
+ const col=i=>{const u=up(i);return u===null?'var(--soft)':(u===!!hi?'var(--green)':'var(--red)')};
+ const arr=i=>{const u=up(i);return u===null?'':u?'▲ ':'▼ '};
+ let s='';
+ for(let k=0;k<=4;k++){const g=mn+(mx-mn)*k/4;s+=`<line class="gl" x1="${L}" x2="${W-P}" y1="${y(g).toFixed(1)}" y2="${y(g).toFixed(1)}"/><text class="a" x="${L-6}" y="${(y(g)+3).toFixed(1)}" text-anchor="end">${f(g)}</text>`}
+ if(mn<0)s+=`<line x1="${L}" x2="${W-P}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" stroke="var(--soft)" stroke-width="1"/>`;
+ const lab=i=>{const neg=pts[i].v<0,yy=neg?y(pts[i].v)+11:y(pts[i].v)-5;return `<text class="dl" x="${X(i).toFixed(1)}" y="${yy.toFixed(1)}" text-anchor="middle" fill="${col(i)}">${arr(i)}${f(pts[i].v)}</text>`};
+ if(bar){const bw=pw/n*.6;s+=pts.map((p,i)=>`<rect x="${(X(i)-bw/2).toFixed(1)}" y="${Math.min(y(p.v),y(0)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1,Math.abs(y(p.v)-y(0))).toFixed(1)}" fill="var(--ib)"/>`).join('');if(n<=14)s+=pts.map((p,i)=>lab(i)).join('')}
+ else{const d=pts.map((p,i)=>(i?'L':'M')+X(i).toFixed(1)+','+y(p.v).toFixed(1)).join('');
+  s+=`<path d="${d}L${X(n-1).toFixed(1)},${y(mn).toFixed(1)}L${L},${y(mn).toFixed(1)}Z" fill="var(--ib)" opacity=".1"/><path d="${d}" fill="none" stroke="var(--ib)" stroke-width="2.2" stroke-linejoin="round"/>`;
+  if(n<=14)s+=pts.map((p,i)=>`<circle cx="${X(i).toFixed(1)}" cy="${y(p.v).toFixed(1)}" r="3" fill="var(--ib)"/>`).join('');
+  const lc=col(n-1);s+=`<circle cx="${X(n-1).toFixed(1)}" cy="${y(v[n-1]).toFixed(1)}" r="5" fill="${lc}"/>`;
+  new Set([0,n-1,v.indexOf(Math.max(...v)),v.indexOf(Math.min(...v))]).forEach(i=>{s+=`<text class="dl" x="${Math.min(W-P-14,Math.max(L+14,X(i))).toFixed(1)}" y="${(y(v[i])-9).toFixed(1)}" text-anchor="middle" fill="${i===n-1?lc:'var(--text)'}">${i===n-1?arr(i):''}${f(v[i])}</text>`})}
+ [0,Math.floor((n-1)/2),n-1].forEach((i,k)=>{s+=`<text class="a" x="${X(i).toFixed(1)}" y="${H-6}" text-anchor="${k===0?'start':k===2?'end':'middle'}">${df(pts[i].f)}</text>`});
  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico">${s}</svg>`;
  tr.hidden=false;tr.innerHTML=trend(pts,f,hi)}
 
-const S=[],SL=[['Dólar blue','Últimos 30 registros · venta · DolarAPI / ArgentinaDatos'],['Inflación mensual','Últimos 12 meses · INDEC vía ArgentinaDatos'],['Riesgo país','Últimos 90 registros · puntos básicos'],['Actividad (EMAE)','Variación interanual, últimos 12 meses · INDEC'],['Reservas del BCRA','Últimos 30 registros · millones de US$']];let cur=0;
-function showS(){$('cth').textContent=SL[cur][0];$('csub').textContent=SL[cur][1];$('cpos').textContent=(cur+1)+' / '+SL.length;const s=S[cur];
+const S=[],SL=[['Dólar blue','Pesos por US$, precio de venta. Últimos 30 registros','Fuente: elaboración propia en base a DolarAPI y ArgentinaDatos.'],['Variación mensual del IPC','Porcentaje. Últimos 12 meses','Fuente: elaboración propia en base a INDEC (vía ArgentinaDatos).'],['Riesgo país','Puntos básicos. Últimos 90 registros','Fuente: elaboración propia en base a ArgentinaDatos.'],['EMAE. Variación interanual','Porcentaje. Últimos 12 meses','Fuente: elaboración propia en base a INDEC (vía datos.gob.ar).'],['Reservas internacionales del BCRA','Millones de US$. Últimos 30 registros','Fuente: elaboración propia en base a BCRA (vía datos.gob.ar).']];let cur=0;
+function showS(){const m=SL[cur];$('cth').textContent='Gráfico '+(cur+1)+'. '+m[0];$('csub').textContent=m[1];$('csrc').textContent=m[2];$('cpos').textContent=(cur+1)+' / '+SL.length;const s=S[cur];
  if(s===undefined){$('cch').innerHTML='<p class="na">Cargando…</p>';$('ctr').hidden=true}else if(!s)chart('cch');else chart('cch',s.p,s.b,s.f,s.d,s.h)}
 function setS(i,s){S[i]=s;if(i===cur)showS()}
 $('cprev').onclick=()=>{cur=(cur+SL.length-1)%SL.length;showS()};$('cnext').onclick=()=>{cur=(cur+1)%SL.length;showS()};showS();
@@ -330,16 +341,16 @@ let Q={},W=[];
 const fail=ks=>ks.forEach(k=>put(k,'No disponible'));
 J('https://dolarapi.com/v1/dolares').then(a=>{const f=c=>(a.find(x=>x.casa===c)||{}).venta;Q={oficial:f('oficial'),blue:f('blue'),mep:f('bolsa'),ccl:f('contadoconliqui')};
  for(const k in Q)Q[k]?put(k,'$'+fmt(Q[k])):put(k,'No disponible');
- Q.blue&&Q.oficial?put('brecha',((Q.blue/Q.oficial-1)*100).toFixed(1)+'%'):put('brecha','No disponible');conv()}).catch(()=>{fail(['oficial','blue','mep','ccl','brecha']);$('cr').innerHTML='<p class="na">Cotizaciones no disponibles por ahora.</p>'});
+ Q.blue&&Q.oficial?put('brecha',((Q.blue/Q.oficial-1)*100).toFixed(1)+'%'):put('brecha','No disponible');conv();try{const z={oficial:'oficial',blue:'blue',mep:'bolsa',ccl:'contadoconliqui'};for(const k in z){const x=a.find(y=>y.casa===z[k]);if(x&&x.fechaActualizacion)stamp(k,fd(x.fechaActualizacion))}}catch(e){}}).catch(()=>{fail(['oficial','blue','mep','ccl','brecha']);$('cr').innerHTML='<p class="na">Cotizaciones no disponibles por ahora.</p>'});
 J('https://api.argentinadatos.com/v1/finanzas/indices/inflacion').then(l=>{l=l.filter(r=>isFinite(r.valor));W=l.slice(-61);const a=l.at(-1),b=l.at(-2);
  put('infl',a.valor.toFixed(1)+'%',Math.sign(a.valor-b.valor),a.valor<=b.valor);
- setS(1,{p:l.slice(-12).map(r=>({v:r.valor,f:r.fecha})),b:1,h:0,f:v=>v.toFixed(1)+'%',d:mes});
+ stamp('infl',mes(a.fecha));setS(1,{p:l.slice(-12).map(r=>({v:r.valor,f:r.fecha})),b:1,h:0,f:v=>v.toFixed(1)+'%',d:mes});
  const o=W.map((r,i)=>`<option value="${i}">${mes(r.fecha)}</option>`).join('');$('cf2').innerHTML=o;$('ct').innerHTML=o;$('cf2').value=Math.max(0,W.length-13);$('ct').value=W.length-1;calc()}).catch(()=>{put('infl','No disponible');setS(1,null);$('co').textContent='Serie de inflación no disponible por ahora.'});
 J('https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais').then(l=>{l=l.filter(r=>isFinite(r.valor));const a=l.at(-1),b=l.at(-2);
- put('riesgo',a.valor+' pb',Math.sign(a.valor-b.valor),a.valor<=b.valor);setS(2,{p:l.slice(-90).map(r=>({v:r.valor,f:r.fecha})),b:0,h:0,f:v=>Math.round(v),d:dd})}).catch(()=>{put('riesgo','No disponible');setS(2,null)});
+ put('riesgo',a.valor+' pb',Math.sign(a.valor-b.valor),a.valor<=b.valor);stamp('riesgo',fd(a.fecha));setS(2,{p:l.slice(-90).map(r=>({v:r.valor,f:r.fecha})),b:0,h:0,f:v=>Math.round(v),d:dd})}).catch(()=>{put('riesgo','No disponible');setS(2,null)});
 const DG=s=>'https://apis.datos.gob.ar/series/api/series/?format=json&last=2&ids='+s;
-J(DG('143.3_NO_PR_2004_A_21:percent_change_a_year_ago')).then(d=>{const r=d.data.filter(x=>isFinite(x[1])),a=r.at(-1)[1]*100,b=r.at(-2)[1]*100;put('emae',a.toFixed(1)+'%',Math.sign(a-b),a>=b)}).catch(()=>put('emae','No disponible'));
-J(DG('174.1_RRVAS_IDOS_0_0_36')).then(d=>{const r=d.data.filter(x=>isFinite(x[1])),a=r.at(-1)[1],b=r.at(-2)[1];put('res','US$ '+fmt(a)+'M',Math.sign(a-b),a>=b)}).catch(()=>put('res','No disponible'));
+J(DG('143.3_NO_PR_2004_A_21:percent_change_a_year_ago')).then(d=>{const r=d.data.filter(x=>isFinite(x[1])),a=r.at(-1)[1]*100,b=r.at(-2)[1]*100;put('emae',a.toFixed(1)+'%',Math.sign(a-b),a>=b);stamp('emae',mes(r.at(-1)[0]))}).catch(()=>put('emae','No disponible'));
+J(DG('174.1_RRVAS_IDOS_0_0_36')).then(d=>{const r=d.data.filter(x=>isFinite(x[1])),a=r.at(-1)[1],b=r.at(-2)[1];put('res','US$ '+fmt(a)+'M',Math.sign(a-b),a>=b);stamp('res',fd(r.at(-1)[0]))}).catch(()=>put('res','No disponible'));
 
 J('https://api.argentinadatos.com/v1/cotizaciones/dolares/blue').then(l=>setS(0,{p:l.filter(r=>isFinite(r.venta)).slice(-30).map(r=>({v:r.venta,f:r.fecha})),b:0,h:0,f:v=>'$'+fmt(v),d:dd})).catch(()=>setS(0,null));
 const DH=(s,n)=>'https://apis.datos.gob.ar/series/api/series/?format=json&last='+n+'&ids='+s;
@@ -354,8 +365,8 @@ function conv(){const a=+$('ca').value||0,u=$('cd').value==='u',L=[['oficial','O
  $('cr').innerHTML=L.length?L.map(x=>`<div class="row"><span>${x[1]}</span><b>${u?'$'+fmt(a*Q[x[0]]):'US$ '+(a/Q[x[0]]).toLocaleString('es-AR',{maximumFractionDigits:2})}</b></div>`).join(''):'<p class="na">Cotizaciones no disponibles por ahora.</p>'}
 ['cm','cf2','ct'].forEach(i=>$(i).addEventListener('input',calc));['ca','cd'].forEach(i=>$(i).addEventListener('input',conv));
 
-// Newsletter: conectalo a un servicio de envío (por ejemplo Buttondown o Formspree) para activarlo
-$('nf').onsubmit=e=>{e.preventDefault();$('nm').textContent='Gracias, registramos tu interés. La suscripción se activa cuando conectemos el servicio de envío.';$('ne').value=''};
+if(!NL_URL){$('newsletter').hidden=true;document.querySelectorAll('a[href="#newsletter"]').forEach(a=>a.hidden=true)}
+$('nf').onsubmit=async e=>{e.preventDefault();const m=$('nm');m.textContent='Enviando…';try{const bd=new FormData();bd.append('email',$('ne').value.trim());const bt=NL_URL.includes('buttondown');const r=await fetch(NL_URL,{method:'POST',body:bd,mode:bt?'no-cors':'cors',headers:bt?{}:{Accept:'application/json'}});if(!bt&&!r.ok)throw 0;m.textContent='Listo, ya estás suscripto. Gracias.';$('ne').value=''}catch(x){m.textContent='No pude registrar tu mail ahora. Probá más tarde o escribime a '+(C.email||'mi mail')+'.'}};
 </script>
 </body>
 </html>
